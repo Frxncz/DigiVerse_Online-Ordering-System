@@ -82,53 +82,58 @@ namespace PointofSaleSystem {
 			// 
 			this->textBox2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(218)), static_cast<System::Int32>(static_cast<System::Byte>(210)),
 				static_cast<System::Int32>(static_cast<System::Byte>(192)));
-			this->textBox2->Location = System::Drawing::Point(62, 377);
+			this->textBox2->Location = System::Drawing::Point(112, 373);
 			this->textBox2->Multiline = true;
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(449, 32);
+			this->textBox2->Size = System::Drawing::Size(449, 36);
 			this->textBox2->TabIndex = 25;
+			this->textBox2->TextChanged += gcnew System::EventHandler(this, &LoginForm::textBox2_TextChanged);
 			// 
 			// textBox1
 			// 
 			this->textBox1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(218)), static_cast<System::Int32>(static_cast<System::Byte>(210)),
 				static_cast<System::Int32>(static_cast<System::Byte>(192)));
-			this->textBox1->Location = System::Drawing::Point(62, 292);
+			this->textBox1->Location = System::Drawing::Point(112, 289);
 			this->textBox1->Multiline = true;
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(449, 32);
+			this->textBox1->Size = System::Drawing::Size(449, 35);
 			this->textBox1->TabIndex = 24;
+			this->textBox1->TextChanged += gcnew System::EventHandler(this, &LoginForm::textBox1_TextChanged);
 			// 
 			// pictureBox2
 			// 
 			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
-			this->pictureBox2->Location = System::Drawing::Point(277, 116);
+			this->pictureBox2->Location = System::Drawing::Point(327, 116);
 			this->pictureBox2->Name = L"pictureBox2";
 			this->pictureBox2->Size = System::Drawing::Size(36, 44);
 			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox2->TabIndex = 23;
 			this->pictureBox2->TabStop = false;
+			this->pictureBox2->Click += gcnew System::EventHandler(this, &LoginForm::pictureBox2_Click);
 			// 
 			// label7
 			// 
 			this->label7->AutoSize = true;
 			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label7->Location = System::Drawing::Point(316, 556);
+			this->label7->Location = System::Drawing::Point(366, 556);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(67, 18);
 			this->label7->TabIndex = 22;
 			this->label7->Text = L"Sign Up";
+			this->label7->Click += gcnew System::EventHandler(this, &LoginForm::label7_Click);
 			// 
 			// label6
 			// 
 			this->label6->AutoSize = true;
 			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label6->Location = System::Drawing::Point(156, 556);
+			this->label6->Location = System::Drawing::Point(206, 556);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(163, 18);
 			this->label6->TabIndex = 21;
 			this->label6->Text = L"Don\'t have an account\?";
+			this->label6->Click += gcnew System::EventHandler(this, &LoginForm::label6_Click);
 			// 
 			// label5
 			// 
@@ -137,11 +142,12 @@ namespace PointofSaleSystem {
 				static_cast<System::Byte>(0)));
 			this->label5->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(110)), static_cast<System::Int32>(static_cast<System::Byte>(108)),
 				static_cast<System::Int32>(static_cast<System::Byte>(104)));
-			this->label5->Location = System::Drawing::Point(395, 424);
+			this->label5->Location = System::Drawing::Point(445, 424);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(116, 16);
 			this->label5->TabIndex = 20;
 			this->label5->Text = L"Forgot Password\?";
+			this->label5->Click += gcnew System::EventHandler(this, &LoginForm::label5_Click);
 			// 
 			// label4
 			// 
@@ -150,29 +156,32 @@ namespace PointofSaleSystem {
 				static_cast<System::Byte>(0)));
 			this->label4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(110)), static_cast<System::Int32>(static_cast<System::Byte>(108)),
 				static_cast<System::Int32>(static_cast<System::Byte>(104)));
-			this->label4->Location = System::Drawing::Point(159, 202);
+			this->label4->Location = System::Drawing::Point(209, 202);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(254, 17);
 			this->label4->TabIndex = 19;
 			this->label4->Text = L"Secure your personal account by loggin in";
+			this->label4->Click += gcnew System::EventHandler(this, &LoginForm::label4_Click);
 			// 
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(64, 354);
+			this->label3->Location = System::Drawing::Point(114, 354);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(67, 16);
 			this->label3->TabIndex = 18;
 			this->label3->Text = L"Password";
+			this->label3->Click += gcnew System::EventHandler(this, &LoginForm::label3_Click);
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(64, 270);
+			this->label2->Location = System::Drawing::Point(114, 270);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(41, 16);
 			this->label2->TabIndex = 17;
 			this->label2->Text = L"Email";
+			this->label2->Click += gcnew System::EventHandler(this, &LoginForm::label2_Click);
 			// 
 			// button3
 			// 
@@ -182,23 +191,25 @@ namespace PointofSaleSystem {
 				static_cast<System::Byte>(0)));
 			this->button3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(245)),
 				static_cast<System::Int32>(static_cast<System::Byte>(236)));
-			this->button3->Location = System::Drawing::Point(62, 473);
+			this->button3->Location = System::Drawing::Point(112, 473);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(449, 55);
 			this->button3->TabIndex = 16;
 			this->button3->Text = L"Log In";
 			this->button3->UseVisualStyleBackColor = false;
+			this->button3->Click += gcnew System::EventHandler(this, &LoginForm::button3_Click);
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Arial Narrow", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(199, 169);
+			this->label1->Location = System::Drawing::Point(249, 169);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(186, 33);
 			this->label1->TabIndex = 15;
 			this->label1->Text = L"Welcome Back!";
+			this->label1->Click += gcnew System::EventHandler(this, &LoginForm::label1_Click);
 			// 
 			// pictureBox1
 			// 
@@ -216,7 +227,7 @@ namespace PointofSaleSystem {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(245)),
 				static_cast<System::Int32>(static_cast<System::Byte>(236)));
-			this->ClientSize = System::Drawing::Size(1230, 714);
+			this->ClientSize = System::Drawing::Size(1261, 714);
 			this->Controls->Add(this->textBox2);
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->pictureBox2);
@@ -238,5 +249,27 @@ namespace PointofSaleSystem {
 
 		}
 #pragma endregion
-	};
+	private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	}
+private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	}
+private: System::Void pictureBox2_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+private: System::Void label7_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+private: System::Void label6_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+private: System::Void label5_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+private: System::Void label4_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+};
 }

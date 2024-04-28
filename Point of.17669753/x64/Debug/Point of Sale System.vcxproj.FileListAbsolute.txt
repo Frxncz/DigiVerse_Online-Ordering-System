@@ -1,0 +1,3 @@
+C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Point of.17669753\x64\Debug\Point of Sale System.vcxproj.AssemblyReference.cache
+C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Point of.17669753\x64\Debug\PointofSaleSystem.LoginForm.resources
+C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Point of.17669753\x64\Debug\Point of Sale System.vcxproj.GenerateResource.cache
