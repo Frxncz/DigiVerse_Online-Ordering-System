@@ -35,9 +35,9 @@ namespace PointofSaleSystem {
 			}
 		}
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
-	private: System::Windows::Forms::Button^ button1;
+
 	private: System::Windows::Forms::Label^ label1;
-	private: System::Windows::Forms::Button^ button2;
+
 	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label3;
@@ -46,6 +46,8 @@ namespace PointofSaleSystem {
 	private: System::Windows::Forms::Label^ label6;
 	private: System::Windows::Forms::Label^ label7;
 	private: System::Windows::Forms::PictureBox^ pictureBox2;
+	private: System::Windows::Forms::TextBox^ textBox1;
+	private: System::Windows::Forms::TextBox^ textBox2;
 	protected:
 
 	private:
@@ -63,9 +65,7 @@ namespace PointofSaleSystem {
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
-			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
@@ -74,6 +74,8 @@ namespace PointofSaleSystem {
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
+			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			this->SuspendLayout();
@@ -89,16 +91,6 @@ namespace PointofSaleSystem {
 			this->pictureBox1->TabStop = false;
 			this->pictureBox1->Click += gcnew System::EventHandler(this, &MyForm::pictureBox1_Click);
 			// 
-			// button1
-			// 
-			this->button1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(218)), static_cast<System::Int32>(static_cast<System::Byte>(210)),
-				static_cast<System::Int32>(static_cast<System::Byte>(192)));
-			this->button1->Location = System::Drawing::Point(147, 292);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(449, 41);
-			this->button1->TabIndex = 1;
-			this->button1->UseVisualStyleBackColor = false;
-			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
@@ -109,16 +101,6 @@ namespace PointofSaleSystem {
 			this->label1->Size = System::Drawing::Size(186, 33);
 			this->label1->TabIndex = 2;
 			this->label1->Text = L"Welcome Back!";
-			// 
-			// button2
-			// 
-			this->button2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(218)), static_cast<System::Int32>(static_cast<System::Byte>(210)),
-				static_cast<System::Int32>(static_cast<System::Byte>(192)));
-			this->button2->Location = System::Drawing::Point(147, 375);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(449, 41);
-			this->button2->TabIndex = 3;
-			this->button2->UseVisualStyleBackColor = false;
 			// 
 			// button3
 			// 
@@ -211,6 +193,26 @@ namespace PointofSaleSystem {
 			this->pictureBox2->TabIndex = 11;
 			this->pictureBox2->TabStop = false;
 			// 
+			// textBox1
+			// 
+			this->textBox1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(218)), static_cast<System::Int32>(static_cast<System::Byte>(210)),
+				static_cast<System::Int32>(static_cast<System::Byte>(192)));
+			this->textBox1->Location = System::Drawing::Point(147, 292);
+			this->textBox1->Multiline = true;
+			this->textBox1->Name = L"textBox1";
+			this->textBox1->Size = System::Drawing::Size(449, 32);
+			this->textBox1->TabIndex = 12;
+			// 
+			// textBox2
+			// 
+			this->textBox2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(218)), static_cast<System::Int32>(static_cast<System::Byte>(210)),
+				static_cast<System::Int32>(static_cast<System::Byte>(192)));
+			this->textBox2->Location = System::Drawing::Point(147, 377);
+			this->textBox2->Multiline = true;
+			this->textBox2->Name = L"textBox2";
+			this->textBox2->Size = System::Drawing::Size(449, 32);
+			this->textBox2->TabIndex = 13;
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -218,6 +220,8 @@ namespace PointofSaleSystem {
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(245)),
 				static_cast<System::Int32>(static_cast<System::Byte>(236)));
 			this->ClientSize = System::Drawing::Size(1328, 711);
+			this->Controls->Add(this->textBox2);
+			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->pictureBox2);
 			this->Controls->Add(this->label7);
 			this->Controls->Add(this->label6);
@@ -226,9 +230,7 @@ namespace PointofSaleSystem {
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->button3);
-			this->Controls->Add(this->button2);
 			this->Controls->Add(this->label1);
-			this->Controls->Add(this->button1);
 			this->Controls->Add(this->pictureBox1);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
