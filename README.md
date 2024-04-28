@@ -2,5 +2,5 @@
 
 ### Point of Sale System with GUI in C++ 
 
-### Final Project in Prograamming 1 
+### Final Project in  Computer Programming 2 
 ( 2nd Semester )
