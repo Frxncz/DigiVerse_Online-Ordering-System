@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Home.h"
+
 namespace PointofSaleSystem {
 
 	using namespace System;
@@ -196,6 +198,7 @@ namespace PointofSaleSystem {
 			this->btnLogin->TabIndex = 16;
 			this->btnLogin->Text = L"Log In";
 			this->btnLogin->UseVisualStyleBackColor = false;
+			this->btnLogin->Click += gcnew System::EventHandler(this, &LoginForm::btnLogin_Click);
 			// 
 			// label1
 			// 
@@ -250,5 +253,12 @@ namespace PointofSaleSystem {
 #pragma endregion
 
 
+	private: System::Void btnLogin_Click(System::Object^ sender, System::EventArgs^ e) 
+	{
+		this->Hide();
+		Home^ homeInterface = gcnew Home();
+		homeInterface->ShowDialog();
+		this->Show();
+	}
 };
 }
