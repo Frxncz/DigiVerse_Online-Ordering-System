@@ -110,18 +110,24 @@ namespace PointofSaleSystem {
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
 	private: System::Windows::Forms::Label^ label26;
 	private: System::Windows::Forms::Label^ label27;
-	private: System::Windows::Forms::Button^ button4;
+    private: System::Windows::Forms::Button^ btnAddAH;
+
+
 
 	private: System::Windows::Forms::Label^ label40;
 	private: System::Windows::Forms::Label^ label41;
 	private: System::Windows::Forms::PictureBox^ pictureBox8;
 
 	private: System::Windows::Forms::Label^ label38;
-	private: System::Windows::Forms::Label^ label39;
+private: System::Windows::Forms::Label^ label39;
+
+
 	private: System::Windows::Forms::PictureBox^ pictureBox7;
 
 	private: System::Windows::Forms::Label^ label36;
-	private: System::Windows::Forms::Label^ label37;
+private: System::Windows::Forms::Label^ label37;
+
+
 	private: System::Windows::Forms::PictureBox^ pictureBox6;
 
 	private: System::Windows::Forms::Label^ label34;
@@ -163,13 +169,21 @@ namespace PointofSaleSystem {
     private: System::Windows::Forms::Button^ btnFantasy;
 
     private: System::Windows::Forms::GroupBox^ groupBox2;
-    private: System::Windows::Forms::Button^ button11;
-    private: System::Windows::Forms::Button^ button10;
-    private: System::Windows::Forms::Button^ button9;
-    private: System::Windows::Forms::Button^ button8;
-    private: System::Windows::Forms::Button^ button7;
-    private: System::Windows::Forms::Button^ button6;
-    private: System::Windows::Forms::Button^ button5;
+private: System::Windows::Forms::Button^ btnAddOR;
+
+private: System::Windows::Forms::Button^ btnAddSL;
+private: System::Windows::Forms::Button^ btnAddSB;
+
+
+private: System::Windows::Forms::Button^ btnAddMIS;
+
+
+private: System::Windows::Forms::Button^ btnAddMH;
+
+private: System::Windows::Forms::Button^ btnAddHN;
+
+private: System::Windows::Forms::Button^ btnAddPM;
+
     private: System::Windows::Forms::GroupBox^ groupBox3;
 
 
@@ -216,50 +230,50 @@ namespace PointofSaleSystem {
             this->panel2 = (gcnew System::Windows::Forms::Panel());
             this->groupBox3 = (gcnew System::Windows::Forms::GroupBox());
             this->groupBox18 = (gcnew System::Windows::Forms::GroupBox());
-            this->button11 = (gcnew System::Windows::Forms::Button());
+            this->btnAddOR = (gcnew System::Windows::Forms::Button());
             this->label49 = (gcnew System::Windows::Forms::Label());
             this->label40 = (gcnew System::Windows::Forms::Label());
             this->label41 = (gcnew System::Windows::Forms::Label());
             this->pictureBox8 = (gcnew System::Windows::Forms::PictureBox());
             this->groupBox17 = (gcnew System::Windows::Forms::GroupBox());
-            this->button10 = (gcnew System::Windows::Forms::Button());
+            this->btnAddSL = (gcnew System::Windows::Forms::Button());
             this->label48 = (gcnew System::Windows::Forms::Label());
             this->label38 = (gcnew System::Windows::Forms::Label());
             this->label39 = (gcnew System::Windows::Forms::Label());
             this->pictureBox7 = (gcnew System::Windows::Forms::PictureBox());
             this->groupBox16 = (gcnew System::Windows::Forms::GroupBox());
-            this->button9 = (gcnew System::Windows::Forms::Button());
+            this->btnAddSB = (gcnew System::Windows::Forms::Button());
             this->label47 = (gcnew System::Windows::Forms::Label());
             this->label36 = (gcnew System::Windows::Forms::Label());
             this->label37 = (gcnew System::Windows::Forms::Label());
             this->pictureBox6 = (gcnew System::Windows::Forms::PictureBox());
             this->groupBox15 = (gcnew System::Windows::Forms::GroupBox());
-            this->button8 = (gcnew System::Windows::Forms::Button());
+            this->btnAddMIS = (gcnew System::Windows::Forms::Button());
             this->label46 = (gcnew System::Windows::Forms::Label());
             this->label34 = (gcnew System::Windows::Forms::Label());
             this->label35 = (gcnew System::Windows::Forms::Label());
             this->pictureBox5 = (gcnew System::Windows::Forms::PictureBox());
             this->groupBox14 = (gcnew System::Windows::Forms::GroupBox());
-            this->button7 = (gcnew System::Windows::Forms::Button());
+            this->btnAddMH = (gcnew System::Windows::Forms::Button());
             this->label45 = (gcnew System::Windows::Forms::Label());
             this->label32 = (gcnew System::Windows::Forms::Label());
             this->label33 = (gcnew System::Windows::Forms::Label());
             this->pictureBox4 = (gcnew System::Windows::Forms::PictureBox());
             this->groupBox13 = (gcnew System::Windows::Forms::GroupBox());
-            this->button6 = (gcnew System::Windows::Forms::Button());
+            this->btnAddHN = (gcnew System::Windows::Forms::Button());
             this->label44 = (gcnew System::Windows::Forms::Label());
             this->label30 = (gcnew System::Windows::Forms::Label());
             this->label31 = (gcnew System::Windows::Forms::Label());
             this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
             this->groupBox12 = (gcnew System::Windows::Forms::GroupBox());
-            this->button5 = (gcnew System::Windows::Forms::Button());
+            this->btnAddPM = (gcnew System::Windows::Forms::Button());
             this->label43 = (gcnew System::Windows::Forms::Label());
             this->label28 = (gcnew System::Windows::Forms::Label());
             this->label29 = (gcnew System::Windows::Forms::Label());
             this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
             this->groupBox11 = (gcnew System::Windows::Forms::GroupBox());
             this->label42 = (gcnew System::Windows::Forms::Label());
-            this->button4 = (gcnew System::Windows::Forms::Button());
+            this->btnAddAH = (gcnew System::Windows::Forms::Button());
             this->label27 = (gcnew System::Windows::Forms::Label());
             this->label26 = (gcnew System::Windows::Forms::Label());
             this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
@@ -568,7 +582,7 @@ namespace PointofSaleSystem {
             // 
             this->groupBox18->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(231)), static_cast<System::Int32>(static_cast<System::Byte>(237)),
                 static_cast<System::Int32>(static_cast<System::Byte>(248)));
-            this->groupBox18->Controls->Add(this->button11);
+            this->groupBox18->Controls->Add(this->btnAddOR);
             this->groupBox18->Controls->Add(this->label49);
             this->groupBox18->Controls->Add(this->label40);
             this->groupBox18->Controls->Add(this->label41);
@@ -579,20 +593,20 @@ namespace PointofSaleSystem {
             this->groupBox18->TabIndex = 19;
             this->groupBox18->TabStop = false;
             // 
-            // button11
+            // btnAddOR
             // 
-            this->button11->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
+            this->btnAddOR->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
                 static_cast<System::Int32>(static_cast<System::Byte>(197)));
-            this->button11->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+            this->btnAddOR->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->button11->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
+            this->btnAddOR->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
                 static_cast<System::Int32>(static_cast<System::Byte>(253)));
-            this->button11->Location = System::Drawing::Point(286, 115);
-            this->button11->Name = L"button11";
-            this->button11->Size = System::Drawing::Size(68, 35);
-            this->button11->TabIndex = 30;
-            this->button11->Text = L"+ Add";
-            this->button11->UseVisualStyleBackColor = false;
+            this->btnAddOR->Location = System::Drawing::Point(286, 115);
+            this->btnAddOR->Name = L"btnAddOR";
+            this->btnAddOR->Size = System::Drawing::Size(68, 35);
+            this->btnAddOR->TabIndex = 30;
+            this->btnAddOR->Text = L"+ Add";
+            this->btnAddOR->UseVisualStyleBackColor = false;
             // 
             // label49
             // 
@@ -641,7 +655,7 @@ namespace PointofSaleSystem {
             // 
             this->groupBox17->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(231)), static_cast<System::Int32>(static_cast<System::Byte>(237)),
                 static_cast<System::Int32>(static_cast<System::Byte>(248)));
-            this->groupBox17->Controls->Add(this->button10);
+            this->groupBox17->Controls->Add(this->btnAddSL);
             this->groupBox17->Controls->Add(this->label48);
             this->groupBox17->Controls->Add(this->label38);
             this->groupBox17->Controls->Add(this->label39);
@@ -652,20 +666,20 @@ namespace PointofSaleSystem {
             this->groupBox17->TabIndex = 18;
             this->groupBox17->TabStop = false;
             // 
-            // button10
+            // btnAddSL
             // 
-            this->button10->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
+            this->btnAddSL->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
                 static_cast<System::Int32>(static_cast<System::Byte>(197)));
-            this->button10->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+            this->btnAddSL->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->button10->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
+            this->btnAddSL->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
                 static_cast<System::Int32>(static_cast<System::Byte>(253)));
-            this->button10->Location = System::Drawing::Point(268, 115);
-            this->button10->Name = L"button10";
-            this->button10->Size = System::Drawing::Size(68, 35);
-            this->button10->TabIndex = 29;
-            this->button10->Text = L"+ Add";
-            this->button10->UseVisualStyleBackColor = false;
+            this->btnAddSL->Location = System::Drawing::Point(268, 115);
+            this->btnAddSL->Name = L"btnAddSL";
+            this->btnAddSL->Size = System::Drawing::Size(68, 35);
+            this->btnAddSL->TabIndex = 29;
+            this->btnAddSL->Text = L"+ Add";
+            this->btnAddSL->UseVisualStyleBackColor = false;
             // 
             // label48
             // 
@@ -715,7 +729,7 @@ namespace PointofSaleSystem {
             // 
             this->groupBox16->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(231)), static_cast<System::Int32>(static_cast<System::Byte>(237)),
                 static_cast<System::Int32>(static_cast<System::Byte>(248)));
-            this->groupBox16->Controls->Add(this->button9);
+            this->groupBox16->Controls->Add(this->btnAddSB);
             this->groupBox16->Controls->Add(this->label47);
             this->groupBox16->Controls->Add(this->label36);
             this->groupBox16->Controls->Add(this->label37);
@@ -726,20 +740,20 @@ namespace PointofSaleSystem {
             this->groupBox16->TabIndex = 17;
             this->groupBox16->TabStop = false;
             // 
-            // button9
+            // btnAddSB
             // 
-            this->button9->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
+            this->btnAddSB->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
                 static_cast<System::Int32>(static_cast<System::Byte>(197)));
-            this->button9->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+            this->btnAddSB->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->button9->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
+            this->btnAddSB->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
                 static_cast<System::Int32>(static_cast<System::Byte>(253)));
-            this->button9->Location = System::Drawing::Point(286, 115);
-            this->button9->Name = L"button9";
-            this->button9->Size = System::Drawing::Size(68, 35);
-            this->button9->TabIndex = 29;
-            this->button9->Text = L"+ Add";
-            this->button9->UseVisualStyleBackColor = false;
+            this->btnAddSB->Location = System::Drawing::Point(286, 115);
+            this->btnAddSB->Name = L"btnAddSB";
+            this->btnAddSB->Size = System::Drawing::Size(68, 35);
+            this->btnAddSB->TabIndex = 29;
+            this->btnAddSB->Text = L"+ Add";
+            this->btnAddSB->UseVisualStyleBackColor = false;
             // 
             // label47
             // 
@@ -788,7 +802,7 @@ namespace PointofSaleSystem {
             // 
             this->groupBox15->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(231)), static_cast<System::Int32>(static_cast<System::Byte>(237)),
                 static_cast<System::Int32>(static_cast<System::Byte>(248)));
-            this->groupBox15->Controls->Add(this->button8);
+            this->groupBox15->Controls->Add(this->btnAddMIS);
             this->groupBox15->Controls->Add(this->label46);
             this->groupBox15->Controls->Add(this->label34);
             this->groupBox15->Controls->Add(this->label35);
@@ -799,20 +813,20 @@ namespace PointofSaleSystem {
             this->groupBox15->TabIndex = 16;
             this->groupBox15->TabStop = false;
             // 
-            // button8
+            // btnAddMIS
             // 
-            this->button8->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
+            this->btnAddMIS->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
                 static_cast<System::Int32>(static_cast<System::Byte>(197)));
-            this->button8->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+            this->btnAddMIS->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->button8->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
+            this->btnAddMIS->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
                 static_cast<System::Int32>(static_cast<System::Byte>(253)));
-            this->button8->Location = System::Drawing::Point(268, 115);
-            this->button8->Name = L"button8";
-            this->button8->Size = System::Drawing::Size(68, 35);
-            this->button8->TabIndex = 28;
-            this->button8->Text = L"+ Add";
-            this->button8->UseVisualStyleBackColor = false;
+            this->btnAddMIS->Location = System::Drawing::Point(268, 115);
+            this->btnAddMIS->Name = L"btnAddMIS";
+            this->btnAddMIS->Size = System::Drawing::Size(68, 35);
+            this->btnAddMIS->TabIndex = 28;
+            this->btnAddMIS->Text = L"+ Add";
+            this->btnAddMIS->UseVisualStyleBackColor = false;
             // 
             // label46
             // 
@@ -862,7 +876,7 @@ namespace PointofSaleSystem {
             // 
             this->groupBox14->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(231)), static_cast<System::Int32>(static_cast<System::Byte>(237)),
                 static_cast<System::Int32>(static_cast<System::Byte>(248)));
-            this->groupBox14->Controls->Add(this->button7);
+            this->groupBox14->Controls->Add(this->btnAddMH);
             this->groupBox14->Controls->Add(this->label45);
             this->groupBox14->Controls->Add(this->label32);
             this->groupBox14->Controls->Add(this->label33);
@@ -873,20 +887,20 @@ namespace PointofSaleSystem {
             this->groupBox14->TabIndex = 15;
             this->groupBox14->TabStop = false;
             // 
-            // button7
+            // btnAddMH
             // 
-            this->button7->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
+            this->btnAddMH->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
                 static_cast<System::Int32>(static_cast<System::Byte>(197)));
-            this->button7->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+            this->btnAddMH->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->button7->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
+            this->btnAddMH->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
                 static_cast<System::Int32>(static_cast<System::Byte>(253)));
-            this->button7->Location = System::Drawing::Point(286, 115);
-            this->button7->Name = L"button7";
-            this->button7->Size = System::Drawing::Size(68, 35);
-            this->button7->TabIndex = 27;
-            this->button7->Text = L"+ Add";
-            this->button7->UseVisualStyleBackColor = false;
+            this->btnAddMH->Location = System::Drawing::Point(286, 115);
+            this->btnAddMH->Name = L"btnAddMH";
+            this->btnAddMH->Size = System::Drawing::Size(68, 35);
+            this->btnAddMH->TabIndex = 27;
+            this->btnAddMH->Text = L"+ Add";
+            this->btnAddMH->UseVisualStyleBackColor = false;
             // 
             // label45
             // 
@@ -936,7 +950,7 @@ namespace PointofSaleSystem {
             // 
             this->groupBox13->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(231)), static_cast<System::Int32>(static_cast<System::Byte>(237)),
                 static_cast<System::Int32>(static_cast<System::Byte>(248)));
-            this->groupBox13->Controls->Add(this->button6);
+            this->groupBox13->Controls->Add(this->btnAddHN);
             this->groupBox13->Controls->Add(this->label44);
             this->groupBox13->Controls->Add(this->label30);
             this->groupBox13->Controls->Add(this->label31);
@@ -947,20 +961,20 @@ namespace PointofSaleSystem {
             this->groupBox13->TabIndex = 14;
             this->groupBox13->TabStop = false;
             // 
-            // button6
+            // btnAddHN
             // 
-            this->button6->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
+            this->btnAddHN->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
                 static_cast<System::Int32>(static_cast<System::Byte>(197)));
-            this->button6->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+            this->btnAddHN->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->button6->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
+            this->btnAddHN->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
                 static_cast<System::Int32>(static_cast<System::Byte>(253)));
-            this->button6->Location = System::Drawing::Point(268, 115);
-            this->button6->Name = L"button6";
-            this->button6->Size = System::Drawing::Size(68, 35);
-            this->button6->TabIndex = 27;
-            this->button6->Text = L"+ Add";
-            this->button6->UseVisualStyleBackColor = false;
+            this->btnAddHN->Location = System::Drawing::Point(268, 115);
+            this->btnAddHN->Name = L"btnAddHN";
+            this->btnAddHN->Size = System::Drawing::Size(68, 35);
+            this->btnAddHN->TabIndex = 27;
+            this->btnAddHN->Text = L"+ Add";
+            this->btnAddHN->UseVisualStyleBackColor = false;
             // 
             // label44
             // 
@@ -1009,7 +1023,7 @@ namespace PointofSaleSystem {
             // 
             this->groupBox12->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(231)), static_cast<System::Int32>(static_cast<System::Byte>(237)),
                 static_cast<System::Int32>(static_cast<System::Byte>(248)));
-            this->groupBox12->Controls->Add(this->button5);
+            this->groupBox12->Controls->Add(this->btnAddPM);
             this->groupBox12->Controls->Add(this->label43);
             this->groupBox12->Controls->Add(this->label28);
             this->groupBox12->Controls->Add(this->label29);
@@ -1020,20 +1034,20 @@ namespace PointofSaleSystem {
             this->groupBox12->TabIndex = 14;
             this->groupBox12->TabStop = false;
             // 
-            // button5
+            // btnAddPM
             // 
-            this->button5->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
+            this->btnAddPM->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
                 static_cast<System::Int32>(static_cast<System::Byte>(197)));
-            this->button5->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+            this->btnAddPM->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->button5->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
+            this->btnAddPM->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
                 static_cast<System::Int32>(static_cast<System::Byte>(253)));
-            this->button5->Location = System::Drawing::Point(286, 115);
-            this->button5->Name = L"button5";
-            this->button5->Size = System::Drawing::Size(68, 35);
-            this->button5->TabIndex = 27;
-            this->button5->Text = L"+ Add";
-            this->button5->UseVisualStyleBackColor = false;
+            this->btnAddPM->Location = System::Drawing::Point(286, 115);
+            this->btnAddPM->Name = L"btnAddPM";
+            this->btnAddPM->Size = System::Drawing::Size(68, 35);
+            this->btnAddPM->TabIndex = 27;
+            this->btnAddPM->Text = L"+ Add";
+            this->btnAddPM->UseVisualStyleBackColor = false;
             // 
             // label43
             // 
@@ -1083,7 +1097,7 @@ namespace PointofSaleSystem {
             this->groupBox11->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(231)), static_cast<System::Int32>(static_cast<System::Byte>(237)),
                 static_cast<System::Int32>(static_cast<System::Byte>(248)));
             this->groupBox11->Controls->Add(this->label42);
-            this->groupBox11->Controls->Add(this->button4);
+            this->groupBox11->Controls->Add(this->btnAddAH);
             this->groupBox11->Controls->Add(this->label27);
             this->groupBox11->Controls->Add(this->label26);
             this->groupBox11->Controls->Add(this->pictureBox1);
@@ -1105,20 +1119,20 @@ namespace PointofSaleSystem {
             this->label42->Text = L"Atomic Habits by James clear\r\nis a comprehensive, practical\r\nguide on how to...\r\n"
                 L"";
             // 
-            // button4
+            // btnAddAH
             // 
-            this->button4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
+            this->btnAddAH->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
                 static_cast<System::Int32>(static_cast<System::Byte>(197)));
-            this->button4->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+            this->btnAddAH->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->button4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
+            this->btnAddAH->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
                 static_cast<System::Int32>(static_cast<System::Byte>(253)));
-            this->button4->Location = System::Drawing::Point(268, 115);
-            this->button4->Name = L"button4";
-            this->button4->Size = System::Drawing::Size(68, 35);
-            this->button4->TabIndex = 21;
-            this->button4->Text = L"+ Add";
-            this->button4->UseVisualStyleBackColor = false;
+            this->btnAddAH->Location = System::Drawing::Point(268, 115);
+            this->btnAddAH->Name = L"btnAddAH";
+            this->btnAddAH->Size = System::Drawing::Size(68, 35);
+            this->btnAddAH->TabIndex = 21;
+            this->btnAddAH->Text = L"+ Add";
+            this->btnAddAH->UseVisualStyleBackColor = false;
             // 
             // label27
             // 
