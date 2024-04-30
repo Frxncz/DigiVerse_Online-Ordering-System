@@ -141,15 +141,21 @@ private: System::Windows::Forms::Label^ label43;
 private: System::Windows::Forms::Label^ label47;
 private: System::Windows::Forms::Label^ label49;
 private: System::Windows::Forms::Label^ label48;
-private: System::Windows::Forms::Button^ button12;
+private: System::Windows::Forms::Button^ btnAllGenre;
+
+private: System::Windows::Forms::Button^ btnNonFiction;
 
 
-private: System::Windows::Forms::Button^ button13;
-private: System::Windows::Forms::Button^ button14;
-private: System::Windows::Forms::Button^ button15;
+
+private: System::Windows::Forms::Button^ btnFiction;
+private: System::Windows::Forms::Button^ btnNovel;
+
+
+
 private: System::Windows::Forms::TextBox^ textBox2;
 private: System::Windows::Forms::PictureBox^ pictureBox9;
-private: System::Windows::Forms::Button^ button16;
+private: System::Windows::Forms::Button^ btnFantasy;
+
 private: System::Windows::Forms::GroupBox^ groupBox2;
 private: System::Windows::Forms::Button^ button11;
 private: System::Windows::Forms::Button^ button10;
@@ -263,13 +269,13 @@ private: System::Windows::Forms::GroupBox^ groupBox3;
             this->flowLayoutPanel1 = (gcnew System::Windows::Forms::FlowLayoutPanel());
             this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
             this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
-            this->button12 = (gcnew System::Windows::Forms::Button());
-            this->button13 = (gcnew System::Windows::Forms::Button());
-            this->button14 = (gcnew System::Windows::Forms::Button());
-            this->button15 = (gcnew System::Windows::Forms::Button());
+            this->btnAllGenre = (gcnew System::Windows::Forms::Button());
+            this->btnNonFiction = (gcnew System::Windows::Forms::Button());
+            this->btnFiction = (gcnew System::Windows::Forms::Button());
+            this->btnNovel = (gcnew System::Windows::Forms::Button());
             this->textBox2 = (gcnew System::Windows::Forms::TextBox());
             this->pictureBox9 = (gcnew System::Windows::Forms::PictureBox());
-            this->button16 = (gcnew System::Windows::Forms::Button());
+            this->btnFantasy = (gcnew System::Windows::Forms::Button());
             this->groupBox8->SuspendLayout();
             this->groupBox9->SuspendLayout();
             this->panel2->SuspendLayout();
@@ -521,7 +527,7 @@ private: System::Windows::Forms::GroupBox^ groupBox3;
             this->textBox1->Location = System::Drawing::Point(999, 720);
             this->textBox1->Multiline = true;
             this->textBox1->Name = L"textBox1";
-            this->textBox1->Size = System::Drawing::Size(377, 30);
+            this->textBox1->Size = System::Drawing::Size(361, 30);
             this->textBox1->TabIndex = 12;
             this->textBox1->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
             // 
@@ -546,7 +552,7 @@ private: System::Windows::Forms::GroupBox^ groupBox3;
             // 
             this->groupBox3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
                 static_cast<System::Int32>(static_cast<System::Byte>(253)));
-            this->groupBox3->Location = System::Drawing::Point(12, 796);
+            this->groupBox3->Location = System::Drawing::Point(12, 784);
             this->groupBox3->Name = L"groupBox3";
             this->groupBox3->Size = System::Drawing::Size(781, 44);
             this->groupBox3->TabIndex = 26;
@@ -598,7 +604,7 @@ private: System::Windows::Forms::GroupBox^ groupBox3;
             this->label40->AutoSize = true;
             this->label40->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->label40->Location = System::Drawing::Point(21, 103);
+            this->label40->Location = System::Drawing::Point(21, 131);
             this->label40->Name = L"label40";
             this->label40->Size = System::Drawing::Size(45, 16);
             this->label40->TabIndex = 25;
@@ -672,7 +678,7 @@ private: System::Windows::Forms::GroupBox^ groupBox3;
             this->label38->AutoSize = true;
             this->label38->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->label38->Location = System::Drawing::Point(23, 102);
+            this->label38->Location = System::Drawing::Point(20, 131);
             this->label38->Name = L"label38";
             this->label38->Size = System::Drawing::Size(45, 16);
             this->label38->TabIndex = 25;
@@ -745,7 +751,7 @@ private: System::Windows::Forms::GroupBox^ groupBox3;
             this->label36->AutoSize = true;
             this->label36->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->label36->Location = System::Drawing::Point(21, 114);
+            this->label36->Location = System::Drawing::Point(21, 131);
             this->label36->Name = L"label36";
             this->label36->Size = System::Drawing::Size(45, 16);
             this->label36->TabIndex = 25;
@@ -819,7 +825,7 @@ private: System::Windows::Forms::GroupBox^ groupBox3;
             this->label34->AutoSize = true;
             this->label34->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->label34->Location = System::Drawing::Point(19, 114);
+            this->label34->Location = System::Drawing::Point(20, 131);
             this->label34->Name = L"label34";
             this->label34->Size = System::Drawing::Size(45, 16);
             this->label34->TabIndex = 25;
@@ -893,7 +899,7 @@ private: System::Windows::Forms::GroupBox^ groupBox3;
             this->label32->AutoSize = true;
             this->label32->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->label32->Location = System::Drawing::Point(21, 121);
+            this->label32->Location = System::Drawing::Point(21, 131);
             this->label32->Name = L"label32";
             this->label32->Size = System::Drawing::Size(45, 16);
             this->label32->TabIndex = 25;
@@ -966,7 +972,7 @@ private: System::Windows::Forms::GroupBox^ groupBox3;
             this->label30->AutoSize = true;
             this->label30->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->label30->Location = System::Drawing::Point(19, 118);
+            this->label30->Location = System::Drawing::Point(20, 131);
             this->label30->Name = L"label30";
             this->label30->Size = System::Drawing::Size(45, 16);
             this->label30->TabIndex = 25;
@@ -1039,7 +1045,7 @@ private: System::Windows::Forms::GroupBox^ groupBox3;
             this->label28->AutoSize = true;
             this->label28->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->label28->Location = System::Drawing::Point(21, 116);
+            this->label28->Location = System::Drawing::Point(21, 131);
             this->label28->Name = L"label28";
             this->label28->Size = System::Drawing::Size(45, 16);
             this->label28->TabIndex = 25;
@@ -1113,7 +1119,7 @@ private: System::Windows::Forms::GroupBox^ groupBox3;
             this->label27->AutoSize = true;
             this->label27->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->label27->Location = System::Drawing::Point(19, 119);
+            this->label27->Location = System::Drawing::Point(20, 131);
             this->label27->Name = L"label27";
             this->label27->Size = System::Drawing::Size(45, 16);
             this->label27->TabIndex = 21;
@@ -1281,62 +1287,66 @@ private: System::Windows::Forms::GroupBox^ groupBox3;
             this->groupBox2->TabIndex = 26;
             this->groupBox2->TabStop = false;
             // 
-            // button12
+            // btnAllGenre
             // 
-            this->button12->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
+            this->btnAllGenre->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
                 static_cast<System::Int32>(static_cast<System::Byte>(197)));
-            this->button12->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+            this->btnAllGenre->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->button12->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(239)), static_cast<System::Int32>(static_cast<System::Byte>(233)),
-                static_cast<System::Int32>(static_cast<System::Byte>(221)));
-            this->button12->Location = System::Drawing::Point(52, 190);
-            this->button12->Name = L"button12";
-            this->button12->Size = System::Drawing::Size(111, 38);
-            this->button12->TabIndex = 19;
-            this->button12->Text = L"All Genre";
-            this->button12->UseVisualStyleBackColor = false;
+            this->btnAllGenre->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
+                static_cast<System::Int32>(static_cast<System::Byte>(253)));
+            this->btnAllGenre->Location = System::Drawing::Point(52, 190);
+            this->btnAllGenre->Name = L"btnAllGenre";
+            this->btnAllGenre->Size = System::Drawing::Size(111, 38);
+            this->btnAllGenre->TabIndex = 19;
+            this->btnAllGenre->Text = L"All Genre";
+            this->btnAllGenre->UseVisualStyleBackColor = false;
+            this->btnAllGenre->Click += gcnew System::EventHandler(this, &Home::btnAllGenre_Click);
             // 
-            // button13
+            // btnNonFiction
             // 
-            this->button13->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
+            this->btnNonFiction->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
                 static_cast<System::Int32>(static_cast<System::Byte>(242)));
-            this->button13->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            this->btnNonFiction->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->button13->ForeColor = System::Drawing::Color::Black;
-            this->button13->Location = System::Drawing::Point(200, 190);
-            this->button13->Name = L"button13";
-            this->button13->Size = System::Drawing::Size(111, 38);
-            this->button13->TabIndex = 20;
-            this->button13->Text = L"Non Fiction";
-            this->button13->UseVisualStyleBackColor = false;
+            this->btnNonFiction->ForeColor = System::Drawing::Color::Black;
+            this->btnNonFiction->Location = System::Drawing::Point(200, 190);
+            this->btnNonFiction->Name = L"btnNonFiction";
+            this->btnNonFiction->Size = System::Drawing::Size(111, 38);
+            this->btnNonFiction->TabIndex = 20;
+            this->btnNonFiction->Text = L"Non Fiction";
+            this->btnNonFiction->UseVisualStyleBackColor = false;
+            this->btnNonFiction->Click += gcnew System::EventHandler(this, &Home::btnNonFiction_Click);
             // 
-            // button14
+            // btnFiction
             // 
-            this->button14->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
+            this->btnFiction->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
                 static_cast<System::Int32>(static_cast<System::Byte>(242)));
-            this->button14->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            this->btnFiction->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->button14->ForeColor = System::Drawing::Color::Black;
-            this->button14->Location = System::Drawing::Point(349, 190);
-            this->button14->Name = L"button14";
-            this->button14->Size = System::Drawing::Size(111, 38);
-            this->button14->TabIndex = 21;
-            this->button14->Text = L"Fiction";
-            this->button14->UseVisualStyleBackColor = false;
+            this->btnFiction->ForeColor = System::Drawing::Color::Black;
+            this->btnFiction->Location = System::Drawing::Point(349, 190);
+            this->btnFiction->Name = L"btnFiction";
+            this->btnFiction->Size = System::Drawing::Size(111, 38);
+            this->btnFiction->TabIndex = 21;
+            this->btnFiction->Text = L"Fiction";
+            this->btnFiction->UseVisualStyleBackColor = false;
+            this->btnFiction->Click += gcnew System::EventHandler(this, &Home::btnFiction_Click);
             // 
-            // button15
+            // btnNovel
             // 
-            this->button15->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
+            this->btnNovel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
                 static_cast<System::Int32>(static_cast<System::Byte>(242)));
-            this->button15->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            this->btnNovel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->button15->ForeColor = System::Drawing::Color::Black;
-            this->button15->Location = System::Drawing::Point(492, 190);
-            this->button15->Name = L"button15";
-            this->button15->Size = System::Drawing::Size(111, 38);
-            this->button15->TabIndex = 22;
-            this->button15->Text = L"Novel";
-            this->button15->UseVisualStyleBackColor = false;
+            this->btnNovel->ForeColor = System::Drawing::Color::Black;
+            this->btnNovel->Location = System::Drawing::Point(492, 190);
+            this->btnNovel->Name = L"btnNovel";
+            this->btnNovel->Size = System::Drawing::Size(111, 38);
+            this->btnNovel->TabIndex = 22;
+            this->btnNovel->Text = L"Novel";
+            this->btnNovel->UseVisualStyleBackColor = false;
+            this->btnNovel->Click += gcnew System::EventHandler(this, &Home::btnNovel_Click);
             // 
             // textBox2
             // 
@@ -1359,19 +1369,20 @@ private: System::Windows::Forms::GroupBox^ groupBox3;
             this->pictureBox9->TabIndex = 24;
             this->pictureBox9->TabStop = false;
             // 
-            // button16
+            // btnFantasy
             // 
-            this->button16->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
+            this->btnFantasy->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
                 static_cast<System::Int32>(static_cast<System::Byte>(242)));
-            this->button16->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            this->btnFantasy->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->button16->ForeColor = System::Drawing::Color::Black;
-            this->button16->Location = System::Drawing::Point(636, 190);
-            this->button16->Name = L"button16";
-            this->button16->Size = System::Drawing::Size(111, 38);
-            this->button16->TabIndex = 25;
-            this->button16->Text = L"Horror";
-            this->button16->UseVisualStyleBackColor = false;
+            this->btnFantasy->ForeColor = System::Drawing::Color::Black;
+            this->btnFantasy->Location = System::Drawing::Point(636, 190);
+            this->btnFantasy->Name = L"btnFantasy";
+            this->btnFantasy->Size = System::Drawing::Size(111, 38);
+            this->btnFantasy->TabIndex = 25;
+            this->btnFantasy->Text = L"Fantsy";
+            this->btnFantasy->UseVisualStyleBackColor = false;
+            this->btnFantasy->Click += gcnew System::EventHandler(this, &Home::btnFantasy_Click);
             // 
             // Home
             // 
@@ -1381,13 +1392,13 @@ private: System::Windows::Forms::GroupBox^ groupBox3;
             this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
                 static_cast<System::Int32>(static_cast<System::Byte>(253)));
             this->ClientSize = System::Drawing::Size(1572, 846);
-            this->Controls->Add(this->button16);
+            this->Controls->Add(this->btnFantasy);
             this->Controls->Add(this->pictureBox9);
             this->Controls->Add(this->textBox2);
-            this->Controls->Add(this->button15);
-            this->Controls->Add(this->button14);
-            this->Controls->Add(this->button13);
-            this->Controls->Add(this->button12);
+            this->Controls->Add(this->btnNovel);
+            this->Controls->Add(this->btnFiction);
+            this->Controls->Add(this->btnNonFiction);
+            this->Controls->Add(this->btnAllGenre);
             this->Controls->Add(this->panel2);
             this->Controls->Add(this->textBox1);
             this->Controls->Add(this->button2);
@@ -1438,5 +1449,260 @@ private: System::Windows::Forms::GroupBox^ groupBox3;
 #pragma endregion
 
 
+    // When clicking on each button changes its color, but the other buttons should remain unchanged
+        //btnAllGenre
+    private: System::Void btnAllGenre_Click(System::Object^ sender, System::EventArgs^ e) 
+    {
+        ////////// Change color of btnAllGenre
+        btnAllGenre->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
+            static_cast<System::Int32>(static_cast<System::Byte>(197)));
+
+        btnAllGenre->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
+            static_cast<System::Int32>(static_cast<System::Byte>(253)));
+
+        btnAllGenre->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+            static_cast<System::Byte>(0)));
+
+        // Reset color of btnNonFiction
+        btnNonFiction->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
+            static_cast<System::Int32>(static_cast<System::Byte>(242)));
+
+        btnNonFiction->ForeColor = System::Drawing::Color::Black;
+
+        btnNonFiction->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            static_cast<System::Byte>(0)));
+
+
+        // Reset color of btnFiction
+        btnFiction->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
+            static_cast<System::Int32>(static_cast<System::Byte>(242)));
+
+        btnFiction->ForeColor = System::Drawing::Color::Black;
+
+        btnFiction->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            static_cast<System::Byte>(0)));
+
+        // Reset color of btnNovel
+        btnNovel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
+            static_cast<System::Int32>(static_cast<System::Byte>(242)));
+
+        btnNovel->ForeColor = System::Drawing::Color::Black;
+
+        btnNovel ->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            static_cast<System::Byte>(0)));
+
+        // Reset color of btnFantasy
+
+        btnFantasy->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
+            static_cast<System::Int32>(static_cast<System::Byte>(242)));
+
+        btnFantasy->ForeColor = System::Drawing::Color::Black;
+
+        btnFantasy->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            static_cast<System::Byte>(0)));
+
+    }
+           //btnNonFiction
+    private: System::Void btnNonFiction_Click(System::Object^ sender, System::EventArgs^ e) 
+    {
+        // Reset color of btnAllGenre
+        btnAllGenre->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
+            static_cast<System::Int32>(static_cast<System::Byte>(242)));
+
+        btnAllGenre->ForeColor = System::Drawing::Color::Black;
+
+        btnAllGenre->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            static_cast<System::Byte>(0)));
+
+        ////////// Change color of btnNonFiction
+        btnNonFiction->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
+            static_cast<System::Int32>(static_cast<System::Byte>(197)));
+
+        btnNonFiction->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
+            static_cast<System::Int32>(static_cast<System::Byte>(253)));
+
+        btnNonFiction->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+            static_cast<System::Byte>(0)));
+
+
+        // Reset color of btnFiction
+        btnFiction->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
+            static_cast<System::Int32>(static_cast<System::Byte>(242)));
+
+        btnFiction->ForeColor = System::Drawing::Color::Black;
+
+        btnFiction->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            static_cast<System::Byte>(0)));
+
+        // Reset color of btnNovel
+        btnNovel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
+            static_cast<System::Int32>(static_cast<System::Byte>(242)));
+
+        btnNovel->ForeColor = System::Drawing::Color::Black;
+
+        btnNovel->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            static_cast<System::Byte>(0)));
+
+        // Reset color of btnFantasy
+
+        btnFantasy->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
+            static_cast<System::Int32>(static_cast<System::Byte>(242)));
+
+        btnFantasy->ForeColor = System::Drawing::Color::Black;
+
+        btnFantasy->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            static_cast<System::Byte>(0)));
+    }
+           //btnFiction
+    private: System::Void btnFiction_Click(System::Object^ sender, System::EventArgs^ e) 
+    {
+        // Reset color of btnAllGenre
+        btnAllGenre->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
+            static_cast<System::Int32>(static_cast<System::Byte>(242)));
+
+        btnAllGenre->ForeColor = System::Drawing::Color::Black;
+
+        btnAllGenre->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            static_cast<System::Byte>(0)));
+
+        // Reset color of btnNonFiction
+        btnNonFiction->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
+            static_cast<System::Int32>(static_cast<System::Byte>(242)));
+
+        btnNonFiction->ForeColor = System::Drawing::Color::Black;
+
+        btnNonFiction->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            static_cast<System::Byte>(0)));
+
+
+        ////////// Change color of btnFiction
+        btnFiction->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
+            static_cast<System::Int32>(static_cast<System::Byte>(197)));
+
+        btnFiction->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
+            static_cast<System::Int32>(static_cast<System::Byte>(253)));
+
+        btnFiction->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+            static_cast<System::Byte>(0)));
+
+        // Reset color of btnNovel
+        btnNovel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
+            static_cast<System::Int32>(static_cast<System::Byte>(242)));
+
+        btnNovel->ForeColor = System::Drawing::Color::Black;
+
+        btnNovel->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            static_cast<System::Byte>(0)));
+
+        // Reset color of btnFantasy
+
+        this->btnFantasy->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
+            static_cast<System::Int32>(static_cast<System::Byte>(242)));
+
+        btnFantasy->ForeColor = System::Drawing::Color::Black;
+
+        btnFantasy->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            static_cast<System::Byte>(0)));
+    }
+           //btnNovel
+    private: System::Void btnNovel_Click(System::Object^ sender, System::EventArgs^ e) 
+    {
+        // Reset color of AllGenre
+        btnAllGenre->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
+            static_cast<System::Int32>(static_cast<System::Byte>(242)));
+
+        btnAllGenre->ForeColor = System::Drawing::Color::Black;
+
+        btnAllGenre->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            static_cast<System::Byte>(0)));
+
+        // Reset color of btnNonFiction
+        btnNonFiction->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
+            static_cast<System::Int32>(static_cast<System::Byte>(242)));
+
+        btnNonFiction->ForeColor = System::Drawing::Color::Black;
+
+        btnNonFiction->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            static_cast<System::Byte>(0)));
+
+
+        // Reset color of btnFiction
+        btnFiction->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
+            static_cast<System::Int32>(static_cast<System::Byte>(242)));
+
+        btnFiction->ForeColor = System::Drawing::Color::Black;
+
+        btnFiction->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            static_cast<System::Byte>(0)));
+
+        ////////// Change color of btnNovel
+        btnNovel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
+            static_cast<System::Int32>(static_cast<System::Byte>(197)));
+
+        btnNovel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
+            static_cast<System::Int32>(static_cast<System::Byte>(253)));
+
+        btnNovel->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+            static_cast<System::Byte>(0)));
+
+        // Reset color of btnFantasy
+        btnFantasy->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
+            static_cast<System::Int32>(static_cast<System::Byte>(242)));
+
+        btnFantasy->ForeColor = System::Drawing::Color::Black;
+
+        btnFantasy->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            static_cast<System::Byte>(0)));
+    }
+           //btnFantsy
+    private: System::Void btnFantasy_Click(System::Object^ sender, System::EventArgs^ e) 
+    {
+        // Reset color of btnAllGenre
+        btnAllGenre->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
+            static_cast<System::Int32>(static_cast<System::Byte>(242)));
+
+        btnAllGenre->ForeColor = System::Drawing::Color::Black;
+
+        btnAllGenre->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            static_cast<System::Byte>(0)));
+
+        // Reset color of btnNonFiction
+        btnNonFiction->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
+            static_cast<System::Int32>(static_cast<System::Byte>(242)));
+
+        btnNonFiction->ForeColor = System::Drawing::Color::Black;
+
+        btnNonFiction->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            static_cast<System::Byte>(0)));
+
+
+        // Reset color of btnFiction
+        btnFiction->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
+            static_cast<System::Int32>(static_cast<System::Byte>(242)));
+
+        btnFiction->ForeColor = System::Drawing::Color::Black;
+
+        btnFiction->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            static_cast<System::Byte>(0)));
+
+        // Reset color of btnNovel
+        btnNovel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
+            static_cast<System::Int32>(static_cast<System::Byte>(242)));
+
+        btnNovel->ForeColor = System::Drawing::Color::Black;
+
+        btnNovel->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            static_cast<System::Byte>(0)));
+
+        ////////// Change color of btnFantasy
+        btnFantasy->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
+            static_cast<System::Int32>(static_cast<System::Byte>(197)));
+
+        btnFantasy->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
+            static_cast<System::Int32>(static_cast<System::Byte>(253)));
+
+        btnFantasy->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+            static_cast<System::Byte>(0)));
+    }
 };
 }
