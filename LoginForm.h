@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Home.h"
+#include "SignupForm.h"
 
 namespace PointofSaleSystem {
 
@@ -40,10 +41,11 @@ namespace PointofSaleSystem {
 	protected:
 
 	private: System::Windows::Forms::TextBox^ txtEmail;
+	private: System::Windows::Forms::Label^ btnSignUp;
 	protected:
 
 
-	private: System::Windows::Forms::Label^ label7;
+
 	private: System::Windows::Forms::Label^ label6;
 	private: System::Windows::Forms::Label^ label5;
 	private: System::Windows::Forms::Label^ label4;
@@ -71,7 +73,7 @@ namespace PointofSaleSystem {
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(LoginForm::typeid));
 			this->txtPassword = (gcnew System::Windows::Forms::TextBox());
 			this->txtEmail = (gcnew System::Windows::Forms::TextBox());
-			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->btnSignUp = (gcnew System::Windows::Forms::Label());
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
@@ -87,7 +89,7 @@ namespace PointofSaleSystem {
 			// 
 			this->txtPassword->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(203)), static_cast<System::Int32>(static_cast<System::Byte>(216)),
 				static_cast<System::Int32>(static_cast<System::Byte>(241)));
-			this->txtPassword->Location = System::Drawing::Point(151, 369);
+			this->txtPassword->Location = System::Drawing::Point(149, 367);
 			this->txtPassword->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->txtPassword->Multiline = true;
 			this->txtPassword->Name = L"txtPassword";
@@ -98,30 +100,31 @@ namespace PointofSaleSystem {
 			// 
 			this->txtEmail->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(203)), static_cast<System::Int32>(static_cast<System::Byte>(216)),
 				static_cast<System::Int32>(static_cast<System::Byte>(241)));
-			this->txtEmail->Location = System::Drawing::Point(151, 285);
+			this->txtEmail->Location = System::Drawing::Point(149, 283);
 			this->txtEmail->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->txtEmail->Multiline = true;
 			this->txtEmail->Name = L"txtEmail";
 			this->txtEmail->Size = System::Drawing::Size(449, 35);
 			this->txtEmail->TabIndex = 24;
 			// 
-			// label7
+			// btnSignUp
 			// 
-			this->label7->AutoSize = true;
-			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->btnSignUp->AutoSize = true;
+			this->btnSignUp->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label7->Location = System::Drawing::Point(406, 556);
-			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(67, 18);
-			this->label7->TabIndex = 22;
-			this->label7->Text = L"Sign Up";
+			this->btnSignUp->Location = System::Drawing::Point(416, 554);
+			this->btnSignUp->Name = L"btnSignUp";
+			this->btnSignUp->Size = System::Drawing::Size(67, 18);
+			this->btnSignUp->TabIndex = 22;
+			this->btnSignUp->Text = L"Sign Up";
+			this->btnSignUp->Click += gcnew System::EventHandler(this, &LoginForm::btnSignUp_Click);
 			// 
 			// label6
 			// 
 			this->label6->AutoSize = true;
 			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label6->Location = System::Drawing::Point(246, 556);
+			this->label6->Location = System::Drawing::Point(240, 554);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(163, 18);
 			this->label6->TabIndex = 21;
@@ -134,7 +137,7 @@ namespace PointofSaleSystem {
 				static_cast<System::Byte>(0)));
 			this->label5->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(110)), static_cast<System::Int32>(static_cast<System::Byte>(108)),
 				static_cast<System::Int32>(static_cast<System::Byte>(104)));
-			this->label5->Location = System::Drawing::Point(484, 419);
+			this->label5->Location = System::Drawing::Point(482, 417);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(116, 16);
 			this->label5->TabIndex = 20;
@@ -147,7 +150,7 @@ namespace PointofSaleSystem {
 				static_cast<System::Byte>(0)));
 			this->label4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(110)), static_cast<System::Int32>(static_cast<System::Byte>(108)),
 				static_cast<System::Int32>(static_cast<System::Byte>(104)));
-			this->label4->Location = System::Drawing::Point(236, 202);
+			this->label4->Location = System::Drawing::Point(234, 200);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(279, 17);
 			this->label4->TabIndex = 19;
@@ -156,7 +159,7 @@ namespace PointofSaleSystem {
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(152, 350);
+			this->label3->Location = System::Drawing::Point(150, 348);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(67, 16);
 			this->label3->TabIndex = 18;
@@ -165,7 +168,7 @@ namespace PointofSaleSystem {
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(152, 266);
+			this->label2->Location = System::Drawing::Point(150, 264);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(41, 16);
 			this->label2->TabIndex = 17;
@@ -179,7 +182,7 @@ namespace PointofSaleSystem {
 				static_cast<System::Byte>(0)));
 			this->btnLogin->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(245)),
 				static_cast<System::Int32>(static_cast<System::Byte>(236)));
-			this->btnLogin->Location = System::Drawing::Point(151, 473);
+			this->btnLogin->Location = System::Drawing::Point(149, 471);
 			this->btnLogin->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btnLogin->Name = L"btnLogin";
 			this->btnLogin->Size = System::Drawing::Size(449, 55);
@@ -193,7 +196,7 @@ namespace PointofSaleSystem {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Arial Narrow", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(288, 162);
+			this->label1->Location = System::Drawing::Point(286, 160);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(186, 33);
 			this->label1->TabIndex = 15;
@@ -202,7 +205,7 @@ namespace PointofSaleSystem {
 			// pictureBox1
 			// 
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(722, 17);
+			this->pictureBox1->Location = System::Drawing::Point(715, 17);
 			this->pictureBox1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(503, 638);
@@ -219,7 +222,7 @@ namespace PointofSaleSystem {
 			this->ClientSize = System::Drawing::Size(1251, 676);
 			this->Controls->Add(this->txtPassword);
 			this->Controls->Add(this->txtEmail);
-			this->Controls->Add(this->label7);
+			this->Controls->Add(this->btnSignUp);
 			this->Controls->Add(this->label6);
 			this->Controls->Add(this->label5);
 			this->Controls->Add(this->label4);
@@ -242,8 +245,18 @@ namespace PointofSaleSystem {
 	private: System::Void btnLogin_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
 		this->Hide();
-		Home^ homeInterface = gcnew Home();
-		homeInterface->ShowDialog();
+		Home^ homeFormUI = gcnew Home();
+		homeFormUI->ShowDialog();
+		this->Show();
+
+	}
+
+	// When click it will go to the sign up form
+	private: System::Void btnSignUp_Click(System::Object^ sender, System::EventArgs^ e) 
+	{
+		this->Hide();
+		SignupForm^ SignupFormUI = gcnew SignupForm();
+		SignupFormUI->ShowDialog();
 		this->Show();
 	}
 };

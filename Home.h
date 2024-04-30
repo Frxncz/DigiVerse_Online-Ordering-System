@@ -133,38 +133,38 @@ namespace PointofSaleSystem {
 	private: System::Windows::Forms::Label^ label28;
 	private: System::Windows::Forms::Label^ label29;
 	private: System::Windows::Forms::PictureBox^ pictureBox2;
-private: System::Windows::Forms::Label^ label42;
-private: System::Windows::Forms::Label^ label46;
-private: System::Windows::Forms::Label^ label45;
-private: System::Windows::Forms::Label^ label44;
-private: System::Windows::Forms::Label^ label43;
-private: System::Windows::Forms::Label^ label47;
-private: System::Windows::Forms::Label^ label49;
-private: System::Windows::Forms::Label^ label48;
-private: System::Windows::Forms::Button^ btnAllGenre;
+    private: System::Windows::Forms::Label^ label42;
+    private: System::Windows::Forms::Label^ label46;
+    private: System::Windows::Forms::Label^ label45;
+    private: System::Windows::Forms::Label^ label44;
+    private: System::Windows::Forms::Label^ label43;
+    private: System::Windows::Forms::Label^ label47;
+    private: System::Windows::Forms::Label^ label49;
+    private: System::Windows::Forms::Label^ label48;
+    private: System::Windows::Forms::Button^ btnAllGenre;
 
-private: System::Windows::Forms::Button^ btnNonFiction;
-
-
-
-private: System::Windows::Forms::Button^ btnFiction;
-private: System::Windows::Forms::Button^ btnNovel;
+    private: System::Windows::Forms::Button^ btnNonFiction;
 
 
 
-private: System::Windows::Forms::TextBox^ textBox2;
-private: System::Windows::Forms::PictureBox^ pictureBox9;
-private: System::Windows::Forms::Button^ btnFantasy;
+    private: System::Windows::Forms::Button^ btnFiction;
+    private: System::Windows::Forms::Button^ btnNovel;
 
-private: System::Windows::Forms::GroupBox^ groupBox2;
-private: System::Windows::Forms::Button^ button11;
-private: System::Windows::Forms::Button^ button10;
-private: System::Windows::Forms::Button^ button9;
-private: System::Windows::Forms::Button^ button8;
-private: System::Windows::Forms::Button^ button7;
-private: System::Windows::Forms::Button^ button6;
-private: System::Windows::Forms::Button^ button5;
-private: System::Windows::Forms::GroupBox^ groupBox3;
+
+
+    private: System::Windows::Forms::TextBox^ textBox2;
+    private: System::Windows::Forms::PictureBox^ pictureBox9;
+    private: System::Windows::Forms::Button^ btnFantasy;
+
+    private: System::Windows::Forms::GroupBox^ groupBox2;
+    private: System::Windows::Forms::Button^ button11;
+    private: System::Windows::Forms::Button^ button10;
+    private: System::Windows::Forms::Button^ button9;
+    private: System::Windows::Forms::Button^ button8;
+    private: System::Windows::Forms::Button^ button7;
+    private: System::Windows::Forms::Button^ button6;
+    private: System::Windows::Forms::Button^ button5;
+    private: System::Windows::Forms::GroupBox^ groupBox3;
 
 
 
@@ -1408,7 +1408,7 @@ private: System::Windows::Forms::GroupBox^ groupBox3;
             this->Controls->Add(this->groupBox7);
             this->Controls->Add(this->label1);
             this->Name = L"Home";
-            this->Text = L"Home";
+            this->Text = L"HomeForm";
             this->groupBox8->ResumeLayout(false);
             this->groupBox8->PerformLayout();
             this->groupBox9->ResumeLayout(false);
@@ -1449,11 +1449,14 @@ private: System::Windows::Forms::GroupBox^ groupBox3;
 #pragma endregion
 
 
-    // When clicking on each button changes its color, but the other buttons should remain unchanged
+    //----- When clicking on each button changes its color, but the other buttons should remain unchanged -----//
+  
         //btnAllGenre
     private: System::Void btnAllGenre_Click(System::Object^ sender, System::EventArgs^ e) 
     {
-        ////////// Change color of btnAllGenre
+        //
+        // Change color of btnAllGenre
+        //
         btnAllGenre->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
             static_cast<System::Int32>(static_cast<System::Byte>(197)));
 
@@ -1513,8 +1516,9 @@ private: System::Windows::Forms::GroupBox^ groupBox3;
 
         btnAllGenre->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
-
-        ////////// Change color of btnNonFiction
+        //
+        // Change color of btnNonFiction
+        //
         btnNonFiction->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
             static_cast<System::Int32>(static_cast<System::Byte>(197)));
 
@@ -1574,8 +1578,9 @@ private: System::Windows::Forms::GroupBox^ groupBox3;
         btnNonFiction->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
 
-
-        ////////// Change color of btnFiction
+        //
+        // Change color of btnFiction
+        //
         btnFiction->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
             static_cast<System::Int32>(static_cast<System::Byte>(197)));
 
@@ -1634,8 +1639,9 @@ private: System::Windows::Forms::GroupBox^ groupBox3;
 
         btnFiction->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
-
-        ////////// Change color of btnNovel
+        //
+        // Change color of btnNovel
+        //
         btnNovel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
             static_cast<System::Int32>(static_cast<System::Byte>(197)));
 
@@ -1693,8 +1699,9 @@ private: System::Windows::Forms::GroupBox^ groupBox3;
 
         btnNovel->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
-
-        ////////// Change color of btnFantasy
+        //
+        // Change color of btnFantasy
+        //
         btnFantasy->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
             static_cast<System::Int32>(static_cast<System::Byte>(197)));
 
