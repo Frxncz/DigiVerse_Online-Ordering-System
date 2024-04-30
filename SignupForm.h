@@ -21,6 +21,11 @@ namespace PointofSaleSystem {
 			//
 			//TODO: Add the constructor code here
 			//
+
+			//
+			// This will center the Form in the screen when it pop up
+			//
+			CenterToScreen();
 		}
 
 	protected:
@@ -239,5 +244,6 @@ namespace PointofSaleSystem {
 
 		}
 #pragma endregion
-	};
+
+};
 }

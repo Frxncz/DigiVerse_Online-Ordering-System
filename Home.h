@@ -21,6 +21,12 @@ namespace PointofSaleSystem {
 			//
 			//TODO: Add the constructor code here
 			//
+
+            //
+            // This will center the Form in the screen when it pop up
+            //
+            CenterToScreen();
+
 		}
 
 	protected:
@@ -1711,5 +1717,6 @@ namespace PointofSaleSystem {
         btnFantasy->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
     }
+
 };
 }
