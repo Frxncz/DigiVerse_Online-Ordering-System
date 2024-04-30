@@ -252,7 +252,7 @@ namespace PointofSaleSystem {
 		}
 #pragma endregion
 
-
+	// When you click the Login Button the Login form will go to the Home form and when you X the Home form it will go back to Login
 	private: System::Void btnLogin_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
 		this->Hide();
