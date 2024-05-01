@@ -77,15 +77,23 @@ namespace PointofSaleSystem {
 
 
 	private: System::Windows::Forms::Panel^ panel2;
+    private: System::Windows::Forms::GroupBox^ gbOmnicientReader;
 
-	private: System::Windows::Forms::GroupBox^ groupBox18;
-	private: System::Windows::Forms::GroupBox^ groupBox17;
-	private: System::Windows::Forms::GroupBox^ groupBox16;
-	private: System::Windows::Forms::GroupBox^ groupBox15;
-	private: System::Windows::Forms::GroupBox^ groupBox14;
-	private: System::Windows::Forms::GroupBox^ groupBox13;
-	private: System::Windows::Forms::GroupBox^ groupBox12;
-	private: System::Windows::Forms::GroupBox^ groupBox11;
+
+    private: System::Windows::Forms::GroupBox^ gbSoloLeveling;
+
+    private: System::Windows::Forms::GroupBox^ gbSecondBrain;
+
+    private: System::Windows::Forms::GroupBox^ gbMakeStick;
+
+    private: System::Windows::Forms::GroupBox^ gbMiniHabits;
+
+    private: System::Windows::Forms::GroupBox^ gbHumanNature;
+
+    private: System::Windows::Forms::GroupBox^ gbPsychologyMoney;
+
+    private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
+
 	private: System::Windows::Forms::Label^ label15;
 	private: System::Windows::Forms::Label^ label16;
 	private: System::Windows::Forms::Label^ label17;
@@ -229,49 +237,49 @@ private: System::Windows::Forms::Button^ btnAddPM;
             this->textBox1 = (gcnew System::Windows::Forms::TextBox());
             this->panel2 = (gcnew System::Windows::Forms::Panel());
             this->groupBox3 = (gcnew System::Windows::Forms::GroupBox());
-            this->groupBox18 = (gcnew System::Windows::Forms::GroupBox());
+            this->gbOmnicientReader = (gcnew System::Windows::Forms::GroupBox());
             this->btnAddOR = (gcnew System::Windows::Forms::Button());
             this->label49 = (gcnew System::Windows::Forms::Label());
             this->label40 = (gcnew System::Windows::Forms::Label());
             this->label41 = (gcnew System::Windows::Forms::Label());
             this->pictureBox8 = (gcnew System::Windows::Forms::PictureBox());
-            this->groupBox17 = (gcnew System::Windows::Forms::GroupBox());
+            this->gbSoloLeveling = (gcnew System::Windows::Forms::GroupBox());
             this->btnAddSL = (gcnew System::Windows::Forms::Button());
             this->label48 = (gcnew System::Windows::Forms::Label());
             this->label38 = (gcnew System::Windows::Forms::Label());
             this->label39 = (gcnew System::Windows::Forms::Label());
             this->pictureBox7 = (gcnew System::Windows::Forms::PictureBox());
-            this->groupBox16 = (gcnew System::Windows::Forms::GroupBox());
+            this->gbSecondBrain = (gcnew System::Windows::Forms::GroupBox());
             this->btnAddSB = (gcnew System::Windows::Forms::Button());
             this->label47 = (gcnew System::Windows::Forms::Label());
             this->label36 = (gcnew System::Windows::Forms::Label());
             this->label37 = (gcnew System::Windows::Forms::Label());
             this->pictureBox6 = (gcnew System::Windows::Forms::PictureBox());
-            this->groupBox15 = (gcnew System::Windows::Forms::GroupBox());
+            this->gbMakeStick = (gcnew System::Windows::Forms::GroupBox());
             this->btnAddMIS = (gcnew System::Windows::Forms::Button());
             this->label46 = (gcnew System::Windows::Forms::Label());
             this->label34 = (gcnew System::Windows::Forms::Label());
             this->label35 = (gcnew System::Windows::Forms::Label());
             this->pictureBox5 = (gcnew System::Windows::Forms::PictureBox());
-            this->groupBox14 = (gcnew System::Windows::Forms::GroupBox());
+            this->gbMiniHabits = (gcnew System::Windows::Forms::GroupBox());
             this->btnAddMH = (gcnew System::Windows::Forms::Button());
             this->label45 = (gcnew System::Windows::Forms::Label());
             this->label32 = (gcnew System::Windows::Forms::Label());
             this->label33 = (gcnew System::Windows::Forms::Label());
             this->pictureBox4 = (gcnew System::Windows::Forms::PictureBox());
-            this->groupBox13 = (gcnew System::Windows::Forms::GroupBox());
+            this->gbHumanNature = (gcnew System::Windows::Forms::GroupBox());
             this->btnAddHN = (gcnew System::Windows::Forms::Button());
             this->label44 = (gcnew System::Windows::Forms::Label());
             this->label30 = (gcnew System::Windows::Forms::Label());
             this->label31 = (gcnew System::Windows::Forms::Label());
             this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
-            this->groupBox12 = (gcnew System::Windows::Forms::GroupBox());
+            this->gbPsychologyMoney = (gcnew System::Windows::Forms::GroupBox());
             this->btnAddPM = (gcnew System::Windows::Forms::Button());
             this->label43 = (gcnew System::Windows::Forms::Label());
             this->label28 = (gcnew System::Windows::Forms::Label());
             this->label29 = (gcnew System::Windows::Forms::Label());
             this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
-            this->groupBox11 = (gcnew System::Windows::Forms::GroupBox());
+            this->gbAtomicHabits = (gcnew System::Windows::Forms::GroupBox());
             this->label42 = (gcnew System::Windows::Forms::Label());
             this->btnAddAH = (gcnew System::Windows::Forms::Button());
             this->label27 = (gcnew System::Windows::Forms::Label());
@@ -299,21 +307,21 @@ private: System::Windows::Forms::Button^ btnAddPM;
             this->groupBox8->SuspendLayout();
             this->groupBox9->SuspendLayout();
             this->panel2->SuspendLayout();
-            this->groupBox18->SuspendLayout();
+            this->gbOmnicientReader->SuspendLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox8))->BeginInit();
-            this->groupBox17->SuspendLayout();
+            this->gbSoloLeveling->SuspendLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox7))->BeginInit();
-            this->groupBox16->SuspendLayout();
+            this->gbSecondBrain->SuspendLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->BeginInit();
-            this->groupBox15->SuspendLayout();
+            this->gbMakeStick->SuspendLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->BeginInit();
-            this->groupBox14->SuspendLayout();
+            this->gbMiniHabits->SuspendLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->BeginInit();
-            this->groupBox13->SuspendLayout();
+            this->gbHumanNature->SuspendLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
-            this->groupBox12->SuspendLayout();
+            this->gbPsychologyMoney->SuspendLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
-            this->groupBox11->SuspendLayout();
+            this->gbAtomicHabits->SuspendLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
             this->groupBox7->SuspendLayout();
             this->flowLayoutPanel1->SuspendLayout();
@@ -555,14 +563,14 @@ private: System::Windows::Forms::Button^ btnAddPM;
             // 
             this->panel2->AutoScroll = true;
             this->panel2->Controls->Add(this->groupBox3);
-            this->panel2->Controls->Add(this->groupBox18);
-            this->panel2->Controls->Add(this->groupBox17);
-            this->panel2->Controls->Add(this->groupBox16);
-            this->panel2->Controls->Add(this->groupBox15);
-            this->panel2->Controls->Add(this->groupBox14);
-            this->panel2->Controls->Add(this->groupBox13);
-            this->panel2->Controls->Add(this->groupBox12);
-            this->panel2->Controls->Add(this->groupBox11);
+            this->panel2->Controls->Add(this->gbOmnicientReader);
+            this->panel2->Controls->Add(this->gbSoloLeveling);
+            this->panel2->Controls->Add(this->gbSecondBrain);
+            this->panel2->Controls->Add(this->gbMakeStick);
+            this->panel2->Controls->Add(this->gbMiniHabits);
+            this->panel2->Controls->Add(this->gbHumanNature);
+            this->panel2->Controls->Add(this->gbPsychologyMoney);
+            this->panel2->Controls->Add(this->gbAtomicHabits);
             this->panel2->Location = System::Drawing::Point(35, 259);
             this->panel2->Name = L"panel2";
             this->panel2->Size = System::Drawing::Size(831, 575);
@@ -578,20 +586,20 @@ private: System::Windows::Forms::Button^ btnAddPM;
             this->groupBox3->TabIndex = 26;
             this->groupBox3->TabStop = false;
             // 
-            // groupBox18
+            // gbOmnicientReader
             // 
-            this->groupBox18->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(231)), static_cast<System::Int32>(static_cast<System::Byte>(237)),
-                static_cast<System::Int32>(static_cast<System::Byte>(248)));
-            this->groupBox18->Controls->Add(this->btnAddOR);
-            this->groupBox18->Controls->Add(this->label49);
-            this->groupBox18->Controls->Add(this->label40);
-            this->groupBox18->Controls->Add(this->label41);
-            this->groupBox18->Controls->Add(this->pictureBox8);
-            this->groupBox18->Location = System::Drawing::Point(412, 584);
-            this->groupBox18->Name = L"groupBox18";
-            this->groupBox18->Size = System::Drawing::Size(381, 166);
-            this->groupBox18->TabIndex = 19;
-            this->groupBox18->TabStop = false;
+            this->gbOmnicientReader->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(231)),
+                static_cast<System::Int32>(static_cast<System::Byte>(237)), static_cast<System::Int32>(static_cast<System::Byte>(248)));
+            this->gbOmnicientReader->Controls->Add(this->btnAddOR);
+            this->gbOmnicientReader->Controls->Add(this->label49);
+            this->gbOmnicientReader->Controls->Add(this->label40);
+            this->gbOmnicientReader->Controls->Add(this->label41);
+            this->gbOmnicientReader->Controls->Add(this->pictureBox8);
+            this->gbOmnicientReader->Location = System::Drawing::Point(412, 584);
+            this->gbOmnicientReader->Name = L"gbOmnicientReader";
+            this->gbOmnicientReader->Size = System::Drawing::Size(381, 166);
+            this->gbOmnicientReader->TabIndex = 19;
+            this->gbOmnicientReader->TabStop = false;
             // 
             // btnAddOR
             // 
@@ -651,20 +659,20 @@ private: System::Windows::Forms::Button^ btnAddPM;
             this->pictureBox8->TabIndex = 22;
             this->pictureBox8->TabStop = false;
             // 
-            // groupBox17
+            // gbSoloLeveling
             // 
-            this->groupBox17->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(231)), static_cast<System::Int32>(static_cast<System::Byte>(237)),
+            this->gbSoloLeveling->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(231)), static_cast<System::Int32>(static_cast<System::Byte>(237)),
                 static_cast<System::Int32>(static_cast<System::Byte>(248)));
-            this->groupBox17->Controls->Add(this->btnAddSL);
-            this->groupBox17->Controls->Add(this->label48);
-            this->groupBox17->Controls->Add(this->label38);
-            this->groupBox17->Controls->Add(this->label39);
-            this->groupBox17->Controls->Add(this->pictureBox7);
-            this->groupBox17->Location = System::Drawing::Point(12, 582);
-            this->groupBox17->Name = L"groupBox17";
-            this->groupBox17->Size = System::Drawing::Size(357, 168);
-            this->groupBox17->TabIndex = 18;
-            this->groupBox17->TabStop = false;
+            this->gbSoloLeveling->Controls->Add(this->btnAddSL);
+            this->gbSoloLeveling->Controls->Add(this->label48);
+            this->gbSoloLeveling->Controls->Add(this->label38);
+            this->gbSoloLeveling->Controls->Add(this->label39);
+            this->gbSoloLeveling->Controls->Add(this->pictureBox7);
+            this->gbSoloLeveling->Location = System::Drawing::Point(12, 582);
+            this->gbSoloLeveling->Name = L"gbSoloLeveling";
+            this->gbSoloLeveling->Size = System::Drawing::Size(357, 168);
+            this->gbSoloLeveling->TabIndex = 18;
+            this->gbSoloLeveling->TabStop = false;
             // 
             // btnAddSL
             // 
@@ -725,20 +733,20 @@ private: System::Windows::Forms::Button^ btnAddPM;
             this->pictureBox7->TabIndex = 22;
             this->pictureBox7->TabStop = false;
             // 
-            // groupBox16
+            // gbSecondBrain
             // 
-            this->groupBox16->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(231)), static_cast<System::Int32>(static_cast<System::Byte>(237)),
+            this->gbSecondBrain->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(231)), static_cast<System::Int32>(static_cast<System::Byte>(237)),
                 static_cast<System::Int32>(static_cast<System::Byte>(248)));
-            this->groupBox16->Controls->Add(this->btnAddSB);
-            this->groupBox16->Controls->Add(this->label47);
-            this->groupBox16->Controls->Add(this->label36);
-            this->groupBox16->Controls->Add(this->label37);
-            this->groupBox16->Controls->Add(this->pictureBox6);
-            this->groupBox16->Location = System::Drawing::Point(412, 391);
-            this->groupBox16->Name = L"groupBox16";
-            this->groupBox16->Size = System::Drawing::Size(381, 169);
-            this->groupBox16->TabIndex = 17;
-            this->groupBox16->TabStop = false;
+            this->gbSecondBrain->Controls->Add(this->btnAddSB);
+            this->gbSecondBrain->Controls->Add(this->label47);
+            this->gbSecondBrain->Controls->Add(this->label36);
+            this->gbSecondBrain->Controls->Add(this->label37);
+            this->gbSecondBrain->Controls->Add(this->pictureBox6);
+            this->gbSecondBrain->Location = System::Drawing::Point(412, 391);
+            this->gbSecondBrain->Name = L"gbSecondBrain";
+            this->gbSecondBrain->Size = System::Drawing::Size(381, 169);
+            this->gbSecondBrain->TabIndex = 17;
+            this->gbSecondBrain->TabStop = false;
             // 
             // btnAddSB
             // 
@@ -798,20 +806,20 @@ private: System::Windows::Forms::Button^ btnAddPM;
             this->pictureBox6->TabIndex = 22;
             this->pictureBox6->TabStop = false;
             // 
-            // groupBox15
+            // gbMakeStick
             // 
-            this->groupBox15->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(231)), static_cast<System::Int32>(static_cast<System::Byte>(237)),
+            this->gbMakeStick->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(231)), static_cast<System::Int32>(static_cast<System::Byte>(237)),
                 static_cast<System::Int32>(static_cast<System::Byte>(248)));
-            this->groupBox15->Controls->Add(this->btnAddMIS);
-            this->groupBox15->Controls->Add(this->label46);
-            this->groupBox15->Controls->Add(this->label34);
-            this->groupBox15->Controls->Add(this->label35);
-            this->groupBox15->Controls->Add(this->pictureBox5);
-            this->groupBox15->Location = System::Drawing::Point(14, 391);
-            this->groupBox15->Name = L"groupBox15";
-            this->groupBox15->Size = System::Drawing::Size(357, 169);
-            this->groupBox15->TabIndex = 16;
-            this->groupBox15->TabStop = false;
+            this->gbMakeStick->Controls->Add(this->btnAddMIS);
+            this->gbMakeStick->Controls->Add(this->label46);
+            this->gbMakeStick->Controls->Add(this->label34);
+            this->gbMakeStick->Controls->Add(this->label35);
+            this->gbMakeStick->Controls->Add(this->pictureBox5);
+            this->gbMakeStick->Location = System::Drawing::Point(14, 391);
+            this->gbMakeStick->Name = L"gbMakeStick";
+            this->gbMakeStick->Size = System::Drawing::Size(357, 169);
+            this->gbMakeStick->TabIndex = 16;
+            this->gbMakeStick->TabStop = false;
             // 
             // btnAddMIS
             // 
@@ -872,20 +880,20 @@ private: System::Windows::Forms::Button^ btnAddPM;
             this->pictureBox5->TabIndex = 22;
             this->pictureBox5->TabStop = false;
             // 
-            // groupBox14
+            // gbMiniHabits
             // 
-            this->groupBox14->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(231)), static_cast<System::Int32>(static_cast<System::Byte>(237)),
+            this->gbMiniHabits->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(231)), static_cast<System::Int32>(static_cast<System::Byte>(237)),
                 static_cast<System::Int32>(static_cast<System::Byte>(248)));
-            this->groupBox14->Controls->Add(this->btnAddMH);
-            this->groupBox14->Controls->Add(this->label45);
-            this->groupBox14->Controls->Add(this->label32);
-            this->groupBox14->Controls->Add(this->label33);
-            this->groupBox14->Controls->Add(this->pictureBox4);
-            this->groupBox14->Location = System::Drawing::Point(412, 197);
-            this->groupBox14->Name = L"groupBox14";
-            this->groupBox14->Size = System::Drawing::Size(381, 169);
-            this->groupBox14->TabIndex = 15;
-            this->groupBox14->TabStop = false;
+            this->gbMiniHabits->Controls->Add(this->btnAddMH);
+            this->gbMiniHabits->Controls->Add(this->label45);
+            this->gbMiniHabits->Controls->Add(this->label32);
+            this->gbMiniHabits->Controls->Add(this->label33);
+            this->gbMiniHabits->Controls->Add(this->pictureBox4);
+            this->gbMiniHabits->Location = System::Drawing::Point(412, 197);
+            this->gbMiniHabits->Name = L"gbMiniHabits";
+            this->gbMiniHabits->Size = System::Drawing::Size(381, 169);
+            this->gbMiniHabits->TabIndex = 15;
+            this->gbMiniHabits->TabStop = false;
             // 
             // btnAddMH
             // 
@@ -946,20 +954,20 @@ private: System::Windows::Forms::Button^ btnAddPM;
             this->pictureBox4->TabIndex = 22;
             this->pictureBox4->TabStop = false;
             // 
-            // groupBox13
+            // gbHumanNature
             // 
-            this->groupBox13->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(231)), static_cast<System::Int32>(static_cast<System::Byte>(237)),
+            this->gbHumanNature->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(231)), static_cast<System::Int32>(static_cast<System::Byte>(237)),
                 static_cast<System::Int32>(static_cast<System::Byte>(248)));
-            this->groupBox13->Controls->Add(this->btnAddHN);
-            this->groupBox13->Controls->Add(this->label44);
-            this->groupBox13->Controls->Add(this->label30);
-            this->groupBox13->Controls->Add(this->label31);
-            this->groupBox13->Controls->Add(this->pictureBox3);
-            this->groupBox13->Location = System::Drawing::Point(16, 197);
-            this->groupBox13->Name = L"groupBox13";
-            this->groupBox13->Size = System::Drawing::Size(357, 169);
-            this->groupBox13->TabIndex = 14;
-            this->groupBox13->TabStop = false;
+            this->gbHumanNature->Controls->Add(this->btnAddHN);
+            this->gbHumanNature->Controls->Add(this->label44);
+            this->gbHumanNature->Controls->Add(this->label30);
+            this->gbHumanNature->Controls->Add(this->label31);
+            this->gbHumanNature->Controls->Add(this->pictureBox3);
+            this->gbHumanNature->Location = System::Drawing::Point(16, 197);
+            this->gbHumanNature->Name = L"gbHumanNature";
+            this->gbHumanNature->Size = System::Drawing::Size(357, 169);
+            this->gbHumanNature->TabIndex = 14;
+            this->gbHumanNature->TabStop = false;
             // 
             // btnAddHN
             // 
@@ -1019,20 +1027,20 @@ private: System::Windows::Forms::Button^ btnAddPM;
             this->pictureBox3->TabIndex = 22;
             this->pictureBox3->TabStop = false;
             // 
-            // groupBox12
+            // gbPsychologyMoney
             // 
-            this->groupBox12->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(231)), static_cast<System::Int32>(static_cast<System::Byte>(237)),
-                static_cast<System::Int32>(static_cast<System::Byte>(248)));
-            this->groupBox12->Controls->Add(this->btnAddPM);
-            this->groupBox12->Controls->Add(this->label43);
-            this->groupBox12->Controls->Add(this->label28);
-            this->groupBox12->Controls->Add(this->label29);
-            this->groupBox12->Controls->Add(this->pictureBox2);
-            this->groupBox12->Location = System::Drawing::Point(412, 3);
-            this->groupBox12->Name = L"groupBox12";
-            this->groupBox12->Size = System::Drawing::Size(381, 169);
-            this->groupBox12->TabIndex = 14;
-            this->groupBox12->TabStop = false;
+            this->gbPsychologyMoney->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(231)),
+                static_cast<System::Int32>(static_cast<System::Byte>(237)), static_cast<System::Int32>(static_cast<System::Byte>(248)));
+            this->gbPsychologyMoney->Controls->Add(this->btnAddPM);
+            this->gbPsychologyMoney->Controls->Add(this->label43);
+            this->gbPsychologyMoney->Controls->Add(this->label28);
+            this->gbPsychologyMoney->Controls->Add(this->label29);
+            this->gbPsychologyMoney->Controls->Add(this->pictureBox2);
+            this->gbPsychologyMoney->Location = System::Drawing::Point(412, 3);
+            this->gbPsychologyMoney->Name = L"gbPsychologyMoney";
+            this->gbPsychologyMoney->Size = System::Drawing::Size(381, 169);
+            this->gbPsychologyMoney->TabIndex = 14;
+            this->gbPsychologyMoney->TabStop = false;
             // 
             // btnAddPM
             // 
@@ -1092,20 +1100,20 @@ private: System::Windows::Forms::Button^ btnAddPM;
             this->pictureBox2->TabIndex = 22;
             this->pictureBox2->TabStop = false;
             // 
-            // groupBox11
+            // gbAtomicHabits
             // 
-            this->groupBox11->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(231)), static_cast<System::Int32>(static_cast<System::Byte>(237)),
+            this->gbAtomicHabits->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(231)), static_cast<System::Int32>(static_cast<System::Byte>(237)),
                 static_cast<System::Int32>(static_cast<System::Byte>(248)));
-            this->groupBox11->Controls->Add(this->label42);
-            this->groupBox11->Controls->Add(this->btnAddAH);
-            this->groupBox11->Controls->Add(this->label27);
-            this->groupBox11->Controls->Add(this->label26);
-            this->groupBox11->Controls->Add(this->pictureBox1);
-            this->groupBox11->Location = System::Drawing::Point(17, 3);
-            this->groupBox11->Name = L"groupBox11";
-            this->groupBox11->Size = System::Drawing::Size(357, 169);
-            this->groupBox11->TabIndex = 14;
-            this->groupBox11->TabStop = false;
+            this->gbAtomicHabits->Controls->Add(this->label42);
+            this->gbAtomicHabits->Controls->Add(this->btnAddAH);
+            this->gbAtomicHabits->Controls->Add(this->label27);
+            this->gbAtomicHabits->Controls->Add(this->label26);
+            this->gbAtomicHabits->Controls->Add(this->pictureBox1);
+            this->gbAtomicHabits->Location = System::Drawing::Point(17, 3);
+            this->gbAtomicHabits->Name = L"gbAtomicHabits";
+            this->gbAtomicHabits->Size = System::Drawing::Size(357, 169);
+            this->gbAtomicHabits->TabIndex = 14;
+            this->gbAtomicHabits->TabStop = false;
             // 
             // label42
             // 
@@ -1434,29 +1442,29 @@ private: System::Windows::Forms::Button^ btnAddPM;
             this->groupBox9->ResumeLayout(false);
             this->groupBox9->PerformLayout();
             this->panel2->ResumeLayout(false);
-            this->groupBox18->ResumeLayout(false);
-            this->groupBox18->PerformLayout();
+            this->gbOmnicientReader->ResumeLayout(false);
+            this->gbOmnicientReader->PerformLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox8))->EndInit();
-            this->groupBox17->ResumeLayout(false);
-            this->groupBox17->PerformLayout();
+            this->gbSoloLeveling->ResumeLayout(false);
+            this->gbSoloLeveling->PerformLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox7))->EndInit();
-            this->groupBox16->ResumeLayout(false);
-            this->groupBox16->PerformLayout();
+            this->gbSecondBrain->ResumeLayout(false);
+            this->gbSecondBrain->PerformLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->EndInit();
-            this->groupBox15->ResumeLayout(false);
-            this->groupBox15->PerformLayout();
+            this->gbMakeStick->ResumeLayout(false);
+            this->gbMakeStick->PerformLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->EndInit();
-            this->groupBox14->ResumeLayout(false);
-            this->groupBox14->PerformLayout();
+            this->gbMiniHabits->ResumeLayout(false);
+            this->gbMiniHabits->PerformLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->EndInit();
-            this->groupBox13->ResumeLayout(false);
-            this->groupBox13->PerformLayout();
+            this->gbHumanNature->ResumeLayout(false);
+            this->gbHumanNature->PerformLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
-            this->groupBox12->ResumeLayout(false);
-            this->groupBox12->PerformLayout();
+            this->gbPsychologyMoney->ResumeLayout(false);
+            this->gbPsychologyMoney->PerformLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
-            this->groupBox11->ResumeLayout(false);
-            this->groupBox11->PerformLayout();
+            this->gbAtomicHabits->ResumeLayout(false);
+            this->gbAtomicHabits->PerformLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
             this->groupBox7->ResumeLayout(false);
             this->groupBox7->PerformLayout();
@@ -1525,6 +1533,7 @@ private: System::Windows::Forms::Button^ btnAddPM;
             static_cast<System::Byte>(0)));
 
     }
+
            //btnNonFiction
     private: System::Void btnNonFiction_Click(System::Object^ sender, System::EventArgs^ e) 
     {
@@ -1577,6 +1586,7 @@ private: System::Windows::Forms::Button^ btnAddPM;
         btnFantasy->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
     }
+           
            //btnFiction
     private: System::Void btnFiction_Click(System::Object^ sender, System::EventArgs^ e) 
     {
@@ -1629,6 +1639,7 @@ private: System::Windows::Forms::Button^ btnAddPM;
         btnFantasy->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
     }
+
            //btnNovel
     private: System::Void btnNovel_Click(System::Object^ sender, System::EventArgs^ e) 
     {
@@ -1680,6 +1691,7 @@ private: System::Windows::Forms::Button^ btnAddPM;
         btnFantasy->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
     }
+
            //btnFantsy
     private: System::Void btnFantasy_Click(System::Object^ sender, System::EventArgs^ e) 
     {
