@@ -67,6 +67,7 @@ namespace PointofSaleSystem {
 	private: System::Windows::Forms::Label^ label7;
 	private: System::Windows::Forms::Label^ label14;
 	private: System::Windows::Forms::Label^ label10;
+    private: System::Windows::Forms::Panel^ pAllBooks;
 
 
 
@@ -76,7 +77,7 @@ namespace PointofSaleSystem {
 
 
 
-	private: System::Windows::Forms::Panel^ panel2;
+
     private: System::Windows::Forms::GroupBox^ gbOmnicientReader;
 
 
@@ -127,13 +128,13 @@ namespace PointofSaleSystem {
 	private: System::Windows::Forms::PictureBox^ pictureBox8;
 
 	private: System::Windows::Forms::Label^ label38;
-private: System::Windows::Forms::Label^ label39;
+    private: System::Windows::Forms::Label^ label39;
 
 
 	private: System::Windows::Forms::PictureBox^ pictureBox7;
 
 	private: System::Windows::Forms::Label^ label36;
-private: System::Windows::Forms::Label^ label37;
+    private: System::Windows::Forms::Label^ label37;
 
 
 	private: System::Windows::Forms::PictureBox^ pictureBox6;
@@ -177,22 +178,23 @@ private: System::Windows::Forms::Label^ label37;
     private: System::Windows::Forms::Button^ btnFantasy;
 
     private: System::Windows::Forms::GroupBox^ groupBox2;
-private: System::Windows::Forms::Button^ btnAddOR;
+    private: System::Windows::Forms::Button^ btnAddOR;
 
-private: System::Windows::Forms::Button^ btnAddSL;
-private: System::Windows::Forms::Button^ btnAddSB;
-
-
-private: System::Windows::Forms::Button^ btnAddMIS;
+    private: System::Windows::Forms::Button^ btnAddSL;
+    private: System::Windows::Forms::Button^ btnAddSB;
 
 
-private: System::Windows::Forms::Button^ btnAddMH;
+    private: System::Windows::Forms::Button^ btnAddMIS;
 
-private: System::Windows::Forms::Button^ btnAddHN;
 
-private: System::Windows::Forms::Button^ btnAddPM;
+    private: System::Windows::Forms::Button^ btnAddMH;
 
-    private: System::Windows::Forms::GroupBox^ groupBox3;
+    private: System::Windows::Forms::Button^ btnAddHN;
+
+    private: System::Windows::Forms::Button^ btnAddPM;
+private: System::Windows::Forms::GroupBox^ gbWhiteEnd;
+
+
 
 
 
@@ -235,8 +237,8 @@ private: System::Windows::Forms::Button^ btnAddPM;
             this->button1 = (gcnew System::Windows::Forms::Button());
             this->button2 = (gcnew System::Windows::Forms::Button());
             this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-            this->panel2 = (gcnew System::Windows::Forms::Panel());
-            this->groupBox3 = (gcnew System::Windows::Forms::GroupBox());
+            this->pAllBooks = (gcnew System::Windows::Forms::Panel());
+            this->gbWhiteEnd = (gcnew System::Windows::Forms::GroupBox());
             this->gbOmnicientReader = (gcnew System::Windows::Forms::GroupBox());
             this->btnAddOR = (gcnew System::Windows::Forms::Button());
             this->label49 = (gcnew System::Windows::Forms::Label());
@@ -306,7 +308,7 @@ private: System::Windows::Forms::Button^ btnAddPM;
             this->btnFantasy = (gcnew System::Windows::Forms::Button());
             this->groupBox8->SuspendLayout();
             this->groupBox9->SuspendLayout();
-            this->panel2->SuspendLayout();
+            this->pAllBooks->SuspendLayout();
             this->gbOmnicientReader->SuspendLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox8))->BeginInit();
             this->gbSoloLeveling->SuspendLayout();
@@ -559,32 +561,32 @@ private: System::Windows::Forms::Button^ btnAddPM;
             this->textBox1->TabIndex = 12;
             this->textBox1->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
             // 
-            // panel2
+            // pAllBooks
             // 
-            this->panel2->AutoScroll = true;
-            this->panel2->Controls->Add(this->groupBox3);
-            this->panel2->Controls->Add(this->gbOmnicientReader);
-            this->panel2->Controls->Add(this->gbSoloLeveling);
-            this->panel2->Controls->Add(this->gbSecondBrain);
-            this->panel2->Controls->Add(this->gbMakeStick);
-            this->panel2->Controls->Add(this->gbMiniHabits);
-            this->panel2->Controls->Add(this->gbHumanNature);
-            this->panel2->Controls->Add(this->gbPsychologyMoney);
-            this->panel2->Controls->Add(this->gbAtomicHabits);
-            this->panel2->Location = System::Drawing::Point(35, 259);
-            this->panel2->Name = L"panel2";
-            this->panel2->Size = System::Drawing::Size(831, 575);
-            this->panel2->TabIndex = 13;
+            this->pAllBooks->AutoScroll = true;
+            this->pAllBooks->Controls->Add(this->gbWhiteEnd);
+            this->pAllBooks->Controls->Add(this->gbOmnicientReader);
+            this->pAllBooks->Controls->Add(this->gbSoloLeveling);
+            this->pAllBooks->Controls->Add(this->gbSecondBrain);
+            this->pAllBooks->Controls->Add(this->gbMakeStick);
+            this->pAllBooks->Controls->Add(this->gbMiniHabits);
+            this->pAllBooks->Controls->Add(this->gbHumanNature);
+            this->pAllBooks->Controls->Add(this->gbPsychologyMoney);
+            this->pAllBooks->Controls->Add(this->gbAtomicHabits);
+            this->pAllBooks->Location = System::Drawing::Point(35, 259);
+            this->pAllBooks->Name = L"pAllBooks";
+            this->pAllBooks->Size = System::Drawing::Size(831, 575);
+            this->pAllBooks->TabIndex = 13;
             // 
-            // groupBox3
+            // gbWhiteEnd
             // 
-            this->groupBox3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
+            this->gbWhiteEnd->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
                 static_cast<System::Int32>(static_cast<System::Byte>(253)));
-            this->groupBox3->Location = System::Drawing::Point(12, 784);
-            this->groupBox3->Name = L"groupBox3";
-            this->groupBox3->Size = System::Drawing::Size(781, 44);
-            this->groupBox3->TabIndex = 26;
-            this->groupBox3->TabStop = false;
+            this->gbWhiteEnd->Location = System::Drawing::Point(12, 784);
+            this->gbWhiteEnd->Name = L"gbWhiteEnd";
+            this->gbWhiteEnd->Size = System::Drawing::Size(781, 44);
+            this->gbWhiteEnd->TabIndex = 26;
+            this->gbWhiteEnd->TabStop = false;
             // 
             // gbOmnicientReader
             // 
@@ -1427,7 +1429,7 @@ private: System::Windows::Forms::Button^ btnAddPM;
             this->Controls->Add(this->btnFiction);
             this->Controls->Add(this->btnNonFiction);
             this->Controls->Add(this->btnAllGenre);
-            this->Controls->Add(this->panel2);
+            this->Controls->Add(this->pAllBooks);
             this->Controls->Add(this->textBox1);
             this->Controls->Add(this->button2);
             this->Controls->Add(this->button1);
@@ -1441,7 +1443,7 @@ private: System::Windows::Forms::Button^ btnAddPM;
             this->groupBox8->PerformLayout();
             this->groupBox9->ResumeLayout(false);
             this->groupBox9->PerformLayout();
-            this->panel2->ResumeLayout(false);
+            this->pAllBooks->ResumeLayout(false);
             this->gbOmnicientReader->ResumeLayout(false);
             this->gbOmnicientReader->PerformLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox8))->EndInit();
@@ -1478,10 +1480,17 @@ private: System::Windows::Forms::Button^ btnAddPM;
 
 
     //----- When clicking on each button changes its color, but the other buttons should remain unchanged -----//
-  
+    //--------------- When clicking on each button, it will sort the books based on their genre ---------------//
+
+
         //btnAllGenre
     private: System::Void btnAllGenre_Click(System::Object^ sender, System::EventArgs^ e) 
     {
+
+        ////
+        ////
+        ////
+
         //
         // Change color of btnAllGenre
         //
@@ -1531,6 +1540,38 @@ private: System::Windows::Forms::Button^ btnAddPM;
 
         btnFantasy->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
+
+        ////
+        ////
+        ////
+
+        // Add all the book group box from panel->pAllBooks
+        pAllBooks->Controls->Remove(gbSoloLeveling);
+        pAllBooks->Controls->Remove(gbOmnicientReader);
+
+        pAllBooks->Controls->Add(gbAtomicHabits);
+        pAllBooks->Controls->Add(gbPsychologyMoney);
+        pAllBooks->Controls->Add(gbHumanNature);
+        pAllBooks->Controls->Add(gbMiniHabits);
+        pAllBooks->Controls->Add(gbMakeStick);
+        pAllBooks->Controls->Add(gbSecondBrain);
+
+        pAllBooks->Controls->Add(gbSoloLeveling);
+        pAllBooks->Controls->Add(gbOmnicientReader);
+
+        // Change the location of the gbSoloLeveling & gbOmnicientReader
+
+        // Get the current scroll position of the panel
+        int scrollPosX = pAllBooks->HorizontalScroll->Value;
+        int scrollPosY = pAllBooks->VerticalScroll->Value;
+
+        // Reset the location of gbSoloLeveling & gbOmnicientReader back to their original positions
+        gbSoloLeveling->Location = System::Drawing::Point(12 - scrollPosX, 482 - scrollPosY);
+        gbOmnicientReader->Location = System::Drawing::Point(312 - scrollPosX, 482 - scrollPosY);
+
+        ////
+        ////
+        ////
 
     }
 
@@ -1585,6 +1626,25 @@ private: System::Windows::Forms::Button^ btnAddPM;
 
         btnFantasy->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
+
+        ////
+        ////
+        ////
+
+        // Add other books and Remove gbSoloLeveling & gbOmnicientRedear from panel->pAllBooks
+        pAllBooks->Controls->Remove(gbSoloLeveling);
+        pAllBooks->Controls->Remove(gbOmnicientReader);
+        pAllBooks->Controls->Add(gbAtomicHabits);
+        pAllBooks->Controls->Add(gbPsychologyMoney);
+        pAllBooks->Controls->Add(gbHumanNature);
+        pAllBooks->Controls->Add(gbMiniHabits);
+        pAllBooks->Controls->Add(gbMakeStick);
+        pAllBooks->Controls->Add(gbSecondBrain);
+
+        ////
+        ////
+        ////
+        ////
     }
            
            //btnFiction
@@ -1638,6 +1698,25 @@ private: System::Windows::Forms::Button^ btnAddPM;
 
         btnFantasy->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
+
+        ////
+        ////
+        ////
+
+        // Remove all the book group box from panel->pAllBooks
+        pAllBooks->Controls->Remove(gbSoloLeveling);
+        pAllBooks->Controls->Remove(gbOmnicientReader);
+        pAllBooks->Controls->Remove(gbAtomicHabits);
+        pAllBooks->Controls->Remove(gbPsychologyMoney);
+        pAllBooks->Controls->Remove(gbHumanNature);
+        pAllBooks->Controls->Remove(gbMiniHabits);
+        pAllBooks->Controls->Remove(gbMakeStick);
+        pAllBooks->Controls->Remove(gbSecondBrain);
+
+        ////
+        ////
+        ////
+        ////
     }
 
            //btnNovel
@@ -1690,6 +1769,31 @@ private: System::Windows::Forms::Button^ btnAddPM;
 
         btnFantasy->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
+
+        ////
+        ////
+        ////
+
+        // Remove all the book group box except for gbSoloLeveling & gbOmnicientReader from panel->pAllBooks
+        pAllBooks->Controls->Remove(gbAtomicHabits);
+        pAllBooks->Controls->Remove(gbPsychologyMoney);
+        pAllBooks->Controls->Remove(gbHumanNature);
+        pAllBooks->Controls->Remove(gbMiniHabits);
+        pAllBooks->Controls->Remove(gbMakeStick);
+        pAllBooks->Controls->Remove(gbSecondBrain);
+
+        // the gbSoloLeveling & gbOmnicientReader
+        pAllBooks->Controls->Add(gbSoloLeveling);
+        pAllBooks->Controls->Add(gbOmnicientReader);
+
+        // Change the location of the gbSoloLeveling & gbOmnicientReader
+        gbSoloLeveling->Location = System::Drawing::Point(17, 3);
+        gbOmnicientReader->Location = System::Drawing::Point(312, 3);
+
+        ////
+        ////
+        ////
+
     }
 
            //btnFantsy
@@ -1742,6 +1846,30 @@ private: System::Windows::Forms::Button^ btnAddPM;
 
         btnFantasy->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
+
+        ////
+        ////
+        ////
+
+        // Remove all the book group box except for gbSoloLeveling & gbOmnicientReader from panel->pAllBooks
+        pAllBooks->Controls->Remove(gbAtomicHabits);
+        pAllBooks->Controls->Remove(gbPsychologyMoney);
+        pAllBooks->Controls->Remove(gbHumanNature);
+        pAllBooks->Controls->Remove(gbMiniHabits);
+        pAllBooks->Controls->Remove(gbMakeStick);
+        pAllBooks->Controls->Remove(gbSecondBrain);
+
+        // the gbSoloLeveling & gbOmnicientReader
+        pAllBooks->Controls->Add(gbSoloLeveling);
+        pAllBooks->Controls->Add(gbOmnicientReader);
+
+        // Change the location of the gbSoloLeveling & gbOmnicientReader
+        gbSoloLeveling->Location = System::Drawing::Point(17, 3);
+        gbOmnicientReader->Location = System::Drawing::Point(312, 3);
+
+        ////
+        ////
+        ////
     }
 
 };
