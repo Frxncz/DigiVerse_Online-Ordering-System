@@ -1939,18 +1939,41 @@ private: System::Windows::Forms::PictureBox^ pbSecondBrain;
         // Create a new label for DELETETING ORDER
         //
 
-        Label^ deleteOrder = gcnew Label();
+        Label^ lblDeleteOrder = gcnew Label();
 
-        deleteOrder->Font = (gcnew System::Drawing::Font(L"Arial", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+        lblDeleteOrder->Font = (gcnew System::Drawing::Font(L"Arial", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
-        deleteOrder->Text = L"Delete";
-        deleteOrder->Size = System::Drawing::Size(67, 21);
-        deleteOrder->Location = System::Drawing::Point(350, 80);
+        lblDeleteOrder->Text = L"Delete";
+        lblDeleteOrder->Size = System::Drawing::Size(67, 21);
+        lblDeleteOrder->Location = System::Drawing::Point(350, 80);
 
-        //Add the new delete order label to the new GroupBox
-        newGbAtomicHabits->Controls->Add(deleteOrder);
+        // Handle Click event of deleteOrder label
+        lblDeleteOrder->Click += gcnew System::EventHandler(this, &Home::DeleteOrder_Click);
+
+        // Add the new delete order label to the new GroupBox
+        newGbAtomicHabits->Controls->Add(lblDeleteOrder);
 
     }
+        ///
+        ///
+        /// 
+        
+        //
+        // Event handler for deleteOrder label Click event
+        //
+    private: System::Void DeleteOrder_Click(System::Object^ sender, System::EventArgs^ e)
+    {
+        // Find the parent GroupBox of the clicked label
+        Label^ deleteLabel = safe_cast<Label^>(sender);
+        GroupBox^ parentGroupBox = safe_cast<GroupBox^>(deleteLabel->Parent);
+
+        // Remove the parent GroupBox from the flow layout panel
+        flpOrderDetail->Controls->Remove(parentGroupBox);
+    }
+
+        ///
+        ///
+        /// 
 
 };
 }
