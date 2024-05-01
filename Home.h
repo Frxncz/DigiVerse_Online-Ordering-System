@@ -45,7 +45,7 @@ namespace PointofSaleSystem {
 
 
 
-
+    private: GroupBox^ newGbAtomicHabits;
 
 
 
@@ -150,28 +150,28 @@ private: System::Windows::Forms::PictureBox^ pbSecondBrain;
 
 
 	private: System::Windows::Forms::Label^ label34;
-private: System::Windows::Forms::Label^ lblMakeIt;
+    private: System::Windows::Forms::Label^ lblMakeIt;
 
-private: System::Windows::Forms::PictureBox^ pbMakeStick;
+    private: System::Windows::Forms::PictureBox^ pbMakeStick;
 
 
 	private: System::Windows::Forms::Label^ label32;
-private: System::Windows::Forms::Label^ lblMini;
+    private: System::Windows::Forms::Label^ lblMini;
 
-private: System::Windows::Forms::PictureBox^ pbMiniHabits;
+    private: System::Windows::Forms::PictureBox^ pbMiniHabits;
 
 
 	private: System::Windows::Forms::Label^ label30;
-private: System::Windows::Forms::Label^ lblHuman;
-private: System::Windows::Forms::PictureBox^ pbHumanNature;
+    private: System::Windows::Forms::Label^ lblHuman;
+    private: System::Windows::Forms::PictureBox^ pbHumanNature;
 
 
 
 
 	private: System::Windows::Forms::Label^ label28;
-private: System::Windows::Forms::Label^ lblMoeny;
+    private: System::Windows::Forms::Label^ lblMoeny;
 
-private: System::Windows::Forms::PictureBox^ pbMoney;
+    private: System::Windows::Forms::PictureBox^ pbMoney;
 
     private: System::Windows::Forms::Label^ label42;
     private: System::Windows::Forms::Label^ label46;
@@ -211,7 +211,9 @@ private: System::Windows::Forms::PictureBox^ pbMoney;
     private: System::Windows::Forms::Button^ btnAddHN;
 
     private: System::Windows::Forms::Button^ btnAddPM;
-private: System::Windows::Forms::GroupBox^ gbWhiteEnd;
+    private: System::Windows::Forms::GroupBox^ gbWhiteEnd;
+
+
 
 
 
@@ -1886,6 +1888,7 @@ private: System::Windows::Forms::GroupBox^ gbWhiteEnd;
         // Add the new GroupBox to the flow Layout Panel
         flpOrderDetail->Controls->Add(newGbAtomicHabits);
 
+
         //
         // Create a new PictureBox
         //
@@ -1900,24 +1903,26 @@ private: System::Windows::Forms::GroupBox^ gbWhiteEnd;
         // Add the new PictureBox to the new GroupBox
         newGbAtomicHabits->Controls->Add(newPbAtomicHabits);
 
+
         //
         // Create a new label TITLE
         //
         Label^ newlblAtomic = gcnew Label();
-        newlblAtomic->Font = (gcnew System::Drawing::Font(L"Arial", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+        newlblAtomic->Font = (gcnew System::Drawing::Font(L"Arial", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
         newlblAtomic->Text = lblAtomic->Text;
-        newlblAtomic->Size = System::Drawing::Size(118, 19);
+        newlblAtomic->Size = System::Drawing::Size(141, 24);
         newlblAtomic->Location = System::Drawing::Point(130, 50);
 
         // Add the new Label to the new GroupBox
         newGbAtomicHabits->Controls->Add(newlblAtomic);
 
+
         //
         // Create a new label PRICE
         //
         Label^ newlblAtomicPrice = gcnew Label();
-        newlblAtomicPrice->Font = (gcnew System::Drawing::Font(L"Arial Black", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+        newlblAtomicPrice->Font = (gcnew System::Drawing::Font(L"Arial Black", 10.2, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
         newlblAtomicPrice->Text = L"P 100";
         newlblAtomicPrice->Size = System::Drawing::Size(118, 19);
@@ -1926,6 +1931,26 @@ private: System::Windows::Forms::GroupBox^ gbWhiteEnd;
         // Add the new Label to the new GroupBox
         newGbAtomicHabits->Controls->Add(newlblAtomicPrice);
 
+        ////
+        ////
+        ////
+
+        //
+        // Create a new label for DELETETING ORDER
+        //
+
+        Label^ deleteOrder = gcnew Label();
+
+        deleteOrder->Font = (gcnew System::Drawing::Font(L"Arial", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+            static_cast<System::Byte>(0)));
+        deleteOrder->Text = L"Delete";
+        deleteOrder->Size = System::Drawing::Size(67, 21);
+        deleteOrder->Location = System::Drawing::Point(350, 80);
+
+        //Add the new delete order label to the new GroupBox
+        newGbAtomicHabits->Controls->Add(deleteOrder);
+
     }
+
 };
 }

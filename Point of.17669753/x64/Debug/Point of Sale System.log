@@ -1,5 +1,11 @@
 ﻿  Home.cpp
   LoginForm.cpp
+C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(1925,80): warning C4305: 'argument': truncation from 'double' to 'float'
+  (compiling source file 'Home.cpp')
+  
+C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(1925,80): warning C4305: 'argument': truncation from 'double' to 'float'
+  (compiling source file 'LoginForm.cpp')
+  
   Generating Code...
   Home.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   Point of Sale System.vcxproj -> C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\x64\Debug\Point of Sale System.exe
