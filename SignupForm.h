@@ -245,5 +245,6 @@ namespace PointofSaleSystem {
 		}
 #pragma endregion
 
+
 };
 }

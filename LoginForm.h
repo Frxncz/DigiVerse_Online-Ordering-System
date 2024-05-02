@@ -61,6 +61,14 @@ namespace PointofSaleSystem {
 
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
+	private: System::Windows::Forms::MenuStrip^ menuStrip1;
+	private: System::Windows::Forms::ToolStripMenuItem^ loginAsAdminToolStripMenuItem;
+
+
+
+
+
+
 
 
 	private:
@@ -88,7 +96,10 @@ namespace PointofSaleSystem {
 			this->btnLogin = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
+			this->loginAsAdminToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
+			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// txtPassword
@@ -219,6 +230,22 @@ namespace PointofSaleSystem {
 			this->pictureBox1->TabIndex = 14;
 			this->pictureBox1->TabStop = false;
 			// 
+			// menuStrip1
+			// 
+			this->menuStrip1->ImageScalingSize = System::Drawing::Size(20, 20);
+			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->loginAsAdminToolStripMenuItem });
+			this->menuStrip1->Location = System::Drawing::Point(0, 0);
+			this->menuStrip1->Name = L"menuStrip1";
+			this->menuStrip1->Size = System::Drawing::Size(1251, 28);
+			this->menuStrip1->TabIndex = 26;
+			this->menuStrip1->Text = L"menuStrip1";
+			// 
+			// loginAsAdminToolStripMenuItem
+			// 
+			this->loginAsAdminToolStripMenuItem->Name = L"loginAsAdminToolStripMenuItem";
+			this->loginAsAdminToolStripMenuItem->Size = System::Drawing::Size(126, 24);
+			this->loginAsAdminToolStripMenuItem->Text = L"Login as Admin";
+			// 
 			// LoginForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -237,10 +264,13 @@ namespace PointofSaleSystem {
 			this->Controls->Add(this->btnLogin);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->pictureBox1);
+			this->Controls->Add(this->menuStrip1);
 			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Name = L"LoginForm";
 			this->Text = L"LoginForm";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
+			this->menuStrip1->ResumeLayout(false);
+			this->menuStrip1->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
