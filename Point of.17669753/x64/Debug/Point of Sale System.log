@@ -1,9 +1,9 @@
 ﻿  Home.cpp
-C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(1945,80): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(2011,80): warning C4305: 'argument': truncation from 'double' to 'float'
   (compiling source file 'Home.cpp')
   
   LoginForm.cpp
-C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(1945,80): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(2011,80): warning C4305: 'argument': truncation from 'double' to 'float'
   (compiling source file 'LoginForm.cpp')
   
   Generating Code...

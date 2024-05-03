@@ -46,8 +46,12 @@ namespace PointofSaleSystem {
 
 
     private: GroupBox^ newGbAtomicHabits;
-    private: Label^ lblQuantity;
 
+    // Declare lblQuantity as a class-level variable
+    private: System::Windows::Forms::Label^ lblQuantity;
+
+    private: System::Windows::Forms::Button^ btnAddQty;
+    private: System::Windows::Forms::Button^ btnDecreaseQty;
 
 
 	private: System::Windows::Forms::GroupBox^ groupBox8;
@@ -129,23 +133,23 @@ namespace PointofSaleSystem {
 
 
 	private: System::Windows::Forms::Label^ label40;
-private: System::Windows::Forms::Label^ lblReader;
+    private: System::Windows::Forms::Label^ lblReader;
 
-private: System::Windows::Forms::PictureBox^ pbReader;
+    private: System::Windows::Forms::PictureBox^ pbReader;
 
 
 	private: System::Windows::Forms::Label^ label38;
-private: System::Windows::Forms::Label^ lblSolo;
+    private: System::Windows::Forms::Label^ lblSolo;
 
-private: System::Windows::Forms::PictureBox^ pbSoloLeveling;
+    private: System::Windows::Forms::PictureBox^ pbSoloLeveling;
 
 
 
 
 	private: System::Windows::Forms::Label^ label36;
-private: System::Windows::Forms::Label^ lblBrain;
+    private: System::Windows::Forms::Label^ lblBrain;
 
-private: System::Windows::Forms::PictureBox^ pbSecondBrain;
+    private: System::Windows::Forms::PictureBox^ pbSecondBrain;
 
 
 
@@ -213,8 +217,8 @@ private: System::Windows::Forms::PictureBox^ pbSecondBrain;
 
     private: System::Windows::Forms::Button^ btnAddPM;
     private: System::Windows::Forms::GroupBox^ gbWhiteEnd;
-private: System::Windows::Forms::PictureBox^ pictureBox1;
-private: System::Windows::Forms::PictureBox^ pictureBox2;
+    private: System::Windows::Forms::PictureBox^ pictureBox1;
+    private: System::Windows::Forms::PictureBox^ pictureBox2;
 
 
 
@@ -2095,6 +2099,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
         newGbAtomicHabits->Controls->Add(btnDecreaseQty);
 
 
+
         ////
         ////
         ////
@@ -2104,8 +2109,8 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
         //----- Quantity of the item -----//
         //
 
-        Label^ lblQuantity = gcnew Label();
-
+        // Create a new label for Quantity
+        lblQuantity = gcnew Label();
         lblQuantity->Font = (gcnew System::Drawing::Font(L"Arial", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
         lblQuantity->Text = L"1";
@@ -2116,6 +2121,16 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
         // Add the new label to groupbox
         newGbAtomicHabits->Controls->Add(lblQuantity);
 
+
+
+
+        // Handle Click event of Decrease Quantity button
+        btnDecreaseQty->Click += gcnew System::EventHandler(this, &Home::btnDecreaseQty_Click);
+
+
+        // Handle Click event of Add Quantity button
+        btnAddQty->Click += gcnew System::EventHandler(this, &Home::btnAddQty_Click);
+
     }
 
 
@@ -2123,7 +2138,6 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
         ///
         /// 
         
-
         
         //----- When Clicked the Delete text the whole book that has been added to order detail will get deleted -----//
        
@@ -2137,6 +2151,40 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
         // Remove the parent GroupBox from the flow layout panel
         flpOrderDetail->Controls->Remove(parentGroupBox);
     }
+
+
+        ///
+        ///
+        /// 
+
+
+    private: System::Void btnAddQty_Click(System::Object^ sender, System::EventArgs^ e)
+    {
+        // Get the current quantity from lblQuantity
+        int currentQuantity = System::Convert::ToInt32(lblQuantity->Text);
+
+        // Increase the quantity by one if it's less than 100
+        if (currentQuantity < 100)
+        {
+            currentQuantity++;
+            lblQuantity->Text = currentQuantity.ToString();
+        }
+    }
+
+
+    private: System::Void btnDecreaseQty_Click(System::Object^ sender, System::EventArgs^ e)
+    {
+        // Get the current quantity from lblQuantity
+        int currentQuantity = System::Convert::ToInt32(lblQuantity->Text);
+
+        // Decrease the quantity by one if it's greater than 1
+        if (currentQuantity > 1)
+        {
+            currentQuantity--;
+            lblQuantity->Text = currentQuantity.ToString();
+        }
+    }
+
 
 };
 }
