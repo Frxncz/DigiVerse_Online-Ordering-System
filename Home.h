@@ -1495,21 +1495,21 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
 #pragma endregion
 
 
+
     //----- When clicking on each button changes its color, but the other buttons should remain unchanged -----//
     //--------------- When clicking on each button, it will sort the books based on their genre ---------------//
 
 
-        //btnAllGenre
+
+        //----- btnAllGenre
+
     private: System::Void btnAllGenre_Click(System::Object^ sender, System::EventArgs^ e) 
     {
 
-        ////
-        ////
-        ////
 
-        //
+        //////
         // Change color of btnAllGenre
-        //
+        //////
         btnAllGenre->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
             static_cast<System::Int32>(static_cast<System::Byte>(197)));
 
@@ -1519,7 +1519,9 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
         btnAllGenre->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
 
+        //
         // Reset color of btnNonFiction
+        //
         btnNonFiction->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
             static_cast<System::Int32>(static_cast<System::Byte>(242)));
 
@@ -1529,7 +1531,9 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
             static_cast<System::Byte>(0)));
 
 
+        //
         // Reset color of btnFiction
+        //
         btnFiction->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
             static_cast<System::Int32>(static_cast<System::Byte>(242)));
 
@@ -1538,7 +1542,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
         btnFiction->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
 
+
+        //
         // Reset color of btnNovel
+        //
         btnNovel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
             static_cast<System::Int32>(static_cast<System::Byte>(242)));
 
@@ -1547,8 +1554,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
         btnNovel ->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
 
-        // Reset color of btnFantasy
 
+        //
+        // Reset color of btnFantasy
+        //
         btnFantasy->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
             static_cast<System::Int32>(static_cast<System::Byte>(242)));
 
@@ -1561,7 +1570,9 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
         ////
         ////
 
+        //
         // Add all the book group box from panel->pAllBooks
+        //
         pAllBooks->Controls->Remove(gbSoloLeveling);
         pAllBooks->Controls->Remove(gbOmnicientReader);
 
@@ -1575,7 +1586,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
         pAllBooks->Controls->Add(gbSoloLeveling);
         pAllBooks->Controls->Add(gbOmnicientReader);
 
+
+        //
         // Change the location of the gbSoloLeveling & gbOmnicientReader
+        //
 
         // Get the current scroll position of the panel
         int scrollPosX = pAllBooks->HorizontalScroll->Value;
@@ -1591,10 +1605,16 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
 
     }
 
-           //btnNonFiction
+
+
+           //----- btnNonFiction
+
     private: System::Void btnNonFiction_Click(System::Object^ sender, System::EventArgs^ e) 
     {
+
+        //
         // Reset color of btnAllGenre
+        //
         btnAllGenre->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
             static_cast<System::Int32>(static_cast<System::Byte>(242)));
 
@@ -1602,9 +1622,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
 
         btnAllGenre->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
-        //
+
+        ///////
         // Change color of btnNonFiction
-        //
+        ///////
         btnNonFiction->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
             static_cast<System::Int32>(static_cast<System::Byte>(197)));
 
@@ -1614,8 +1635,9 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
         btnNonFiction->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
 
-
+        //
         // Reset color of btnFiction
+        //
         btnFiction->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
             static_cast<System::Int32>(static_cast<System::Byte>(242)));
 
@@ -1624,7 +1646,9 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
         btnFiction->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
 
+        //
         // Reset color of btnNovel
+        //
         btnNovel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
             static_cast<System::Int32>(static_cast<System::Byte>(242)));
 
@@ -1633,8 +1657,9 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
         btnNovel->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
 
+        //
         // Reset color of btnFantasy
-
+        //
         btnFantasy->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
             static_cast<System::Int32>(static_cast<System::Byte>(242)));
 
@@ -1660,13 +1685,19 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
         ////
         ////
         ////
-        ////
+
     }
+
+
            
-           //btnFiction
+           //-----btnFiction
+
     private: System::Void btnFiction_Click(System::Object^ sender, System::EventArgs^ e) 
     {
+
+        //
         // Reset color of btnAllGenre
+        //
         btnAllGenre->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
             static_cast<System::Int32>(static_cast<System::Byte>(242)));
 
@@ -1675,7 +1706,9 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
         btnAllGenre->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
 
+        //
         // Reset color of btnNonFiction
+        //
         btnNonFiction->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
             static_cast<System::Int32>(static_cast<System::Byte>(242)));
 
@@ -1684,9 +1717,9 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
         btnNonFiction->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
 
-        //
+        //////
         // Change color of btnFiction
-        //
+        //////
         btnFiction->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
             static_cast<System::Int32>(static_cast<System::Byte>(197)));
 
@@ -1696,7 +1729,9 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
         btnFiction->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
 
+        //
         // Reset color of btnNovel
+        //
         btnNovel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
             static_cast<System::Int32>(static_cast<System::Byte>(242)));
 
@@ -1705,8 +1740,9 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
         btnNovel->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
 
+        //
         // Reset color of btnFantasy
-
+        //
         this->btnFantasy->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
             static_cast<System::Int32>(static_cast<System::Byte>(242)));
 
@@ -1732,13 +1768,19 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
         ////
         ////
         ////
-        ////
+       
     }
 
-           //btnNovel
+
+
+           //-----btnNovel
+
     private: System::Void btnNovel_Click(System::Object^ sender, System::EventArgs^ e) 
     {
+
+        //
         // Reset color of AllGenre
+        //
         btnAllGenre->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
             static_cast<System::Int32>(static_cast<System::Byte>(242)));
 
@@ -1747,7 +1789,9 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
         btnAllGenre->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
 
+        //
         // Reset color of btnNonFiction
+        //
         btnNonFiction->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
             static_cast<System::Int32>(static_cast<System::Byte>(242)));
 
@@ -1756,8 +1800,9 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
         btnNonFiction->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
 
-
+        //
         // Reset color of btnFiction
+        //
         btnFiction->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
             static_cast<System::Int32>(static_cast<System::Byte>(242)));
 
@@ -1765,9 +1810,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
 
         btnFiction->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
-        //
+
+        //////
         // Change color of btnNovel
-        //
+        //////
         btnNovel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
             static_cast<System::Int32>(static_cast<System::Byte>(197)));
 
@@ -1777,7 +1823,9 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
         btnNovel->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
 
+        //
         // Reset color of btnFantasy
+        //
         btnFantasy->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
             static_cast<System::Int32>(static_cast<System::Byte>(242)));
 
@@ -1811,11 +1859,17 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
         ////
 
     }
+           
 
-           //btnFantsy
+
+           //-----btnFantsy
+
     private: System::Void btnFantasy_Click(System::Object^ sender, System::EventArgs^ e) 
     {
+
+        //
         // Reset color of btnAllGenre
+        //
         btnAllGenre->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
             static_cast<System::Int32>(static_cast<System::Byte>(242)));
 
@@ -1824,7 +1878,9 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
         btnAllGenre->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
 
+        //
         // Reset color of btnNonFiction
+        //
         btnNonFiction->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
             static_cast<System::Int32>(static_cast<System::Byte>(242)));
 
@@ -1833,8 +1889,9 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
         btnNonFiction->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
 
-
+        //
         // Reset color of btnFiction
+        //
         btnFiction->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
             static_cast<System::Int32>(static_cast<System::Byte>(242)));
 
@@ -1843,7 +1900,9 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
         btnFiction->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
 
+        //
         // Reset color of btnNovel
+        //
         btnNovel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
             static_cast<System::Int32>(static_cast<System::Byte>(242)));
 
@@ -1851,9 +1910,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
 
         btnNovel->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
-        //
+
+        //////
         // Change color of btnFantasy
-        //
+        //////
         btnFantasy->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
             static_cast<System::Int32>(static_cast<System::Byte>(197)));
 
@@ -1886,17 +1946,17 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
         ////
         ////
         ////
+
     }
 
-        ////
-        ////
-        ////
-        
-        //
-        // When click add button it will go to order detail
-        //
+
+
+        //----- When clicked the add button the book will go to Order Detail -----//
+             
+
     private: System::Void btnAddAH_Click(System::Object^ sender, System::EventArgs^ e) 
     {
+
         //
         // Create a new GroupBox for Atomic Habits
         //
@@ -1909,6 +1969,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
         flpOrderDetail->Controls->Add(newGbAtomicHabits);
 
 
+
         //
         // Create a new PictureBox
         //
@@ -1919,9 +1980,9 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
         newPbAtomicHabits->Size = System::Drawing::Size(60, 100);
         newPbAtomicHabits->Location = System::Drawing::Point(40, 28); 
 
-
         // Add the new PictureBox to the new GroupBox
         newGbAtomicHabits->Controls->Add(newPbAtomicHabits);
+
 
 
         //
@@ -1938,6 +1999,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
         newGbAtomicHabits->Controls->Add(newlblAtomic);
 
 
+
         //
         // Create a new label PRICE
         //
@@ -1951,12 +2013,14 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
         // Add the new Label to the new GroupBox
         newGbAtomicHabits->Controls->Add(newlblAtomicPrice);
 
+
         ////
         ////
         ////
 
+
         //
-        // Create a new label for DELETETING ORDER
+        //----- Create a new label for DELETETING ORDER -----//
         //
 
         Label^ lblDeleteOrder = gcnew Label();
@@ -1968,17 +2032,21 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
         lblDeleteOrder->Size = System::Drawing::Size(67, 21);
         lblDeleteOrder->Location = System::Drawing::Point(350, 75);
 
-        // Handle Click event of deleteOrder label
-        lblDeleteOrder->Click += gcnew System::EventHandler(this, &Home::DeleteOrder_Click);
-
         // Add the new delete order label to the new GroupBox
         newGbAtomicHabits->Controls->Add(lblDeleteOrder);
 
+        // Handle Click event of deleteOrder label
+        lblDeleteOrder->Click += gcnew System::EventHandler(this, &Home::DeleteOrder_Click);
+
+
         ////
         ////
         ////
 
-        // Add Quantity
+
+        //
+        //----- Create a button to Increase Quantity -----//
+        //
 
         Button^ btnAddQty = gcnew Button();
 
@@ -1995,14 +2063,18 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
         btnAddQty->Text = L"+";
         btnAddQty->UseVisualStyleBackColor = false;
 
-        // Add the new button to groupbox
+        // Add the new addQty button to groupbox
         newGbAtomicHabits->Controls->Add(btnAddQty);
 
-        ///
-        ///
-        /// 
+
+        ////
+        ////
+        ////
         
-        // Decrease Quantity
+
+        //
+        //----- Create a button to Decrease Quantity -----//
+        //
 
         Button^ btnDecreaseQty = gcnew Button();
 
@@ -2022,11 +2094,16 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
         // Add the new button to groupbox
         newGbAtomicHabits->Controls->Add(btnDecreaseQty);
 
-        ///
-        ///
-        /// 
 
-        // Quantity of the item
+        ////
+        ////
+        ////
+
+
+        //
+        //----- Quantity of the item -----//
+        //
+
         Label^ lblQuantity = gcnew Label();
 
         lblQuantity->Font = (gcnew System::Drawing::Font(L"Arial", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
@@ -2041,13 +2118,16 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
 
     }
 
+
         ///
         ///
         /// 
         
-        //
-        // Event handler for deleteOrder label Click event
-        //
+
+        
+        //----- When Clicked the Delete text the whole book that has been added to order detail will get deleted -----//
+       
+
     private: System::Void DeleteOrder_Click(System::Object^ sender, System::EventArgs^ e)
     {
         // Find the parent GroupBox of the clicked label
@@ -2057,10 +2137,6 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
         // Remove the parent GroupBox from the flow layout panel
         flpOrderDetail->Controls->Remove(parentGroupBox);
     }
-        ///
-        ///
-        /// 
-
 
 };
 }
