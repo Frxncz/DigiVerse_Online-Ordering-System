@@ -43,6 +43,9 @@ namespace PointofSaleSystem {
 	private: System::Windows::Forms::Label^ label1;
 	protected:
 
+    ///
+    ///
+    /// 
 
 
     private: GroupBox^ newGbAtomicHabits;
@@ -50,9 +53,14 @@ namespace PointofSaleSystem {
     // Declare lblQuantity as a class-level variable
     private: System::Windows::Forms::Label^ lblQuantity;
 
-    private: System::Windows::Forms::Button^ btnAddQty;
+    private: System::Windows::Forms::Button^ btnIncreaseQty;
     private: System::Windows::Forms::Button^ btnDecreaseQty;
+    private: System::Windows::Forms::Label^ lblSubtotal;
 
+
+    ///
+    ///
+    /// 
 
 	private: System::Windows::Forms::GroupBox^ groupBox8;
 	private: System::Windows::Forms::GroupBox^ groupBox9;
@@ -66,11 +74,12 @@ namespace PointofSaleSystem {
 	private: System::Windows::Forms::Label^ label3;
 
 	private: System::Windows::Forms::Label^ label12;
-	private: System::Windows::Forms::Label^ label11;
+
 	private: System::Windows::Forms::Label^ label9;
 	private: System::Windows::Forms::Label^ label8;
 	private: System::Windows::Forms::Label^ label7;
-	private: System::Windows::Forms::Label^ label14;
+    private: System::Windows::Forms::Label^ lblTotalPayment;
+
 	private: System::Windows::Forms::Label^ label10;
     private: System::Windows::Forms::Panel^ pAllBooks;
 
@@ -253,7 +262,7 @@ namespace PointofSaleSystem {
             this->label1 = (gcnew System::Windows::Forms::Label());
             this->groupBox8 = (gcnew System::Windows::Forms::GroupBox());
             this->label12 = (gcnew System::Windows::Forms::Label());
-            this->label11 = (gcnew System::Windows::Forms::Label());
+            this->lblSubtotal = (gcnew System::Windows::Forms::Label());
             this->label9 = (gcnew System::Windows::Forms::Label());
             this->label8 = (gcnew System::Windows::Forms::Label());
             this->label7 = (gcnew System::Windows::Forms::Label());
@@ -262,7 +271,7 @@ namespace PointofSaleSystem {
             this->label4 = (gcnew System::Windows::Forms::Label());
             this->label3 = (gcnew System::Windows::Forms::Label());
             this->groupBox9 = (gcnew System::Windows::Forms::GroupBox());
-            this->label14 = (gcnew System::Windows::Forms::Label());
+            this->lblTotalPayment = (gcnew System::Windows::Forms::Label());
             this->label10 = (gcnew System::Windows::Forms::Label());
             this->label2 = (gcnew System::Windows::Forms::Label());
             this->button1 = (gcnew System::Windows::Forms::Button());
@@ -378,7 +387,7 @@ namespace PointofSaleSystem {
             this->groupBox8->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(203)), static_cast<System::Int32>(static_cast<System::Byte>(216)),
                 static_cast<System::Int32>(static_cast<System::Byte>(241)));
             this->groupBox8->Controls->Add(this->label12);
-            this->groupBox8->Controls->Add(this->label11);
+            this->groupBox8->Controls->Add(this->lblSubtotal);
             this->groupBox8->Controls->Add(this->label9);
             this->groupBox8->Controls->Add(this->label8);
             this->groupBox8->Controls->Add(this->label7);
@@ -403,16 +412,16 @@ namespace PointofSaleSystem {
             this->label12->TabIndex = 16;
             this->label12->Text = L"0";
             // 
-            // label11
+            // lblSubtotal
             // 
-            this->label11->AutoSize = true;
-            this->label11->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+            this->lblSubtotal->AutoSize = true;
+            this->lblSubtotal->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->label11->Location = System::Drawing::Point(429, 59);
-            this->label11->Name = L"label11";
-            this->label11->Size = System::Drawing::Size(16, 18);
-            this->label11->TabIndex = 14;
-            this->label11->Text = L"0";
+            this->lblSubtotal->Location = System::Drawing::Point(429, 59);
+            this->lblSubtotal->Name = L"lblSubtotal";
+            this->lblSubtotal->Size = System::Drawing::Size(16, 18);
+            this->lblSubtotal->TabIndex = 14;
+            this->lblSubtotal->Text = L"0";
             // 
             // label9
             // 
@@ -493,7 +502,7 @@ namespace PointofSaleSystem {
             // 
             this->groupBox9->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(203)), static_cast<System::Int32>(static_cast<System::Byte>(216)),
                 static_cast<System::Int32>(static_cast<System::Byte>(241)));
-            this->groupBox9->Controls->Add(this->label14);
+            this->groupBox9->Controls->Add(this->lblTotalPayment);
             this->groupBox9->Controls->Add(this->label10);
             this->groupBox9->Controls->Add(this->label2);
             this->groupBox9->Location = System::Drawing::Point(975, 649);
@@ -502,16 +511,16 @@ namespace PointofSaleSystem {
             this->groupBox9->TabIndex = 9;
             this->groupBox9->TabStop = false;
             // 
-            // label14
+            // lblTotalPayment
             // 
-            this->label14->AutoSize = true;
-            this->label14->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+            this->lblTotalPayment->AutoSize = true;
+            this->lblTotalPayment->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->label14->Location = System::Drawing::Point(429, 13);
-            this->label14->Name = L"label14";
-            this->label14->Size = System::Drawing::Size(16, 18);
-            this->label14->TabIndex = 18;
-            this->label14->Text = L"0";
+            this->lblTotalPayment->Location = System::Drawing::Point(429, 13);
+            this->lblTotalPayment->Name = L"lblTotalPayment";
+            this->lblTotalPayment->Size = System::Drawing::Size(16, 18);
+            this->lblTotalPayment->TabIndex = 18;
+            this->lblTotalPayment->Text = L"0";
             // 
             // label10
             // 
@@ -547,7 +556,7 @@ namespace PointofSaleSystem {
             this->button1->Name = L"button1";
             this->button1->Size = System::Drawing::Size(463, 53);
             this->button1->TabIndex = 10;
-            this->button1->Text = L"Continue to Payment";
+            this->button1->Text = L"Continue to Checkout";
             this->button1->UseVisualStyleBackColor = false;
             // 
             // button2
@@ -2010,12 +2019,20 @@ namespace PointofSaleSystem {
         Label^ newlblAtomicPrice = gcnew Label();
         newlblAtomicPrice->Font = (gcnew System::Drawing::Font(L"Arial Black", 10.2, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
-        newlblAtomicPrice->Text = L"P 100";
+        newlblAtomicPrice->Text = L"100";
         newlblAtomicPrice->Size = System::Drawing::Size(118, 19);
         newlblAtomicPrice->Location = System::Drawing::Point(130, 80);
 
         // Add the new Label to the new GroupBox
         newGbAtomicHabits->Controls->Add(newlblAtomicPrice);
+
+
+        //
+        // Update lblSubtotal and lblTotalPayment with the text from newlblAtomicPrice
+        //
+        lblSubtotal->Text = newlblAtomicPrice->Text;
+        lblTotalPayment->Text = newlblAtomicPrice->Text;
+
 
 
         ////
@@ -2052,23 +2069,26 @@ namespace PointofSaleSystem {
         //----- Create a button to Increase Quantity -----//
         //
 
-        Button^ btnAddQty = gcnew Button();
+        Button^ btnIncreaseQty = gcnew Button();
 
-        btnAddQty->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
+        btnIncreaseQty->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
             static_cast<System::Int32>(static_cast<System::Byte>(197)));
-        btnAddQty->Font = (gcnew System::Drawing::Font(L"Arial", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+        btnIncreaseQty->Font = (gcnew System::Drawing::Font(L"Arial", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
-        btnAddQty->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
+        btnIncreaseQty->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
             static_cast<System::Int32>(static_cast<System::Byte>(253)));
-        btnAddQty->Location = System::Drawing::Point(367, 100);
-        btnAddQty->Name = L"btnAddQty";
-        btnAddQty->Size = System::Drawing::Size(27, 27);
-        btnAddQty->TabIndex = 28;
-        btnAddQty->Text = L"+";
-        btnAddQty->UseVisualStyleBackColor = false;
+        btnIncreaseQty->Location = System::Drawing::Point(367, 100);
+        btnIncreaseQty->Name = L"btnAddQty";
+        btnIncreaseQty->Size = System::Drawing::Size(27, 27);
+        btnIncreaseQty->TabIndex = 28;
+        btnIncreaseQty->Text = L"+";
+        btnIncreaseQty->UseVisualStyleBackColor = false;
 
         // Add the new addQty button to groupbox
-        newGbAtomicHabits->Controls->Add(btnAddQty);
+        newGbAtomicHabits->Controls->Add(btnIncreaseQty);
+
+        // Handle Click event of Add Quantity button
+        btnIncreaseQty->Click += gcnew System::EventHandler(this, &Home::btnIncreaseQty_Click);
 
 
         ////
@@ -2098,6 +2118,9 @@ namespace PointofSaleSystem {
         // Add the new button to groupbox
         newGbAtomicHabits->Controls->Add(btnDecreaseQty);
 
+        // Handle Click event of Decrease Quantity button
+        btnDecreaseQty->Click += gcnew System::EventHandler(this, &Home::btnDecreaseQty_Click);
+
 
 
         ////
@@ -2121,16 +2144,6 @@ namespace PointofSaleSystem {
         // Add the new label to groupbox
         newGbAtomicHabits->Controls->Add(lblQuantity);
 
-
-
-
-        // Handle Click event of Decrease Quantity button
-        btnDecreaseQty->Click += gcnew System::EventHandler(this, &Home::btnDecreaseQty_Click);
-
-
-        // Handle Click event of Add Quantity button
-        btnAddQty->Click += gcnew System::EventHandler(this, &Home::btnAddQty_Click);
-
     }
 
 
@@ -2144,37 +2157,106 @@ namespace PointofSaleSystem {
 
     private: System::Void DeleteOrder_Click(System::Object^ sender, System::EventArgs^ e)
     {
+
+        //
         // Find the parent GroupBox of the clicked label
+        //
         Label^ deleteLabel = safe_cast<Label^>(sender);
         GroupBox^ parentGroupBox = safe_cast<GroupBox^>(deleteLabel->Parent);
 
         // Remove the parent GroupBox from the flow layout panel
         flpOrderDetail->Controls->Remove(parentGroupBox);
+
+
+
+        //
+        // rest Totatl payment when the delete has been cliked
+        //
+
+        int resetTotalPayment = System::Convert::ToInt32(lblTotalPayment->Text);
+
+
+        resetTotalPayment = 0;
+
+
+        lblTotalPayment->Text = resetTotalPayment.ToString();
+
+
+
+        //
+        // rest Totatl payment when the delete has been cliked
+        //
+
+        int resetSubtotal = System::Convert::ToInt32(lblSubtotal->Text);
+
+
+        resetSubtotal = 0;
+
+
+        lblSubtotal->Text = resetSubtotal.ToString();
     }
 
 
         ///
         ///
-        /// 
+        ///
 
 
-    private: System::Void btnAddQty_Click(System::Object^ sender, System::EventArgs^ e)
+        //----- When Clicked the plus button in order detail the quantity, subtotal, and payment total increase -----//
+
+
+    private: System::Void btnIncreaseQty_Click(System::Object^ sender, System::EventArgs^ e)
     {
-        // Get the current quantity from lblQuantity
+        //
+        // Increase lblQuantity
+        //
+
         int currentQuantity = System::Convert::ToInt32(lblQuantity->Text);
 
         // Increase the quantity by one if it's less than 100
-        if (currentQuantity < 100)
+        if (currentQuantity < 99)
         {
             currentQuantity++;
             lblQuantity->Text = currentQuantity.ToString();
         }
+
+
+
+        //
+        // Increase lblSubtotal
+        //
+        int subtotalIncrease = System::Convert::ToInt32(lblSubtotal->Text);
+
+
+        subtotalIncrease += 100;
+
+
+        lblSubtotal->Text = subtotalIncrease.ToString();
+
+
+        //
+        // Increase lblTotalPayment
+        //
+        int totalPaymentIncrease = System::Convert::ToInt32(lblTotalPayment->Text);
+
+
+        totalPaymentIncrease += 100;
+
+
+        lblTotalPayment->Text = totalPaymentIncrease.ToString();
+
     }
+
+
+           //----- When Clicked the plus button in order detail the quantity, subtotal, and payment total decrease -----//
 
 
     private: System::Void btnDecreaseQty_Click(System::Object^ sender, System::EventArgs^ e)
     {
-        // Get the current quantity from lblQuantity
+
+        //
+        // Decrease lblQuantity
+        //
         int currentQuantity = System::Convert::ToInt32(lblQuantity->Text);
 
         // Decrease the quantity by one if it's greater than 1
@@ -2183,8 +2265,34 @@ namespace PointofSaleSystem {
             currentQuantity--;
             lblQuantity->Text = currentQuantity.ToString();
         }
+
+
+        //
+        // Decrease lblSubtotal
+        //
+        int subtotalDecrease = System::Convert::ToInt32(lblSubtotal->Text);
+
+        subtotalDecrease -= 100;
+
+        lblSubtotal->Text = subtotalDecrease.ToString();
+
+
+        //
+        // Decrease lblTotalPayment
+        //
+        int totalPaymentDecrease = System::Convert::ToInt32(lblTotalPayment->Text);
+
+        totalPaymentDecrease -= 100;
+
+        lblTotalPayment->Text = totalPaymentDecrease.ToString();
     }
 
+    
+    ///
+    ///
+    ///  
+    
+    
 
 };
 }
