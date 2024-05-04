@@ -50,12 +50,14 @@ namespace PointofSaleSystem {
 
     private: GroupBox^ newGbAtomicHabits;
 
-    // Declare lblQuantity as a class-level variable
-    private: System::Windows::Forms::Label^ lblQuantity;
 
+    private: System::Windows::Forms::Label^ lblQuantity;
     private: System::Windows::Forms::Button^ btnIncreaseQty;
     private: System::Windows::Forms::Button^ btnDecreaseQty;
+
+
     private: System::Windows::Forms::Label^ lblSubtotal;
+    private: System::Windows::Forms::Label^ lblTotalPayment;
 
 
     ///
@@ -78,7 +80,6 @@ namespace PointofSaleSystem {
 	private: System::Windows::Forms::Label^ label9;
 	private: System::Windows::Forms::Label^ label8;
 	private: System::Windows::Forms::Label^ label7;
-    private: System::Windows::Forms::Label^ lblTotalPayment;
 
 	private: System::Windows::Forms::Label^ label10;
     private: System::Windows::Forms::Panel^ pAllBooks;
@@ -246,16 +247,20 @@ namespace PointofSaleSystem {
 
 
 	private:
+
+
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
 
 
 #pragma region Windows Form Designer generated code
+
 		/// <summary>
 		/// Required method for Designer support - do not modify
 		/// the contents of this method with the code editor.
 		/// </summary>
+        
 		void InitializeComponent(void)
 		{
             System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Home::typeid));
@@ -1965,185 +1970,235 @@ namespace PointofSaleSystem {
 
 
         //----- When clicked the add button the book will go to Order Detail -----//
-             
+    
+
+    // Global variable to track if Atomic Habits is already added
+    bool isAtomicHabitsAdded = false;
 
     private: System::Void btnAddAH_Click(System::Object^ sender, System::EventArgs^ e) 
     {
 
-        //
-        // Create a new GroupBox for Atomic Habits
-        //
-        GroupBox^ newGbAtomicHabits = gcnew GroupBox();
-        newGbAtomicHabits->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(229)), static_cast<System::Int32>(static_cast<System::Byte>(235)),
-            static_cast<System::Int32>(static_cast<System::Byte>(246)));
-        newGbAtomicHabits->Size = System::Drawing::Size(422, 155);
+        if (!isAtomicHabitsAdded)
+        {
+            //
+                    // Create a new GroupBox for Atomic Habits
+                    //
+            GroupBox^ newGbAtomicHabits = gcnew GroupBox();
+            newGbAtomicHabits->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(229)), static_cast<System::Int32>(static_cast<System::Byte>(235)),
+                static_cast<System::Int32>(static_cast<System::Byte>(246)));
+            newGbAtomicHabits->Size = System::Drawing::Size(422, 155);
 
-        // Add the new GroupBox to the flow Layout Panel
-        flpOrderDetail->Controls->Add(newGbAtomicHabits);
-
-
-
-        //
-        // Create a new PictureBox
-        //
-        PictureBox^ newPbAtomicHabits = gcnew PictureBox();
-        newPbAtomicHabits->Image = pbAtomicHabits->Image; 
-        newPbAtomicHabits->SizeMode = pbAtomicHabits->SizeMode; 
-        newPbAtomicHabits->Location = pbAtomicHabits->Location; 
-        newPbAtomicHabits->Size = System::Drawing::Size(60, 100);
-        newPbAtomicHabits->Location = System::Drawing::Point(40, 28); 
-
-        // Add the new PictureBox to the new GroupBox
-        newGbAtomicHabits->Controls->Add(newPbAtomicHabits);
+            // Add the new GroupBox to the flow Layout Panel
+            flpOrderDetail->Controls->Add(newGbAtomicHabits);
 
 
 
-        //
-        // Create a new label TITLE
-        //
-        Label^ newlblAtomic = gcnew Label();
-        newlblAtomic->Font = (gcnew System::Drawing::Font(L"Arial", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-            static_cast<System::Byte>(0)));
-        newlblAtomic->Text = lblAtomic->Text;
-        newlblAtomic->Size = System::Drawing::Size(141, 24);
-        newlblAtomic->Location = System::Drawing::Point(130, 50);
+            //
+            // Create a new PictureBox
+            //
+            PictureBox^ newPbAtomicHabits = gcnew PictureBox();
+            newPbAtomicHabits->Image = pbAtomicHabits->Image;
+            newPbAtomicHabits->SizeMode = pbAtomicHabits->SizeMode;
+            newPbAtomicHabits->Location = pbAtomicHabits->Location;
+            newPbAtomicHabits->Size = System::Drawing::Size(60, 100);
+            newPbAtomicHabits->Location = System::Drawing::Point(40, 28);
 
-        // Add the new Label to the new GroupBox
-        newGbAtomicHabits->Controls->Add(newlblAtomic);
-
-
-
-        //
-        // Create a new label PRICE
-        //
-        Label^ newlblAtomicPrice = gcnew Label();
-        newlblAtomicPrice->Font = (gcnew System::Drawing::Font(L"Arial Black", 10.2, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-            static_cast<System::Byte>(0)));
-        newlblAtomicPrice->Text = L"100";
-        newlblAtomicPrice->Size = System::Drawing::Size(118, 19);
-        newlblAtomicPrice->Location = System::Drawing::Point(130, 80);
-
-        // Add the new Label to the new GroupBox
-        newGbAtomicHabits->Controls->Add(newlblAtomicPrice);
-
-
-        //
-        // Update lblSubtotal and lblTotalPayment with the text from newlblAtomicPrice
-        //
-        lblSubtotal->Text = newlblAtomicPrice->Text;
-        lblTotalPayment->Text = newlblAtomicPrice->Text;
+            // Add the new PictureBox to the new GroupBox
+            newGbAtomicHabits->Controls->Add(newPbAtomicHabits);
 
 
 
-        ////
-        ////
-        ////
+            //
+            // Create a new label TITLE
+            //
+            Label^ newlblAtomic = gcnew Label();
+            newlblAtomic->Font = (gcnew System::Drawing::Font(L"Arial", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            newlblAtomic->Text = lblAtomic->Text;
+            newlblAtomic->Size = System::Drawing::Size(141, 24);
+            newlblAtomic->Location = System::Drawing::Point(130, 50);
 
-
-        //
-        //----- Create a new label for DELETETING ORDER -----//
-        //
-
-        Label^ lblDeleteOrder = gcnew Label();
-
-        lblDeleteOrder->Font = (gcnew System::Drawing::Font(L"Arial", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-            static_cast<System::Byte>(0)));
-        lblDeleteOrder->Text = L"Delete";
-        lblDeleteOrder->ForeColor = System::Drawing::Color::Red;
-        lblDeleteOrder->Size = System::Drawing::Size(67, 21);
-        lblDeleteOrder->Location = System::Drawing::Point(350, 75);
-
-        // Add the new delete order label to the new GroupBox
-        newGbAtomicHabits->Controls->Add(lblDeleteOrder);
-
-        // Handle Click event of deleteOrder label
-        lblDeleteOrder->Click += gcnew System::EventHandler(this, &Home::DeleteOrder_Click);
-
-
-        ////
-        ////
-        ////
-
-
-        //
-        //----- Create a button to Increase Quantity -----//
-        //
-
-        Button^ btnIncreaseQty = gcnew Button();
-
-        btnIncreaseQty->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
-            static_cast<System::Int32>(static_cast<System::Byte>(197)));
-        btnIncreaseQty->Font = (gcnew System::Drawing::Font(L"Arial", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-            static_cast<System::Byte>(0)));
-        btnIncreaseQty->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
-            static_cast<System::Int32>(static_cast<System::Byte>(253)));
-        btnIncreaseQty->Location = System::Drawing::Point(367, 100);
-        btnIncreaseQty->Name = L"btnAddQty";
-        btnIncreaseQty->Size = System::Drawing::Size(27, 27);
-        btnIncreaseQty->TabIndex = 28;
-        btnIncreaseQty->Text = L"+";
-        btnIncreaseQty->UseVisualStyleBackColor = false;
-
-        // Add the new addQty button to groupbox
-        newGbAtomicHabits->Controls->Add(btnIncreaseQty);
-
-        // Handle Click event of Add Quantity button
-        btnIncreaseQty->Click += gcnew System::EventHandler(this, &Home::btnIncreaseQty_Click);
-
-
-        ////
-        ////
-        ////
-        
-
-        //
-        //----- Create a button to Decrease Quantity -----//
-        //
-
-        Button^ btnDecreaseQty = gcnew Button();
-
-        btnDecreaseQty->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
-            static_cast<System::Int32>(static_cast<System::Byte>(197)));
-        btnDecreaseQty->Font = (gcnew System::Drawing::Font(L"Arial", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-            static_cast<System::Byte>(0)));
-        btnDecreaseQty->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
-            static_cast<System::Int32>(static_cast<System::Byte>(253)));
-        btnDecreaseQty->Location = System::Drawing::Point(300, 100);
-        btnDecreaseQty->Name = L"btnAddQty";
-        btnDecreaseQty->Size = System::Drawing::Size(27, 27);
-        btnDecreaseQty->TabIndex = 28;
-        btnDecreaseQty->Text = L"-";
-        btnDecreaseQty->UseVisualStyleBackColor = false;
-
-        // Add the new button to groupbox
-        newGbAtomicHabits->Controls->Add(btnDecreaseQty);
-
-        // Handle Click event of Decrease Quantity button
-        btnDecreaseQty->Click += gcnew System::EventHandler(this, &Home::btnDecreaseQty_Click);
+            // Add the new Label to the new GroupBox
+            newGbAtomicHabits->Controls->Add(newlblAtomic);
 
 
 
-        ////
-        ////
-        ////
+            //
+            // Create a new label PRICE
+            //
+            Label^ newlblAtomicPrice = gcnew Label();
+            newlblAtomicPrice->Font = (gcnew System::Drawing::Font(L"Arial Black", 10.2, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            newlblAtomicPrice->Text = L"100";
+            newlblAtomicPrice->Size = System::Drawing::Size(118, 19);
+            newlblAtomicPrice->Location = System::Drawing::Point(130, 80);
+
+            // Add the new Label to the new GroupBox
+            newGbAtomicHabits->Controls->Add(newlblAtomicPrice);
 
 
-        //
-        //----- Quantity of the item -----//
-        //
+            //
+            // Update lblSubtotal and lblTotalPayment with the text from newlblAtomicPrice
+            //
+            lblSubtotal->Text = newlblAtomicPrice->Text;
+            lblTotalPayment->Text = newlblAtomicPrice->Text;
 
-        // Create a new label for Quantity
-        lblQuantity = gcnew Label();
-        lblQuantity->Font = (gcnew System::Drawing::Font(L"Arial", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-            static_cast<System::Byte>(0)));
-        lblQuantity->Text = L"1";
-        lblQuantity->ForeColor = System::Drawing::Color::Black;
-        lblQuantity->Size = System::Drawing::Size(67, 21);
-        lblQuantity->Location = System::Drawing::Point(341, 105);
 
-        // Add the new label to groupbox
-        newGbAtomicHabits->Controls->Add(lblQuantity);
 
+            ////
+            ////
+            ////
+
+
+            //
+            //----- Create a new label for DELETETING ORDER -----//
+            //
+
+            Label^ lblDeleteOrder = gcnew Label();
+
+            lblDeleteOrder->Font = (gcnew System::Drawing::Font(L"Arial", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            lblDeleteOrder->Text = L"Delete";
+            lblDeleteOrder->ForeColor = System::Drawing::Color::Red;
+            lblDeleteOrder->Size = System::Drawing::Size(67, 21);
+            lblDeleteOrder->Location = System::Drawing::Point(350, 75);
+
+            // Add the new delete order label to the new GroupBox
+            newGbAtomicHabits->Controls->Add(lblDeleteOrder);
+
+            // Handle Click event of deleteOrder label
+            lblDeleteOrder->Click += gcnew System::EventHandler(this, &Home::DeleteOrder_Click);
+
+
+            ////
+            ////
+            ////
+
+
+            //
+            //----- Create a button to Increase Quantity -----//
+            //
+
+            Button^ btnIncreaseQty = gcnew Button();
+
+            btnIncreaseQty->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
+                static_cast<System::Int32>(static_cast<System::Byte>(197)));
+            btnIncreaseQty->Font = (gcnew System::Drawing::Font(L"Arial", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            btnIncreaseQty->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
+                static_cast<System::Int32>(static_cast<System::Byte>(253)));
+            btnIncreaseQty->Location = System::Drawing::Point(367, 100);
+            btnIncreaseQty->Name = L"btnAddQty";
+            btnIncreaseQty->Size = System::Drawing::Size(27, 27);
+            btnIncreaseQty->TabIndex = 28;
+            btnIncreaseQty->Text = L"+";
+            btnIncreaseQty->UseVisualStyleBackColor = false;
+
+            // Add the new addQty button to groupbox
+            newGbAtomicHabits->Controls->Add(btnIncreaseQty);
+
+            // Handle Click event of Add Quantity button
+            btnIncreaseQty->Click += gcnew System::EventHandler(this, &Home::btnIncreaseQty_Click);
+
+
+            ////
+            ////
+            ////
+
+
+            //
+            //----- Create a button to Decrease Quantity -----//
+            //
+
+            Button^ btnDecreaseQty = gcnew Button();
+
+            btnDecreaseQty->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
+                static_cast<System::Int32>(static_cast<System::Byte>(197)));
+            btnDecreaseQty->Font = (gcnew System::Drawing::Font(L"Arial", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            btnDecreaseQty->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
+                static_cast<System::Int32>(static_cast<System::Byte>(253)));
+            btnDecreaseQty->Location = System::Drawing::Point(300, 100);
+            btnDecreaseQty->Name = L"btnAddQty";
+            btnDecreaseQty->Size = System::Drawing::Size(27, 27);
+            btnDecreaseQty->TabIndex = 28;
+            btnDecreaseQty->Text = L"-";
+            btnDecreaseQty->UseVisualStyleBackColor = false;
+
+            // Add the new button to groupbox
+            newGbAtomicHabits->Controls->Add(btnDecreaseQty);
+
+            // Handle Click event of Decrease Quantity button
+            btnDecreaseQty->Click += gcnew System::EventHandler(this, &Home::btnDecreaseQty_Click);
+
+
+
+            ////
+            ////
+            ////
+
+
+            //
+            //----- Quantity of the item -----//
+            //
+
+            // Create a new label for Quantity
+            lblQuantity = gcnew Label();
+            lblQuantity->Font = (gcnew System::Drawing::Font(L"Arial", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            lblQuantity->Text = L"1";
+            lblQuantity->ForeColor = System::Drawing::Color::Black;
+            lblQuantity->Size = System::Drawing::Size(67, 21);
+            lblQuantity->Location = System::Drawing::Point(341, 105);
+
+            // Add the new label to groupbox
+            newGbAtomicHabits->Controls->Add(lblQuantity);
+
+
+
+            //
+            // Atomic Habits is now added
+            //
+            isAtomicHabitsAdded = true;
+        }
+        else
+        {
+            //
+            // Atomic Habits is already added, so increase the quantity
+            //
+
+            int currentQuantity = System::Convert::ToInt32(lblQuantity->Text);
+
+            if (currentQuantity < 99)
+            {
+                currentQuantity++;
+                lblQuantity->Text = currentQuantity.ToString();
+            }
+
+
+            //
+            // Atomic Habits is already added, so increase the subtotatl
+            //
+            int subtotalIncrease = System::Convert::ToInt32(lblSubtotal->Text);
+
+
+            subtotalIncrease += 100;
+
+
+            lblSubtotal->Text = subtotalIncrease.ToString();
+
+
+            //
+            // Atomic Habits is already added, so increase the subtotatl
+            //
+            int totalPaymentIncrease = System::Convert::ToInt32(lblTotalPayment->Text);
+
+
+            totalPaymentIncrease += 100;
+
+
+            lblTotalPayment->Text = totalPaymentIncrease.ToString();
+        }
     }
 
 
@@ -2170,7 +2225,7 @@ namespace PointofSaleSystem {
 
 
         //
-        // rest Totatl payment when the delete has been cliked
+        // reset Total payment when the delete has been cliked
         //
 
         int resetTotalPayment = System::Convert::ToInt32(lblTotalPayment->Text);
@@ -2184,7 +2239,7 @@ namespace PointofSaleSystem {
 
 
         //
-        // rest Totatl payment when the delete has been cliked
+        // reset Total payment when the delete has been cliked
         //
 
         int resetSubtotal = System::Convert::ToInt32(lblSubtotal->Text);
@@ -2194,6 +2249,12 @@ namespace PointofSaleSystem {
 
 
         lblSubtotal->Text = resetSubtotal.ToString();
+
+
+        //
+        // Atomic Habits is now delete 
+        //
+        isAtomicHabitsAdded = false;
     }
 
 
