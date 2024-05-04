@@ -1,6 +1,7 @@
-# DigiVerse Point of Sale Version 1.0
+# DigiVerse Online Ordering System 1.0
 
-### Point of Sale System with GUI in C++ 
+### Online Ordering System with GUI in C++ / CLI 
 
 ### Final Project in  Computer Programming 2 
-( 2nd Semester )
+
+ITC123 ( 2nd Semester )
