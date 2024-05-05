@@ -49,6 +49,7 @@ namespace PointofSaleSystem {
 
 
     private: GroupBox^ newGbAtomicHabits;
+    private: GroupBox^ newGbMoney;
 
 
     private: System::Windows::Forms::Label^ lblQuantity;
@@ -111,11 +112,11 @@ namespace PointofSaleSystem {
     private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
 
 	private: System::Windows::Forms::Label^ label15;
-	private: System::Windows::Forms::Label^ label16;
+
 	private: System::Windows::Forms::Label^ label17;
 	private: System::Windows::Forms::Label^ label18;
 	private: System::Windows::Forms::Label^ label19;
-	private: System::Windows::Forms::Label^ label20;
+
 	private: System::Windows::Forms::Label^ label21;
 	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::GroupBox^ groupBox7;
@@ -184,7 +185,8 @@ namespace PointofSaleSystem {
 
 
 	private: System::Windows::Forms::Label^ label28;
-    private: System::Windows::Forms::Label^ lblMoeny;
+private: System::Windows::Forms::Label^ lblMoney;
+
 
     private: System::Windows::Forms::PictureBox^ pbMoney;
 
@@ -207,8 +209,8 @@ namespace PointofSaleSystem {
 
 
 
-    private: System::Windows::Forms::TextBox^ textBox2;
-    private: System::Windows::Forms::PictureBox^ pictureBox9;
+
+
     private: System::Windows::Forms::Button^ btnFantasy;
 
 
@@ -229,6 +231,8 @@ namespace PointofSaleSystem {
     private: System::Windows::Forms::GroupBox^ gbWhiteEnd;
     private: System::Windows::Forms::PictureBox^ pictureBox1;
     private: System::Windows::Forms::PictureBox^ pictureBox2;
+private: System::Windows::Forms::PictureBox^ pictureBox9;
+private: System::Windows::Forms::TextBox^ textBox2;
 
 
 
@@ -324,7 +328,7 @@ namespace PointofSaleSystem {
             this->btnAddPM = (gcnew System::Windows::Forms::Button());
             this->label43 = (gcnew System::Windows::Forms::Label());
             this->label28 = (gcnew System::Windows::Forms::Label());
-            this->lblMoeny = (gcnew System::Windows::Forms::Label());
+            this->lblMoney = (gcnew System::Windows::Forms::Label());
             this->pbMoney = (gcnew System::Windows::Forms::PictureBox());
             this->gbAtomicHabits = (gcnew System::Windows::Forms::GroupBox());
             this->label42 = (gcnew System::Windows::Forms::Label());
@@ -333,11 +337,9 @@ namespace PointofSaleSystem {
             this->lblAtomic = (gcnew System::Windows::Forms::Label());
             this->pbAtomicHabits = (gcnew System::Windows::Forms::PictureBox());
             this->label15 = (gcnew System::Windows::Forms::Label());
-            this->label16 = (gcnew System::Windows::Forms::Label());
             this->label17 = (gcnew System::Windows::Forms::Label());
             this->label18 = (gcnew System::Windows::Forms::Label());
             this->label19 = (gcnew System::Windows::Forms::Label());
-            this->label20 = (gcnew System::Windows::Forms::Label());
             this->label21 = (gcnew System::Windows::Forms::Label());
             this->button3 = (gcnew System::Windows::Forms::Button());
             this->groupBox7 = (gcnew System::Windows::Forms::GroupBox());
@@ -346,11 +348,11 @@ namespace PointofSaleSystem {
             this->btnNonFiction = (gcnew System::Windows::Forms::Button());
             this->btnFiction = (gcnew System::Windows::Forms::Button());
             this->btnNovel = (gcnew System::Windows::Forms::Button());
-            this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-            this->pictureBox9 = (gcnew System::Windows::Forms::PictureBox());
             this->btnFantasy = (gcnew System::Windows::Forms::Button());
             this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
             this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
+            this->pictureBox9 = (gcnew System::Windows::Forms::PictureBox());
+            this->textBox2 = (gcnew System::Windows::Forms::TextBox());
             this->groupBox8->SuspendLayout();
             this->groupBox9->SuspendLayout();
             this->pAllBooks->SuspendLayout();
@@ -371,9 +373,9 @@ namespace PointofSaleSystem {
             this->gbAtomicHabits->SuspendLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pbAtomicHabits))->BeginInit();
             this->groupBox7->SuspendLayout();
-            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox9))->BeginInit();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox9))->BeginInit();
             this->SuspendLayout();
             // 
             // label1
@@ -381,7 +383,7 @@ namespace PointofSaleSystem {
             this->label1->AutoSize = true;
             this->label1->Font = (gcnew System::Drawing::Font(L"Arial Black", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->label1->Location = System::Drawing::Point(46, 111);
+            this->label1->Location = System::Drawing::Point(46, 89);
             this->label1->Name = L"label1";
             this->label1->Size = System::Drawing::Size(136, 32);
             this->label1->TabIndex = 0;
@@ -557,7 +559,7 @@ namespace PointofSaleSystem {
                 static_cast<System::Byte>(0)));
             this->button1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
                 static_cast<System::Int32>(static_cast<System::Byte>(253)));
-            this->button1->Location = System::Drawing::Point(995, 769);
+            this->button1->Location = System::Drawing::Point(992, 769);
             this->button1->Name = L"button1";
             this->button1->Size = System::Drawing::Size(463, 53);
             this->button1->TabIndex = 10;
@@ -572,7 +574,7 @@ namespace PointofSaleSystem {
                 static_cast<System::Byte>(0)));
             this->button2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
                 static_cast<System::Int32>(static_cast<System::Byte>(253)));
-            this->button2->Location = System::Drawing::Point(1377, 719);
+            this->button2->Location = System::Drawing::Point(1374, 719);
             this->button2->Name = L"button2";
             this->button2->Size = System::Drawing::Size(80, 33);
             this->button2->TabIndex = 11;
@@ -586,7 +588,7 @@ namespace PointofSaleSystem {
             this->textBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->textBox1->ForeColor = System::Drawing::Color::Silver;
-            this->textBox1->Location = System::Drawing::Point(999, 720);
+            this->textBox1->Location = System::Drawing::Point(996, 720);
             this->textBox1->Multiline = true;
             this->textBox1->Name = L"textBox1";
             this->textBox1->Size = System::Drawing::Size(361, 30);
@@ -605,9 +607,9 @@ namespace PointofSaleSystem {
             this->pAllBooks->Controls->Add(this->gbHumanNature);
             this->pAllBooks->Controls->Add(this->gbPsychologyMoney);
             this->pAllBooks->Controls->Add(this->gbAtomicHabits);
-            this->pAllBooks->Location = System::Drawing::Point(35, 259);
+            this->pAllBooks->Location = System::Drawing::Point(35, 233);
             this->pAllBooks->Name = L"pAllBooks";
-            this->pAllBooks->Size = System::Drawing::Size(831, 575);
+            this->pAllBooks->Size = System::Drawing::Size(831, 611);
             this->pAllBooks->TabIndex = 13;
             // 
             // gbWhiteEnd
@@ -686,7 +688,7 @@ namespace PointofSaleSystem {
             // pbReader
             // 
             this->pbReader->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pbReader.Image")));
-            this->pbReader->Location = System::Drawing::Point(16, 5);
+            this->pbReader->Location = System::Drawing::Point(16, 19);
             this->pbReader->Name = L"pbReader";
             this->pbReader->Size = System::Drawing::Size(57, 93);
             this->pbReader->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -760,7 +762,7 @@ namespace PointofSaleSystem {
             // pbSoloLeveling
             // 
             this->pbSoloLeveling->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pbSoloLeveling.Image")));
-            this->pbSoloLeveling->Location = System::Drawing::Point(17, 5);
+            this->pbSoloLeveling->Location = System::Drawing::Point(17, 18);
             this->pbSoloLeveling->Name = L"pbSoloLeveling";
             this->pbSoloLeveling->Size = System::Drawing::Size(57, 93);
             this->pbSoloLeveling->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1068,7 +1070,7 @@ namespace PointofSaleSystem {
             this->gbPsychologyMoney->Controls->Add(this->btnAddPM);
             this->gbPsychologyMoney->Controls->Add(this->label43);
             this->gbPsychologyMoney->Controls->Add(this->label28);
-            this->gbPsychologyMoney->Controls->Add(this->lblMoeny);
+            this->gbPsychologyMoney->Controls->Add(this->lblMoney);
             this->gbPsychologyMoney->Controls->Add(this->pbMoney);
             this->gbPsychologyMoney->Location = System::Drawing::Point(412, 3);
             this->gbPsychologyMoney->Name = L"gbPsychologyMoney";
@@ -1090,6 +1092,7 @@ namespace PointofSaleSystem {
             this->btnAddPM->TabIndex = 27;
             this->btnAddPM->Text = L"+ Add";
             this->btnAddPM->UseVisualStyleBackColor = false;
+            this->btnAddPM->Click += gcnew System::EventHandler(this, &Home::btnAddPM_Click);
             // 
             // label43
             // 
@@ -1113,16 +1116,16 @@ namespace PointofSaleSystem {
             this->label28->TabIndex = 25;
             this->label28->Text = L"P 200";
             // 
-            // lblMoeny
+            // lblMoney
             // 
-            this->lblMoeny->AutoSize = true;
-            this->lblMoeny->Font = (gcnew System::Drawing::Font(L"Arial", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+            this->lblMoney->AutoSize = true;
+            this->lblMoney->Font = (gcnew System::Drawing::Font(L"Arial", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->lblMoeny->Location = System::Drawing::Point(94, 21);
-            this->lblMoeny->Name = L"lblMoeny";
-            this->lblMoeny->Size = System::Drawing::Size(176, 19);
-            this->lblMoeny->TabIndex = 23;
-            this->lblMoeny->Text = L"Psychology of Money";
+            this->lblMoney->Location = System::Drawing::Point(94, 21);
+            this->lblMoney->Name = L"lblMoney";
+            this->lblMoney->Size = System::Drawing::Size(176, 19);
+            this->lblMoney->TabIndex = 23;
+            this->lblMoney->Text = L"Psychology of Money";
             // 
             // pbMoney
             // 
@@ -1214,29 +1217,18 @@ namespace PointofSaleSystem {
             this->label15->AutoSize = true;
             this->label15->Font = (gcnew System::Drawing::Font(L"Arial", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->label15->Location = System::Drawing::Point(258, 18);
+            this->label15->Location = System::Drawing::Point(256, 18);
             this->label15->Name = L"label15";
-            this->label15->Size = System::Drawing::Size(124, 24);
+            this->label15->Size = System::Drawing::Size(158, 24);
             this->label15->TabIndex = 1;
-            this->label15->Text = L"Order Detail";
-            // 
-            // label16
-            // 
-            this->label16->AutoSize = true;
-            this->label16->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->label16->Location = System::Drawing::Point(27, 62);
-            this->label16->Name = L"label16";
-            this->label16->Size = System::Drawing::Size(64, 17);
-            this->label16->TabIndex = 14;
-            this->label16->Text = L"Order ID";
+            this->label15->Text = L"My Order Detail";
             // 
             // label17
             // 
             this->label17->AutoSize = true;
             this->label17->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->label17->Location = System::Drawing::Point(28, 89);
+            this->label17->Location = System::Drawing::Point(28, 70);
             this->label17->Name = L"label17";
             this->label17->Size = System::Drawing::Size(39, 17);
             this->label17->TabIndex = 15;
@@ -1247,40 +1239,29 @@ namespace PointofSaleSystem {
             this->label18->AutoSize = true;
             this->label18->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->label18->Location = System::Drawing::Point(28, 118);
+            this->label18->Location = System::Drawing::Point(28, 103);
             this->label18->Name = L"label18";
-            this->label18->Size = System::Drawing::Size(120, 17);
+            this->label18->Size = System::Drawing::Size(51, 17);
             this->label18->TabIndex = 16;
-            this->label18->Text = L"Customer Name:";
+            this->label18->Text = L"Name:";
             // 
             // label19
             // 
             this->label19->AutoSize = true;
             this->label19->Font = (gcnew System::Drawing::Font(L"Arial", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->label19->Location = System::Drawing::Point(26, 146);
+            this->label19->Location = System::Drawing::Point(26, 131);
             this->label19->Name = L"label19";
             this->label19->Size = System::Drawing::Size(198, 19);
             this->label19->TabIndex = 17;
             this->label19->Text = L"May Barcelona Figueroa";
-            // 
-            // label20
-            // 
-            this->label20->AutoSize = true;
-            this->label20->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->label20->Location = System::Drawing::Point(518, 63);
-            this->label20->Name = L"label20";
-            this->label20->Size = System::Drawing::Size(72, 17);
-            this->label20->TabIndex = 18;
-            this->label20->Text = L"12345678";
             // 
             // label21
             // 
             this->label21->AutoSize = true;
             this->label21->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->label21->Location = System::Drawing::Point(463, 90);
+            this->label21->Location = System::Drawing::Point(463, 71);
             this->label21->Name = L"label21";
             this->label21->Size = System::Drawing::Size(129, 17);
             this->label21->TabIndex = 19;
@@ -1294,7 +1275,7 @@ namespace PointofSaleSystem {
                 static_cast<System::Byte>(0)));
             this->button3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
                 static_cast<System::Int32>(static_cast<System::Byte>(253)));
-            this->button3->Location = System::Drawing::Point(532, 134);
+            this->button3->Location = System::Drawing::Point(532, 119);
             this->button3->Name = L"button3";
             this->button3->Size = System::Drawing::Size(58, 31);
             this->button3->TabIndex = 20;
@@ -1308,11 +1289,9 @@ namespace PointofSaleSystem {
             this->groupBox7->Controls->Add(this->flpOrderDetail);
             this->groupBox7->Controls->Add(this->button3);
             this->groupBox7->Controls->Add(this->label21);
-            this->groupBox7->Controls->Add(this->label20);
             this->groupBox7->Controls->Add(this->label19);
             this->groupBox7->Controls->Add(this->label18);
             this->groupBox7->Controls->Add(this->label17);
-            this->groupBox7->Controls->Add(this->label16);
             this->groupBox7->Controls->Add(this->label15);
             this->groupBox7->Location = System::Drawing::Point(898, 36);
             this->groupBox7->Name = L"groupBox7";
@@ -1323,7 +1302,7 @@ namespace PointofSaleSystem {
             // flpOrderDetail
             // 
             this->flpOrderDetail->AutoScroll = true;
-            this->flpOrderDetail->Location = System::Drawing::Point(23, 181);
+            this->flpOrderDetail->Location = System::Drawing::Point(23, 173);
             this->flpOrderDetail->Name = L"flpOrderDetail";
             this->flpOrderDetail->Size = System::Drawing::Size(597, 231);
             this->flpOrderDetail->TabIndex = 21;
@@ -1336,7 +1315,7 @@ namespace PointofSaleSystem {
                 static_cast<System::Byte>(0)));
             this->btnAllGenre->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
                 static_cast<System::Int32>(static_cast<System::Byte>(253)));
-            this->btnAllGenre->Location = System::Drawing::Point(52, 185);
+            this->btnAllGenre->Location = System::Drawing::Point(52, 163);
             this->btnAllGenre->Name = L"btnAllGenre";
             this->btnAllGenre->Size = System::Drawing::Size(111, 38);
             this->btnAllGenre->TabIndex = 19;
@@ -1351,7 +1330,7 @@ namespace PointofSaleSystem {
             this->btnNonFiction->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->btnNonFiction->ForeColor = System::Drawing::Color::Black;
-            this->btnNonFiction->Location = System::Drawing::Point(200, 185);
+            this->btnNonFiction->Location = System::Drawing::Point(201, 163);
             this->btnNonFiction->Name = L"btnNonFiction";
             this->btnNonFiction->Size = System::Drawing::Size(111, 38);
             this->btnNonFiction->TabIndex = 20;
@@ -1366,7 +1345,7 @@ namespace PointofSaleSystem {
             this->btnFiction->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->btnFiction->ForeColor = System::Drawing::Color::Black;
-            this->btnFiction->Location = System::Drawing::Point(349, 185);
+            this->btnFiction->Location = System::Drawing::Point(357, 163);
             this->btnFiction->Name = L"btnFiction";
             this->btnFiction->Size = System::Drawing::Size(111, 38);
             this->btnFiction->TabIndex = 21;
@@ -1381,34 +1360,13 @@ namespace PointofSaleSystem {
             this->btnNovel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->btnNovel->ForeColor = System::Drawing::Color::Black;
-            this->btnNovel->Location = System::Drawing::Point(492, 185);
+            this->btnNovel->Location = System::Drawing::Point(501, 163);
             this->btnNovel->Name = L"btnNovel";
             this->btnNovel->Size = System::Drawing::Size(111, 38);
             this->btnNovel->TabIndex = 22;
             this->btnNovel->Text = L"Novel";
             this->btnNovel->UseVisualStyleBackColor = false;
             this->btnNovel->Click += gcnew System::EventHandler(this, &Home::btnNovel_Click);
-            // 
-            // textBox2
-            // 
-            this->textBox2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
-                static_cast<System::Int32>(static_cast<System::Byte>(242)));
-            this->textBox2->Font = (gcnew System::Drawing::Font(L"Arial Narrow", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->textBox2->Location = System::Drawing::Point(544, 117);
-            this->textBox2->Name = L"textBox2";
-            this->textBox2->Size = System::Drawing::Size(203, 22);
-            this->textBox2->TabIndex = 23;
-            // 
-            // pictureBox9
-            // 
-            this->pictureBox9->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox9.Image")));
-            this->pictureBox9->Location = System::Drawing::Point(516, 117);
-            this->pictureBox9->Name = L"pictureBox9";
-            this->pictureBox9->Size = System::Drawing::Size(18, 20);
-            this->pictureBox9->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
-            this->pictureBox9->TabIndex = 24;
-            this->pictureBox9->TabStop = false;
             // 
             // btnFantasy
             // 
@@ -1417,7 +1375,7 @@ namespace PointofSaleSystem {
             this->btnFantasy->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->btnFantasy->ForeColor = System::Drawing::Color::Black;
-            this->btnFantasy->Location = System::Drawing::Point(636, 185);
+            this->btnFantasy->Location = System::Drawing::Point(646, 163);
             this->btnFantasy->Name = L"btnFantasy";
             this->btnFantasy->Size = System::Drawing::Size(111, 38);
             this->btnFantasy->TabIndex = 25;
@@ -1428,7 +1386,7 @@ namespace PointofSaleSystem {
             // pictureBox1
             // 
             this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-            this->pictureBox1->Location = System::Drawing::Point(51, 54);
+            this->pictureBox1->Location = System::Drawing::Point(51, 32);
             this->pictureBox1->Name = L"pictureBox1";
             this->pictureBox1->Size = System::Drawing::Size(25, 25);
             this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -1438,12 +1396,37 @@ namespace PointofSaleSystem {
             // pictureBox2
             // 
             this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
-            this->pictureBox2->Location = System::Drawing::Point(82, 54);
+            this->pictureBox2->Location = System::Drawing::Point(82, 32);
             this->pictureBox2->Name = L"pictureBox2";
             this->pictureBox2->Size = System::Drawing::Size(35, 25);
             this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
             this->pictureBox2->TabIndex = 27;
             this->pictureBox2->TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this->pictureBox9->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(203)), static_cast<System::Int32>(static_cast<System::Byte>(216)),
+                static_cast<System::Int32>(static_cast<System::Byte>(241)));
+            this->pictureBox9->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox9.Image")));
+            this->pictureBox9->Location = System::Drawing::Point(511, 98);
+            this->pictureBox9->Name = L"pictureBox9";
+            this->pictureBox9->Size = System::Drawing::Size(18, 20);
+            this->pictureBox9->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+            this->pictureBox9->TabIndex = 24;
+            this->pictureBox9->TabStop = false;
+            // 
+            // textBox2
+            // 
+            this->textBox2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
+                static_cast<System::Int32>(static_cast<System::Byte>(242)));
+            this->textBox2->Font = (gcnew System::Drawing::Font(L"Arial Narrow", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->textBox2->Location = System::Drawing::Point(501, 92);
+            this->textBox2->Multiline = true;
+            this->textBox2->Name = L"textBox2";
+            this->textBox2->Size = System::Drawing::Size(255, 30);
+            this->textBox2->TabIndex = 23;
+            this->textBox2->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
             // 
             // Home
             // 
@@ -1503,9 +1486,9 @@ namespace PointofSaleSystem {
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pbAtomicHabits))->EndInit();
             this->groupBox7->ResumeLayout(false);
             this->groupBox7->PerformLayout();
-            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox9))->EndInit();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox9))->EndInit();
             this->ResumeLayout(false);
             this->PerformLayout();
 
@@ -1601,21 +1584,21 @@ namespace PointofSaleSystem {
         pAllBooks->Controls->Add(gbMakeStick);
         pAllBooks->Controls->Add(gbSecondBrain);
 
-        pAllBooks->Controls->Add(gbSoloLeveling);
-        pAllBooks->Controls->Add(gbOmnicientReader);
-
 
         //
         // Change the location of the gbSoloLeveling & gbOmnicientReader
         //
+
+        pAllBooks->Controls->Add(gbSoloLeveling);
+        pAllBooks->Controls->Add(gbOmnicientReader);
 
         // Get the current scroll position of the panel
         int scrollPosX = pAllBooks->HorizontalScroll->Value;
         int scrollPosY = pAllBooks->VerticalScroll->Value;
 
         // Reset the location of gbSoloLeveling & gbOmnicientReader back to their original positions
-        gbSoloLeveling->Location = System::Drawing::Point(12 - scrollPosX, 482 - scrollPosY);
-        gbOmnicientReader->Location = System::Drawing::Point(312 - scrollPosX, 482 - scrollPosY);
+        gbSoloLeveling->Location = System::Drawing::Point(12 - scrollPosX, 472 - scrollPosY);
+        gbOmnicientReader->Location = System::Drawing::Point(312 - scrollPosX, 472 - scrollPosY);
 
         ////
         ////
@@ -1968,8 +1951,9 @@ namespace PointofSaleSystem {
     }
 
 
-
+        //                                                                        //
         //----- When clicked the add button the book will go to Order Detail -----//
+        //                                                                        //
     
 
     // Global variable to track if Atomic Habits is already added
@@ -1981,8 +1965,8 @@ namespace PointofSaleSystem {
         if (!isAtomicHabitsAdded)
         {
             //
-                    // Create a new GroupBox for Atomic Habits
-                    //
+            // Create a new GroupBox for Atomic Habits
+            //
             GroupBox^ newGbAtomicHabits = gcnew GroupBox();
             newGbAtomicHabits->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(229)), static_cast<System::Int32>(static_cast<System::Byte>(235)),
                 static_cast<System::Int32>(static_cast<System::Byte>(246)));
@@ -2206,9 +2190,9 @@ namespace PointofSaleSystem {
         ///
         /// 
         
-        
+        //                                                                                                            //
         //----- When Clicked the Delete text the whole book that has been added to order detail will get deleted -----//
-       
+        //                                                                                                            //
 
     private: System::Void DeleteOrder_Click(System::Object^ sender, System::EventArgs^ e)
     {
@@ -2263,8 +2247,9 @@ namespace PointofSaleSystem {
         ///
 
 
+        //  
         //----- When Clicked the plus button in order detail the quantity, subtotal, and payment total increase -----//
-
+        //
 
     private: System::Void btnIncreaseQty_Click(System::Object^ sender, System::EventArgs^ e)
     {
@@ -2353,7 +2338,70 @@ namespace PointofSaleSystem {
     ///
     ///  
     
-    
 
+
+        //                                                                        //
+        //----- When clicked the add button the book will go to Order Detail -----//
+        //                                                                        //
+
+
+    private: System::Void btnAddPM_Click(System::Object^ sender, System::EventArgs^ e) 
+    {
+            //
+            // Create a new GroupBox for Psychology of Money
+            //
+            GroupBox^ newGbMoney = gcnew GroupBox();
+            newGbMoney->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(229)), static_cast<System::Int32>(static_cast<System::Byte>(235)),
+                static_cast<System::Int32>(static_cast<System::Byte>(246)));
+            newGbMoney->Size = System::Drawing::Size(422, 155);
+
+            // Add the new GroupBox to the flow Layout Panel
+            flpOrderDetail->Controls->Add(newGbMoney);
+
+
+
+            //
+            // Create a new PictureBox
+            //
+            PictureBox^ newPbMoney = gcnew PictureBox();
+            newPbMoney->Image = pbMoney->Image;
+            newPbMoney->SizeMode = pbAtomicHabits->SizeMode;
+            newPbMoney->Location = pbAtomicHabits->Location;
+            newPbMoney->Size = System::Drawing::Size(60, 100);
+            newPbMoney->Location = System::Drawing::Point(40, 28);
+
+            // Add the new PictureBox to the new GroupBox
+            newGbMoney->Controls->Add(newPbMoney);
+
+
+
+            //
+            // Create a new label TITLE
+            //
+            Label^ newlblMoney = gcnew Label();
+            newlblMoney->Font = (gcnew System::Drawing::Font(L"Arial", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            newlblMoney->Text = L"Psychology of Money";
+            newlblMoney->Size = System::Drawing::Size(198, 23);
+            newlblMoney->Location = System::Drawing::Point(130, 50);
+
+            // Add the new Label to the new GroupBox
+            newGbMoney->Controls->Add(newlblMoney);
+
+
+
+            //
+            // Create a new label PRICE
+            //
+            Label^ newlblMoneyPrice = gcnew Label();
+            newlblMoneyPrice->Font = (gcnew System::Drawing::Font(L"Arial Black", 10.2, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            newlblMoneyPrice->Text = L"150";
+            newlblMoneyPrice->Size = System::Drawing::Size(118, 19);
+            newlblMoneyPrice->Location = System::Drawing::Point(130, 80);
+
+            // Add the new Label to the new GroupBox
+            newGbMoney->Controls->Add(newlblMoneyPrice);
+    }
 };
 }
