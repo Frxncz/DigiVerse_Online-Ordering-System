@@ -2402,6 +2402,50 @@ private: System::Windows::Forms::TextBox^ textBox2;
 
             // Add the new Label to the new GroupBox
             newGbMoney->Controls->Add(newlblMoneyPrice);
+
+
+
+            //
+            //----- Create a new label for DELETETING ORDER -----//
+            //
+
+            Label^ lblDeleteOrderMoney = gcnew Label();
+
+            lblDeleteOrderMoney->Font = (gcnew System::Drawing::Font(L"Arial", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            lblDeleteOrderMoney->Text = L"Delete";
+            lblDeleteOrderMoney->ForeColor = System::Drawing::Color::Red;
+            lblDeleteOrderMoney->Size = System::Drawing::Size(67, 21);
+            lblDeleteOrderMoney->Location = System::Drawing::Point(350, 75);
+
+            // Add the new delete order label to the new GroupBox
+            newGbMoney->Controls->Add(lblDeleteOrderMoney);
+
+            // Handle Click event of deleteOrder label
+            lblDeleteOrderMoney->Click += gcnew System::EventHandler(this, &Home::DeleteOrderMoney_Click);
+    }
+
+
+           ///
+           ///
+           /// 
+
+           //                                                                                                            //
+           //----- When Clicked the Delete text the whole book that has been added to order detail will get deleted -----//
+           //                                                                                                            //
+
+    private: System::Void DeleteOrderMoney_Click(System::Object^ sender, System::EventArgs^ e)
+    {
+
+        //
+        // Find the parent GroupBox of the clicked label
+        //
+        Label^ deleteLabel = safe_cast<Label^>(sender);
+        GroupBox^ parentGroupBox = safe_cast<GroupBox^>(deleteLabel->Parent);
+
+        // Remove the parent GroupBox from the flow layout panel
+        flpOrderDetail->Controls->Remove(parentGroupBox);
+
     }
 };
 }
