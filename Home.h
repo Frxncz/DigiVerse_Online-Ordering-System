@@ -52,9 +52,20 @@ namespace PointofSaleSystem {
     private: GroupBox^ newGbMoney;
 
 
+    //--- Atomic habits plus and minus buttons and also the quantity
+
     private: System::Windows::Forms::Label^ lblQuantity;
     private: System::Windows::Forms::Button^ btnIncreaseQty;
     private: System::Windows::Forms::Button^ btnDecreaseQty;
+
+
+    //--- Atomic habits plus and minus buttons and also the quantity
+
+    private: System::Windows::Forms::Label^ lblQuantityMoney;
+    private: System::Windows::Forms::Button^ btnIncreaseQtyMoney;
+    private: System::Windows::Forms::Button^ btnDecreaseQtyMoney;
+
+
 
 
     private: System::Windows::Forms::Label^ lblSubtotal;
@@ -1999,7 +2010,7 @@ private: System::Windows::Forms::TextBox^ textBox2;
             newlblAtomic->Font = (gcnew System::Drawing::Font(L"Arial", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             newlblAtomic->Text = lblAtomic->Text;
-            newlblAtomic->Size = System::Drawing::Size(141, 24);
+            newlblAtomic->Size = System::Drawing::Size(198, 23);
             newlblAtomic->Location = System::Drawing::Point(130, 50);
 
             // Add the new Label to the new GroupBox
@@ -2228,7 +2239,7 @@ private: System::Windows::Forms::TextBox^ textBox2;
         int resetTotalPayment = System::Convert::ToInt32(lblTotalPayment->Text);
 
 
-        resetTotalPayment = 0;
+        resetTotalPayment -= 100;
 
 
         lblTotalPayment->Text = resetTotalPayment.ToString();
@@ -2242,7 +2253,7 @@ private: System::Windows::Forms::TextBox^ textBox2;
         int resetSubtotal = System::Convert::ToInt32(lblSubtotal->Text);
 
 
-        resetSubtotal = 0;
+        resetSubtotal -= 100;
 
 
         lblSubtotal->Text = resetSubtotal.ToString();
@@ -2358,8 +2369,14 @@ private: System::Windows::Forms::TextBox^ textBox2;
         //                                                                        //
 
 
+    // Global variable to track if Psychology of money is already added
+    bool isPsychologyMoneyAdded = false;
+
     private: System::Void btnAddPM_Click(System::Object^ sender, System::EventArgs^ e) 
     {
+
+        if (!isPsychologyMoneyAdded)
+        {
             //
             // Create a new GroupBox for Psychology of Money
             //
@@ -2422,7 +2439,7 @@ private: System::Windows::Forms::TextBox^ textBox2;
             //
             int subtotalIncrease = System::Convert::ToInt32(lblSubtotal->Text);
 
-            subtotalIncrease += 150;
+            subtotalIncrease += 200;
 
             lblSubtotal->Text = subtotalIncrease.ToString();
 
@@ -2432,7 +2449,7 @@ private: System::Windows::Forms::TextBox^ textBox2;
             //
             int totalPaymentIncrease = System::Convert::ToInt32(lblTotalPayment->Text);
 
-            totalPaymentIncrease += 150;
+            totalPaymentIncrease += 200;
 
             lblTotalPayment->Text = totalPaymentIncrease.ToString();
 
@@ -2456,6 +2473,135 @@ private: System::Windows::Forms::TextBox^ textBox2;
 
             // Handle Click event of deleteOrder label
             lblDeleteOrderMoney->Click += gcnew System::EventHandler(this, &Home::DeleteOrderMoney_Click);
+            ////
+            ////
+            ////
+
+
+            //
+            //----- Create a button to Increase Quantity -----//
+            //
+
+            Button^ btnIncreaseQtyMoney = gcnew Button();
+
+            btnIncreaseQtyMoney->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
+                static_cast<System::Int32>(static_cast<System::Byte>(197)));
+            btnIncreaseQtyMoney->Font = (gcnew System::Drawing::Font(L"Arial", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            btnIncreaseQtyMoney->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
+                static_cast<System::Int32>(static_cast<System::Byte>(253)));
+            btnIncreaseQtyMoney->Location = System::Drawing::Point(367, 100);
+            btnIncreaseQtyMoney->Name = L"btnAddQtyMoney";
+            btnIncreaseQtyMoney->Size = System::Drawing::Size(27, 27);
+            btnIncreaseQtyMoney->TabIndex = 28;
+            btnIncreaseQtyMoney->Text = L"+";
+            btnIncreaseQtyMoney->UseVisualStyleBackColor = false;
+
+            // Add the new addQty button to groupbox
+            newGbMoney->Controls->Add(btnIncreaseQtyMoney);
+
+            // Handle Click event of Add Quantity button
+            btnIncreaseQtyMoney->Click += gcnew System::EventHandler(this, &Home::btnIncreaseQtyMoney_Click);
+
+
+            ////
+            ////
+            ////
+
+
+            //
+            //----- Create a button to Decrease Quantity -----//
+            //
+
+            Button^ btnDecreaseQtyMoney = gcnew Button();
+
+            btnDecreaseQtyMoney->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
+                static_cast<System::Int32>(static_cast<System::Byte>(197)));
+            btnDecreaseQtyMoney->Font = (gcnew System::Drawing::Font(L"Arial", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            btnDecreaseQtyMoney->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
+                static_cast<System::Int32>(static_cast<System::Byte>(253)));
+            btnDecreaseQtyMoney->Location = System::Drawing::Point(300, 100);
+            btnDecreaseQtyMoney->Name = L"btnDecreaseQtyMoney";
+            btnDecreaseQtyMoney->Size = System::Drawing::Size(27, 27);
+            btnDecreaseQtyMoney->TabIndex = 28;
+            btnDecreaseQtyMoney->Text = L"-";
+            btnDecreaseQtyMoney->UseVisualStyleBackColor = false;
+
+            // Add the new button to groupbox
+            newGbMoney->Controls->Add(btnDecreaseQtyMoney);
+
+            // Handle Click event of Decrease Quantity button
+            btnDecreaseQtyMoney->Click += gcnew System::EventHandler(this, &Home::btnDecreaseQtyMoney_Click);
+
+
+
+            ////
+            ////
+            ////
+
+
+            //
+            //----- Quantity of the item -----//
+            //
+
+            // Create a new label for Quantity
+            lblQuantityMoney = gcnew Label();
+            lblQuantityMoney->Font = (gcnew System::Drawing::Font(L"Arial", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            lblQuantityMoney->Text = L"1";
+            lblQuantityMoney->ForeColor = System::Drawing::Color::Black;
+            lblQuantityMoney->Size = System::Drawing::Size(67, 21);
+            lblQuantityMoney->Location = System::Drawing::Point(341, 105);
+
+            // Add the new label to groupbox
+            newGbMoney->Controls->Add(lblQuantityMoney);
+
+
+
+            //
+            // Atomic Habits is now added
+            //
+            isPsychologyMoneyAdded = true;
+        }
+        else
+        {
+            //
+            // Atomic Habits is already added, so increase the quantity
+            //
+
+            int currentQuantityMoney = System::Convert::ToInt32(lblQuantityMoney->Text);
+
+            if (currentQuantityMoney < 99)
+            {
+                currentQuantityMoney++;
+                lblQuantityMoney->Text = currentQuantityMoney.ToString();
+            }
+
+
+            //
+            // Atomic Habits is already added, so increase the subtotatl
+            //
+            int subtotalIncrease = System::Convert::ToInt32(lblSubtotal->Text);
+
+
+            subtotalIncrease += 200;
+
+
+            lblSubtotal->Text = subtotalIncrease.ToString();
+
+
+            //
+            // Atomic Habits is already added, so increase the subtotatl
+            //
+            int totalPaymentIncrease = System::Convert::ToInt32(lblTotalPayment->Text);
+
+
+            totalPaymentIncrease += 200;
+
+
+            lblTotalPayment->Text = totalPaymentIncrease.ToString();
+        }
     }
 
 
@@ -2478,6 +2624,132 @@ private: System::Windows::Forms::TextBox^ textBox2;
 
         // Remove the parent GroupBox from the flow layout panel
         flpOrderDetail->Controls->Remove(parentGroupBox);
+
+
+        //
+        // reset Total payment when the delete has been cliked
+        //
+
+        int resetTotalPaymentMoney = System::Convert::ToInt32(lblTotalPayment->Text);
+
+
+        resetTotalPaymentMoney -= 200;
+
+
+        lblTotalPayment->Text = resetTotalPaymentMoney.ToString();
+
+
+
+        //
+        // reset Total payment when the delete has been cliked
+        //
+
+        int resetSubtotalMoney = System::Convert::ToInt32(lblSubtotal->Text);
+
+
+        resetSubtotalMoney -= 200;
+
+
+        lblSubtotal->Text = resetSubtotalMoney.ToString();
+
+
+
+        //
+        // Atomic Habits is now delete 
+        //
+        isPsychologyMoneyAdded = false;
     }
+
+
+        //  
+        //----- When Clicked the plus button in order detail the quantity, subtotal, and payment total increase -----//
+        //
+
+    private: System::Void btnIncreaseQtyMoney_Click(System::Object^ sender, System::EventArgs^ e)
+    {
+        //
+        // Increase lblQuantity
+        //
+
+        int currentQuantityIncreaseMoney = System::Convert::ToInt32(lblQuantityMoney->Text);
+
+        // Increase the quantity by one if it's less than 100
+        if (currentQuantityIncreaseMoney < 99)
+        {
+            currentQuantityIncreaseMoney++;
+            lblQuantityMoney->Text = currentQuantityIncreaseMoney.ToString();
+        }
+
+
+
+        //
+        // Increase lblSubtotal
+        //
+        int subtotalIncreaseMoney = System::Convert::ToInt32(lblSubtotal->Text);
+
+
+        subtotalIncreaseMoney += 200;
+
+
+        lblSubtotal->Text = subtotalIncreaseMoney.ToString();
+
+
+        //
+        // Increase lblTotalPayment
+        //
+        int totalPaymentIncreaseMoney = System::Convert::ToInt32(lblTotalPayment->Text);
+
+
+        totalPaymentIncreaseMoney += 200;
+
+
+        lblTotalPayment->Text = totalPaymentIncreaseMoney.ToString();
+
+    }
+
+
+        //----- When Clicked the plus button in order detail the quantity, subtotal, and payment total decrease -----//
+
+
+    private: System::Void btnDecreaseQtyMoney_Click(System::Object^ sender, System::EventArgs^ e)
+    {
+
+        //
+        // Decrease lblQuantity
+        //
+        int currentQuantityDecreaseMoney = System::Convert::ToInt32(lblQuantityMoney->Text);
+
+        // Decrease the quantity by one if it's greater than 1
+        if (currentQuantityDecreaseMoney > 1)
+        {
+            currentQuantityDecreaseMoney--;
+            lblQuantityMoney->Text = currentQuantityDecreaseMoney.ToString();
+        }
+
+
+        //
+        // Decrease lblSubtotal
+        //
+        int subtotalDecreaseMoeny = System::Convert::ToInt32(lblSubtotal->Text);
+
+        subtotalDecreaseMoeny -= 200;
+
+        lblSubtotal->Text = subtotalDecreaseMoeny.ToString();
+
+
+        //
+        // Decrease lblTotalPayment
+        //
+        int totalPaymentDecreaseMoney = System::Convert::ToInt32(lblTotalPayment->Text);
+
+        totalPaymentDecreaseMoney -= 200;
+
+        lblTotalPayment->Text = totalPaymentDecreaseMoney.ToString();
+    }
+
+
+         ///
+         ///
+         ///  
 };
 }
