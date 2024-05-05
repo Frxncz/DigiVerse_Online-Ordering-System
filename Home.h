@@ -2022,10 +2022,23 @@ private: System::Windows::Forms::TextBox^ textBox2;
 
 
             //
-            // Update lblSubtotal and lblTotalPayment with the text from newlblAtomicPrice
+            //  Psychology of Money is added to order detail, so increase the subtotatl
             //
-            lblSubtotal->Text = newlblAtomicPrice->Text;
-            lblTotalPayment->Text = newlblAtomicPrice->Text;
+            int subtotalIncrease = System::Convert::ToInt32(lblSubtotal->Text);
+
+            subtotalIncrease += 100;
+
+            lblSubtotal->Text = subtotalIncrease.ToString();
+
+
+            //
+            // Psychology of Money is added to order detail, so increase the Total payment
+            //
+            int totalPaymentIncrease = System::Convert::ToInt32(lblTotalPayment->Text);
+
+            totalPaymentIncrease += 100;
+
+            lblTotalPayment->Text = totalPaymentIncrease.ToString();
 
 
 
@@ -2404,6 +2417,26 @@ private: System::Windows::Forms::TextBox^ textBox2;
             newGbMoney->Controls->Add(newlblMoneyPrice);
 
 
+            //
+            //  Psychology of Money is added to order detail, so increase the subtotatl
+            //
+            int subtotalIncrease = System::Convert::ToInt32(lblSubtotal->Text);
+
+            subtotalIncrease += 150;
+
+            lblSubtotal->Text = subtotalIncrease.ToString();
+
+
+            //
+            // Psychology of Money is added to order detail, so increase the Total payment
+            //
+            int totalPaymentIncrease = System::Convert::ToInt32(lblTotalPayment->Text);
+
+            totalPaymentIncrease += 150;
+
+            lblTotalPayment->Text = totalPaymentIncrease.ToString();
+
+
 
             //
             //----- Create a new label for DELETETING ORDER -----//
@@ -2445,7 +2478,6 @@ private: System::Windows::Forms::TextBox^ textBox2;
 
         // Remove the parent GroupBox from the flow layout panel
         flpOrderDetail->Controls->Remove(parentGroupBox);
-
     }
 };
 }
