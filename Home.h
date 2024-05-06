@@ -128,8 +128,8 @@ namespace PointofSaleSystem {
 	private: System::Windows::Forms::Label^ label18;
 	private: System::Windows::Forms::Label^ label19;
 
-	private: System::Windows::Forms::Label^ label21;
-	private: System::Windows::Forms::Button^ button3;
+
+
 	private: System::Windows::Forms::GroupBox^ groupBox7;
     private: System::Windows::Forms::FlowLayoutPanel^ flpOrderDetail;
     private: System::Windows::Forms::PictureBox^ pbAtomicHabits;
@@ -247,6 +247,12 @@ private: System::Windows::Forms::TextBox^ textBox2;
 private: System::Windows::Forms::Label^ label14;
 private: System::Windows::Forms::Label^ label13;
 private: System::Windows::Forms::Label^ label11;
+private: System::Windows::Forms::Label^ label21;
+
+
+
+
+
 
 
 
@@ -357,10 +363,9 @@ private: System::Windows::Forms::Label^ label11;
             this->label17 = (gcnew System::Windows::Forms::Label());
             this->label18 = (gcnew System::Windows::Forms::Label());
             this->label19 = (gcnew System::Windows::Forms::Label());
-            this->label21 = (gcnew System::Windows::Forms::Label());
-            this->button3 = (gcnew System::Windows::Forms::Button());
             this->groupBox7 = (gcnew System::Windows::Forms::GroupBox());
             this->flpOrderDetail = (gcnew System::Windows::Forms::FlowLayoutPanel());
+            this->label21 = (gcnew System::Windows::Forms::Label());
             this->btnAllGenre = (gcnew System::Windows::Forms::Button());
             this->btnNonFiction = (gcnew System::Windows::Forms::Button());
             this->btnFiction = (gcnew System::Windows::Forms::Button());
@@ -578,7 +583,7 @@ private: System::Windows::Forms::Label^ label11;
                 static_cast<System::Byte>(0)));
             this->lblTotalPayment->Location = System::Drawing::Point(429, 13);
             this->lblTotalPayment->Name = L"lblTotalPayment";
-            this->lblTotalPayment->Size = System::Drawing::Size(16, 18);
+            this->lblTotalPayment->Size = System::Drawing::Size(24, 18);
             this->lblTotalPayment->TabIndex = 18;
             this->lblTotalPayment->Text = L"50";
             // 
@@ -1309,38 +1314,11 @@ private: System::Windows::Forms::Label^ label11;
             this->label19->TabIndex = 17;
             this->label19->Text = L"May Barcelona Figueroa";
             // 
-            // label21
-            // 
-            this->label21->AutoSize = true;
-            this->label21->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->label21->Location = System::Drawing::Point(463, 71);
-            this->label21->Name = L"label21";
-            this->label21->Size = System::Drawing::Size(129, 17);
-            this->label21->TabIndex = 19;
-            this->label21->Text = L"Monday, 6/24/2024";
-            // 
-            // button3
-            // 
-            this->button3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
-                static_cast<System::Int32>(static_cast<System::Byte>(197)));
-            this->button3->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->button3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
-                static_cast<System::Int32>(static_cast<System::Byte>(253)));
-            this->button3->Location = System::Drawing::Point(532, 119);
-            this->button3->Name = L"button3";
-            this->button3->Size = System::Drawing::Size(58, 31);
-            this->button3->TabIndex = 20;
-            this->button3->Text = L"Edit";
-            this->button3->UseVisualStyleBackColor = false;
-            // 
             // groupBox7
             // 
             this->groupBox7->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(203)), static_cast<System::Int32>(static_cast<System::Byte>(216)),
                 static_cast<System::Int32>(static_cast<System::Byte>(241)));
             this->groupBox7->Controls->Add(this->flpOrderDetail);
-            this->groupBox7->Controls->Add(this->button3);
             this->groupBox7->Controls->Add(this->label21);
             this->groupBox7->Controls->Add(this->label19);
             this->groupBox7->Controls->Add(this->label18);
@@ -1359,6 +1337,17 @@ private: System::Windows::Forms::Label^ label11;
             this->flpOrderDetail->Name = L"flpOrderDetail";
             this->flpOrderDetail->Size = System::Drawing::Size(597, 231);
             this->flpOrderDetail->TabIndex = 21;
+            // 
+            // label21
+            // 
+            this->label21->AutoSize = true;
+            this->label21->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->label21->Location = System::Drawing::Point(463, 71);
+            this->label21->Name = L"label21";
+            this->label21->Size = System::Drawing::Size(129, 17);
+            this->label21->TabIndex = 19;
+            this->label21->Text = L"Monday, 6/24/2024";
             // 
             // btnAllGenre
             // 
@@ -1488,7 +1477,7 @@ private: System::Windows::Forms::Label^ label11;
             this->AutoScroll = true;
             this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
                 static_cast<System::Int32>(static_cast<System::Byte>(253)));
-            this->ClientSize = System::Drawing::Size(1572, 846);
+            this->ClientSize = System::Drawing::Size(1564, 852);
             this->Controls->Add(this->pictureBox2);
             this->Controls->Add(this->pictureBox1);
             this->Controls->Add(this->btnFantasy);
@@ -2068,10 +2057,24 @@ private: System::Windows::Forms::Label^ label11;
                 static_cast<System::Byte>(0)));
             newlblAtomicPrice->Text = L"100";
             newlblAtomicPrice->Size = System::Drawing::Size(118, 19);
-            newlblAtomicPrice->Location = System::Drawing::Point(130, 80);
+            newlblAtomicPrice->Location = System::Drawing::Point(145, 80);
 
             // Add the new Label to the new GroupBox
             newGbAtomicHabits->Controls->Add(newlblAtomicPrice);
+
+
+            //
+            // Create a new label for symbol PHP
+            // 
+            Label^ newlblAtomicPriceSymbol = gcnew Label();
+            newlblAtomicPriceSymbol->Font = (gcnew System::Drawing::Font(L"Arial Black", 10.2, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            newlblAtomicPriceSymbol->Text = L"P";
+            newlblAtomicPriceSymbol->Size = System::Drawing::Size(118, 19);
+            newlblAtomicPriceSymbol->Location = System::Drawing::Point(130, 80);
+
+            // Add the new Label to the new GroupBox
+            newGbAtomicHabits->Controls->Add(newlblAtomicPriceSymbol);
 
 
             //
@@ -2447,17 +2450,30 @@ private: System::Windows::Forms::Label^ label11;
 
 
             //
-            // Create a new label PRICE
+            // Create a new label PHP
             //
             Label^ newlblMoneyPrice = gcnew Label();
             newlblMoneyPrice->Font = (gcnew System::Drawing::Font(L"Arial Black", 10.2, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             newlblMoneyPrice->Text = L"200";
             newlblMoneyPrice->Size = System::Drawing::Size(118, 19);
-            newlblMoneyPrice->Location = System::Drawing::Point(130, 80);
+            newlblMoneyPrice->Location = System::Drawing::Point(145, 80);
 
             // Add the new Label to the new GroupBox
             newGbMoney->Controls->Add(newlblMoneyPrice);
+
+            //
+            // Create a new label PRI
+            // //
+            Label^ newlblMoneyPriceSymbol = gcnew Label();
+            newlblMoneyPriceSymbol->Font = (gcnew System::Drawing::Font(L"Arial Black", 10.2, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            newlblMoneyPriceSymbol->Text = L"P";
+            newlblMoneyPriceSymbol->Size = System::Drawing::Size(118, 19);
+            newlblMoneyPriceSymbol->Location = System::Drawing::Point(130, 80);
+
+            // Add the new Label to the new GroupBox
+            newGbMoney->Controls->Add(newlblMoneyPriceSymbol);
 
 
             //
