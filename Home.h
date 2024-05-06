@@ -1,5 +1,8 @@
 #pragma once
 
+#include "Shipping.h"
+
+
 namespace PointofSaleSystem {
 
 	using namespace System;
@@ -355,6 +358,7 @@ private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
             this->label28 = (gcnew System::Windows::Forms::Label());
             this->lblMoney = (gcnew System::Windows::Forms::Label());
             this->pbMoney = (gcnew System::Windows::Forms::PictureBox());
+            this->gbAtomicHabits = (gcnew System::Windows::Forms::GroupBox());
             this->label42 = (gcnew System::Windows::Forms::Label());
             this->btnAddAH = (gcnew System::Windows::Forms::Button());
             this->label27 = (gcnew System::Windows::Forms::Label());
@@ -376,7 +380,6 @@ private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
             this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
             this->pictureBox9 = (gcnew System::Windows::Forms::PictureBox());
             this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-            this->gbAtomicHabits = (gcnew System::Windows::Forms::GroupBox());
             this->groupBox8->SuspendLayout();
             this->groupBox9->SuspendLayout();
             this->pAllBooks->SuspendLayout();
@@ -394,12 +397,12 @@ private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pbHumanNature))->BeginInit();
             this->gbPsychologyMoney->SuspendLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pbMoney))->BeginInit();
+            this->gbAtomicHabits->SuspendLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pbAtomicHabits))->BeginInit();
             this->groupBox7->SuspendLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox9))->BeginInit();
-            this->gbAtomicHabits->SuspendLayout();
             this->SuspendLayout();
             // 
             // label1
@@ -625,6 +628,7 @@ private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
             this->button1->TabIndex = 10;
             this->button1->Text = L"Continue to Checkout";
             this->button1->UseVisualStyleBackColor = false;
+            this->button1->Click += gcnew System::EventHandler(this, &Home::button1_Click);
             // 
             // button2
             // 
@@ -1197,6 +1201,21 @@ private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
             this->pbMoney->TabIndex = 22;
             this->pbMoney->TabStop = false;
             // 
+            // gbAtomicHabits
+            // 
+            this->gbAtomicHabits->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(231)), static_cast<System::Int32>(static_cast<System::Byte>(237)),
+                static_cast<System::Int32>(static_cast<System::Byte>(248)));
+            this->gbAtomicHabits->Controls->Add(this->label42);
+            this->gbAtomicHabits->Controls->Add(this->btnAddAH);
+            this->gbAtomicHabits->Controls->Add(this->label27);
+            this->gbAtomicHabits->Controls->Add(this->lblAtomic);
+            this->gbAtomicHabits->Controls->Add(this->pbAtomicHabits);
+            this->gbAtomicHabits->Location = System::Drawing::Point(17, 3);
+            this->gbAtomicHabits->Name = L"gbAtomicHabits";
+            this->gbAtomicHabits->Size = System::Drawing::Size(357, 169);
+            this->gbAtomicHabits->TabIndex = 14;
+            this->gbAtomicHabits->TabStop = false;
+            // 
             // label42
             // 
             this->label42->AutoSize = true;
@@ -1300,9 +1319,9 @@ private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
                 static_cast<System::Byte>(0)));
             this->label19->Location = System::Drawing::Point(26, 131);
             this->label19->Name = L"label19";
-            this->label19->Size = System::Drawing::Size(198, 19);
+            this->label19->Size = System::Drawing::Size(162, 19);
             this->label19->TabIndex = 17;
-            this->label19->Text = L"May Barcelona Figueroa";
+            this->label19->Text = L"Werner Heisenberg";
             // 
             // groupBox7
             // 
@@ -1460,21 +1479,6 @@ private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
             this->textBox2->TabIndex = 23;
             this->textBox2->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
             // 
-            // gbAtomicHabits
-            // 
-            this->gbAtomicHabits->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(231)), static_cast<System::Int32>(static_cast<System::Byte>(237)),
-                static_cast<System::Int32>(static_cast<System::Byte>(248)));
-            this->gbAtomicHabits->Controls->Add(this->label42);
-            this->gbAtomicHabits->Controls->Add(this->btnAddAH);
-            this->gbAtomicHabits->Controls->Add(this->label27);
-            this->gbAtomicHabits->Controls->Add(this->lblAtomic);
-            this->gbAtomicHabits->Controls->Add(this->pbAtomicHabits);
-            this->gbAtomicHabits->Location = System::Drawing::Point(17, 3);
-            this->gbAtomicHabits->Name = L"gbAtomicHabits";
-            this->gbAtomicHabits->Size = System::Drawing::Size(357, 169);
-            this->gbAtomicHabits->TabIndex = 14;
-            this->gbAtomicHabits->TabStop = false;
-            // 
             // Home
             // 
             this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -1529,14 +1533,14 @@ private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
             this->gbPsychologyMoney->ResumeLayout(false);
             this->gbPsychologyMoney->PerformLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pbMoney))->EndInit();
+            this->gbAtomicHabits->ResumeLayout(false);
+            this->gbAtomicHabits->PerformLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pbAtomicHabits))->EndInit();
             this->groupBox7->ResumeLayout(false);
             this->groupBox7->PerformLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox9))->EndInit();
-            this->gbAtomicHabits->ResumeLayout(false);
-            this->gbAtomicHabits->PerformLayout();
             this->ResumeLayout(false);
             this->PerformLayout();
 
@@ -2783,5 +2787,17 @@ private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
          ///
          ///
          ///
+         /// 
+         /// 
+         /// 
+         /// 
+         
+    private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) 
+    {
+        this->Hide();
+        Shipping^ ShippingFormUI = gcnew Shipping();
+        ShippingFormUI->ShowDialog();
+        this->Show();
+    }
 };
 }
