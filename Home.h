@@ -244,6 +244,9 @@ private: System::Windows::Forms::Label^ lblMoney;
     private: System::Windows::Forms::PictureBox^ pictureBox2;
 private: System::Windows::Forms::PictureBox^ pictureBox9;
 private: System::Windows::Forms::TextBox^ textBox2;
+private: System::Windows::Forms::Label^ label14;
+private: System::Windows::Forms::Label^ label13;
+private: System::Windows::Forms::Label^ label11;
 
 
 
@@ -281,6 +284,9 @@ private: System::Windows::Forms::TextBox^ textBox2;
             System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Home::typeid));
             this->label1 = (gcnew System::Windows::Forms::Label());
             this->groupBox8 = (gcnew System::Windows::Forms::GroupBox());
+            this->label14 = (gcnew System::Windows::Forms::Label());
+            this->label13 = (gcnew System::Windows::Forms::Label());
+            this->label11 = (gcnew System::Windows::Forms::Label());
             this->label12 = (gcnew System::Windows::Forms::Label());
             this->lblSubtotal = (gcnew System::Windows::Forms::Label());
             this->label9 = (gcnew System::Windows::Forms::Label());
@@ -404,6 +410,9 @@ private: System::Windows::Forms::TextBox^ textBox2;
             // 
             this->groupBox8->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(203)), static_cast<System::Int32>(static_cast<System::Byte>(216)),
                 static_cast<System::Int32>(static_cast<System::Byte>(241)));
+            this->groupBox8->Controls->Add(this->label14);
+            this->groupBox8->Controls->Add(this->label13);
+            this->groupBox8->Controls->Add(this->label11);
             this->groupBox8->Controls->Add(this->label12);
             this->groupBox8->Controls->Add(this->lblSubtotal);
             this->groupBox8->Controls->Add(this->label9);
@@ -413,11 +422,44 @@ private: System::Windows::Forms::TextBox^ textBox2;
             this->groupBox8->Controls->Add(this->label5);
             this->groupBox8->Controls->Add(this->label4);
             this->groupBox8->Controls->Add(this->label3);
-            this->groupBox8->Location = System::Drawing::Point(975, 504);
+            this->groupBox8->Location = System::Drawing::Point(975, 480);
             this->groupBox8->Name = L"groupBox8";
-            this->groupBox8->Size = System::Drawing::Size(496, 121);
+            this->groupBox8->Size = System::Drawing::Size(496, 149);
             this->groupBox8->TabIndex = 8;
             this->groupBox8->TabStop = false;
+            // 
+            // label14
+            // 
+            this->label14->AutoSize = true;
+            this->label14->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->label14->Location = System::Drawing::Point(407, 118);
+            this->label14->Name = L"label14";
+            this->label14->Size = System::Drawing::Size(18, 17);
+            this->label14->TabIndex = 19;
+            this->label14->Text = L"P";
+            // 
+            // label13
+            // 
+            this->label13->AutoSize = true;
+            this->label13->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->label13->Location = System::Drawing::Point(429, 117);
+            this->label13->Name = L"label13";
+            this->label13->Size = System::Drawing::Size(24, 18);
+            this->label13->TabIndex = 18;
+            this->label13->Text = L"50";
+            // 
+            // label11
+            // 
+            this->label11->AutoSize = true;
+            this->label11->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->label11->Location = System::Drawing::Point(20, 117);
+            this->label11->Name = L"label11";
+            this->label11->Size = System::Drawing::Size(88, 17);
+            this->label11->TabIndex = 17;
+            this->label11->Text = L"Shipping fee";
             // 
             // label12
             // 
@@ -538,7 +580,7 @@ private: System::Windows::Forms::TextBox^ textBox2;
             this->lblTotalPayment->Name = L"lblTotalPayment";
             this->lblTotalPayment->Size = System::Drawing::Size(16, 18);
             this->lblTotalPayment->TabIndex = 18;
-            this->lblTotalPayment->Text = L"0";
+            this->lblTotalPayment->Text = L"50";
             // 
             // label10
             // 
@@ -1304,7 +1346,7 @@ private: System::Windows::Forms::TextBox^ textBox2;
             this->groupBox7->Controls->Add(this->label18);
             this->groupBox7->Controls->Add(this->label17);
             this->groupBox7->Controls->Add(this->label15);
-            this->groupBox7->Location = System::Drawing::Point(898, 36);
+            this->groupBox7->Location = System::Drawing::Point(898, 21);
             this->groupBox7->Name = L"groupBox7";
             this->groupBox7->Size = System::Drawing::Size(644, 434);
             this->groupBox7->TabIndex = 7;
@@ -2049,6 +2091,7 @@ private: System::Windows::Forms::TextBox^ textBox2;
 
             totalPaymentIncrease += 100;
 
+
             lblTotalPayment->Text = totalPaymentIncrease.ToString();
 
 
@@ -2434,6 +2477,7 @@ private: System::Windows::Forms::TextBox^ textBox2;
 
             totalPaymentIncrease += 200;
 
+
             lblTotalPayment->Text = totalPaymentIncrease.ToString();
 
 
@@ -2615,6 +2659,7 @@ private: System::Windows::Forms::TextBox^ textBox2;
 
         // Update subtotal and total payment
         int quantity = System::Convert::ToInt32(lblQuantityMoney->Text);
+
         lblSubtotal->Text = (System::Convert::ToInt32(lblSubtotal->Text) - (quantity * 200)).ToString();
         lblTotalPayment->Text = (System::Convert::ToInt32(lblTotalPayment->Text) - (quantity * 200)).ToString();
 
