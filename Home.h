@@ -120,7 +120,7 @@ namespace PointofSaleSystem {
 
     private: System::Windows::Forms::GroupBox^ gbPsychologyMoney;
 
-    private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
+
 
 	private: System::Windows::Forms::Label^ label15;
 
@@ -248,6 +248,8 @@ private: System::Windows::Forms::Label^ label14;
 private: System::Windows::Forms::Label^ label13;
 private: System::Windows::Forms::Label^ label11;
 private: System::Windows::Forms::Label^ label21;
+private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
+
 
 
 
@@ -353,7 +355,6 @@ private: System::Windows::Forms::Label^ label21;
             this->label28 = (gcnew System::Windows::Forms::Label());
             this->lblMoney = (gcnew System::Windows::Forms::Label());
             this->pbMoney = (gcnew System::Windows::Forms::PictureBox());
-            this->gbAtomicHabits = (gcnew System::Windows::Forms::GroupBox());
             this->label42 = (gcnew System::Windows::Forms::Label());
             this->btnAddAH = (gcnew System::Windows::Forms::Button());
             this->label27 = (gcnew System::Windows::Forms::Label());
@@ -375,6 +376,7 @@ private: System::Windows::Forms::Label^ label21;
             this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
             this->pictureBox9 = (gcnew System::Windows::Forms::PictureBox());
             this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+            this->gbAtomicHabits = (gcnew System::Windows::Forms::GroupBox());
             this->groupBox8->SuspendLayout();
             this->groupBox9->SuspendLayout();
             this->pAllBooks->SuspendLayout();
@@ -392,12 +394,12 @@ private: System::Windows::Forms::Label^ label21;
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pbHumanNature))->BeginInit();
             this->gbPsychologyMoney->SuspendLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pbMoney))->BeginInit();
-            this->gbAtomicHabits->SuspendLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pbAtomicHabits))->BeginInit();
             this->groupBox7->SuspendLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox9))->BeginInit();
+            this->gbAtomicHabits->SuspendLayout();
             this->SuspendLayout();
             // 
             // label1
@@ -746,9 +748,9 @@ private: System::Windows::Forms::Label^ label21;
             // pbReader
             // 
             this->pbReader->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pbReader.Image")));
-            this->pbReader->Location = System::Drawing::Point(16, 19);
+            this->pbReader->Location = System::Drawing::Point(12, 12);
             this->pbReader->Name = L"pbReader";
-            this->pbReader->Size = System::Drawing::Size(57, 93);
+            this->pbReader->Size = System::Drawing::Size(72, 108);
             this->pbReader->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
             this->pbReader->TabIndex = 22;
             this->pbReader->TabStop = false;
@@ -820,9 +822,9 @@ private: System::Windows::Forms::Label^ label21;
             // pbSoloLeveling
             // 
             this->pbSoloLeveling->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pbSoloLeveling.Image")));
-            this->pbSoloLeveling->Location = System::Drawing::Point(17, 18);
+            this->pbSoloLeveling->Location = System::Drawing::Point(2, 14);
             this->pbSoloLeveling->Name = L"pbSoloLeveling";
-            this->pbSoloLeveling->Size = System::Drawing::Size(57, 93);
+            this->pbSoloLeveling->Size = System::Drawing::Size(74, 114);
             this->pbSoloLeveling->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
             this->pbSoloLeveling->TabIndex = 22;
             this->pbSoloLeveling->TabStop = false;
@@ -893,9 +895,9 @@ private: System::Windows::Forms::Label^ label21;
             // pbSecondBrain
             // 
             this->pbSecondBrain->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pbSecondBrain.Image")));
-            this->pbSecondBrain->Location = System::Drawing::Point(16, 11);
+            this->pbSecondBrain->Location = System::Drawing::Point(12, 18);
             this->pbSecondBrain->Name = L"pbSecondBrain";
-            this->pbSecondBrain->Size = System::Drawing::Size(57, 96);
+            this->pbSecondBrain->Size = System::Drawing::Size(73, 107);
             this->pbSecondBrain->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
             this->pbSecondBrain->TabIndex = 22;
             this->pbSecondBrain->TabStop = false;
@@ -967,9 +969,9 @@ private: System::Windows::Forms::Label^ label21;
             // pbMakeStick
             // 
             this->pbMakeStick->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pbMakeStick.Image")));
-            this->pbMakeStick->Location = System::Drawing::Point(14, 18);
+            this->pbMakeStick->Location = System::Drawing::Point(7, 17);
             this->pbMakeStick->Name = L"pbMakeStick";
-            this->pbMakeStick->Size = System::Drawing::Size(57, 91);
+            this->pbMakeStick->Size = System::Drawing::Size(74, 111);
             this->pbMakeStick->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
             this->pbMakeStick->TabIndex = 22;
             this->pbMakeStick->TabStop = false;
@@ -1041,9 +1043,9 @@ private: System::Windows::Forms::Label^ label21;
             // pbMiniHabits
             // 
             this->pbMiniHabits->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pbMiniHabits.Image")));
-            this->pbMiniHabits->Location = System::Drawing::Point(16, 14);
+            this->pbMiniHabits->Location = System::Drawing::Point(11, 17);
             this->pbMiniHabits->Name = L"pbMiniHabits";
-            this->pbMiniHabits->Size = System::Drawing::Size(57, 96);
+            this->pbMiniHabits->Size = System::Drawing::Size(73, 106);
             this->pbMiniHabits->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
             this->pbMiniHabits->TabIndex = 22;
             this->pbMiniHabits->TabStop = false;
@@ -1114,9 +1116,9 @@ private: System::Windows::Forms::Label^ label21;
             // pbHumanNature
             // 
             this->pbHumanNature->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pbHumanNature.Image")));
-            this->pbHumanNature->Location = System::Drawing::Point(14, 14);
+            this->pbHumanNature->Location = System::Drawing::Point(10, 18);
             this->pbHumanNature->Name = L"pbHumanNature";
-            this->pbHumanNature->Size = System::Drawing::Size(57, 94);
+            this->pbHumanNature->Size = System::Drawing::Size(75, 109);
             this->pbHumanNature->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
             this->pbHumanNature->TabIndex = 22;
             this->pbHumanNature->TabStop = false;
@@ -1188,27 +1190,12 @@ private: System::Windows::Forms::Label^ label21;
             // pbMoney
             // 
             this->pbMoney->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pbMoney.Image")));
-            this->pbMoney->Location = System::Drawing::Point(16, 9);
+            this->pbMoney->Location = System::Drawing::Point(12, 14);
             this->pbMoney->Name = L"pbMoney";
-            this->pbMoney->Size = System::Drawing::Size(57, 98);
+            this->pbMoney->Size = System::Drawing::Size(76, 108);
             this->pbMoney->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
             this->pbMoney->TabIndex = 22;
             this->pbMoney->TabStop = false;
-            // 
-            // gbAtomicHabits
-            // 
-            this->gbAtomicHabits->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(231)), static_cast<System::Int32>(static_cast<System::Byte>(237)),
-                static_cast<System::Int32>(static_cast<System::Byte>(248)));
-            this->gbAtomicHabits->Controls->Add(this->label42);
-            this->gbAtomicHabits->Controls->Add(this->btnAddAH);
-            this->gbAtomicHabits->Controls->Add(this->label27);
-            this->gbAtomicHabits->Controls->Add(this->lblAtomic);
-            this->gbAtomicHabits->Controls->Add(this->pbAtomicHabits);
-            this->gbAtomicHabits->Location = System::Drawing::Point(17, 3);
-            this->gbAtomicHabits->Name = L"gbAtomicHabits";
-            this->gbAtomicHabits->Size = System::Drawing::Size(357, 169);
-            this->gbAtomicHabits->TabIndex = 14;
-            this->gbAtomicHabits->TabStop = false;
             // 
             // label42
             // 
@@ -1262,10 +1249,13 @@ private: System::Windows::Forms::Label^ label21;
             // 
             // pbAtomicHabits
             // 
+            this->pbAtomicHabits->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(231)), static_cast<System::Int32>(static_cast<System::Byte>(237)),
+                static_cast<System::Int32>(static_cast<System::Byte>(248)));
+            this->pbAtomicHabits->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
             this->pbAtomicHabits->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pbAtomicHabits.Image")));
-            this->pbAtomicHabits->Location = System::Drawing::Point(15, 10);
+            this->pbAtomicHabits->Location = System::Drawing::Point(9, 14);
             this->pbAtomicHabits->Name = L"pbAtomicHabits";
-            this->pbAtomicHabits->Size = System::Drawing::Size(57, 98);
+            this->pbAtomicHabits->Size = System::Drawing::Size(77, 111);
             this->pbAtomicHabits->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
             this->pbAtomicHabits->TabIndex = 19;
             this->pbAtomicHabits->TabStop = false;
@@ -1470,6 +1460,21 @@ private: System::Windows::Forms::Label^ label21;
             this->textBox2->TabIndex = 23;
             this->textBox2->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
             // 
+            // gbAtomicHabits
+            // 
+            this->gbAtomicHabits->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(231)), static_cast<System::Int32>(static_cast<System::Byte>(237)),
+                static_cast<System::Int32>(static_cast<System::Byte>(248)));
+            this->gbAtomicHabits->Controls->Add(this->label42);
+            this->gbAtomicHabits->Controls->Add(this->btnAddAH);
+            this->gbAtomicHabits->Controls->Add(this->label27);
+            this->gbAtomicHabits->Controls->Add(this->lblAtomic);
+            this->gbAtomicHabits->Controls->Add(this->pbAtomicHabits);
+            this->gbAtomicHabits->Location = System::Drawing::Point(17, 3);
+            this->gbAtomicHabits->Name = L"gbAtomicHabits";
+            this->gbAtomicHabits->Size = System::Drawing::Size(357, 169);
+            this->gbAtomicHabits->TabIndex = 14;
+            this->gbAtomicHabits->TabStop = false;
+            // 
             // Home
             // 
             this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -1477,6 +1482,7 @@ private: System::Windows::Forms::Label^ label21;
             this->AutoScroll = true;
             this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
                 static_cast<System::Int32>(static_cast<System::Byte>(253)));
+            this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
             this->ClientSize = System::Drawing::Size(1564, 852);
             this->Controls->Add(this->pictureBox2);
             this->Controls->Add(this->pictureBox1);
@@ -1523,14 +1529,14 @@ private: System::Windows::Forms::Label^ label21;
             this->gbPsychologyMoney->ResumeLayout(false);
             this->gbPsychologyMoney->PerformLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pbMoney))->EndInit();
-            this->gbAtomicHabits->ResumeLayout(false);
-            this->gbAtomicHabits->PerformLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pbAtomicHabits))->EndInit();
             this->groupBox7->ResumeLayout(false);
             this->groupBox7->PerformLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox9))->EndInit();
+            this->gbAtomicHabits->ResumeLayout(false);
+            this->gbAtomicHabits->PerformLayout();
             this->ResumeLayout(false);
             this->PerformLayout();
 
@@ -2026,8 +2032,8 @@ private: System::Windows::Forms::Label^ label21;
             newPbAtomicHabits->Image = pbAtomicHabits->Image;
             newPbAtomicHabits->SizeMode = pbAtomicHabits->SizeMode;
             newPbAtomicHabits->Location = pbAtomicHabits->Location;
-            newPbAtomicHabits->Size = System::Drawing::Size(60, 100);
-            newPbAtomicHabits->Location = System::Drawing::Point(40, 28);
+            newPbAtomicHabits->Size = System::Drawing::Size(80, 130);
+            newPbAtomicHabits->Location = System::Drawing::Point(25, 18);
 
             // Add the new PictureBox to the new GroupBox
             newGbAtomicHabits->Controls->Add(newPbAtomicHabits);
@@ -2426,8 +2432,8 @@ private: System::Windows::Forms::Label^ label21;
             newPbMoney->Image = pbMoney->Image;
             newPbMoney->SizeMode = pbAtomicHabits->SizeMode;
             newPbMoney->Location = pbAtomicHabits->Location;
-            newPbMoney->Size = System::Drawing::Size(60, 100);
-            newPbMoney->Location = System::Drawing::Point(40, 28);
+            newPbMoney->Size = System::Drawing::Size(80, 130);
+            newPbMoney->Location = System::Drawing::Point(25, 18);
 
             // Add the new PictureBox to the new GroupBox
             newGbMoney->Controls->Add(newPbMoney);
