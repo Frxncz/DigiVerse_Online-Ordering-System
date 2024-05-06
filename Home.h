@@ -2233,30 +2233,13 @@ private: System::Windows::Forms::TextBox^ textBox2;
 
 
         //
-        // reset Total payment when the delete has been cliked
+        // reset Subtotal Total payment when the delete has been cliked
         //
 
-        int resetTotalPayment = System::Convert::ToInt32(lblTotalPayment->Text);
-
-
-        resetTotalPayment -= 100;
-
-
-        lblTotalPayment->Text = resetTotalPayment.ToString();
-
-
-
-        //
-        // reset Total payment when the delete has been cliked
-        //
-
-        int resetSubtotal = System::Convert::ToInt32(lblSubtotal->Text);
-
-
-        resetSubtotal -= 100;
-
-
-        lblSubtotal->Text = resetSubtotal.ToString();
+        // Update subtotal and total payment
+        int quantity = System::Convert::ToInt32(lblQuantity->Text);
+        lblSubtotal->Text = (System::Convert::ToInt32(lblSubtotal->Text) - (quantity * 100)).ToString();
+        lblTotalPayment->Text = (System::Convert::ToInt32(lblTotalPayment->Text) - (quantity * 100)).ToString();
 
 
         //
@@ -2426,7 +2409,7 @@ private: System::Windows::Forms::TextBox^ textBox2;
             Label^ newlblMoneyPrice = gcnew Label();
             newlblMoneyPrice->Font = (gcnew System::Drawing::Font(L"Arial Black", 10.2, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            newlblMoneyPrice->Text = L"150";
+            newlblMoneyPrice->Text = L"200";
             newlblMoneyPrice->Size = System::Drawing::Size(118, 19);
             newlblMoneyPrice->Location = System::Drawing::Point(130, 80);
 
@@ -2627,31 +2610,13 @@ private: System::Windows::Forms::TextBox^ textBox2;
 
 
         //
-        // reset Total payment when the delete has been cliked
+        // reset Subtotal Total payment when the delete has been cliked
         //
 
-        int resetTotalPaymentMoney = System::Convert::ToInt32(lblTotalPayment->Text);
-
-
-        resetTotalPaymentMoney -= 200;
-
-
-        lblTotalPayment->Text = resetTotalPaymentMoney.ToString();
-
-
-
-        //
-        // reset Total payment when the delete has been cliked
-        //
-
-        int resetSubtotalMoney = System::Convert::ToInt32(lblSubtotal->Text);
-
-
-        resetSubtotalMoney -= 200;
-
-
-        lblSubtotal->Text = resetSubtotalMoney.ToString();
-
+        // Update subtotal and total payment
+        int quantity = System::Convert::ToInt32(lblQuantityMoney->Text);
+        lblSubtotal->Text = (System::Convert::ToInt32(lblSubtotal->Text) - (quantity * 200)).ToString();
+        lblTotalPayment->Text = (System::Convert::ToInt32(lblTotalPayment->Text) - (quantity * 200)).ToString();
 
 
         //
@@ -2730,11 +2695,11 @@ private: System::Windows::Forms::TextBox^ textBox2;
         //
         // Decrease lblSubtotal
         //
-        int subtotalDecreaseMoeny = System::Convert::ToInt32(lblSubtotal->Text);
+        int subtotalDecreaseMoney = System::Convert::ToInt32(lblSubtotal->Text);
 
-        subtotalDecreaseMoeny -= 200;
+        subtotalDecreaseMoney -= 200;
 
-        lblSubtotal->Text = subtotalDecreaseMoeny.ToString();
+        lblSubtotal->Text = subtotalDecreaseMoney.ToString();
 
 
         //
@@ -2750,6 +2715,6 @@ private: System::Windows::Forms::TextBox^ textBox2;
 
          ///
          ///
-         ///  
+         ///
 };
 }
