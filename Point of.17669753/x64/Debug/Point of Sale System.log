@@ -1,5 +1,4 @@
 ﻿  Home.cpp
-  LoginForm.cpp
 C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(2066,84): warning C4305: 'argument': truncation from 'double' to 'float'
   (compiling source file 'Home.cpp')
   
@@ -12,6 +11,7 @@ C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(24
 C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(2479,89): warning C4305: 'argument': truncation from 'double' to 'float'
   (compiling source file 'Home.cpp')
   
+  LoginForm.cpp
 C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(2066,84): warning C4305: 'argument': truncation from 'double' to 'float'
   (compiling source file 'LoginForm.cpp')
   
@@ -25,6 +25,7 @@ C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(24
   (compiling source file 'LoginForm.cpp')
   
   PaymentForm.cpp
+  PaymentSuccessForm.cpp
   Shipping.cpp
   Generating Code...
   Home.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link

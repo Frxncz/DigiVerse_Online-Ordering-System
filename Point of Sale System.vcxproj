@@ -126,6 +126,7 @@
     <ClCompile Include="Home.cpp" />
     <ClCompile Include="LoginForm.cpp" />
     <ClCompile Include="PaymentForm.cpp" />
+    <ClCompile Include="PaymentSuccessForm.cpp" />
     <ClCompile Include="Shipping.cpp" />
     <ClCompile Include="SignupForm.cpp" />
   </ItemGroup>
@@ -137,6 +138,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="PaymentForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="PaymentSuccessForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Shipping.h">
@@ -155,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PaymentForm.resx">
       <DependentUpon>PaymentForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentSuccessForm.resx">
+      <DependentUpon>PaymentSuccessForm.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Shipping.resx">
       <DependentUpon>Shipping.h</DependentUpon>

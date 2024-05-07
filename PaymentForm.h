@@ -1,5 +1,7 @@
 #pragma once
 
+#include "PaymentSuccessForm.h"
+
 namespace PointofSaleSystem {
 
 	using namespace System;
@@ -155,7 +157,10 @@ namespace PointofSaleSystem {
 
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
-
+		this->Hide();
+		PaymentSuccessForm^ PaymentSuccessFormUI = gcnew PaymentSuccessForm();
+		PaymentSuccessFormUI->ShowDialog();
+		this->Show();
 	}
 };
 }
