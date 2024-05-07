@@ -73,9 +73,9 @@ namespace PointofSaleSystem {
 			// pbOrderRecieve
 			// 
 			this->pbOrderRecieve->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pbOrderRecieve.Image")));
-			this->pbOrderRecieve->Location = System::Drawing::Point(22, 21);
+			this->pbOrderRecieve->Location = System::Drawing::Point(25, 23);
 			this->pbOrderRecieve->Name = L"pbOrderRecieve";
-			this->pbOrderRecieve->Size = System::Drawing::Size(243, 47);
+			this->pbOrderRecieve->Size = System::Drawing::Size(174, 36);
 			this->pbOrderRecieve->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pbOrderRecieve->TabIndex = 0;
 			this->pbOrderRecieve->TabStop = false;
@@ -104,7 +104,6 @@ namespace PointofSaleSystem {
 			this->button1->TabIndex = 13;
 			this->button1->Text = L"View Order";
 			this->button1->UseVisualStyleBackColor = false;
-			this->button1->Click += gcnew System::EventHandler(this, &PaymentSuccessForm::button1_Click);
 			// 
 			// label1
 			// 
@@ -139,8 +138,5 @@ namespace PointofSaleSystem {
 
 		}
 #pragma endregion
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) 
-	{
-	}
 };
 }

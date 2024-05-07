@@ -1,6 +1,6 @@
 #pragma once
 
-#include "PaymentSuccessForm.h"
+#include "GcashForm.h"
 
 namespace PointofSaleSystem {
 
@@ -158,8 +158,8 @@ namespace PointofSaleSystem {
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
 		this->Hide();
-		PaymentSuccessForm^ PaymentSuccessFormUI = gcnew PaymentSuccessForm();
-		PaymentSuccessFormUI->ShowDialog();
+		GcashForm^ GcashFormUI = gcnew GcashForm();
+		GcashFormUI->ShowDialog();
 		this->Show();
 	}
 };

@@ -123,6 +123,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="GcashForm.cpp" />
     <ClCompile Include="Home.cpp" />
     <ClCompile Include="LoginForm.cpp" />
     <ClCompile Include="PaymentForm.cpp" />
@@ -131,6 +132,9 @@
     <ClCompile Include="SignupForm.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="GcashForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Home.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -151,6 +155,9 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="GcashForm.resx">
+      <DependentUpon>GcashForm.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.h</DependentUpon>
     </EmbeddedResource>
