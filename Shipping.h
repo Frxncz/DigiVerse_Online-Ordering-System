@@ -1,5 +1,7 @@
 #pragma once
 
+#include "PaymentForm.h"
+
 namespace PointofSaleSystem {
 
 	using namespace System;
@@ -140,6 +142,7 @@ namespace PointofSaleSystem {
 			this->button1->TabIndex = 11;
 			this->button1->Text = L"Continue to Payment";
 			this->button1->UseVisualStyleBackColor = false;
+			this->button1->Click += gcnew System::EventHandler(this, &Shipping::button1_Click);
 			// 
 			// pictureBox5
 			// 
@@ -239,5 +242,12 @@ namespace PointofSaleSystem {
 		}
 #pragma endregion
 
-	};
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) 
+	{
+		this->Hide();
+		PaymentForm^ PaymentFormUI = gcnew PaymentForm();
+		PaymentFormUI->ShowDialog();
+		this->Show();
+	}
+};
 }

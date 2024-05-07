@@ -721,7 +721,7 @@ private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
             this->label49->AutoSize = true;
             this->label49->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->label49->Location = System::Drawing::Point(92, 47);
+            this->label49->Location = System::Drawing::Point(109, 58);
             this->label49->Name = L"label49";
             this->label49->Size = System::Drawing::Size(203, 51);
             this->label49->TabIndex = 29;
@@ -743,7 +743,7 @@ private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
             this->lblReader->AutoSize = true;
             this->lblReader->Font = (gcnew System::Drawing::Font(L"Arial", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->lblReader->Location = System::Drawing::Point(90, 17);
+            this->lblReader->Location = System::Drawing::Point(107, 21);
             this->lblReader->Name = L"lblReader";
             this->lblReader->Size = System::Drawing::Size(162, 19);
             this->lblReader->TabIndex = 23;
@@ -794,7 +794,7 @@ private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
             this->label48->AutoSize = true;
             this->label48->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->label48->Location = System::Drawing::Point(94, 53);
+            this->label48->Location = System::Drawing::Point(109, 59);
             this->label48->Name = L"label48";
             this->label48->Size = System::Drawing::Size(211, 51);
             this->label48->TabIndex = 28;
@@ -817,7 +817,7 @@ private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
             this->lblSolo->AutoSize = true;
             this->lblSolo->Font = (gcnew System::Drawing::Font(L"Arial", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->lblSolo->Location = System::Drawing::Point(92, 19);
+            this->lblSolo->Location = System::Drawing::Point(107, 24);
             this->lblSolo->Name = L"lblSolo";
             this->lblSolo->Size = System::Drawing::Size(114, 19);
             this->lblSolo->TabIndex = 23;
@@ -868,7 +868,7 @@ private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
             this->label47->AutoSize = true;
             this->label47->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->label47->Location = System::Drawing::Point(95, 51);
+            this->label47->Location = System::Drawing::Point(111, 56);
             this->label47->Name = L"label47";
             this->label47->Size = System::Drawing::Size(213, 51);
             this->label47->TabIndex = 28;
@@ -890,7 +890,7 @@ private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
             this->lblBrain->AutoSize = true;
             this->lblBrain->Font = (gcnew System::Drawing::Font(L"Arial", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->lblBrain->Location = System::Drawing::Point(93, 18);
+            this->lblBrain->Location = System::Drawing::Point(109, 18);
             this->lblBrain->Name = L"lblBrain";
             this->lblBrain->Size = System::Drawing::Size(115, 19);
             this->lblBrain->TabIndex = 23;
@@ -941,7 +941,7 @@ private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
             this->label46->AutoSize = true;
             this->label46->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->label46->Location = System::Drawing::Point(85, 52);
+            this->label46->Location = System::Drawing::Point(106, 56);
             this->label46->Name = L"label46";
             this->label46->Size = System::Drawing::Size(212, 51);
             this->label46->TabIndex = 27;
@@ -964,7 +964,7 @@ private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
             this->lblMakeIt->AutoSize = true;
             this->lblMakeIt->Font = (gcnew System::Drawing::Font(L"Arial", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->lblMakeIt->Location = System::Drawing::Point(87, 20);
+            this->lblMakeIt->Location = System::Drawing::Point(106, 20);
             this->lblMakeIt->Name = L"lblMakeIt";
             this->lblMakeIt->Size = System::Drawing::Size(108, 19);
             this->lblMakeIt->TabIndex = 23;
@@ -1015,7 +1015,7 @@ private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
             this->label45->AutoSize = true;
             this->label45->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->label45->Location = System::Drawing::Point(94, 48);
+            this->label45->Location = System::Drawing::Point(112, 55);
             this->label45->Name = L"label45";
             this->label45->Size = System::Drawing::Size(183, 51);
             this->label45->TabIndex = 26;
@@ -1038,7 +1038,7 @@ private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
             this->lblMini->AutoSize = true;
             this->lblMini->Font = (gcnew System::Drawing::Font(L"Arial", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->lblMini->Location = System::Drawing::Point(91, 20);
+            this->lblMini->Location = System::Drawing::Point(109, 20);
             this->lblMini->Name = L"lblMini";
             this->lblMini->Size = System::Drawing::Size(95, 19);
             this->lblMini->TabIndex = 23;
@@ -1089,7 +1089,7 @@ private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
             this->label44->AutoSize = true;
             this->label44->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->label44->Location = System::Drawing::Point(88, 53);
+            this->label44->Location = System::Drawing::Point(112, 60);
             this->label44->Name = L"label44";
             this->label44->Size = System::Drawing::Size(185, 51);
             this->label44->TabIndex = 26;
@@ -1111,7 +1111,7 @@ private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
             this->lblHuman->AutoSize = true;
             this->lblHuman->Font = (gcnew System::Drawing::Font(L"Arial", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->lblHuman->Location = System::Drawing::Point(87, 22);
+            this->lblHuman->Location = System::Drawing::Point(111, 22);
             this->lblHuman->Name = L"lblHuman";
             this->lblHuman->Size = System::Drawing::Size(122, 19);
             this->lblHuman->TabIndex = 23;
@@ -1163,7 +1163,7 @@ private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
             this->label43->AutoSize = true;
             this->label43->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->label43->Location = System::Drawing::Point(94, 55);
+            this->label43->Location = System::Drawing::Point(106, 55);
             this->label43->Name = L"label43";
             this->label43->Size = System::Drawing::Size(190, 51);
             this->label43->TabIndex = 26;
@@ -1185,7 +1185,7 @@ private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
             this->lblMoney->AutoSize = true;
             this->lblMoney->Font = (gcnew System::Drawing::Font(L"Arial", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->lblMoney->Location = System::Drawing::Point(94, 21);
+            this->lblMoney->Location = System::Drawing::Point(106, 21);
             this->lblMoney->Name = L"lblMoney";
             this->lblMoney->Size = System::Drawing::Size(176, 19);
             this->lblMoney->TabIndex = 23;
@@ -1221,7 +1221,7 @@ private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
             this->label42->AutoSize = true;
             this->label42->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->label42->Location = System::Drawing::Point(90, 55);
+            this->label42->Location = System::Drawing::Point(110, 55);
             this->label42->Name = L"label42";
             this->label42->Size = System::Drawing::Size(201, 51);
             this->label42->TabIndex = 20;
@@ -1260,7 +1260,7 @@ private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
             this->lblAtomic->AutoSize = true;
             this->lblAtomic->Font = (gcnew System::Drawing::Font(L"Arial", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->lblAtomic->Location = System::Drawing::Point(89, 18);
+            this->lblAtomic->Location = System::Drawing::Point(109, 18);
             this->lblAtomic->Name = L"lblAtomic";
             this->lblAtomic->Size = System::Drawing::Size(118, 19);
             this->lblAtomic->TabIndex = 20;
@@ -1286,9 +1286,9 @@ private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
                 static_cast<System::Byte>(0)));
             this->label15->Location = System::Drawing::Point(256, 18);
             this->label15->Name = L"label15";
-            this->label15->Size = System::Drawing::Size(158, 24);
+            this->label15->Size = System::Drawing::Size(146, 24);
             this->label15->TabIndex = 1;
-            this->label15->Text = L"My Order Detail";
+            this->label15->Text = L"Shopping Cart";
             // 
             // label17
             // 
