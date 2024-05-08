@@ -1,5 +1,7 @@
 #pragma once
 
+#include "PaymentSuccessForm.h"
+
 namespace PointofSaleSystem {
 
 	using namespace System;
@@ -135,6 +137,7 @@ namespace PointofSaleSystem {
 			this->btnPay->TabIndex = 13;
 			this->btnPay->Text = L"PAY PHP 0.00";
 			this->btnPay->UseVisualStyleBackColor = false;
+			this->btnPay->Click += gcnew System::EventHandler(this, &GcashForm::btnPay_Click);
 			// 
 			// label1
 			// 
@@ -223,10 +226,19 @@ namespace PointofSaleSystem {
 		}
 #pragma endregion
 
+	//------ Go To  Payment form when clicked the 'Return to Payment' in Gcash form -----//
 	private: System::Void pbReturnPayment_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
 		this->Hide();
 		newGcashUI->Show();
+	}
+
+	//----- Go to Payment Success -----//
+	private: System::Void btnPay_Click(System::Object^ sender, System::EventArgs^ e) 
+	{
+		this->Hide();
+		PaymentSuccessForm^ paymentSuccessUI = gcnew PaymentSuccessForm();
+		paymentSuccessUI->ShowDialog();
 	}
 };
 }

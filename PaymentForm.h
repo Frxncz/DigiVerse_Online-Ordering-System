@@ -186,7 +186,7 @@ namespace PointofSaleSystem {
 	}
 
 
-
+	//----- Go to Gcash Form -----//
 	private: System::Void btnGotoGcash_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
 		this->Hide();

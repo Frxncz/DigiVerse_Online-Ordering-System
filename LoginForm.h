@@ -281,6 +281,7 @@ namespace PointofSaleSystem {
 		this->Hide();
 		Home^ homeFormUI = gcnew Home();
 		homeFormUI->ShowDialog();
+		this->Show();
 	}
 };
 }

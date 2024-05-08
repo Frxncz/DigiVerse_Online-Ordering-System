@@ -157,7 +157,7 @@ namespace PointofSaleSystem {
 				static_cast<System::Byte>(0)));
 			this->btnGotoPayment->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
 				static_cast<System::Int32>(static_cast<System::Byte>(253)));
-			this->btnGotoPayment->Location = System::Drawing::Point(634, 550);
+			this->btnGotoPayment->Location = System::Drawing::Point(634, 563);
 			this->btnGotoPayment->Name = L"btnGotoPayment";
 			this->btnGotoPayment->Size = System::Drawing::Size(296, 61);
 			this->btnGotoPayment->TabIndex = 11;
@@ -168,7 +168,7 @@ namespace PointofSaleSystem {
 			// pbCancel
 			// 
 			this->pbCancel->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pbCancel.Image")));
-			this->pbCancel->Location = System::Drawing::Point(51, 597);
+			this->pbCancel->Location = System::Drawing::Point(51, 619);
 			this->pbCancel->Name = L"pbCancel";
 			this->pbCancel->Size = System::Drawing::Size(97, 24);
 			this->pbCancel->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
