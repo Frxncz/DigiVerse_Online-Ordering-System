@@ -1,5 +1,7 @@
 #pragma once
 
+#include "PaymentForm.h"
+
 
 namespace PointofSaleSystem {
 
@@ -65,7 +67,8 @@ namespace PointofSaleSystem {
 	private: System::Windows::Forms::PictureBox^ pictureBox2;
 	private: System::Windows::Forms::PictureBox^ pictureBox3;
 	private: System::Windows::Forms::PictureBox^ pictureBox4;
-	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::Button^ btnGotoPayment;
+
 	private: System::Windows::Forms::PictureBox^ pbCancel;
 
 	private: System::Windows::Forms::Label^ label1;
@@ -93,7 +96,7 @@ namespace PointofSaleSystem {
 			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox4 = (gcnew System::Windows::Forms::PictureBox());
-			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->btnGotoPayment = (gcnew System::Windows::Forms::Button());
 			this->pbCancel = (gcnew System::Windows::Forms::PictureBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
@@ -146,20 +149,21 @@ namespace PointofSaleSystem {
 			this->pictureBox4->TabIndex = 3;
 			this->pictureBox4->TabStop = false;
 			// 
-			// button1
+			// btnGotoPayment
 			// 
-			this->button1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
+			this->btnGotoPayment->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
 				static_cast<System::Int32>(static_cast<System::Byte>(197)));
-			this->button1->Font = (gcnew System::Drawing::Font(L"Arial Black", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->btnGotoPayment->Font = (gcnew System::Drawing::Font(L"Arial Black", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
+			this->btnGotoPayment->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
 				static_cast<System::Int32>(static_cast<System::Byte>(253)));
-			this->button1->Location = System::Drawing::Point(634, 550);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(296, 61);
-			this->button1->TabIndex = 11;
-			this->button1->Text = L"Continue to Payment";
-			this->button1->UseVisualStyleBackColor = false;
+			this->btnGotoPayment->Location = System::Drawing::Point(634, 550);
+			this->btnGotoPayment->Name = L"btnGotoPayment";
+			this->btnGotoPayment->Size = System::Drawing::Size(296, 61);
+			this->btnGotoPayment->TabIndex = 11;
+			this->btnGotoPayment->Text = L"Continue to Payment";
+			this->btnGotoPayment->UseVisualStyleBackColor = false;
+			this->btnGotoPayment->Click += gcnew System::EventHandler(this, &Shipping::btnGotoPayment_Click);
 			// 
 			// pbCancel
 			// 
@@ -240,7 +244,7 @@ namespace PointofSaleSystem {
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->pbCancel);
-			this->Controls->Add(this->button1);
+			this->Controls->Add(this->btnGotoPayment);
 			this->Controls->Add(this->pictureBox4);
 			this->Controls->Add(this->pictureBox3);
 			this->Controls->Add(this->pictureBox2);
@@ -259,10 +263,21 @@ namespace PointofSaleSystem {
 
 		}
 #pragma endregion
+
+	//------ Go To Home whenclicked the cancel in Shipping form -----//
 	private: System::Void pbCancel_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
 		this->Hide();
 		newShippingUI->Show();
+	}
+
+
+	//----- Go to Payment form -----//
+	private: System::Void btnGotoPayment_Click(System::Object^ sender, System::EventArgs^ e)
+	{
+		this->Hide();
+		PaymentForm^ paymentUI = gcnew PaymentForm(this);
+		paymentUI->ShowDialog();
 	}
 };
 }

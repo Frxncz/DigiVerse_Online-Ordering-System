@@ -15,8 +15,27 @@ namespace PointofSaleSystem {
 	public ref class PaymentForm : public System::Windows::Forms::Form
 	{
 	public:
+
+		Form^ newPaymentUI;
+
 		PaymentForm(void)
 		{
+			InitializeComponent();
+			//
+			//TODO: Add the constructor code here
+			//
+
+
+			//
+			// This will center the Form in the screen when it pop up
+			//
+			CenterToScreen();
+		}
+
+		PaymentForm(Form^ paymentUI)
+		{
+			newPaymentUI = paymentUI;
+
 			InitializeComponent();
 			//
 			//TODO: Add the constructor code here
@@ -40,7 +59,9 @@ namespace PointofSaleSystem {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::PictureBox^ pictureBox1;
+	private: System::Windows::Forms::PictureBox^ pbReturnShipping;
+	protected:
+
 	protected:
 	private: System::Windows::Forms::PictureBox^ pictureBox2;
 	private: System::Windows::Forms::PictureBox^ pictureBox3;
@@ -61,26 +82,27 @@ namespace PointofSaleSystem {
 		void InitializeComponent(void)
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(PaymentForm::typeid));
-			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->pbReturnShipping = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox4 = (gcnew System::Windows::Forms::PictureBox());
 			this->button1 = (gcnew System::Windows::Forms::Button());
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pbReturnShipping))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->BeginInit();
 			this->SuspendLayout();
 			// 
-			// pictureBox1
+			// pbReturnShipping
 			// 
-			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(51, 710);
-			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(233, 24);
-			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->pictureBox1->TabIndex = 0;
-			this->pictureBox1->TabStop = false;
+			this->pbReturnShipping->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pbReturnShipping.Image")));
+			this->pbReturnShipping->Location = System::Drawing::Point(51, 710);
+			this->pbReturnShipping->Name = L"pbReturnShipping";
+			this->pbReturnShipping->Size = System::Drawing::Size(206, 24);
+			this->pbReturnShipping->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->pbReturnShipping->TabIndex = 0;
+			this->pbReturnShipping->TabStop = false;
+			this->pbReturnShipping->Click += gcnew System::EventHandler(this, &PaymentForm::pbReturnShipping_Click);
 			// 
 			// pictureBox2
 			// 
@@ -140,10 +162,10 @@ namespace PointofSaleSystem {
 			this->Controls->Add(this->pictureBox4);
 			this->Controls->Add(this->pictureBox3);
 			this->Controls->Add(this->pictureBox2);
-			this->Controls->Add(this->pictureBox1);
+			this->Controls->Add(this->pbReturnShipping);
 			this->Name = L"PaymentForm";
 			this->Text = L"PaymentForm";
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pbReturnShipping))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->EndInit();
@@ -151,5 +173,12 @@ namespace PointofSaleSystem {
 
 		}
 #pragma endregion
+
+	//------ Go To Shipping form when clicked the return to Shipping -----//
+	private: System::Void pbReturnShipping_Click(System::Object^ sender, System::EventArgs^ e)
+	{
+		this->Hide();
+		newPaymentUI->Show();
+	}
 };
 }
