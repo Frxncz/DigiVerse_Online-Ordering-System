@@ -98,7 +98,7 @@ namespace PointofSaleSystem {
 				static_cast<System::Byte>(0)));
 			this->button1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
 				static_cast<System::Int32>(static_cast<System::Byte>(253)));
-			this->button1->Location = System::Drawing::Point(512, 465);
+			this->button1->Location = System::Drawing::Point(516, 465);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(182, 61);
 			this->button1->TabIndex = 13;
@@ -112,7 +112,7 @@ namespace PointofSaleSystem {
 				static_cast<System::Byte>(0)));
 			this->label1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(144)), static_cast<System::Int32>(static_cast<System::Byte>(143)),
 				static_cast<System::Int32>(static_cast<System::Byte>(146)));
-			this->label1->Location = System::Drawing::Point(503, 411);
+			this->label1->Location = System::Drawing::Point(507, 411);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(207, 26);
 			this->label1->TabIndex = 14;

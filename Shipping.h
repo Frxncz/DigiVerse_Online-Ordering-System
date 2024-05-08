@@ -19,8 +19,6 @@ namespace PointofSaleSystem {
 	{
 	public:
 
-		Form^ newShippingUI;
-
 		Shipping(void)
 		{
 			InitializeComponent();
@@ -29,22 +27,6 @@ namespace PointofSaleSystem {
 			//
 
 					
-			//
-			// This will center the Form in the screen when it pop up
-			//
-			CenterToScreen();
-		}
-
-		Shipping(Form^ shippingUI)
-		{
-			newShippingUI = shippingUI;
-
-			InitializeComponent();
-			//
-			//TODO: Add the constructor code here
-			//
-
-
 			//
 			// This will center the Form in the screen when it pop up
 			//
@@ -174,7 +156,6 @@ namespace PointofSaleSystem {
 			this->pbCancel->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pbCancel->TabIndex = 12;
 			this->pbCancel->TabStop = false;
-			this->pbCancel->Click += gcnew System::EventHandler(this, &Shipping::pbCancel_Click);
 			// 
 			// label1
 			// 
@@ -263,13 +244,6 @@ namespace PointofSaleSystem {
 
 		}
 #pragma endregion
-
-	//------ Go To Home whenclicked the cancel in Shipping form -----//
-	private: System::Void pbCancel_Click(System::Object^ sender, System::EventArgs^ e) 
-	{
-		this->Hide();
-		newShippingUI->Show();
-	}
 
 
 	//----- Go to Payment form -----//

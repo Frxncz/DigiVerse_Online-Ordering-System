@@ -1,7 +1,5 @@
 #pragma once
 
-#include "Shipping.h"
-
 namespace PointofSaleSystem {
 
 	using namespace System;
@@ -244,13 +242,15 @@ private: System::Windows::Forms::Label^ lblMoney;
     private: System::Windows::Forms::GroupBox^ gbWhiteEnd;
     private: System::Windows::Forms::PictureBox^ pictureBox1;
     private: System::Windows::Forms::PictureBox^ pictureBox2;
-private: System::Windows::Forms::PictureBox^ pictureBox9;
-private: System::Windows::Forms::TextBox^ textBox2;
+
+
 private: System::Windows::Forms::Label^ label14;
 private: System::Windows::Forms::Label^ label13;
 private: System::Windows::Forms::Label^ label11;
 private: System::Windows::Forms::Label^ label21;
 private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
+private: System::Windows::Forms::PictureBox^ pictureBox3;
+private: System::Windows::Forms::PictureBox^ pictureBox4;
 
 
 
@@ -377,8 +377,8 @@ private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
             this->btnFantasy = (gcnew System::Windows::Forms::Button());
             this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
             this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
-            this->pictureBox9 = (gcnew System::Windows::Forms::PictureBox());
-            this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+            this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
+            this->pictureBox4 = (gcnew System::Windows::Forms::PictureBox());
             this->groupBox8->SuspendLayout();
             this->groupBox9->SuspendLayout();
             this->pAllBooks->SuspendLayout();
@@ -401,7 +401,8 @@ private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
             this->groupBox7->SuspendLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
-            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox9))->BeginInit();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->BeginInit();
             this->SuspendLayout();
             // 
             // label1
@@ -627,7 +628,6 @@ private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
             this->button1->TabIndex = 10;
             this->button1->Text = L"Continue to Checkout";
             this->button1->UseVisualStyleBackColor = false;
-            this->button1->Click += gcnew System::EventHandler(this, &Home::button1_Click);
             // 
             // button2
             // 
@@ -1380,7 +1380,7 @@ private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
             this->btnNonFiction->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->btnNonFiction->ForeColor = System::Drawing::Color::Black;
-            this->btnNonFiction->Location = System::Drawing::Point(201, 163);
+            this->btnNonFiction->Location = System::Drawing::Point(204, 163);
             this->btnNonFiction->Name = L"btnNonFiction";
             this->btnNonFiction->Size = System::Drawing::Size(111, 38);
             this->btnNonFiction->TabIndex = 20;
@@ -1395,7 +1395,7 @@ private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
             this->btnFiction->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->btnFiction->ForeColor = System::Drawing::Color::Black;
-            this->btnFiction->Location = System::Drawing::Point(357, 163);
+            this->btnFiction->Location = System::Drawing::Point(361, 163);
             this->btnFiction->Name = L"btnFiction";
             this->btnFiction->Size = System::Drawing::Size(111, 38);
             this->btnFiction->TabIndex = 21;
@@ -1410,7 +1410,7 @@ private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
             this->btnNovel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->btnNovel->ForeColor = System::Drawing::Color::Black;
-            this->btnNovel->Location = System::Drawing::Point(501, 163);
+            this->btnNovel->Location = System::Drawing::Point(508, 163);
             this->btnNovel->Name = L"btnNovel";
             this->btnNovel->Size = System::Drawing::Size(111, 38);
             this->btnNovel->TabIndex = 22;
@@ -1425,7 +1425,7 @@ private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
             this->btnFantasy->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->btnFantasy->ForeColor = System::Drawing::Color::Black;
-            this->btnFantasy->Location = System::Drawing::Point(646, 163);
+            this->btnFantasy->Location = System::Drawing::Point(668, 163);
             this->btnFantasy->Name = L"btnFantasy";
             this->btnFantasy->Size = System::Drawing::Size(111, 38);
             this->btnFantasy->TabIndex = 25;
@@ -1453,30 +1453,25 @@ private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
             this->pictureBox2->TabIndex = 27;
             this->pictureBox2->TabStop = false;
             // 
-            // pictureBox9
+            // pictureBox3
             // 
-            this->pictureBox9->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(203)), static_cast<System::Int32>(static_cast<System::Byte>(216)),
-                static_cast<System::Int32>(static_cast<System::Byte>(241)));
-            this->pictureBox9->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox9.Image")));
-            this->pictureBox9->Location = System::Drawing::Point(511, 98);
-            this->pictureBox9->Name = L"pictureBox9";
-            this->pictureBox9->Size = System::Drawing::Size(18, 20);
-            this->pictureBox9->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
-            this->pictureBox9->TabIndex = 24;
-            this->pictureBox9->TabStop = false;
+            this->pictureBox3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.Image")));
+            this->pictureBox3->Location = System::Drawing::Point(325, 42);
+            this->pictureBox3->Name = L"pictureBox3";
+            this->pictureBox3->Size = System::Drawing::Size(169, 41);
+            this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+            this->pictureBox3->TabIndex = 28;
+            this->pictureBox3->TabStop = false;
             // 
-            // textBox2
+            // pictureBox4
             // 
-            this->textBox2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
-                static_cast<System::Int32>(static_cast<System::Byte>(242)));
-            this->textBox2->Font = (gcnew System::Drawing::Font(L"Arial Narrow", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->textBox2->Location = System::Drawing::Point(501, 92);
-            this->textBox2->Multiline = true;
-            this->textBox2->Name = L"textBox2";
-            this->textBox2->Size = System::Drawing::Size(255, 30);
-            this->textBox2->TabIndex = 23;
-            this->textBox2->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
+            this->pictureBox4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox4.Image")));
+            this->pictureBox4->Location = System::Drawing::Point(626, 107);
+            this->pictureBox4->Name = L"pictureBox4";
+            this->pictureBox4->Size = System::Drawing::Size(153, 34);
+            this->pictureBox4->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+            this->pictureBox4->TabIndex = 29;
+            this->pictureBox4->TabStop = false;
             // 
             // Home
             // 
@@ -1487,11 +1482,11 @@ private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
                 static_cast<System::Int32>(static_cast<System::Byte>(253)));
             this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
             this->ClientSize = System::Drawing::Size(1564, 852);
+            this->Controls->Add(this->pictureBox4);
+            this->Controls->Add(this->pictureBox3);
             this->Controls->Add(this->pictureBox2);
             this->Controls->Add(this->pictureBox1);
             this->Controls->Add(this->btnFantasy);
-            this->Controls->Add(this->pictureBox9);
-            this->Controls->Add(this->textBox2);
             this->Controls->Add(this->btnNovel);
             this->Controls->Add(this->btnFiction);
             this->Controls->Add(this->btnNonFiction);
@@ -1539,7 +1534,8 @@ private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
             this->groupBox7->PerformLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
-            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox9))->EndInit();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->EndInit();
             this->ResumeLayout(false);
             this->PerformLayout();
 
@@ -2792,12 +2788,5 @@ private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
          /// 
      
 
-    //----- Go To Shipping Form -----//
-    private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) 
-    {
-        this->Hide();
-        Shipping^ shippingUI = gcnew Shipping(this);
-        shippingUI->ShowDialog();
-    }
 };
 }

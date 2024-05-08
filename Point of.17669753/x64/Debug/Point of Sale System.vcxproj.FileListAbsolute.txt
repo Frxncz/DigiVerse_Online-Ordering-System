@@ -7,3 +7,4 @@ C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Point of.
 C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Point of.17669753\x64\Debug\PointofSaleSystem.PaymentForm.resources
 C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Point of.17669753\x64\Debug\PointofSaleSystem.PaymentSuccessForm.resources
 C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Point of.17669753\x64\Debug\PointofSaleSystem.GcashForm.resources
+C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Point of.17669753\x64\Debug\PointofSaleSystem.CheckoutForm.resources
