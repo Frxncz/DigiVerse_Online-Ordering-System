@@ -2,7 +2,6 @@
 
 #include "Shipping.h"
 
-
 namespace PointofSaleSystem {
 
 	using namespace System;
@@ -2791,13 +2790,12 @@ private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
          /// 
          /// 
          /// 
-         
+        
     private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) 
     {
         this->Hide();
-        Shipping^ ShippingFormUI = gcnew Shipping();
-        ShippingFormUI->ShowDialog();
-        this->Show();
+        Shipping^ shippingUI = gcnew Shipping(this);
+        shippingUI->ShowDialog();
     }
 };
 }

@@ -1,7 +1,5 @@
 #pragma once
 
-#include "GcashForm.h"
-
 namespace PointofSaleSystem {
 
 	using namespace System;
@@ -130,7 +128,6 @@ namespace PointofSaleSystem {
 			this->button1->TabIndex = 12;
 			this->button1->Text = L"Continue to Payment";
 			this->button1->UseVisualStyleBackColor = false;
-			this->button1->Click += gcnew System::EventHandler(this, &PaymentForm::button1_Click);
 			// 
 			// PaymentForm
 			// 
@@ -154,13 +151,5 @@ namespace PointofSaleSystem {
 
 		}
 #pragma endregion
-
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) 
-	{
-		this->Hide();
-		GcashForm^ GcashFormUI = gcnew GcashForm();
-		GcashFormUI->ShowDialog();
-		this->Show();
-	}
 };
 }

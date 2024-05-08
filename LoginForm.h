@@ -1,7 +1,6 @@
 #pragma once
 
 #include "Home.h"
-#include "SignupForm.h"
 
 namespace PointofSaleSystem {
 
@@ -134,7 +133,6 @@ namespace PointofSaleSystem {
 			this->btnSignUp->Size = System::Drawing::Size(67, 18);
 			this->btnSignUp->TabIndex = 22;
 			this->btnSignUp->Text = L"Sign Up";
-			this->btnSignUp->Click += gcnew System::EventHandler(this, &LoginForm::btnSignUp_Click);
 			// 
 			// label6
 			// 
@@ -283,17 +281,6 @@ namespace PointofSaleSystem {
 		this->Hide();
 		Home^ homeFormUI = gcnew Home();
 		homeFormUI->ShowDialog();
-		this->Show();
-
-	}
-
-	// When click it will go to the sign up form
-	private: System::Void btnSignUp_Click(System::Object^ sender, System::EventArgs^ e) 
-	{
-		this->Hide();
-		SignupForm^ SignupFormUI = gcnew SignupForm();
-		SignupFormUI->ShowDialog();
-		this->Show();
 	}
 };
 }

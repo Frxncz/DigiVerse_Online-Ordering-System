@@ -1,6 +1,5 @@
 #pragma once
 
-#include "PaymentForm.h"
 
 namespace PointofSaleSystem {
 
@@ -17,6 +16,9 @@ namespace PointofSaleSystem {
 	public ref class Shipping : public System::Windows::Forms::Form
 	{
 	public:
+
+		Form^ newShippingUI;
+
 		Shipping(void)
 		{
 			InitializeComponent();
@@ -25,7 +27,22 @@ namespace PointofSaleSystem {
 			//
 
 					
-			
+			//
+			// This will center the Form in the screen when it pop up
+			//
+			CenterToScreen();
+		}
+
+		Shipping(Form^ shippingUI)
+		{
+			newShippingUI = shippingUI;
+
+			InitializeComponent();
+			//
+			//TODO: Add the constructor code here
+			//
+
+
 			//
 			// This will center the Form in the screen when it pop up
 			//
@@ -49,7 +66,8 @@ namespace PointofSaleSystem {
 	private: System::Windows::Forms::PictureBox^ pictureBox3;
 	private: System::Windows::Forms::PictureBox^ pictureBox4;
 	private: System::Windows::Forms::Button^ button1;
-	private: System::Windows::Forms::PictureBox^ pictureBox5;
+	private: System::Windows::Forms::PictureBox^ pbCancel;
+
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label3;
@@ -76,7 +94,7 @@ namespace PointofSaleSystem {
 			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox4 = (gcnew System::Windows::Forms::PictureBox());
 			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->pictureBox5 = (gcnew System::Windows::Forms::PictureBox());
+			this->pbCancel = (gcnew System::Windows::Forms::PictureBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
@@ -85,7 +103,7 @@ namespace PointofSaleSystem {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pbCancel))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// pictureBox1
@@ -142,17 +160,17 @@ namespace PointofSaleSystem {
 			this->button1->TabIndex = 11;
 			this->button1->Text = L"Continue to Payment";
 			this->button1->UseVisualStyleBackColor = false;
-			this->button1->Click += gcnew System::EventHandler(this, &Shipping::button1_Click);
 			// 
-			// pictureBox5
+			// pbCancel
 			// 
-			this->pictureBox5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox5.Image")));
-			this->pictureBox5->Location = System::Drawing::Point(51, 597);
-			this->pictureBox5->Name = L"pictureBox5";
-			this->pictureBox5->Size = System::Drawing::Size(97, 24);
-			this->pictureBox5->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->pictureBox5->TabIndex = 12;
-			this->pictureBox5->TabStop = false;
+			this->pbCancel->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pbCancel.Image")));
+			this->pbCancel->Location = System::Drawing::Point(51, 597);
+			this->pbCancel->Name = L"pbCancel";
+			this->pbCancel->Size = System::Drawing::Size(97, 24);
+			this->pbCancel->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->pbCancel->TabIndex = 12;
+			this->pbCancel->TabStop = false;
+			this->pbCancel->Click += gcnew System::EventHandler(this, &Shipping::pbCancel_Click);
 			// 
 			// label1
 			// 
@@ -221,7 +239,7 @@ namespace PointofSaleSystem {
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
-			this->Controls->Add(this->pictureBox5);
+			this->Controls->Add(this->pbCancel);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->pictureBox4);
 			this->Controls->Add(this->pictureBox3);
@@ -235,19 +253,16 @@ namespace PointofSaleSystem {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pbCancel))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
-
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) 
+	private: System::Void pbCancel_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
 		this->Hide();
-		PaymentForm^ PaymentFormUI = gcnew PaymentForm();
-		PaymentFormUI->ShowDialog();
-		this->Show();
+		newShippingUI->Show();
 	}
 };
 }
