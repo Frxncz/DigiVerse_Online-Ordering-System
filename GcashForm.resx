@@ -121,7 +121,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABPUAAAGUCAYAAABdtxesAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAAK25JREFUeF7t3Xe4pVV9L/CYIKJcFQugwYjYb4zXGJLoTXJjYrlGcmNiLkmkSO9d
+        DgAACw4BQL7hQQAAK25JREFUeF7t3Xe4pVV9L/CYIKJcFQugwYjYb4zXGJLoTXJjYrlGcmNiLkmkSO9d
         kSYoIE2aIIbemwWQKr333jszzABzeu/9zO/u9Z45s8+ZWTMM6M0sfD7reT7MzHfv/e53781f32eV3/u9
         /2gIAAAAAOANJBsCAAAAAOXKhgAAAABAubIhAAAAAFCubAgAAAAAlCsbAgAAAADlyoYAAAAAQLmyIQAA
         AABQrmwIAAAAAJQrGwIAAAAA5cqGAAAAAEC5siEAAAAAUK5sCAAAAACUKxsCAAAAAOXKhgAAAABAubIh
@@ -312,7 +312,7 @@
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAA8sAAAKaCAYAAAAJVMtJAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EgAACxIB0t1+/AAA/7JJREFUeF7s/X+wbddV34nejS1dXd2rH5ZkX2Nky8C1G4yD/3Dev8RV7/2BJFuy
+        EQAACxEBf2RfkQAA/7JJREFUeF7s/X+wbddV34nejS1dXd2rH5ZkX2Nky8C1G4yD/3Dev8RV7/2BJFuy
         8Q+ornJSSeWf9ANeN0lXU4WdkLyYqi6M+cOmQyEgYKjq2EpSgEmHMrGFjSXbsi1ZWDa2ZJsAcYLhxQmE
         0A2k67zxHXOOucaae+5zzl373LvP1v2Mqs9da80114+9zzl3zu8cY4555sx3/7sDAAAAAAAAAEgMCwEA
         AAAAAACuZYaFAAAAAAAAANcyw0IAAAAAAACAa5lhIQAAAAAAAMC1zLAQAAAAAAAA4FpmWAgAAAAAAABw
@@ -1491,6 +1491,15 @@
         6ZvG0M6mqnadj+RwnKlZX30sx3mojzOxr+C0D9pH/Tsdr/retYeWsvppO2jmtQzN8lTVp8+u/RTr38VX
         pb67tmf1017ZJU9pmyBtO1W9+rKv7XmpjfnpN1XtqvRWuzblR9qWmdBZfqraJ2VqWxUX3aqzLOsfrZ/9
         7P8B22FJOfHQvXUAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="pbReturnPayment.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EgAACxIB0t1+/AAAAMBJREFUWEft1sENwjAMheGMwgiMwCiMwAawCWzCCIzCpYrj0LRgZETV9oJJlYDe
+        J/lAI5X/UjkOAOCN6LaR0Z91YU57DqmX8T7u9HEdhnHP4faoR+VN4kK6EtFKj8uai2uauNbjshBnhTgr
+        xFn9WlwfubvIpsg1RHGrf/cZWfrjuKXGdMGoPlAwpcP4ZTF0Z6L2lGuCT9/dfGYi6/lIXhCZCyJzQWQu
+        iMxlEvm4BOhRPYaR5hvK0mTpmxc/APwl5+52SHHG1Nb29wAAAABJRU5ErkJggg==
 </value>
   </data>
 </root>

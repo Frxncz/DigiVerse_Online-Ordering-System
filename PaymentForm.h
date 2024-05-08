@@ -1,5 +1,7 @@
 #pragma once
 
+#include "GcashForm.h"
+
 namespace PointofSaleSystem {
 
 	using namespace System;
@@ -66,7 +68,8 @@ namespace PointofSaleSystem {
 	private: System::Windows::Forms::PictureBox^ pictureBox2;
 	private: System::Windows::Forms::PictureBox^ pictureBox3;
 	private: System::Windows::Forms::PictureBox^ pictureBox4;
-	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::Button^ btnGotoGcash;
+
 
 	private:
 		/// <summary>
@@ -86,7 +89,7 @@ namespace PointofSaleSystem {
 			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox4 = (gcnew System::Windows::Forms::PictureBox());
-			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->btnGotoGcash = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pbReturnShipping))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
@@ -136,20 +139,21 @@ namespace PointofSaleSystem {
 			this->pictureBox4->TabIndex = 3;
 			this->pictureBox4->TabStop = false;
 			// 
-			// button1
+			// btnGotoGcash
 			// 
-			this->button1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
+			this->btnGotoGcash->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
 				static_cast<System::Int32>(static_cast<System::Byte>(197)));
-			this->button1->Font = (gcnew System::Drawing::Font(L"Arial Black", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->btnGotoGcash->Font = (gcnew System::Drawing::Font(L"Arial Black", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
+			this->btnGotoGcash->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
 				static_cast<System::Int32>(static_cast<System::Byte>(253)));
-			this->button1->Location = System::Drawing::Point(800, 661);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(296, 61);
-			this->button1->TabIndex = 12;
-			this->button1->Text = L"Continue to Payment";
-			this->button1->UseVisualStyleBackColor = false;
+			this->btnGotoGcash->Location = System::Drawing::Point(800, 661);
+			this->btnGotoGcash->Name = L"btnGotoGcash";
+			this->btnGotoGcash->Size = System::Drawing::Size(296, 61);
+			this->btnGotoGcash->TabIndex = 12;
+			this->btnGotoGcash->Text = L"Continue to Payment";
+			this->btnGotoGcash->UseVisualStyleBackColor = false;
+			this->btnGotoGcash->Click += gcnew System::EventHandler(this, &PaymentForm::btnGotoGcash_Click);
 			// 
 			// PaymentForm
 			// 
@@ -158,7 +162,7 @@ namespace PointofSaleSystem {
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
 				static_cast<System::Int32>(static_cast<System::Byte>(253)));
 			this->ClientSize = System::Drawing::Size(1251, 769);
-			this->Controls->Add(this->button1);
+			this->Controls->Add(this->btnGotoGcash);
 			this->Controls->Add(this->pictureBox4);
 			this->Controls->Add(this->pictureBox3);
 			this->Controls->Add(this->pictureBox2);
@@ -179,6 +183,15 @@ namespace PointofSaleSystem {
 	{
 		this->Hide();
 		newPaymentUI->Show();
+	}
+
+
+
+	private: System::Void btnGotoGcash_Click(System::Object^ sender, System::EventArgs^ e) 
+	{
+		this->Hide();
+		GcashForm^ gcashUI = gcnew GcashForm(this);
+		gcashUI->ShowDialog();
 	}
 };
 }

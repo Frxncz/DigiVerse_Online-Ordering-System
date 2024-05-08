@@ -14,9 +14,29 @@ namespace PointofSaleSystem {
 	/// </summary>
 	public ref class GcashForm : public System::Windows::Forms::Form
 	{
+
+		Form^ newGcashUI;
+
 	public:
 		GcashForm(void)
 		{
+			InitializeComponent();
+			//
+			//TODO: Add the constructor code here
+			//
+
+
+			//
+			// This will center the Form in the screen when it pop up
+			//
+			CenterToScreen();
+		}
+
+		GcashForm(Form^ gcashUI)
+		{
+
+			newGcashUI = gcashUI;
+
 			InitializeComponent();
 			//
 			//TODO: Add the constructor code here
@@ -43,11 +63,14 @@ namespace PointofSaleSystem {
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
 	protected:
 	private: System::Windows::Forms::PictureBox^ pictureBox2;
-	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::Button^ btnPay;
+
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::Label^ label4;
+	private: System::Windows::Forms::PictureBox^ pbReturnPayment;
+
 
 	private:
 		/// <summary>
@@ -65,13 +88,15 @@ namespace PointofSaleSystem {
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(GcashForm::typeid));
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
-			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->btnPay = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->pbReturnPayment = (gcnew System::Windows::Forms::PictureBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pbReturnPayment))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// pictureBox1
@@ -96,20 +121,20 @@ namespace PointofSaleSystem {
 			this->pictureBox2->TabIndex = 1;
 			this->pictureBox2->TabStop = false;
 			// 
-			// button1
+			// btnPay
 			// 
-			this->button1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
+			this->btnPay->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
 				static_cast<System::Int32>(static_cast<System::Byte>(197)));
-			this->button1->Font = (gcnew System::Drawing::Font(L"Arial Black", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->btnPay->Font = (gcnew System::Drawing::Font(L"Arial Black", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
+			this->btnPay->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
 				static_cast<System::Int32>(static_cast<System::Byte>(253)));
-			this->button1->Location = System::Drawing::Point(519, 658);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(278, 61);
-			this->button1->TabIndex = 13;
-			this->button1->Text = L"PAY PHP 0.00";
-			this->button1->UseVisualStyleBackColor = false;
+			this->btnPay->Location = System::Drawing::Point(519, 658);
+			this->btnPay->Name = L"btnPay";
+			this->btnPay->Size = System::Drawing::Size(278, 61);
+			this->btnPay->TabIndex = 13;
+			this->btnPay->Text = L"PAY PHP 0.00";
+			this->btnPay->UseVisualStyleBackColor = false;
 			// 
 			// label1
 			// 
@@ -159,6 +184,19 @@ namespace PointofSaleSystem {
 			this->label4->TabIndex = 17;
 			this->label4->Text = L"0.00";
 			// 
+			// pbReturnPayment
+			// 
+			this->pbReturnPayment->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(87)),
+				static_cast<System::Int32>(static_cast<System::Byte>(228)));
+			this->pbReturnPayment->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pbReturnPayment.Image")));
+			this->pbReturnPayment->Location = System::Drawing::Point(56, 42);
+			this->pbReturnPayment->Name = L"pbReturnPayment";
+			this->pbReturnPayment->Size = System::Drawing::Size(40, 40);
+			this->pbReturnPayment->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
+			this->pbReturnPayment->TabIndex = 18;
+			this->pbReturnPayment->TabStop = false;
+			this->pbReturnPayment->Click += gcnew System::EventHandler(this, &GcashForm::pbReturnPayment_Click);
+			// 
 			// GcashForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -166,21 +204,29 @@ namespace PointofSaleSystem {
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
 				static_cast<System::Int32>(static_cast<System::Byte>(253)));
 			this->ClientSize = System::Drawing::Size(1261, 842);
+			this->Controls->Add(this->pbReturnPayment);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
-			this->Controls->Add(this->button1);
+			this->Controls->Add(this->btnPay);
 			this->Controls->Add(this->pictureBox2);
 			this->Controls->Add(this->pictureBox1);
 			this->Name = L"GcashForm";
 			this->Text = L"GcashForm";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pbReturnPayment))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
+
+	private: System::Void pbReturnPayment_Click(System::Object^ sender, System::EventArgs^ e) 
+	{
+		this->Hide();
+		newGcashUI->Show();
+	}
 };
 }
