@@ -26,8 +26,15 @@ Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c5619
 Class PointofSaleSystem.CheckoutForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 TotalPayment 'get set' : 
+    Int32 Subtotal 'get set' : 
   Methods:
     AddGroupBoxToOrderDetail(GroupBox): PrivateScope, Public, HideBySig
+    get_Subtotal(): PrivateScope, Public, HideBySig, SpecialName
+    set_Subtotal(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_TotalPayment(): PrivateScope, Public, HideBySig, SpecialName
+    set_TotalPayment(Int32): PrivateScope, Public, HideBySig, SpecialName
 Class PointofSaleSystem.PaymentSuccessForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

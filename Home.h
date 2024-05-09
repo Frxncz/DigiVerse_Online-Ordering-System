@@ -52,17 +52,18 @@ namespace PointofSaleSystem {
     /// 
 
 
-
+    //--- this is for the cart and adding the atomic habits to the order detail
     private:  CheckoutForm^ checkoutForm = gcnew CheckoutForm();
 
 
 
+    private: 
 
 
 
-
+    //--- this is for the cart to get access to the newGbAtomicHabits
     private: GroupBox^ newGbAtomicHabits;
-    private: GroupBox^ newGbMoney;
+
 
 
     //--- Atomic habits plus and minus buttons and also the quantity
@@ -72,7 +73,8 @@ namespace PointofSaleSystem {
     private: System::Windows::Forms::Button^ btnDecreaseQty;
 
 
-    //--- Atomic habits plus and minus buttons and also the quantity
+
+    //--- Pyschology of money plus and minus buttons and also the quantity
 
     private: System::Windows::Forms::Label^ lblQuantityMoney;
     private: System::Windows::Forms::Button^ btnIncreaseQtyMoney;
@@ -80,32 +82,7 @@ namespace PointofSaleSystem {
 
 
 
-
-
-
-
-
-    ///
-    ///
-    /// 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    //--- For pAllBooks the buttons to navigate category
 
     private: System::Windows::Forms::Panel^ pAllBooks;
 
@@ -1786,18 +1763,19 @@ private: System::Windows::Forms::Label^ label4;
         // Change the location of the gbSoloLeveling & gbOmnicientReader
         gbSoloLeveling->Location = System::Drawing::Point(26, 12);
         gbOmnicientReader->Location = System::Drawing::Point(350, 12);
-
-        ////
-        ////
-        ////
-
     }
 
+
+         /// 
          /// 
          /// 
          /// 
          /// 
     
+
+    //
+    //----- When the add button clicked the atomic habit will go to cart ----//
+    //
     private: System::Void btnAddAH_Click(System::Object^ sender, System::EventArgs^ e) 
     {
         //
@@ -1870,11 +1848,30 @@ private: System::Windows::Forms::Label^ label4;
         newGbAtomicHabits->Controls->Add(newlblAtomicPriceSymbol);
 
 
-        // Don't show the CheckoutForm here; it will be shown when pbCart is clicked
+
+
+
+        //
+        //  Atomic habits is added to order detail, so Update subtotal and total payment in checkout form
+        //
+        checkoutForm->Subtotal += 100;
+        checkoutForm->TotalPayment += 100;
+
+
+
+
+
     }
 
-
-
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+           
+    //
+    //----- When the cart image was clicked the checout form or the cart will show ----//
+    //
     private: System::Void pbCart_Click(System::Object^ sender, System::EventArgs^ e) 
     {
 

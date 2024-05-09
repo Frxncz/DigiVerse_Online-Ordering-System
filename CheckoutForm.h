@@ -30,14 +30,32 @@ namespace PointofSaleSystem {
 		}
 
 
+
+
+	// This is important to access the home when adding the book to the flpOrderDetail
 	public:
-		// Constructor and other members...
 
 		void AddGroupBoxToOrderDetail(GroupBox^ groupBox)
 		{
 			// Add the provided GroupBox to flpOrderDetail
 			this->flpOrderDetail->Controls->Add(groupBox);
 		}
+
+
+
+	// Define properties to access subtotal and total payment
+	public:
+
+		property int Subtotal {
+			int get() { return System::Convert::ToInt32(lblSubtotal->Text); }
+			void set(int value) { lblSubtotal->Text = value.ToString(); }
+		}
+
+		property int TotalPayment {
+			int get() { return System::Convert::ToInt32(lblTotalPayment->Text); }
+			void set(int value) { lblTotalPayment->Text = value.ToString(); }
+		}
+
 
 
 	protected:
@@ -528,6 +546,8 @@ namespace PointofSaleSystem {
 		}
 #pragma endregion
 
+
+	//----- Show the checkout form when the cart is cliked -----//
 	private: System::Void pbBackHome_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
 		// Hide the CheckoutForm instead of closing it
