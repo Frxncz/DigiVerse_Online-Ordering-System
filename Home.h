@@ -1849,6 +1849,10 @@ private: System::Windows::Forms::Label^ label4;
 
 
 
+        ////
+        ////
+        ////
+
 
 
         //
@@ -1859,9 +1863,158 @@ private: System::Windows::Forms::Label^ label4;
 
 
 
+        ////
+        ////
+        ////
 
 
+
+        //
+        //----- Create a button to Increase Quantity -----//
+        //
+
+        Button^ btnIncreaseQty = gcnew Button();
+
+        btnIncreaseQty->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
+            static_cast<System::Int32>(static_cast<System::Byte>(197)));
+        btnIncreaseQty->Font = (gcnew System::Drawing::Font(L"Arial", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+            static_cast<System::Byte>(0)));
+        btnIncreaseQty->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
+            static_cast<System::Int32>(static_cast<System::Byte>(253)));
+        btnIncreaseQty->Location = System::Drawing::Point(367, 100);
+        btnIncreaseQty->Name = L"btnAddQty";
+        btnIncreaseQty->Size = System::Drawing::Size(27, 27);
+        btnIncreaseQty->TabIndex = 28;
+        btnIncreaseQty->Text = L"+";
+        btnIncreaseQty->UseVisualStyleBackColor = false;
+
+        // Add the new addQty button to groupbox
+        newGbAtomicHabits->Controls->Add(btnIncreaseQty);
+
+        // Handle Click event of Add Quantity button
+        btnIncreaseQty->Click += gcnew System::EventHandler(this, &Home::btnIncreaseQty_Click);
+
+
+
+        ////
+        ////
+        ////
+
+
+
+        //
+        //----- Create a button to Decrease Quantity -----//
+        //
+
+        Button^ btnDecreaseQty = gcnew Button();
+
+        btnDecreaseQty->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
+            static_cast<System::Int32>(static_cast<System::Byte>(197)));
+        btnDecreaseQty->Font = (gcnew System::Drawing::Font(L"Arial", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+            static_cast<System::Byte>(0)));
+        btnDecreaseQty->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
+            static_cast<System::Int32>(static_cast<System::Byte>(253)));
+        btnDecreaseQty->Location = System::Drawing::Point(300, 100);
+        btnDecreaseQty->Name = L"btnAddQty";
+        btnDecreaseQty->Size = System::Drawing::Size(27, 27);
+        btnDecreaseQty->TabIndex = 28;
+        btnDecreaseQty->Text = L"-";
+        btnDecreaseQty->UseVisualStyleBackColor = false;
+
+        // Add the new button to groupbox
+        newGbAtomicHabits->Controls->Add(btnDecreaseQty);
+
+        // Handle Click event of Decrease Quantity button
+        btnDecreaseQty->Click += gcnew System::EventHandler(this, &Home::btnDecreaseQty_Click);
+
+
+
+        ////
+        ////
+        ////
+
+
+
+        //
+        //----- Quantity of the item -----//
+        //
+
+        // Create a new label for Quantity
+        lblQuantity = gcnew Label();
+        lblQuantity->Font = (gcnew System::Drawing::Font(L"Arial", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+            static_cast<System::Byte>(0)));
+        lblQuantity->Text = L"1";
+        lblQuantity->ForeColor = System::Drawing::Color::Black;
+        lblQuantity->Size = System::Drawing::Size(67, 21);
+        lblQuantity->Location = System::Drawing::Point(341, 105);
+
+        // Add the new label to groupbox
+        newGbAtomicHabits->Controls->Add(lblQuantity);
     }
+
+
+
+    ///
+    ///
+    ///
+
+
+
+    //  
+    //----- When Clicked the plus button in order detail the quantity, subtotal, and payment total increase -----//
+    //
+
+    private: System::Void btnIncreaseQty_Click(System::Object^ sender, System::EventArgs^ e)
+    {
+        //
+        // Increase lblQuantity
+        //
+
+        int currentQuantity = System::Convert::ToInt32(lblQuantity->Text);
+
+        // Increase the quantity by one if it's less than 100
+        if (currentQuantity < 99)
+        {
+            currentQuantity++;
+            lblQuantity->Text = currentQuantity.ToString();
+        }
+
+
+        //
+        //  Increase the quantity of the bookn aatomic habits
+        //
+        checkoutForm->Subtotal += 100;
+        checkoutForm->TotalPayment += 100;
+    }
+
+
+     //----- When Clicked the plus button in order detail the quantity, subtotal, and payment total decrease -----//
+
+
+    private: System::Void btnDecreaseQty_Click(System::Object^ sender, System::EventArgs^ e)
+    {
+
+        //
+        // Decrease lblQuantity
+        //
+        int currentQuantity = System::Convert::ToInt32(lblQuantity->Text);
+
+        // Decrease the quantity by one if it's greater than 1
+        if (currentQuantity > 1)
+        {
+            currentQuantity--;
+            lblQuantity->Text = currentQuantity.ToString();
+        }
+
+
+        //
+        //  Decrease the quantity of the bookn aatomic habits
+        //
+        checkoutForm->Subtotal -= 100;
+        checkoutForm->TotalPayment -= 100;
+    }
+
+
 
         /// 
         /// 
@@ -1869,6 +2022,8 @@ private: System::Windows::Forms::Label^ label4;
         /// 
         /// 
            
+
+
     //
     //----- When the cart image was clicked the checout form or the cart will show ----//
     //
