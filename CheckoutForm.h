@@ -449,7 +449,6 @@ namespace PointofSaleSystem {
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureBox1->TabIndex = 20;
 			this->pictureBox1->TabStop = false;
-			this->pictureBox1->Click += gcnew System::EventHandler(this, &CheckoutForm::pictureBox1_Click);
 			// 
 			// CheckoutForm
 			// 

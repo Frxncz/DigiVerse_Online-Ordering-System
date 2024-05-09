@@ -11,16 +11,20 @@
       "RelativeMoniker": "D:0:0:{17669753-9DA6-49D2-9E4B-9080D6164B9F}|Point of Sale System.vcxproj|solutionrelative:CheckoutForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{17669753-9DA6-49D2-9E4B-9080D6164B9F}|Point of Sale System.vcxproj|C:\\Users\\John carlo francis\\Documents\\Source Code\\Point of Sale System\\Shipping.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{17669753-9DA6-49D2-9E4B-9080D6164B9F}|Point of Sale System.vcxproj|solutionrelative:Shipping.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{17669753-9DA6-49D2-9E4B-9080D6164B9F}|Point of Sale System.vcxproj|C:\\Users\\John carlo francis\\Documents\\Source Code\\Point of Sale System\\CheckoutForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
       "RelativeMoniker": "D:0:0:{17669753-9DA6-49D2-9E4B-9080D6164B9F}|Point of Sale System.vcxproj|solutionrelative:CheckoutForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{17669753-9DA6-49D2-9E4B-9080D6164B9F}|Point of Sale System.vcxproj|C:\\Users\\John carlo francis\\Documents\\Source Code\\Point of Sale System\\Home.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
       "RelativeMoniker": "D:0:0:{17669753-9DA6-49D2-9E4B-9080D6164B9F}|Point of Sale System.vcxproj|solutionrelative:Home.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17669753-9DA6-49D2-9E4B-9080D6164B9F}|Point of Sale System.vcxproj|C:\\Users\\John carlo francis\\Documents\\Source Code\\Point of Sale System\\SignupForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
+      "RelativeMoniker": "D:0:0:{17669753-9DA6-49D2-9E4B-9080D6164B9F}|Point of Sale System.vcxproj|solutionrelative:SignupForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17669753-9DA6-49D2-9E4B-9080D6164B9F}|Point of Sale System.vcxproj|C:\\Users\\John carlo francis\\Documents\\Source Code\\Point of Sale System\\Shipping.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{17669753-9DA6-49D2-9E4B-9080D6164B9F}|Point of Sale System.vcxproj|solutionrelative:Shipping.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{17669753-9DA6-49D2-9E4B-9080D6164B9F}|Point of Sale System.vcxproj|C:\\Users\\John carlo francis\\Documents\\Source Code\\Point of Sale System\\GcashForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
@@ -41,10 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{17669753-9DA6-49D2-9E4B-9080D6164B9F}|Point of Sale System.vcxproj|C:\\Users\\John carlo francis\\Documents\\Source Code\\Point of Sale System\\PaymentForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
       "RelativeMoniker": "D:0:0:{17669753-9DA6-49D2-9E4B-9080D6164B9F}|Point of Sale System.vcxproj|solutionrelative:PaymentForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{17669753-9DA6-49D2-9E4B-9080D6164B9F}|Point of Sale System.vcxproj|C:\\Users\\John carlo francis\\Documents\\Source Code\\Point of Sale System\\SignupForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
-      "RelativeMoniker": "D:0:0:{17669753-9DA6-49D2-9E4B-9080D6164B9F}|Point of Sale System.vcxproj|solutionrelative:SignupForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{17669753-9DA6-49D2-9E4B-9080D6164B9F}|Point of Sale System.vcxproj|C:\\Users\\John carlo francis\\Documents\\Source Code\\Point of Sale System\\LoginForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
@@ -94,7 +94,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "LoginForm.h",
               "DocumentMoniker": "C:\\Users\\John carlo francis\\Documents\\Source Code\\Point of Sale System\\LoginForm.h",
               "RelativeDocumentMoniker": "LoginForm.h",
@@ -114,7 +114,8 @@
               "RelativeToolTip": "SignupForm.h",
               "ViewState": "AQIAAOoAAAAAAAAAAAAAAPoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-30T15:14:59.945Z"
+              "WhenOpened": "2024-04-30T15:14:59.945Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -124,7 +125,7 @@
               "RelativeDocumentMoniker": "Home.h",
               "ToolTip": "C:\\Users\\John carlo francis\\Documents\\Source Code\\Point of Sale System\\Home.h",
               "RelativeToolTip": "Home.h",
-              "ViewState": "AQIAAMwKAAAAAAAAAAAAANsKAAAAAAAA",
+              "ViewState": "AQIAAGwFAAAAAAAAAAAAAH8FAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-04-29T04:10:38.139Z",
               "EditorCaption": ""
@@ -137,14 +138,14 @@
               "RelativeDocumentMoniker": "CheckoutForm.h",
               "ToolTip": "C:\\Users\\John carlo francis\\Documents\\Source Code\\Point of Sale System\\CheckoutForm.h",
               "RelativeToolTip": "CheckoutForm.h",
-              "ViewState": "AQIAANoBAAAAAAAAAAAAAOABAAARAAAA",
+              "ViewState": "AQIAANUBAAAAAAAAAAAAAMIBAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-05-08T23:06:58.677Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Shipping.h",
               "DocumentMoniker": "C:\\Users\\John carlo francis\\Documents\\Source Code\\Point of Sale System\\Shipping.h",
               "RelativeDocumentMoniker": "Shipping.h",
@@ -152,8 +153,7 @@
               "RelativeToolTip": "Shipping.h",
               "ViewState": "AQIAAJQAAAAAAAAAAAAAAJ0AAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-06T06:02:08.252Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-06T06:02:08.252Z"
             },
             {
               "$type": "Document",
@@ -177,8 +177,7 @@
               "RelativeToolTip": "GcashForm.h",
               "ViewState": "AQIAAOUAAAAAAAAAAAAAAPAAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-07T08:41:55.492Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-07T08:41:55.492Z"
             },
             {
               "$type": "Document",
@@ -205,18 +204,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 4,
               "Title": "SignupForm.h [Design]",
               "DocumentMoniker": "C:\\Users\\John carlo francis\\Documents\\Source Code\\Point of Sale System\\SignupForm.h",
               "RelativeDocumentMoniker": "SignupForm.h",
               "ToolTip": "C:\\Users\\John carlo francis\\Documents\\Source Code\\Point of Sale System\\SignupForm.h [Design]",
               "RelativeToolTip": "SignupForm.h [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-30T11:32:10.271Z"
+              "WhenOpened": "2024-04-30T11:32:10.271Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Home.h [Design]",
               "DocumentMoniker": "C:\\Users\\John carlo francis\\Documents\\Source Code\\Point of Sale System\\Home.h",
               "RelativeDocumentMoniker": "Home.h",
@@ -228,7 +228,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "CheckoutForm.h [Design]",
               "DocumentMoniker": "C:\\Users\\John carlo francis\\Documents\\Source Code\\Point of Sale System\\CheckoutForm.h",
               "RelativeDocumentMoniker": "CheckoutForm.h",
@@ -240,19 +240,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Shipping.h [Design]",
               "DocumentMoniker": "C:\\Users\\John carlo francis\\Documents\\Source Code\\Point of Sale System\\Shipping.h",
               "RelativeDocumentMoniker": "Shipping.h",
               "ToolTip": "C:\\Users\\John carlo francis\\Documents\\Source Code\\Point of Sale System\\Shipping.h [Design]",
               "RelativeToolTip": "Shipping.h [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-06T05:52:33.289Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-05-06T05:52:33.289Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "PaymentForm.h [Design]",
               "DocumentMoniker": "C:\\Users\\John carlo francis\\Documents\\Source Code\\Point of Sale System\\PaymentForm.h",
               "RelativeDocumentMoniker": "PaymentForm.h",
@@ -263,19 +262,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "GcashForm.h [Design]",
               "DocumentMoniker": "C:\\Users\\John carlo francis\\Documents\\Source Code\\Point of Sale System\\GcashForm.h",
               "RelativeDocumentMoniker": "GcashForm.h",
               "ToolTip": "C:\\Users\\John carlo francis\\Documents\\Source Code\\Point of Sale System\\GcashForm.h [Design]",
               "RelativeToolTip": "GcashForm.h [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-07T08:21:50.429Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-05-07T08:21:50.429Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "PaymentSuccessForm.h [Design]",
               "DocumentMoniker": "C:\\Users\\John carlo francis\\Documents\\Source Code\\Point of Sale System\\PaymentSuccessForm.h",
               "RelativeDocumentMoniker": "PaymentSuccessForm.h",

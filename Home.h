@@ -40,7 +40,7 @@ namespace PointofSaleSystem {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Label^ label1;
+
 	protected:
 
     ///
@@ -68,32 +68,32 @@ namespace PointofSaleSystem {
 
 
 
-    private: System::Windows::Forms::Label^ lblSubtotal;
-    private: System::Windows::Forms::Label^ lblTotalPayment;
+
+
 
 
     ///
     ///
     /// 
 
-	private: System::Windows::Forms::GroupBox^ groupBox8;
-	private: System::Windows::Forms::GroupBox^ groupBox9;
-	private: System::Windows::Forms::Button^ button1;
-	private: System::Windows::Forms::Button^ button2;
-	private: System::Windows::Forms::TextBox^ textBox1;
-	private: System::Windows::Forms::Label^ label2;
-	private: System::Windows::Forms::Label^ label6;
-	private: System::Windows::Forms::Label^ label5;
-	private: System::Windows::Forms::Label^ label4;
-	private: System::Windows::Forms::Label^ label3;
 
-	private: System::Windows::Forms::Label^ label12;
 
-	private: System::Windows::Forms::Label^ label9;
-	private: System::Windows::Forms::Label^ label8;
-	private: System::Windows::Forms::Label^ label7;
 
-	private: System::Windows::Forms::Label^ label10;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     private: System::Windows::Forms::Panel^ pAllBooks;
 
 
@@ -122,31 +122,18 @@ namespace PointofSaleSystem {
 
 
 
-	private: System::Windows::Forms::Label^ label15;
-
-	private: System::Windows::Forms::Label^ label17;
-	private: System::Windows::Forms::Label^ label18;
-	private: System::Windows::Forms::Label^ label19;
 
 
 
-	private: System::Windows::Forms::GroupBox^ groupBox7;
-    private: System::Windows::Forms::FlowLayoutPanel^ flpOrderDetail;
+
+
+
+
+
+
+
     private: System::Windows::Forms::PictureBox^ pbAtomicHabits;
     private: System::Windows::Forms::Label^ lblAtomic;
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 	private: System::Windows::Forms::Label^ label27;
@@ -240,31 +227,31 @@ private: System::Windows::Forms::Label^ lblMoney;
 
     private: System::Windows::Forms::Button^ btnAddPM;
     private: System::Windows::Forms::GroupBox^ gbWhiteEnd;
-    private: System::Windows::Forms::PictureBox^ pictureBox1;
-    private: System::Windows::Forms::PictureBox^ pictureBox2;
 
 
-private: System::Windows::Forms::Label^ label14;
-private: System::Windows::Forms::Label^ label13;
-private: System::Windows::Forms::Label^ label11;
-private: System::Windows::Forms::Label^ label21;
+
+
+
+
+
+
 private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
 private: System::Windows::Forms::PictureBox^ pictureBox3;
 private: System::Windows::Forms::PictureBox^ pictureBox4;
 
+private: System::Windows::Forms::PictureBox^ pictureBox1;
+private: System::Windows::Forms::PictureBox^ pictureBox2;
+private: System::Windows::Forms::PictureBox^ pictureBox5;
+private: System::Windows::Forms::PictureBox^ pictureBox6;
+private: System::Windows::Forms::PictureBox^ pictureBox7;
+private: System::Windows::Forms::GroupBox^ gbDune;
 
-
-
-
-
-
-
-
-
-
-
-
-
+private: System::Windows::Forms::Button^ button1;
+private: System::Windows::Forms::Label^ label1;
+private: System::Windows::Forms::Label^ label2;
+private: System::Windows::Forms::Label^ label3;
+private: System::Windows::Forms::PictureBox^ pictureBox8;
+private: System::Windows::Forms::Label^ label4;
 
 
 
@@ -292,28 +279,13 @@ private: System::Windows::Forms::PictureBox^ pictureBox4;
 		void InitializeComponent(void)
 		{
             System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Home::typeid));
-            this->label1 = (gcnew System::Windows::Forms::Label());
-            this->groupBox8 = (gcnew System::Windows::Forms::GroupBox());
-            this->label14 = (gcnew System::Windows::Forms::Label());
-            this->label13 = (gcnew System::Windows::Forms::Label());
-            this->label11 = (gcnew System::Windows::Forms::Label());
-            this->label12 = (gcnew System::Windows::Forms::Label());
-            this->lblSubtotal = (gcnew System::Windows::Forms::Label());
-            this->label9 = (gcnew System::Windows::Forms::Label());
-            this->label8 = (gcnew System::Windows::Forms::Label());
-            this->label7 = (gcnew System::Windows::Forms::Label());
-            this->label6 = (gcnew System::Windows::Forms::Label());
-            this->label5 = (gcnew System::Windows::Forms::Label());
-            this->label4 = (gcnew System::Windows::Forms::Label());
-            this->label3 = (gcnew System::Windows::Forms::Label());
-            this->groupBox9 = (gcnew System::Windows::Forms::GroupBox());
-            this->lblTotalPayment = (gcnew System::Windows::Forms::Label());
-            this->label10 = (gcnew System::Windows::Forms::Label());
-            this->label2 = (gcnew System::Windows::Forms::Label());
-            this->button1 = (gcnew System::Windows::Forms::Button());
-            this->button2 = (gcnew System::Windows::Forms::Button());
-            this->textBox1 = (gcnew System::Windows::Forms::TextBox());
             this->pAllBooks = (gcnew System::Windows::Forms::Panel());
+            this->gbDune = (gcnew System::Windows::Forms::GroupBox());
+            this->button1 = (gcnew System::Windows::Forms::Button());
+            this->label1 = (gcnew System::Windows::Forms::Label());
+            this->label2 = (gcnew System::Windows::Forms::Label());
+            this->label3 = (gcnew System::Windows::Forms::Label());
+            this->pictureBox8 = (gcnew System::Windows::Forms::PictureBox());
             this->gbWhiteEnd = (gcnew System::Windows::Forms::GroupBox());
             this->gbOmnicientReader = (gcnew System::Windows::Forms::GroupBox());
             this->btnAddOR = (gcnew System::Windows::Forms::Button());
@@ -363,25 +335,22 @@ private: System::Windows::Forms::PictureBox^ pictureBox4;
             this->label27 = (gcnew System::Windows::Forms::Label());
             this->lblAtomic = (gcnew System::Windows::Forms::Label());
             this->pbAtomicHabits = (gcnew System::Windows::Forms::PictureBox());
-            this->label15 = (gcnew System::Windows::Forms::Label());
-            this->label17 = (gcnew System::Windows::Forms::Label());
-            this->label18 = (gcnew System::Windows::Forms::Label());
-            this->label19 = (gcnew System::Windows::Forms::Label());
-            this->groupBox7 = (gcnew System::Windows::Forms::GroupBox());
-            this->flpOrderDetail = (gcnew System::Windows::Forms::FlowLayoutPanel());
-            this->label21 = (gcnew System::Windows::Forms::Label());
             this->btnAllGenre = (gcnew System::Windows::Forms::Button());
             this->btnNonFiction = (gcnew System::Windows::Forms::Button());
             this->btnFiction = (gcnew System::Windows::Forms::Button());
             this->btnNovel = (gcnew System::Windows::Forms::Button());
             this->btnFantasy = (gcnew System::Windows::Forms::Button());
-            this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
-            this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
             this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
             this->pictureBox4 = (gcnew System::Windows::Forms::PictureBox());
-            this->groupBox8->SuspendLayout();
-            this->groupBox9->SuspendLayout();
+            this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+            this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
+            this->pictureBox5 = (gcnew System::Windows::Forms::PictureBox());
+            this->pictureBox6 = (gcnew System::Windows::Forms::PictureBox());
+            this->pictureBox7 = (gcnew System::Windows::Forms::PictureBox());
+            this->label4 = (gcnew System::Windows::Forms::Label());
             this->pAllBooks->SuspendLayout();
+            this->gbDune->SuspendLayout();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox8))->BeginInit();
             this->gbOmnicientReader->SuspendLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pbReader))->BeginInit();
             this->gbSoloLeveling->SuspendLayout();
@@ -398,269 +367,19 @@ private: System::Windows::Forms::PictureBox^ pictureBox4;
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pbMoney))->BeginInit();
             this->gbAtomicHabits->SuspendLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pbAtomicHabits))->BeginInit();
-            this->groupBox7->SuspendLayout();
-            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
-            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->BeginInit();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->BeginInit();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->BeginInit();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox7))->BeginInit();
             this->SuspendLayout();
-            // 
-            // label1
-            // 
-            this->label1->AutoSize = true;
-            this->label1->Font = (gcnew System::Drawing::Font(L"Arial Black", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->label1->Location = System::Drawing::Point(46, 89);
-            this->label1->Name = L"label1";
-            this->label1->Size = System::Drawing::Size(136, 32);
-            this->label1->TabIndex = 0;
-            this->label1->Text = L"Menu List";
-            // 
-            // groupBox8
-            // 
-            this->groupBox8->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(203)), static_cast<System::Int32>(static_cast<System::Byte>(216)),
-                static_cast<System::Int32>(static_cast<System::Byte>(241)));
-            this->groupBox8->Controls->Add(this->label14);
-            this->groupBox8->Controls->Add(this->label13);
-            this->groupBox8->Controls->Add(this->label11);
-            this->groupBox8->Controls->Add(this->label12);
-            this->groupBox8->Controls->Add(this->lblSubtotal);
-            this->groupBox8->Controls->Add(this->label9);
-            this->groupBox8->Controls->Add(this->label8);
-            this->groupBox8->Controls->Add(this->label7);
-            this->groupBox8->Controls->Add(this->label6);
-            this->groupBox8->Controls->Add(this->label5);
-            this->groupBox8->Controls->Add(this->label4);
-            this->groupBox8->Controls->Add(this->label3);
-            this->groupBox8->Location = System::Drawing::Point(975, 480);
-            this->groupBox8->Name = L"groupBox8";
-            this->groupBox8->Size = System::Drawing::Size(496, 149);
-            this->groupBox8->TabIndex = 8;
-            this->groupBox8->TabStop = false;
-            // 
-            // label14
-            // 
-            this->label14->AutoSize = true;
-            this->label14->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->label14->Location = System::Drawing::Point(407, 118);
-            this->label14->Name = L"label14";
-            this->label14->Size = System::Drawing::Size(18, 17);
-            this->label14->TabIndex = 19;
-            this->label14->Text = L"P";
-            // 
-            // label13
-            // 
-            this->label13->AutoSize = true;
-            this->label13->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->label13->Location = System::Drawing::Point(429, 117);
-            this->label13->Name = L"label13";
-            this->label13->Size = System::Drawing::Size(24, 18);
-            this->label13->TabIndex = 18;
-            this->label13->Text = L"50";
-            // 
-            // label11
-            // 
-            this->label11->AutoSize = true;
-            this->label11->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->label11->Location = System::Drawing::Point(20, 117);
-            this->label11->Name = L"label11";
-            this->label11->Size = System::Drawing::Size(88, 17);
-            this->label11->TabIndex = 17;
-            this->label11->Text = L"Shipping fee";
-            // 
-            // label12
-            // 
-            this->label12->AutoSize = true;
-            this->label12->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->label12->Location = System::Drawing::Point(429, 85);
-            this->label12->Name = L"label12";
-            this->label12->Size = System::Drawing::Size(16, 18);
-            this->label12->TabIndex = 16;
-            this->label12->Text = L"0";
-            // 
-            // lblSubtotal
-            // 
-            this->lblSubtotal->AutoSize = true;
-            this->lblSubtotal->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->lblSubtotal->Location = System::Drawing::Point(429, 59);
-            this->lblSubtotal->Name = L"lblSubtotal";
-            this->lblSubtotal->Size = System::Drawing::Size(16, 18);
-            this->lblSubtotal->TabIndex = 14;
-            this->lblSubtotal->Text = L"0";
-            // 
-            // label9
-            // 
-            this->label9->AutoSize = true;
-            this->label9->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->label9->Location = System::Drawing::Point(407, 108);
-            this->label9->Name = L"label9";
-            this->label9->Size = System::Drawing::Size(0, 17);
-            this->label9->TabIndex = 15;
-            // 
-            // label8
-            // 
-            this->label8->AutoSize = true;
-            this->label8->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->label8->Location = System::Drawing::Point(407, 85);
-            this->label8->Name = L"label8";
-            this->label8->Size = System::Drawing::Size(18, 17);
-            this->label8->TabIndex = 14;
-            this->label8->Text = L"P";
-            // 
-            // label7
-            // 
-            this->label7->AutoSize = true;
-            this->label7->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->label7->Location = System::Drawing::Point(407, 59);
-            this->label7->Name = L"label7";
-            this->label7->Size = System::Drawing::Size(18, 17);
-            this->label7->TabIndex = 13;
-            this->label7->Text = L"P";
-            // 
-            // label6
-            // 
-            this->label6->AutoSize = true;
-            this->label6->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->label6->Location = System::Drawing::Point(20, 108);
-            this->label6->Name = L"label6";
-            this->label6->Size = System::Drawing::Size(0, 17);
-            this->label6->TabIndex = 13;
-            // 
-            // label5
-            // 
-            this->label5->AutoSize = true;
-            this->label5->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->label5->Location = System::Drawing::Point(20, 85);
-            this->label5->Name = L"label5";
-            this->label5->Size = System::Drawing::Size(101, 17);
-            this->label5->TabIndex = 13;
-            this->label5->Text = L"Discount (0%)";
-            // 
-            // label4
-            // 
-            this->label4->AutoSize = true;
-            this->label4->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->label4->Location = System::Drawing::Point(20, 56);
-            this->label4->Name = L"label4";
-            this->label4->Size = System::Drawing::Size(61, 17);
-            this->label4->TabIndex = 13;
-            this->label4->Text = L"Subtotal";
-            // 
-            // label3
-            // 
-            this->label3->AutoSize = true;
-            this->label3->Font = (gcnew System::Drawing::Font(L"Arial", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->label3->Location = System::Drawing::Point(20, 19);
-            this->label3->Name = L"label3";
-            this->label3->Size = System::Drawing::Size(156, 19);
-            this->label3->TabIndex = 13;
-            this->label3->Text = L"Payment Summary";
-            // 
-            // groupBox9
-            // 
-            this->groupBox9->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(203)), static_cast<System::Int32>(static_cast<System::Byte>(216)),
-                static_cast<System::Int32>(static_cast<System::Byte>(241)));
-            this->groupBox9->Controls->Add(this->lblTotalPayment);
-            this->groupBox9->Controls->Add(this->label10);
-            this->groupBox9->Controls->Add(this->label2);
-            this->groupBox9->Location = System::Drawing::Point(975, 649);
-            this->groupBox9->Name = L"groupBox9";
-            this->groupBox9->Size = System::Drawing::Size(496, 43);
-            this->groupBox9->TabIndex = 9;
-            this->groupBox9->TabStop = false;
-            // 
-            // lblTotalPayment
-            // 
-            this->lblTotalPayment->AutoSize = true;
-            this->lblTotalPayment->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->lblTotalPayment->Location = System::Drawing::Point(429, 13);
-            this->lblTotalPayment->Name = L"lblTotalPayment";
-            this->lblTotalPayment->Size = System::Drawing::Size(24, 18);
-            this->lblTotalPayment->TabIndex = 18;
-            this->lblTotalPayment->Text = L"50";
-            // 
-            // label10
-            // 
-            this->label10->AutoSize = true;
-            this->label10->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->label10->Location = System::Drawing::Point(407, 13);
-            this->label10->Name = L"label10";
-            this->label10->Size = System::Drawing::Size(18, 17);
-            this->label10->TabIndex = 16;
-            this->label10->Text = L"P";
-            // 
-            // label2
-            // 
-            this->label2->AutoSize = true;
-            this->label2->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->label2->Location = System::Drawing::Point(24, 13);
-            this->label2->Name = L"label2";
-            this->label2->Size = System::Drawing::Size(100, 17);
-            this->label2->TabIndex = 0;
-            this->label2->Text = L"Total Payment";
-            // 
-            // button1
-            // 
-            this->button1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
-                static_cast<System::Int32>(static_cast<System::Byte>(197)));
-            this->button1->Font = (gcnew System::Drawing::Font(L"Arial Black", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->button1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
-                static_cast<System::Int32>(static_cast<System::Byte>(253)));
-            this->button1->Location = System::Drawing::Point(992, 769);
-            this->button1->Name = L"button1";
-            this->button1->Size = System::Drawing::Size(463, 53);
-            this->button1->TabIndex = 10;
-            this->button1->Text = L"Continue to Checkout";
-            this->button1->UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this->button2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
-                static_cast<System::Int32>(static_cast<System::Byte>(197)));
-            this->button2->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->button2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
-                static_cast<System::Int32>(static_cast<System::Byte>(253)));
-            this->button2->Location = System::Drawing::Point(1374, 719);
-            this->button2->Name = L"button2";
-            this->button2->Size = System::Drawing::Size(80, 33);
-            this->button2->TabIndex = 11;
-            this->button2->Text = L"Apply";
-            this->button2->UseVisualStyleBackColor = false;
-            // 
-            // textBox1
-            // 
-            this->textBox1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(203)), static_cast<System::Int32>(static_cast<System::Byte>(216)),
-                static_cast<System::Int32>(static_cast<System::Byte>(241)));
-            this->textBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->textBox1->ForeColor = System::Drawing::Color::Silver;
-            this->textBox1->Location = System::Drawing::Point(996, 720);
-            this->textBox1->Multiline = true;
-            this->textBox1->Name = L"textBox1";
-            this->textBox1->Size = System::Drawing::Size(361, 30);
-            this->textBox1->TabIndex = 12;
-            this->textBox1->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
             // 
             // pAllBooks
             // 
             this->pAllBooks->AutoScroll = true;
+            this->pAllBooks->Controls->Add(this->gbDune);
             this->pAllBooks->Controls->Add(this->gbWhiteEnd);
             this->pAllBooks->Controls->Add(this->gbOmnicientReader);
             this->pAllBooks->Controls->Add(this->gbSoloLeveling);
@@ -670,18 +389,92 @@ private: System::Windows::Forms::PictureBox^ pictureBox4;
             this->pAllBooks->Controls->Add(this->gbHumanNature);
             this->pAllBooks->Controls->Add(this->gbPsychologyMoney);
             this->pAllBooks->Controls->Add(this->gbAtomicHabits);
-            this->pAllBooks->Location = System::Drawing::Point(35, 233);
+            this->pAllBooks->Location = System::Drawing::Point(101, 481);
             this->pAllBooks->Name = L"pAllBooks";
-            this->pAllBooks->Size = System::Drawing::Size(831, 611);
+            this->pAllBooks->Size = System::Drawing::Size(1330, 362);
             this->pAllBooks->TabIndex = 13;
+            // 
+            // gbDune
+            // 
+            this->gbDune->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(231)), static_cast<System::Int32>(static_cast<System::Byte>(237)),
+                static_cast<System::Int32>(static_cast<System::Byte>(248)));
+            this->gbDune->Controls->Add(this->button1);
+            this->gbDune->Controls->Add(this->label1);
+            this->gbDune->Controls->Add(this->label2);
+            this->gbDune->Controls->Add(this->label3);
+            this->gbDune->Controls->Add(this->pictureBox8);
+            this->gbDune->Location = System::Drawing::Point(448, 211);
+            this->gbDune->Name = L"gbDune";
+            this->gbDune->Size = System::Drawing::Size(381, 169);
+            this->gbDune->TabIndex = 27;
+            this->gbDune->TabStop = false;
+            // 
+            // button1
+            // 
+            this->button1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
+                static_cast<System::Int32>(static_cast<System::Byte>(197)));
+            this->button1->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->button1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
+                static_cast<System::Int32>(static_cast<System::Byte>(253)));
+            this->button1->Location = System::Drawing::Point(286, 115);
+            this->button1->Name = L"button1";
+            this->button1->Size = System::Drawing::Size(68, 35);
+            this->button1->TabIndex = 27;
+            this->button1->Text = L"+ Add";
+            this->button1->UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this->label1->AutoSize = true;
+            this->label1->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->label1->Location = System::Drawing::Point(106, 55);
+            this->label1->Name = L"label1";
+            this->label1->Size = System::Drawing::Size(213, 51);
+            this->label1->TabIndex = 26;
+            this->label1->Text = L"Dune is set in the distant future \r\nin a feudal interstellar society \r\nin which v"
+                L"arious noble...";
+            // 
+            // label2
+            // 
+            this->label2->AutoSize = true;
+            this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->label2->Location = System::Drawing::Point(21, 131);
+            this->label2->Name = L"label2";
+            this->label2->Size = System::Drawing::Size(45, 16);
+            this->label2->TabIndex = 25;
+            this->label2->Text = L"P 999";
+            // 
+            // label3
+            // 
+            this->label3->AutoSize = true;
+            this->label3->Font = (gcnew System::Drawing::Font(L"Arial", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->label3->Location = System::Drawing::Point(106, 21);
+            this->label3->Name = L"label3";
+            this->label3->Size = System::Drawing::Size(50, 19);
+            this->label3->TabIndex = 23;
+            this->label3->Text = L"Dune";
+            // 
+            // pictureBox8
+            // 
+            this->pictureBox8->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox8.Image")));
+            this->pictureBox8->Location = System::Drawing::Point(6, 10);
+            this->pictureBox8->Name = L"pictureBox8";
+            this->pictureBox8->Size = System::Drawing::Size(88, 118);
+            this->pictureBox8->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+            this->pictureBox8->TabIndex = 22;
+            this->pictureBox8->TabStop = false;
             // 
             // gbWhiteEnd
             // 
             this->gbWhiteEnd->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
                 static_cast<System::Int32>(static_cast<System::Byte>(253)));
-            this->gbWhiteEnd->Location = System::Drawing::Point(12, 784);
+            this->gbWhiteEnd->Location = System::Drawing::Point(3, 623);
             this->gbWhiteEnd->Name = L"gbWhiteEnd";
-            this->gbWhiteEnd->Size = System::Drawing::Size(781, 44);
+            this->gbWhiteEnd->Size = System::Drawing::Size(1303, 70);
             this->gbWhiteEnd->TabIndex = 26;
             this->gbWhiteEnd->TabStop = false;
             // 
@@ -694,9 +487,9 @@ private: System::Windows::Forms::PictureBox^ pictureBox4;
             this->gbOmnicientReader->Controls->Add(this->label40);
             this->gbOmnicientReader->Controls->Add(this->lblReader);
             this->gbOmnicientReader->Controls->Add(this->pbReader);
-            this->gbOmnicientReader->Location = System::Drawing::Point(412, 584);
+            this->gbOmnicientReader->Location = System::Drawing::Point(26, 420);
             this->gbOmnicientReader->Name = L"gbOmnicientReader";
-            this->gbOmnicientReader->Size = System::Drawing::Size(381, 166);
+            this->gbOmnicientReader->Size = System::Drawing::Size(357, 166);
             this->gbOmnicientReader->TabIndex = 19;
             this->gbOmnicientReader->TabStop = false;
             // 
@@ -708,7 +501,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox4;
                 static_cast<System::Byte>(0)));
             this->btnAddOR->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
                 static_cast<System::Int32>(static_cast<System::Byte>(253)));
-            this->btnAddOR->Location = System::Drawing::Point(286, 115);
+            this->btnAddOR->Location = System::Drawing::Point(268, 113);
             this->btnAddOR->Name = L"btnAddOR";
             this->btnAddOR->Size = System::Drawing::Size(68, 35);
             this->btnAddOR->TabIndex = 30;
@@ -767,9 +560,9 @@ private: System::Windows::Forms::PictureBox^ pictureBox4;
             this->gbSoloLeveling->Controls->Add(this->label38);
             this->gbSoloLeveling->Controls->Add(this->lblSolo);
             this->gbSoloLeveling->Controls->Add(this->pbSoloLeveling);
-            this->gbSoloLeveling->Location = System::Drawing::Point(12, 582);
+            this->gbSoloLeveling->Location = System::Drawing::Point(448, 418);
             this->gbSoloLeveling->Name = L"gbSoloLeveling";
-            this->gbSoloLeveling->Size = System::Drawing::Size(357, 168);
+            this->gbSoloLeveling->Size = System::Drawing::Size(381, 168);
             this->gbSoloLeveling->TabIndex = 18;
             this->gbSoloLeveling->TabStop = false;
             // 
@@ -781,7 +574,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox4;
                 static_cast<System::Byte>(0)));
             this->btnAddSL->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
                 static_cast<System::Int32>(static_cast<System::Byte>(253)));
-            this->btnAddSL->Location = System::Drawing::Point(268, 115);
+            this->btnAddSL->Location = System::Drawing::Point(286, 115);
             this->btnAddSL->Name = L"btnAddSL";
             this->btnAddSL->Size = System::Drawing::Size(68, 35);
             this->btnAddSL->TabIndex = 29;
@@ -841,7 +634,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox4;
             this->gbSecondBrain->Controls->Add(this->label36);
             this->gbSecondBrain->Controls->Add(this->lblBrain);
             this->gbSecondBrain->Controls->Add(this->pbSecondBrain);
-            this->gbSecondBrain->Location = System::Drawing::Point(412, 391);
+            this->gbSecondBrain->Location = System::Drawing::Point(903, 418);
             this->gbSecondBrain->Name = L"gbSecondBrain";
             this->gbSecondBrain->Size = System::Drawing::Size(381, 169);
             this->gbSecondBrain->TabIndex = 17;
@@ -914,7 +707,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox4;
             this->gbMakeStick->Controls->Add(this->label34);
             this->gbMakeStick->Controls->Add(this->lblMakeIt);
             this->gbMakeStick->Controls->Add(this->pbMakeStick);
-            this->gbMakeStick->Location = System::Drawing::Point(14, 391);
+            this->gbMakeStick->Location = System::Drawing::Point(26, 211);
             this->gbMakeStick->Name = L"gbMakeStick";
             this->gbMakeStick->Size = System::Drawing::Size(357, 169);
             this->gbMakeStick->TabIndex = 16;
@@ -988,7 +781,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox4;
             this->gbMiniHabits->Controls->Add(this->label32);
             this->gbMiniHabits->Controls->Add(this->lblMini);
             this->gbMiniHabits->Controls->Add(this->pbMiniHabits);
-            this->gbMiniHabits->Location = System::Drawing::Point(412, 197);
+            this->gbMiniHabits->Location = System::Drawing::Point(903, 12);
             this->gbMiniHabits->Name = L"gbMiniHabits";
             this->gbMiniHabits->Size = System::Drawing::Size(381, 169);
             this->gbMiniHabits->TabIndex = 15;
@@ -1062,9 +855,9 @@ private: System::Windows::Forms::PictureBox^ pictureBox4;
             this->gbHumanNature->Controls->Add(this->label30);
             this->gbHumanNature->Controls->Add(this->lblHuman);
             this->gbHumanNature->Controls->Add(this->pbHumanNature);
-            this->gbHumanNature->Location = System::Drawing::Point(16, 197);
+            this->gbHumanNature->Location = System::Drawing::Point(903, 211);
             this->gbHumanNature->Name = L"gbHumanNature";
-            this->gbHumanNature->Size = System::Drawing::Size(357, 169);
+            this->gbHumanNature->Size = System::Drawing::Size(381, 169);
             this->gbHumanNature->TabIndex = 14;
             this->gbHumanNature->TabStop = false;
             // 
@@ -1076,7 +869,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox4;
                 static_cast<System::Byte>(0)));
             this->btnAddHN->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
                 static_cast<System::Int32>(static_cast<System::Byte>(253)));
-            this->btnAddHN->Location = System::Drawing::Point(268, 115);
+            this->btnAddHN->Location = System::Drawing::Point(286, 115);
             this->btnAddHN->Name = L"btnAddHN";
             this->btnAddHN->Size = System::Drawing::Size(68, 35);
             this->btnAddHN->TabIndex = 27;
@@ -1135,7 +928,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox4;
             this->gbPsychologyMoney->Controls->Add(this->label28);
             this->gbPsychologyMoney->Controls->Add(this->lblMoney);
             this->gbPsychologyMoney->Controls->Add(this->pbMoney);
-            this->gbPsychologyMoney->Location = System::Drawing::Point(412, 3);
+            this->gbPsychologyMoney->Location = System::Drawing::Point(448, 12);
             this->gbPsychologyMoney->Name = L"gbPsychologyMoney";
             this->gbPsychologyMoney->Size = System::Drawing::Size(381, 169);
             this->gbPsychologyMoney->TabIndex = 14;
@@ -1155,7 +948,6 @@ private: System::Windows::Forms::PictureBox^ pictureBox4;
             this->btnAddPM->TabIndex = 27;
             this->btnAddPM->Text = L"+ Add";
             this->btnAddPM->UseVisualStyleBackColor = false;
-            this->btnAddPM->Click += gcnew System::EventHandler(this, &Home::btnAddPM_Click);
             // 
             // label43
             // 
@@ -1209,7 +1001,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox4;
             this->gbAtomicHabits->Controls->Add(this->label27);
             this->gbAtomicHabits->Controls->Add(this->lblAtomic);
             this->gbAtomicHabits->Controls->Add(this->pbAtomicHabits);
-            this->gbAtomicHabits->Location = System::Drawing::Point(17, 3);
+            this->gbAtomicHabits->Location = System::Drawing::Point(26, 12);
             this->gbAtomicHabits->Name = L"gbAtomicHabits";
             this->gbAtomicHabits->Size = System::Drawing::Size(357, 169);
             this->gbAtomicHabits->TabIndex = 14;
@@ -1241,7 +1033,6 @@ private: System::Windows::Forms::PictureBox^ pictureBox4;
             this->btnAddAH->TabIndex = 21;
             this->btnAddAH->Text = L"+ Add";
             this->btnAddAH->UseVisualStyleBackColor = false;
-            this->btnAddAH->Click += gcnew System::EventHandler(this, &Home::btnAddAH_Click);
             // 
             // label27
             // 
@@ -1278,85 +1069,6 @@ private: System::Windows::Forms::PictureBox^ pictureBox4;
             this->pbAtomicHabits->TabIndex = 19;
             this->pbAtomicHabits->TabStop = false;
             // 
-            // label15
-            // 
-            this->label15->AutoSize = true;
-            this->label15->Font = (gcnew System::Drawing::Font(L"Arial", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->label15->Location = System::Drawing::Point(256, 18);
-            this->label15->Name = L"label15";
-            this->label15->Size = System::Drawing::Size(146, 24);
-            this->label15->TabIndex = 1;
-            this->label15->Text = L"Shopping Cart";
-            // 
-            // label17
-            // 
-            this->label17->AutoSize = true;
-            this->label17->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->label17->Location = System::Drawing::Point(28, 70);
-            this->label17->Name = L"label17";
-            this->label17->Size = System::Drawing::Size(39, 17);
-            this->label17->TabIndex = 15;
-            this->label17->Text = L"Date";
-            // 
-            // label18
-            // 
-            this->label18->AutoSize = true;
-            this->label18->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->label18->Location = System::Drawing::Point(28, 103);
-            this->label18->Name = L"label18";
-            this->label18->Size = System::Drawing::Size(51, 17);
-            this->label18->TabIndex = 16;
-            this->label18->Text = L"Name:";
-            // 
-            // label19
-            // 
-            this->label19->AutoSize = true;
-            this->label19->Font = (gcnew System::Drawing::Font(L"Arial", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->label19->Location = System::Drawing::Point(26, 131);
-            this->label19->Name = L"label19";
-            this->label19->Size = System::Drawing::Size(162, 19);
-            this->label19->TabIndex = 17;
-            this->label19->Text = L"Werner Heisenberg";
-            // 
-            // groupBox7
-            // 
-            this->groupBox7->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(203)), static_cast<System::Int32>(static_cast<System::Byte>(216)),
-                static_cast<System::Int32>(static_cast<System::Byte>(241)));
-            this->groupBox7->Controls->Add(this->flpOrderDetail);
-            this->groupBox7->Controls->Add(this->label21);
-            this->groupBox7->Controls->Add(this->label19);
-            this->groupBox7->Controls->Add(this->label18);
-            this->groupBox7->Controls->Add(this->label17);
-            this->groupBox7->Controls->Add(this->label15);
-            this->groupBox7->Location = System::Drawing::Point(898, 21);
-            this->groupBox7->Name = L"groupBox7";
-            this->groupBox7->Size = System::Drawing::Size(644, 434);
-            this->groupBox7->TabIndex = 7;
-            this->groupBox7->TabStop = false;
-            // 
-            // flpOrderDetail
-            // 
-            this->flpOrderDetail->AutoScroll = true;
-            this->flpOrderDetail->Location = System::Drawing::Point(23, 173);
-            this->flpOrderDetail->Name = L"flpOrderDetail";
-            this->flpOrderDetail->Size = System::Drawing::Size(597, 231);
-            this->flpOrderDetail->TabIndex = 21;
-            // 
-            // label21
-            // 
-            this->label21->AutoSize = true;
-            this->label21->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->label21->Location = System::Drawing::Point(463, 71);
-            this->label21->Name = L"label21";
-            this->label21->Size = System::Drawing::Size(129, 17);
-            this->label21->TabIndex = 19;
-            this->label21->Text = L"Monday, 6/24/2024";
-            // 
             // btnAllGenre
             // 
             this->btnAllGenre->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
@@ -1365,7 +1077,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox4;
                 static_cast<System::Byte>(0)));
             this->btnAllGenre->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
                 static_cast<System::Int32>(static_cast<System::Byte>(253)));
-            this->btnAllGenre->Location = System::Drawing::Point(52, 163);
+            this->btnAllGenre->Location = System::Drawing::Point(302, 412);
             this->btnAllGenre->Name = L"btnAllGenre";
             this->btnAllGenre->Size = System::Drawing::Size(111, 38);
             this->btnAllGenre->TabIndex = 19;
@@ -1380,7 +1092,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox4;
             this->btnNonFiction->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->btnNonFiction->ForeColor = System::Drawing::Color::Black;
-            this->btnNonFiction->Location = System::Drawing::Point(204, 163);
+            this->btnNonFiction->Location = System::Drawing::Point(494, 412);
             this->btnNonFiction->Name = L"btnNonFiction";
             this->btnNonFiction->Size = System::Drawing::Size(111, 38);
             this->btnNonFiction->TabIndex = 20;
@@ -1395,7 +1107,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox4;
             this->btnFiction->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->btnFiction->ForeColor = System::Drawing::Color::Black;
-            this->btnFiction->Location = System::Drawing::Point(361, 163);
+            this->btnFiction->Location = System::Drawing::Point(692, 412);
             this->btnFiction->Name = L"btnFiction";
             this->btnFiction->Size = System::Drawing::Size(111, 38);
             this->btnFiction->TabIndex = 21;
@@ -1410,7 +1122,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox4;
             this->btnNovel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->btnNovel->ForeColor = System::Drawing::Color::Black;
-            this->btnNovel->Location = System::Drawing::Point(508, 163);
+            this->btnNovel->Location = System::Drawing::Point(885, 412);
             this->btnNovel->Name = L"btnNovel";
             this->btnNovel->Size = System::Drawing::Size(111, 38);
             this->btnNovel->TabIndex = 22;
@@ -1425,7 +1137,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox4;
             this->btnFantasy->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->btnFantasy->ForeColor = System::Drawing::Color::Black;
-            this->btnFantasy->Location = System::Drawing::Point(668, 163);
+            this->btnFantasy->Location = System::Drawing::Point(1061, 412);
             this->btnFantasy->Name = L"btnFantasy";
             this->btnFantasy->Size = System::Drawing::Size(111, 38);
             this->btnFantasy->TabIndex = 25;
@@ -1433,45 +1145,90 @@ private: System::Windows::Forms::PictureBox^ pictureBox4;
             this->btnFantasy->UseVisualStyleBackColor = false;
             this->btnFantasy->Click += gcnew System::EventHandler(this, &Home::btnFantasy_Click);
             // 
-            // pictureBox1
-            // 
-            this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-            this->pictureBox1->Location = System::Drawing::Point(51, 32);
-            this->pictureBox1->Name = L"pictureBox1";
-            this->pictureBox1->Size = System::Drawing::Size(25, 25);
-            this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
-            this->pictureBox1->TabIndex = 26;
-            this->pictureBox1->TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
-            this->pictureBox2->Location = System::Drawing::Point(82, 32);
-            this->pictureBox2->Name = L"pictureBox2";
-            this->pictureBox2->Size = System::Drawing::Size(35, 25);
-            this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
-            this->pictureBox2->TabIndex = 27;
-            this->pictureBox2->TabStop = false;
-            // 
             // pictureBox3
             // 
             this->pictureBox3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.Image")));
-            this->pictureBox3->Location = System::Drawing::Point(325, 42);
+            this->pictureBox3->Location = System::Drawing::Point(644, 55);
             this->pictureBox3->Name = L"pictureBox3";
-            this->pictureBox3->Size = System::Drawing::Size(169, 41);
-            this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+            this->pictureBox3->Size = System::Drawing::Size(183, 48);
+            this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
             this->pictureBox3->TabIndex = 28;
             this->pictureBox3->TabStop = false;
             // 
             // pictureBox4
             // 
             this->pictureBox4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox4.Image")));
-            this->pictureBox4->Location = System::Drawing::Point(626, 107);
+            this->pictureBox4->Location = System::Drawing::Point(165, 113);
             this->pictureBox4->Name = L"pictureBox4";
-            this->pictureBox4->Size = System::Drawing::Size(153, 34);
-            this->pictureBox4->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+            this->pictureBox4->Size = System::Drawing::Size(1154, 307);
+            this->pictureBox4->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
             this->pictureBox4->TabIndex = 29;
             this->pictureBox4->TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
+            this->pictureBox1->Location = System::Drawing::Point(1207, 48);
+            this->pictureBox1->Name = L"pictureBox1";
+            this->pictureBox1->Size = System::Drawing::Size(136, 50);
+            this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+            this->pictureBox1->TabIndex = 31;
+            this->pictureBox1->TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
+            this->pictureBox2->Location = System::Drawing::Point(990, 48);
+            this->pictureBox2->Name = L"pictureBox2";
+            this->pictureBox2->Size = System::Drawing::Size(211, 50);
+            this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+            this->pictureBox2->TabIndex = 32;
+            this->pictureBox2->TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this->pictureBox5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox5.Image")));
+            this->pictureBox5->Location = System::Drawing::Point(236, 51);
+            this->pictureBox5->Name = L"pictureBox5";
+            this->pictureBox5->Size = System::Drawing::Size(262, 50);
+            this->pictureBox5->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+            this->pictureBox5->TabIndex = 30;
+            this->pictureBox5->TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this->pictureBox6->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox6.Image")));
+            this->pictureBox6->Location = System::Drawing::Point(187, 61);
+            this->pictureBox6->Name = L"pictureBox6";
+            this->pictureBox6->Size = System::Drawing::Size(34, 31);
+            this->pictureBox6->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+            this->pictureBox6->TabIndex = 33;
+            this->pictureBox6->TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this->pictureBox7->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox7.Image")));
+            this->pictureBox7->Location = System::Drawing::Point(144, 63);
+            this->pictureBox7->Name = L"pictureBox7";
+            this->pictureBox7->Size = System::Drawing::Size(29, 26);
+            this->pictureBox7->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+            this->pictureBox7->TabIndex = 34;
+            this->pictureBox7->TabStop = false;
+            // 
+            // label4
+            // 
+            this->label4->AutoSize = true;
+            this->label4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
+                static_cast<System::Int32>(static_cast<System::Byte>(197)));
+            this->label4->Font = (gcnew System::Drawing::Font(L"Arial Black", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->label4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
+                static_cast<System::Int32>(static_cast<System::Byte>(253)));
+            this->label4->Location = System::Drawing::Point(1304, 56);
+            this->label4->Name = L"label4";
+            this->label4->Size = System::Drawing::Size(24, 26);
+            this->label4->TabIndex = 35;
+            this->label4->Text = L"0";
             // 
             // Home
             // 
@@ -1481,31 +1238,27 @@ private: System::Windows::Forms::PictureBox^ pictureBox4;
             this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
                 static_cast<System::Int32>(static_cast<System::Byte>(253)));
             this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
-            this->ClientSize = System::Drawing::Size(1564, 852);
-            this->Controls->Add(this->pictureBox4);
-            this->Controls->Add(this->pictureBox3);
-            this->Controls->Add(this->pictureBox2);
-            this->Controls->Add(this->pictureBox1);
+            this->ClientSize = System::Drawing::Size(1564, 897);
+            this->Controls->Add(this->label4);
             this->Controls->Add(this->btnFantasy);
             this->Controls->Add(this->btnNovel);
             this->Controls->Add(this->btnFiction);
             this->Controls->Add(this->btnNonFiction);
             this->Controls->Add(this->btnAllGenre);
+            this->Controls->Add(this->pictureBox7);
+            this->Controls->Add(this->pictureBox6);
+            this->Controls->Add(this->pictureBox2);
+            this->Controls->Add(this->pictureBox1);
+            this->Controls->Add(this->pictureBox5);
+            this->Controls->Add(this->pictureBox4);
+            this->Controls->Add(this->pictureBox3);
             this->Controls->Add(this->pAllBooks);
-            this->Controls->Add(this->textBox1);
-            this->Controls->Add(this->button2);
-            this->Controls->Add(this->button1);
-            this->Controls->Add(this->groupBox9);
-            this->Controls->Add(this->groupBox8);
-            this->Controls->Add(this->groupBox7);
-            this->Controls->Add(this->label1);
             this->Name = L"Home";
             this->Text = L"HomeForm";
-            this->groupBox8->ResumeLayout(false);
-            this->groupBox8->PerformLayout();
-            this->groupBox9->ResumeLayout(false);
-            this->groupBox9->PerformLayout();
             this->pAllBooks->ResumeLayout(false);
+            this->gbDune->ResumeLayout(false);
+            this->gbDune->PerformLayout();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox8))->EndInit();
             this->gbOmnicientReader->ResumeLayout(false);
             this->gbOmnicientReader->PerformLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pbReader))->EndInit();
@@ -1530,12 +1283,13 @@ private: System::Windows::Forms::PictureBox^ pictureBox4;
             this->gbAtomicHabits->ResumeLayout(false);
             this->gbAtomicHabits->PerformLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pbAtomicHabits))->EndInit();
-            this->groupBox7->ResumeLayout(false);
-            this->groupBox7->PerformLayout();
-            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
-            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->EndInit();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->EndInit();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->EndInit();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox7))->EndInit();
             this->ResumeLayout(false);
             this->PerformLayout();
 
@@ -1629,7 +1383,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox4;
         pAllBooks->Controls->Add(gbHumanNature);
         pAllBooks->Controls->Add(gbMiniHabits);
         pAllBooks->Controls->Add(gbMakeStick);
-        pAllBooks->Controls->Add(gbSecondBrain);
+
 
 
         //
@@ -1638,14 +1392,18 @@ private: System::Windows::Forms::PictureBox^ pictureBox4;
 
         pAllBooks->Controls->Add(gbSoloLeveling);
         pAllBooks->Controls->Add(gbOmnicientReader);
+        pAllBooks->Controls->Add(gbSecondBrain);
+        pAllBooks->Controls->Add(gbDune);
 
         // Get the current scroll position of the panel
         int scrollPosX = pAllBooks->HorizontalScroll->Value;
         int scrollPosY = pAllBooks->VerticalScroll->Value;
 
-        // Reset the location of gbSoloLeveling & gbOmnicientReader back to their original positions
-        gbSoloLeveling->Location = System::Drawing::Point(12 - scrollPosX, 472 - scrollPosY);
-        gbOmnicientReader->Location = System::Drawing::Point(312 - scrollPosX, 472 - scrollPosY);
+        // Reset the locatio back to their original positions
+        gbSoloLeveling->Location = System::Drawing::Point(10 - scrollPosX, 340 - scrollPosY);
+        gbOmnicientReader->Location = System::Drawing::Point(350 - scrollPosX, 340 - scrollPosY);
+        gbSecondBrain->Location = System::Drawing::Point(680 - scrollPosX, 340 - scrollPosY);
+        gbDune->Location = System::Drawing::Point(337 - scrollPosX, 171 - scrollPosY);
 
         ////
         ////
@@ -1721,6 +1479,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox4;
         ////
 
         // Add other books and Remove gbSoloLeveling & gbOmnicientRedear from panel->pAllBooks
+        pAllBooks->Controls->Remove(gbDune);
         pAllBooks->Controls->Remove(gbSoloLeveling);
         pAllBooks->Controls->Remove(gbOmnicientReader);
         pAllBooks->Controls->Add(gbAtomicHabits);
@@ -1728,11 +1487,24 @@ private: System::Windows::Forms::PictureBox^ pictureBox4;
         pAllBooks->Controls->Add(gbHumanNature);
         pAllBooks->Controls->Add(gbMiniHabits);
         pAllBooks->Controls->Add(gbMakeStick);
-        pAllBooks->Controls->Add(gbSecondBrain);
 
         ////
         ////
         ////
+
+        //
+        // Change the location of the gbSoloLeveling & gbOmnicientReader
+        //
+
+        pAllBooks->Controls->Add(gbSecondBrain);
+
+        // Get the current scroll position of the panel
+        int scrollPosX = pAllBooks->HorizontalScroll->Value; 
+        int scrollPosY = pAllBooks->VerticalScroll->Value;
+
+        // Reset the location of second bran back to their original positions
+        gbSecondBrain->Location = System::Drawing::Point(337 - scrollPosX, 171 - scrollPosY);
+
 
     }
 
@@ -1816,6 +1588,12 @@ private: System::Windows::Forms::PictureBox^ pictureBox4;
         ////
         ////
         ////
+
+        pAllBooks->Controls->Add(gbDune);
+
+        // Change the location of the gbDune
+        gbDune->Location = System::Drawing::Point(26, 12);
+
        
     }
 
@@ -1893,14 +1671,15 @@ private: System::Windows::Forms::PictureBox^ pictureBox4;
         pAllBooks->Controls->Remove(gbMiniHabits);
         pAllBooks->Controls->Remove(gbMakeStick);
         pAllBooks->Controls->Remove(gbSecondBrain);
+        pAllBooks->Controls->Remove(gbDune);
 
         // the gbSoloLeveling & gbOmnicientReader
         pAllBooks->Controls->Add(gbSoloLeveling);
         pAllBooks->Controls->Add(gbOmnicientReader);
 
         // Change the location of the gbSoloLeveling & gbOmnicientReader
-        gbSoloLeveling->Location = System::Drawing::Point(17, 3);
-        gbOmnicientReader->Location = System::Drawing::Point(312, 3);
+        gbSoloLeveling->Location = System::Drawing::Point(26, 12);
+        gbOmnicientReader->Location = System::Drawing::Point(350, 12);
 
         ////
         ////
@@ -1982,14 +1761,15 @@ private: System::Windows::Forms::PictureBox^ pictureBox4;
         pAllBooks->Controls->Remove(gbMiniHabits);
         pAllBooks->Controls->Remove(gbMakeStick);
         pAllBooks->Controls->Remove(gbSecondBrain);
+        pAllBooks->Controls->Remove(gbDune);
 
         // the gbSoloLeveling & gbOmnicientReader
         pAllBooks->Controls->Add(gbSoloLeveling);
         pAllBooks->Controls->Add(gbOmnicientReader);
 
         // Change the location of the gbSoloLeveling & gbOmnicientReader
-        gbSoloLeveling->Location = System::Drawing::Point(17, 3);
-        gbOmnicientReader->Location = System::Drawing::Point(312, 3);
+        gbSoloLeveling->Location = System::Drawing::Point(26, 12);
+        gbOmnicientReader->Location = System::Drawing::Point(350, 12);
 
         ////
         ////
@@ -1997,796 +1777,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox4;
 
     }
 
-
-        //                                                                        //
-        //----- When clicked the add button the book will go to Order Detail -----//
-        //                                                                        //
+         /// 
+         /// 
+         /// 
+         /// 
     
-
-    // Global variable to track if Atomic Habits is already added
-    bool isAtomicHabitsAdded = false;
-
-    private: System::Void btnAddAH_Click(System::Object^ sender, System::EventArgs^ e) 
-    {
-
-        if (!isAtomicHabitsAdded)
-        {
-            //
-            // Create a new GroupBox for Atomic Habits
-            //
-            GroupBox^ newGbAtomicHabits = gcnew GroupBox();
-            newGbAtomicHabits->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(229)), static_cast<System::Int32>(static_cast<System::Byte>(235)),
-                static_cast<System::Int32>(static_cast<System::Byte>(246)));
-            newGbAtomicHabits->Size = System::Drawing::Size(422, 155);
-
-            // Add the new GroupBox to the flow Layout Panel
-            flpOrderDetail->Controls->Add(newGbAtomicHabits);
-
-
-
-            //
-            // Create a new PictureBox
-            //
-            PictureBox^ newPbAtomicHabits = gcnew PictureBox();
-            newPbAtomicHabits->Image = pbAtomicHabits->Image;
-            newPbAtomicHabits->SizeMode = pbAtomicHabits->SizeMode;
-            newPbAtomicHabits->Location = pbAtomicHabits->Location;
-            newPbAtomicHabits->Size = System::Drawing::Size(80, 130);
-            newPbAtomicHabits->Location = System::Drawing::Point(25, 18);
-
-            // Add the new PictureBox to the new GroupBox
-            newGbAtomicHabits->Controls->Add(newPbAtomicHabits);
-
-
-
-            //
-            // Create a new label TITLE
-            //
-            Label^ newlblAtomic = gcnew Label();
-            newlblAtomic->Font = (gcnew System::Drawing::Font(L"Arial", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            newlblAtomic->Text = lblAtomic->Text;
-            newlblAtomic->Size = System::Drawing::Size(198, 23);
-            newlblAtomic->Location = System::Drawing::Point(130, 50);
-
-            // Add the new Label to the new GroupBox
-            newGbAtomicHabits->Controls->Add(newlblAtomic);
-
-
-
-            //
-            // Create a new label PRICE
-            //
-            Label^ newlblAtomicPrice = gcnew Label();
-            newlblAtomicPrice->Font = (gcnew System::Drawing::Font(L"Arial Black", 10.2, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            newlblAtomicPrice->Text = L"100";
-            newlblAtomicPrice->Size = System::Drawing::Size(118, 19);
-            newlblAtomicPrice->Location = System::Drawing::Point(145, 80);
-
-            // Add the new Label to the new GroupBox
-            newGbAtomicHabits->Controls->Add(newlblAtomicPrice);
-
-
-            //
-            // Create a new label for symbol PHP
-            // 
-            Label^ newlblAtomicPriceSymbol = gcnew Label();
-            newlblAtomicPriceSymbol->Font = (gcnew System::Drawing::Font(L"Arial Black", 10.2, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            newlblAtomicPriceSymbol->Text = L"P";
-            newlblAtomicPriceSymbol->Size = System::Drawing::Size(118, 19);
-            newlblAtomicPriceSymbol->Location = System::Drawing::Point(130, 80);
-
-            // Add the new Label to the new GroupBox
-            newGbAtomicHabits->Controls->Add(newlblAtomicPriceSymbol);
-
-
-            //
-            //  Psychology of Money is added to order detail, so increase the subtotatl
-            //
-            int subtotalIncrease = System::Convert::ToInt32(lblSubtotal->Text);
-
-            subtotalIncrease += 100;
-
-            lblSubtotal->Text = subtotalIncrease.ToString();
-
-
-            //
-            // Psychology of Money is added to order detail, so increase the Total payment
-            //
-            int totalPaymentIncrease = System::Convert::ToInt32(lblTotalPayment->Text);
-
-            totalPaymentIncrease += 100;
-
-
-            lblTotalPayment->Text = totalPaymentIncrease.ToString();
-
-
-
-            ////
-            ////
-            ////
-
-
-            //
-            //----- Create a new label for DELETETING ORDER -----//
-            //
-
-            Label^ lblDeleteOrder = gcnew Label();
-
-            lblDeleteOrder->Font = (gcnew System::Drawing::Font(L"Arial", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            lblDeleteOrder->Text = L"Delete";
-            lblDeleteOrder->ForeColor = System::Drawing::Color::Red;
-            lblDeleteOrder->Size = System::Drawing::Size(67, 21);
-            lblDeleteOrder->Location = System::Drawing::Point(350, 75);
-
-            // Add the new delete order label to the new GroupBox
-            newGbAtomicHabits->Controls->Add(lblDeleteOrder);
-
-            // Handle Click event of deleteOrder label
-            lblDeleteOrder->Click += gcnew System::EventHandler(this, &Home::DeleteOrder_Click);
-
-
-            ////
-            ////
-            ////
-
-
-            //
-            //----- Create a button to Increase Quantity -----//
-            //
-
-            Button^ btnIncreaseQty = gcnew Button();
-
-            btnIncreaseQty->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
-                static_cast<System::Int32>(static_cast<System::Byte>(197)));
-            btnIncreaseQty->Font = (gcnew System::Drawing::Font(L"Arial", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            btnIncreaseQty->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
-                static_cast<System::Int32>(static_cast<System::Byte>(253)));
-            btnIncreaseQty->Location = System::Drawing::Point(367, 100);
-            btnIncreaseQty->Name = L"btnAddQty";
-            btnIncreaseQty->Size = System::Drawing::Size(27, 27);
-            btnIncreaseQty->TabIndex = 28;
-            btnIncreaseQty->Text = L"+";
-            btnIncreaseQty->UseVisualStyleBackColor = false;
-
-            // Add the new addQty button to groupbox
-            newGbAtomicHabits->Controls->Add(btnIncreaseQty);
-
-            // Handle Click event of Add Quantity button
-            btnIncreaseQty->Click += gcnew System::EventHandler(this, &Home::btnIncreaseQty_Click);
-
-
-            ////
-            ////
-            ////
-
-
-            //
-            //----- Create a button to Decrease Quantity -----//
-            //
-
-            Button^ btnDecreaseQty = gcnew Button();
-
-            btnDecreaseQty->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
-                static_cast<System::Int32>(static_cast<System::Byte>(197)));
-            btnDecreaseQty->Font = (gcnew System::Drawing::Font(L"Arial", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            btnDecreaseQty->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
-                static_cast<System::Int32>(static_cast<System::Byte>(253)));
-            btnDecreaseQty->Location = System::Drawing::Point(300, 100);
-            btnDecreaseQty->Name = L"btnAddQty";
-            btnDecreaseQty->Size = System::Drawing::Size(27, 27);
-            btnDecreaseQty->TabIndex = 28;
-            btnDecreaseQty->Text = L"-";
-            btnDecreaseQty->UseVisualStyleBackColor = false;
-
-            // Add the new button to groupbox
-            newGbAtomicHabits->Controls->Add(btnDecreaseQty);
-
-            // Handle Click event of Decrease Quantity button
-            btnDecreaseQty->Click += gcnew System::EventHandler(this, &Home::btnDecreaseQty_Click);
-
-
-
-            ////
-            ////
-            ////
-
-
-            //
-            //----- Quantity of the item -----//
-            //
-
-            // Create a new label for Quantity
-            lblQuantity = gcnew Label();
-            lblQuantity->Font = (gcnew System::Drawing::Font(L"Arial", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            lblQuantity->Text = L"1";
-            lblQuantity->ForeColor = System::Drawing::Color::Black;
-            lblQuantity->Size = System::Drawing::Size(67, 21);
-            lblQuantity->Location = System::Drawing::Point(341, 105);
-
-            // Add the new label to groupbox
-            newGbAtomicHabits->Controls->Add(lblQuantity);
-
-
-
-            //
-            // Atomic Habits is now added
-            //
-            isAtomicHabitsAdded = true;
-        }
-        else
-        {
-            //
-            // Atomic Habits is already added, so increase the quantity
-            //
-
-            int currentQuantity = System::Convert::ToInt32(lblQuantity->Text);
-
-            if (currentQuantity < 99)
-            {
-                currentQuantity++;
-                lblQuantity->Text = currentQuantity.ToString();
-            }
-
-
-            //
-            // Atomic Habits is already added, so increase the subtotatl
-            //
-            int subtotalIncrease = System::Convert::ToInt32(lblSubtotal->Text);
-
-
-            subtotalIncrease += 100;
-
-
-            lblSubtotal->Text = subtotalIncrease.ToString();
-
-
-            //
-            // Atomic Habits is already added, so increase the subtotatl
-            //
-            int totalPaymentIncrease = System::Convert::ToInt32(lblTotalPayment->Text);
-
-
-            totalPaymentIncrease += 100;
-
-
-            lblTotalPayment->Text = totalPaymentIncrease.ToString();
-        }
-    }
-
-
-        ///
-        ///
-        /// 
-        
-        //                                                                                                            //
-        //----- When Clicked the Delete text the whole book that has been added to order detail will get deleted -----//
-        //                                                                                                            //
-
-    private: System::Void DeleteOrder_Click(System::Object^ sender, System::EventArgs^ e)
-    {
-
-        //
-        // Find the parent GroupBox of the clicked label
-        //
-        Label^ deleteLabel = safe_cast<Label^>(sender);
-        GroupBox^ parentGroupBox = safe_cast<GroupBox^>(deleteLabel->Parent);
-
-        // Remove the parent GroupBox from the flow layout panel
-        flpOrderDetail->Controls->Remove(parentGroupBox);
-
-
-
-        //
-        // reset Subtotal Total payment when the delete has been cliked
-        //
-
-        // Update subtotal and total payment
-        int quantity = System::Convert::ToInt32(lblQuantity->Text);
-        lblSubtotal->Text = (System::Convert::ToInt32(lblSubtotal->Text) - (quantity * 100)).ToString();
-        lblTotalPayment->Text = (System::Convert::ToInt32(lblTotalPayment->Text) - (quantity * 100)).ToString();
-
-
-        //
-        // Atomic Habits is now delete 
-        //
-        isAtomicHabitsAdded = false;
-    }
-
-
-        ///
-        ///
-        ///
-
-
-        //  
-        //----- When Clicked the plus button in order detail the quantity, subtotal, and payment total increase -----//
-        //
-
-    private: System::Void btnIncreaseQty_Click(System::Object^ sender, System::EventArgs^ e)
-    {
-        //
-        // Increase lblQuantity
-        //
-
-        int currentQuantity = System::Convert::ToInt32(lblQuantity->Text);
-
-        // Increase the quantity by one if it's less than 100
-        if (currentQuantity < 99)
-        {
-            currentQuantity++;
-            lblQuantity->Text = currentQuantity.ToString();
-        }
-
-
-
-        //
-        // Increase lblSubtotal
-        //
-        int subtotalIncrease = System::Convert::ToInt32(lblSubtotal->Text);
-
-
-        subtotalIncrease += 100;
-
-
-        lblSubtotal->Text = subtotalIncrease.ToString();
-
-
-        //
-        // Increase lblTotalPayment
-        //
-        int totalPaymentIncrease = System::Convert::ToInt32(lblTotalPayment->Text);
-
-
-        totalPaymentIncrease += 100;
-
-
-        lblTotalPayment->Text = totalPaymentIncrease.ToString();
-
-    }
-
-
-           //----- When Clicked the plus button in order detail the quantity, subtotal, and payment total decrease -----//
-
-
-    private: System::Void btnDecreaseQty_Click(System::Object^ sender, System::EventArgs^ e)
-    {
-
-        //
-        // Decrease lblQuantity
-        //
-        int currentQuantity = System::Convert::ToInt32(lblQuantity->Text);
-
-        // Decrease the quantity by one if it's greater than 1
-        if (currentQuantity > 1)
-        {
-            currentQuantity--;
-            lblQuantity->Text = currentQuantity.ToString();
-        }
-
-
-        //
-        // Decrease lblSubtotal
-        //
-        int subtotalDecrease = System::Convert::ToInt32(lblSubtotal->Text);
-
-        subtotalDecrease -= 100;
-
-        lblSubtotal->Text = subtotalDecrease.ToString();
-
-
-        //
-        // Decrease lblTotalPayment
-        //
-        int totalPaymentDecrease = System::Convert::ToInt32(lblTotalPayment->Text);
-
-        totalPaymentDecrease -= 100;
-
-        lblTotalPayment->Text = totalPaymentDecrease.ToString();
-    }
-
-    
-    ///
-    ///
-    ///  
-    
-
-
-        //                                                                        //
-        //----- When clicked the add button the book will go to Order Detail -----//
-        //                                                                        //
-
-
-    // Global variable to track if Psychology of money is already added
-    bool isPsychologyMoneyAdded = false;
-
-    private: System::Void btnAddPM_Click(System::Object^ sender, System::EventArgs^ e) 
-    {
-
-        if (!isPsychologyMoneyAdded)
-        {
-            //
-            // Create a new GroupBox for Psychology of Money
-            //
-            GroupBox^ newGbMoney = gcnew GroupBox();
-            newGbMoney->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(229)), static_cast<System::Int32>(static_cast<System::Byte>(235)),
-                static_cast<System::Int32>(static_cast<System::Byte>(246)));
-            newGbMoney->Size = System::Drawing::Size(422, 155);
-
-            // Add the new GroupBox to the flow Layout Panel
-            flpOrderDetail->Controls->Add(newGbMoney);
-
-
-
-            //
-            // Create a new PictureBox
-            //
-            PictureBox^ newPbMoney = gcnew PictureBox();
-            newPbMoney->Image = pbMoney->Image;
-            newPbMoney->SizeMode = pbAtomicHabits->SizeMode;
-            newPbMoney->Location = pbAtomicHabits->Location;
-            newPbMoney->Size = System::Drawing::Size(80, 130);
-            newPbMoney->Location = System::Drawing::Point(25, 18);
-
-            // Add the new PictureBox to the new GroupBox
-            newGbMoney->Controls->Add(newPbMoney);
-
-
-
-            //
-            // Create a new label TITLE
-            //
-            Label^ newlblMoney = gcnew Label();
-            newlblMoney->Font = (gcnew System::Drawing::Font(L"Arial", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            newlblMoney->Text = L"Psychology of Money";
-            newlblMoney->Size = System::Drawing::Size(198, 23);
-            newlblMoney->Location = System::Drawing::Point(130, 50);
-
-            // Add the new Label to the new GroupBox
-            newGbMoney->Controls->Add(newlblMoney);
-
-
-
-            //
-            // Create a new label PHP
-            //
-            Label^ newlblMoneyPrice = gcnew Label();
-            newlblMoneyPrice->Font = (gcnew System::Drawing::Font(L"Arial Black", 10.2, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            newlblMoneyPrice->Text = L"200";
-            newlblMoneyPrice->Size = System::Drawing::Size(118, 19);
-            newlblMoneyPrice->Location = System::Drawing::Point(145, 80);
-
-            // Add the new Label to the new GroupBox
-            newGbMoney->Controls->Add(newlblMoneyPrice);
-
-            //
-            // Create a new label PRI
-            // //
-            Label^ newlblMoneyPriceSymbol = gcnew Label();
-            newlblMoneyPriceSymbol->Font = (gcnew System::Drawing::Font(L"Arial Black", 10.2, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            newlblMoneyPriceSymbol->Text = L"P";
-            newlblMoneyPriceSymbol->Size = System::Drawing::Size(118, 19);
-            newlblMoneyPriceSymbol->Location = System::Drawing::Point(130, 80);
-
-            // Add the new Label to the new GroupBox
-            newGbMoney->Controls->Add(newlblMoneyPriceSymbol);
-
-
-            //
-            //  Psychology of Money is added to order detail, so increase the subtotatl
-            //
-            int subtotalIncrease = System::Convert::ToInt32(lblSubtotal->Text);
-
-            subtotalIncrease += 200;
-
-            lblSubtotal->Text = subtotalIncrease.ToString();
-
-
-            //
-            // Psychology of Money is added to order detail, so increase the Total payment
-            //
-            int totalPaymentIncrease = System::Convert::ToInt32(lblTotalPayment->Text);
-
-            totalPaymentIncrease += 200;
-
-
-            lblTotalPayment->Text = totalPaymentIncrease.ToString();
-
-
-
-            //
-            //----- Create a new label for DELETETING ORDER -----//
-            //
-
-            Label^ lblDeleteOrderMoney = gcnew Label();
-
-            lblDeleteOrderMoney->Font = (gcnew System::Drawing::Font(L"Arial", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            lblDeleteOrderMoney->Text = L"Delete";
-            lblDeleteOrderMoney->ForeColor = System::Drawing::Color::Red;
-            lblDeleteOrderMoney->Size = System::Drawing::Size(67, 21);
-            lblDeleteOrderMoney->Location = System::Drawing::Point(350, 75);
-
-            // Add the new delete order label to the new GroupBox
-            newGbMoney->Controls->Add(lblDeleteOrderMoney);
-
-            // Handle Click event of deleteOrder label
-            lblDeleteOrderMoney->Click += gcnew System::EventHandler(this, &Home::DeleteOrderMoney_Click);
-            ////
-            ////
-            ////
-
-
-            //
-            //----- Create a button to Increase Quantity -----//
-            //
-
-            Button^ btnIncreaseQtyMoney = gcnew Button();
-
-            btnIncreaseQtyMoney->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
-                static_cast<System::Int32>(static_cast<System::Byte>(197)));
-            btnIncreaseQtyMoney->Font = (gcnew System::Drawing::Font(L"Arial", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            btnIncreaseQtyMoney->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
-                static_cast<System::Int32>(static_cast<System::Byte>(253)));
-            btnIncreaseQtyMoney->Location = System::Drawing::Point(367, 100);
-            btnIncreaseQtyMoney->Name = L"btnAddQtyMoney";
-            btnIncreaseQtyMoney->Size = System::Drawing::Size(27, 27);
-            btnIncreaseQtyMoney->TabIndex = 28;
-            btnIncreaseQtyMoney->Text = L"+";
-            btnIncreaseQtyMoney->UseVisualStyleBackColor = false;
-
-            // Add the new addQty button to groupbox
-            newGbMoney->Controls->Add(btnIncreaseQtyMoney);
-
-            // Handle Click event of Add Quantity button
-            btnIncreaseQtyMoney->Click += gcnew System::EventHandler(this, &Home::btnIncreaseQtyMoney_Click);
-
-
-            ////
-            ////
-            ////
-
-
-            //
-            //----- Create a button to Decrease Quantity -----//
-            //
-
-            Button^ btnDecreaseQtyMoney = gcnew Button();
-
-            btnDecreaseQtyMoney->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
-                static_cast<System::Int32>(static_cast<System::Byte>(197)));
-            btnDecreaseQtyMoney->Font = (gcnew System::Drawing::Font(L"Arial", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            btnDecreaseQtyMoney->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
-                static_cast<System::Int32>(static_cast<System::Byte>(253)));
-            btnDecreaseQtyMoney->Location = System::Drawing::Point(300, 100);
-            btnDecreaseQtyMoney->Name = L"btnDecreaseQtyMoney";
-            btnDecreaseQtyMoney->Size = System::Drawing::Size(27, 27);
-            btnDecreaseQtyMoney->TabIndex = 28;
-            btnDecreaseQtyMoney->Text = L"-";
-            btnDecreaseQtyMoney->UseVisualStyleBackColor = false;
-
-            // Add the new button to groupbox
-            newGbMoney->Controls->Add(btnDecreaseQtyMoney);
-
-            // Handle Click event of Decrease Quantity button
-            btnDecreaseQtyMoney->Click += gcnew System::EventHandler(this, &Home::btnDecreaseQtyMoney_Click);
-
-
-
-            ////
-            ////
-            ////
-
-
-            //
-            //----- Quantity of the item -----//
-            //
-
-            // Create a new label for Quantity
-            lblQuantityMoney = gcnew Label();
-            lblQuantityMoney->Font = (gcnew System::Drawing::Font(L"Arial", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            lblQuantityMoney->Text = L"1";
-            lblQuantityMoney->ForeColor = System::Drawing::Color::Black;
-            lblQuantityMoney->Size = System::Drawing::Size(67, 21);
-            lblQuantityMoney->Location = System::Drawing::Point(341, 105);
-
-            // Add the new label to groupbox
-            newGbMoney->Controls->Add(lblQuantityMoney);
-
-
-
-            //
-            // Atomic Habits is now added
-            //
-            isPsychologyMoneyAdded = true;
-        }
-        else
-        {
-            //
-            // Atomic Habits is already added, so increase the quantity
-            //
-
-            int currentQuantityMoney = System::Convert::ToInt32(lblQuantityMoney->Text);
-
-            if (currentQuantityMoney < 99)
-            {
-                currentQuantityMoney++;
-                lblQuantityMoney->Text = currentQuantityMoney.ToString();
-            }
-
-
-            //
-            // Atomic Habits is already added, so increase the subtotatl
-            //
-            int subtotalIncrease = System::Convert::ToInt32(lblSubtotal->Text);
-
-
-            subtotalIncrease += 200;
-
-
-            lblSubtotal->Text = subtotalIncrease.ToString();
-
-
-            //
-            // Atomic Habits is already added, so increase the subtotatl
-            //
-            int totalPaymentIncrease = System::Convert::ToInt32(lblTotalPayment->Text);
-
-
-            totalPaymentIncrease += 200;
-
-
-            lblTotalPayment->Text = totalPaymentIncrease.ToString();
-        }
-    }
-
-
-           ///
-           ///
-           /// 
-
-           //                                                                                                            //
-           //----- When Clicked the Delete text the whole book that has been added to order detail will get deleted -----//
-           //                                                                                                            //
-
-    private: System::Void DeleteOrderMoney_Click(System::Object^ sender, System::EventArgs^ e)
-    {
-
-        //
-        // Find the parent GroupBox of the clicked label
-        //
-        Label^ deleteLabel = safe_cast<Label^>(sender);
-        GroupBox^ parentGroupBox = safe_cast<GroupBox^>(deleteLabel->Parent);
-
-        // Remove the parent GroupBox from the flow layout panel
-        flpOrderDetail->Controls->Remove(parentGroupBox);
-
-
-        //
-        // reset Subtotal Total payment when the delete has been cliked
-        //
-
-        // Update subtotal and total payment
-        int quantity = System::Convert::ToInt32(lblQuantityMoney->Text);
-
-        lblSubtotal->Text = (System::Convert::ToInt32(lblSubtotal->Text) - (quantity * 200)).ToString();
-        lblTotalPayment->Text = (System::Convert::ToInt32(lblTotalPayment->Text) - (quantity * 200)).ToString();
-
-
-        //
-        // Atomic Habits is now delete 
-        //
-        isPsychologyMoneyAdded = false;
-    }
-
-
-        //  
-        //----- When Clicked the plus button in order detail the quantity, subtotal, and payment total increase -----//
-        //
-
-    private: System::Void btnIncreaseQtyMoney_Click(System::Object^ sender, System::EventArgs^ e)
-    {
-        //
-        // Increase lblQuantity
-        //
-
-        int currentQuantityIncreaseMoney = System::Convert::ToInt32(lblQuantityMoney->Text);
-
-        // Increase the quantity by one if it's less than 100
-        if (currentQuantityIncreaseMoney < 99)
-        {
-            currentQuantityIncreaseMoney++;
-            lblQuantityMoney->Text = currentQuantityIncreaseMoney.ToString();
-        }
-
-
-
-        //
-        // Increase lblSubtotal
-        //
-        int subtotalIncreaseMoney = System::Convert::ToInt32(lblSubtotal->Text);
-
-
-        subtotalIncreaseMoney += 200;
-
-
-        lblSubtotal->Text = subtotalIncreaseMoney.ToString();
-
-
-        //
-        // Increase lblTotalPayment
-        //
-        int totalPaymentIncreaseMoney = System::Convert::ToInt32(lblTotalPayment->Text);
-
-
-        totalPaymentIncreaseMoney += 200;
-
-
-        lblTotalPayment->Text = totalPaymentIncreaseMoney.ToString();
-
-    }
-
-
-        //----- When Clicked the plus button in order detail the quantity, subtotal, and payment total decrease -----//
-
-
-    private: System::Void btnDecreaseQtyMoney_Click(System::Object^ sender, System::EventArgs^ e)
-    {
-
-        //
-        // Decrease lblQuantity
-        //
-        int currentQuantityDecreaseMoney = System::Convert::ToInt32(lblQuantityMoney->Text);
-
-        // Decrease the quantity by one if it's greater than 1
-        if (currentQuantityDecreaseMoney > 1)
-        {
-            currentQuantityDecreaseMoney--;
-            lblQuantityMoney->Text = currentQuantityDecreaseMoney.ToString();
-        }
-
-
-        //
-        // Decrease lblSubtotal
-        //
-        int subtotalDecreaseMoney = System::Convert::ToInt32(lblSubtotal->Text);
-
-        subtotalDecreaseMoney -= 200;
-
-        lblSubtotal->Text = subtotalDecreaseMoney.ToString();
-
-
-        //
-        // Decrease lblTotalPayment
-        //
-        int totalPaymentDecreaseMoney = System::Convert::ToInt32(lblTotalPayment->Text);
-
-        totalPaymentDecreaseMoney -= 200;
-
-        lblTotalPayment->Text = totalPaymentDecreaseMoney.ToString();
-    }
-
-
-         ///
-         ///
-         ///
-         /// 
-         /// 
-         /// 
-         /// 
-     
-
 };
 }
