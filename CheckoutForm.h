@@ -32,7 +32,7 @@ namespace PointofSaleSystem {
 
 
 
-	// This is important to access the home when adding the book to the flpOrderDetail
+	// Created a method to access the flpOrderDetail
 	public:
 
 		void AddGroupBoxToOrderDetail(GroupBox^ groupBox)
@@ -40,6 +40,22 @@ namespace PointofSaleSystem {
 			// Add the provided GroupBox to flpOrderDetail
 			this->flpOrderDetail->Controls->Add(groupBox);
 		}
+
+
+
+
+
+	// Created a method to access the flpOrderDetail
+	public:
+
+		void RemoveGroupBoxToOrderDetail(GroupBox^ groupBox)
+		{
+			// Remove the provided GroupBox to flpOrderDetail
+			flpOrderDetail->Controls->Remove(groupBox);
+
+		}
+
+
 
 
 
@@ -55,6 +71,8 @@ namespace PointofSaleSystem {
 			int get() { return System::Convert::ToInt32(lblTotalPayment->Text); }
 			void set(int value) { lblTotalPayment->Text = value.ToString(); }
 		}
+
+
 
 
 

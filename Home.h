@@ -52,7 +52,7 @@ namespace PointofSaleSystem {
     /// 
 
 
-    //--- this is for the cart and adding the atomic habits to the order detail
+    //--- Access the checkoutForm instance
     private:  CheckoutForm^ checkoutForm = gcnew CheckoutForm();
 
 
@@ -1950,6 +1950,33 @@ private: System::Windows::Forms::Label^ label4;
 
         // Add the new label to groupbox
         newGbAtomicHabits->Controls->Add(lblQuantity);
+
+
+
+        ////
+        ////
+        ////
+
+
+        //
+        //----- Create a new label for DELETETING ORDER -----//
+        //
+
+        Label^ lblDeleteOrder = gcnew Label();
+
+        lblDeleteOrder->Font = (gcnew System::Drawing::Font(L"Arial", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+            static_cast<System::Byte>(0)));
+        lblDeleteOrder->Text = L"Delete";
+        lblDeleteOrder->ForeColor = System::Drawing::Color::Red;
+        lblDeleteOrder->Size = System::Drawing::Size(67, 21);
+        lblDeleteOrder->Location = System::Drawing::Point(350, 75);
+
+        // Add the new delete order label to the new GroupBox
+        newGbAtomicHabits->Controls->Add(lblDeleteOrder);
+
+        // Handle Click event of deleteOrder label
+        lblDeleteOrder->Click += gcnew System::EventHandler(this, &Home::DeleteOrder_Click);
+
     }
 
 
@@ -2012,6 +2039,32 @@ private: System::Windows::Forms::Label^ label4;
         //
         checkoutForm->Subtotal -= 100;
         checkoutForm->TotalPayment -= 100;
+    }
+
+
+
+         /// 
+         /// 
+         /// 
+         /// 
+         /// 
+
+
+
+     //                                                                                                            //
+     //----- When Clicked the Delete text the whole book that has been added to order detail will get deleted -----//
+     //                                                                                                            //
+
+    private: System::Void DeleteOrder_Click(System::Object^ sender, System::EventArgs^ e)
+    {
+        //
+        // Find the parent GroupBox of the clicked label
+        //
+        Label^ deleteLabel = safe_cast<Label^>(sender);
+        GroupBox^ parentGroupBox = safe_cast<GroupBox^>(deleteLabel->Parent);
+
+        // Delete the groupBox inside the flpOrderDetail
+        checkoutForm->RemoveGroupBoxToOrderDetail(parentGroupBox);
     }
 
 

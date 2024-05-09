@@ -124,7 +124,7 @@
               "RelativeDocumentMoniker": "Home.h",
               "ToolTip": "C:\\Users\\John carlo francis\\Documents\\Source Code\\Point of Sale System\\Home.h",
               "RelativeToolTip": "Home.h",
-              "ViewState": "AQIAAK0HAAAAAAAAAAAQwLgHAAAJAAAA",
+              "ViewState": "AQIAAAQIAAAAAAAAAAAAAA0IAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-04-29T04:10:38.139Z",
               "EditorCaption": ""
@@ -137,9 +137,10 @@
               "RelativeDocumentMoniker": "CheckoutForm.h",
               "ToolTip": "C:\\Users\\John carlo francis\\Documents\\Source Code\\Point of Sale System\\CheckoutForm.h",
               "RelativeToolTip": "CheckoutForm.h",
-              "ViewState": "AQIAACEAAAAAAAAAAAAAAC4AAAAIAAAA",
+              "ViewState": "AQIAADMAAAAAAAAAAAAAAC0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-08T23:06:58.677Z"
+              "WhenOpened": "2024-05-08T23:06:58.677Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -231,7 +232,8 @@
               "ToolTip": "C:\\Users\\John carlo francis\\Documents\\Source Code\\Point of Sale System\\CheckoutForm.h [Design]",
               "RelativeToolTip": "CheckoutForm.h [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-08T22:54:50.004Z"
+              "WhenOpened": "2024-05-08T22:54:50.004Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",

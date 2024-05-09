@@ -31,6 +31,7 @@ Class PointofSaleSystem.CheckoutForm: AutoLayout, AnsiClass, Class, Public, Befo
     Int32 Subtotal 'get set' : 
   Methods:
     AddGroupBoxToOrderDetail(GroupBox): PrivateScope, Public, HideBySig
+    RemoveGroupBoxToOrderDetail(GroupBox): PrivateScope, Public, HideBySig
     get_Subtotal(): PrivateScope, Public, HideBySig, SpecialName
     set_Subtotal(Int32): PrivateScope, Public, HideBySig, SpecialName
     get_TotalPayment(): PrivateScope, Public, HideBySig, SpecialName
