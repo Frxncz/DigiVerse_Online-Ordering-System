@@ -86,6 +86,8 @@ namespace PointofSaleSystem {
 	private: System::Windows::Forms::Label^ label17;
 	private: System::Windows::Forms::Label^ label15;
 	private: System::Windows::Forms::PictureBox^ pbBackHome;
+	private: System::Windows::Forms::PictureBox^ pictureBox1;
+	private: System::Windows::Forms::PictureBox^ pictureBox2;
 
 
 
@@ -131,10 +133,14 @@ namespace PointofSaleSystem {
 			this->label17 = (gcnew System::Windows::Forms::Label());
 			this->label15 = (gcnew System::Windows::Forms::Label());
 			this->pbBackHome = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
 			this->groupBox9->SuspendLayout();
 			this->groupBox8->SuspendLayout();
 			this->groupBox7->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pbBackHome))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// textBox1
@@ -469,6 +475,26 @@ namespace PointofSaleSystem {
 			this->pbBackHome->TabStop = false;
 			this->pbBackHome->Click += gcnew System::EventHandler(this, &CheckoutForm::pbBackHome_Click);
 			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
+			this->pictureBox1->Location = System::Drawing::Point(-3, 585);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(340, 268);
+			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->pictureBox1->TabIndex = 21;
+			this->pictureBox1->TabStop = false;
+			// 
+			// pictureBox2
+			// 
+			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
+			this->pictureBox2->Location = System::Drawing::Point(867, 3);
+			this->pictureBox2->Name = L"pictureBox2";
+			this->pictureBox2->Size = System::Drawing::Size(347, 351);
+			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->pictureBox2->TabIndex = 22;
+			this->pictureBox2->TabStop = false;
+			// 
 			// CheckoutForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -476,6 +502,7 @@ namespace PointofSaleSystem {
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
 				static_cast<System::Int32>(static_cast<System::Byte>(253)));
 			this->ClientSize = System::Drawing::Size(1216, 926);
+			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->pbBackHome);
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->button2);
@@ -483,6 +510,7 @@ namespace PointofSaleSystem {
 			this->Controls->Add(this->groupBox9);
 			this->Controls->Add(this->groupBox8);
 			this->Controls->Add(this->groupBox7);
+			this->Controls->Add(this->pictureBox2);
 			this->Name = L"CheckoutForm";
 			this->Text = L"CheckoutForm";
 			this->groupBox9->ResumeLayout(false);
@@ -492,6 +520,8 @@ namespace PointofSaleSystem {
 			this->groupBox7->ResumeLayout(false);
 			this->groupBox7->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pbBackHome))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 

@@ -1800,13 +1800,75 @@ private: System::Windows::Forms::Label^ label4;
     
     private: System::Void btnAddAH_Click(System::Object^ sender, System::EventArgs^ e) 
     {
+        //
         // Create a new GroupBox for Atomic Habits
+        //
         GroupBox^ newGbAtomicHabits = gcnew GroupBox();
         newGbAtomicHabits->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(229)), static_cast<System::Int32>(static_cast<System::Byte>(235)),
             static_cast<System::Int32>(static_cast<System::Byte>(246)));
         newGbAtomicHabits->Size = System::Drawing::Size(422, 155);
 
+        ////----- Add the Book GroupBox to the checkout form inside the flpOrderDetail ----////
         checkoutForm->AddGroupBoxToOrderDetail(newGbAtomicHabits);
+
+
+        //
+        // Create a new PictureBox
+        //
+        PictureBox^ newPbAtomicHabits = gcnew PictureBox();
+        newPbAtomicHabits->Image = pbAtomicHabits->Image;
+        newPbAtomicHabits->SizeMode = pbAtomicHabits->SizeMode;
+        newPbAtomicHabits->Location = pbAtomicHabits->Location;
+        newPbAtomicHabits->Size = System::Drawing::Size(80, 130);
+        newPbAtomicHabits->Location = System::Drawing::Point(25, 18);
+
+        // Add the new Label to the GroupBox
+        newGbAtomicHabits->Controls->Add(newPbAtomicHabits);
+
+
+
+        //
+        // Create a new label TITLE
+        //
+        Label^ newlblAtomic = gcnew Label();
+        newlblAtomic->Font = (gcnew System::Drawing::Font(L"Arial", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            static_cast<System::Byte>(0)));
+        newlblAtomic->Text = lblAtomic->Text;
+        newlblAtomic->Size = System::Drawing::Size(198, 23);
+        newlblAtomic->Location = System::Drawing::Point(130, 50);
+
+        // Add the new Label to the GroupBox
+        newGbAtomicHabits->Controls->Add(newlblAtomic);
+
+
+
+        //
+        // Create a new label PRICE
+        //
+        Label^ newlblAtomicPrice = gcnew Label();
+        newlblAtomicPrice->Font = (gcnew System::Drawing::Font(L"Arial Black", 10.2, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+            static_cast<System::Byte>(0)));
+        newlblAtomicPrice->Text = L"100";
+        newlblAtomicPrice->Size = System::Drawing::Size(118, 19);
+        newlblAtomicPrice->Location = System::Drawing::Point(145, 80);
+
+        // Add the new Label to the GroupBox
+        newGbAtomicHabits->Controls->Add(newlblAtomicPrice);
+
+
+        //
+        // Create a new label for symbol P (PHP peso sysmbol)
+        // 
+        Label^ newlblAtomicPriceSymbol = gcnew Label();
+        newlblAtomicPriceSymbol->Font = (gcnew System::Drawing::Font(L"Arial Black", 10.2, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+            static_cast<System::Byte>(0)));
+        newlblAtomicPriceSymbol->Text = L"P";
+        newlblAtomicPriceSymbol->Size = System::Drawing::Size(118, 19);
+        newlblAtomicPriceSymbol->Location = System::Drawing::Point(130, 80);
+
+        // Add the new Label to the GroupBox
+        newGbAtomicHabits->Controls->Add(newlblAtomicPriceSymbol);
+
 
         // Don't show the CheckoutForm here; it will be shown when pbCart is clicked
     }
