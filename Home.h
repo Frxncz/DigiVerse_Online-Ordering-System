@@ -242,7 +242,8 @@ private: System::Windows::Forms::Label^ label1;
 private: System::Windows::Forms::Label^ label2;
 private: System::Windows::Forms::Label^ label3;
 private: System::Windows::Forms::PictureBox^ pictureBox8;
-private: System::Windows::Forms::Label^ label4;
+private: System::Windows::Forms::Label^ lblCartQty;
+
 
 
 
@@ -338,7 +339,7 @@ private: System::Windows::Forms::Label^ label4;
             this->pictureBox5 = (gcnew System::Windows::Forms::PictureBox());
             this->pictureBox6 = (gcnew System::Windows::Forms::PictureBox());
             this->pictureBox7 = (gcnew System::Windows::Forms::PictureBox());
-            this->label4 = (gcnew System::Windows::Forms::Label());
+            this->lblCartQty = (gcnew System::Windows::Forms::Label());
             this->pAllBooks->SuspendLayout();
             this->gbDune->SuspendLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox8))->BeginInit();
@@ -1208,20 +1209,20 @@ private: System::Windows::Forms::Label^ label4;
             this->pictureBox7->TabIndex = 34;
             this->pictureBox7->TabStop = false;
             // 
-            // label4
+            // lblCartQty
             // 
-            this->label4->AutoSize = true;
-            this->label4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
+            this->lblCartQty->AutoSize = true;
+            this->lblCartQty->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
                 static_cast<System::Int32>(static_cast<System::Byte>(197)));
-            this->label4->Font = (gcnew System::Drawing::Font(L"Arial Black", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+            this->lblCartQty->Font = (gcnew System::Drawing::Font(L"Arial Black", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->label4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
+            this->lblCartQty->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
                 static_cast<System::Int32>(static_cast<System::Byte>(253)));
-            this->label4->Location = System::Drawing::Point(1304, 56);
-            this->label4->Name = L"label4";
-            this->label4->Size = System::Drawing::Size(24, 26);
-            this->label4->TabIndex = 35;
-            this->label4->Text = L"0";
+            this->lblCartQty->Location = System::Drawing::Point(1304, 56);
+            this->lblCartQty->Name = L"lblCartQty";
+            this->lblCartQty->Size = System::Drawing::Size(24, 26);
+            this->lblCartQty->TabIndex = 35;
+            this->lblCartQty->Text = L"0";
             // 
             // Home
             // 
@@ -1232,7 +1233,7 @@ private: System::Windows::Forms::Label^ label4;
                 static_cast<System::Int32>(static_cast<System::Byte>(253)));
             this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
             this->ClientSize = System::Drawing::Size(1564, 897);
-            this->Controls->Add(this->label4);
+            this->Controls->Add(this->lblCartQty);
             this->Controls->Add(this->btnFantasy);
             this->Controls->Add(this->btnNovel);
             this->Controls->Add(this->btnFiction);
@@ -1988,6 +1989,27 @@ private: System::Windows::Forms::Label^ label4;
             lblDeleteOrder->Click += gcnew System::EventHandler(this, &Home::DeleteOrder_Click);
 
 
+
+
+
+            //
+            // Increase lblCartQuantity when adding book to cart
+            //
+
+            int cartQuantityAtomic = System::Convert::ToInt32(lblCartQty->Text);
+
+            // Increase the quantity by one if it's less than 100
+            if (cartQuantityAtomic < 1)
+            {
+                cartQuantityAtomic++;
+                lblCartQty->Text = cartQuantityAtomic.ToString();
+            }
+
+
+
+
+
+
             //
             // Atomic Habits is now added
             //
@@ -2114,6 +2136,23 @@ private: System::Windows::Forms::Label^ label4;
         int quantity = System::Convert::ToInt32(lblQuantity->Text);
         checkoutForm->Subtotal -= (quantity * 100);
         checkoutForm->TotalPayment -= (quantity * 100);
+
+
+
+
+        //
+        // Decrease lblCartQuantity when then added book is deleted
+        //
+        int cartQuantityAtomic = System::Convert::ToInt32(lblCartQty->Text);
+
+        if (cartQuantityAtomic > 0)
+        {
+            cartQuantityAtomic--;
+            lblCartQty->Text = cartQuantityAtomic.ToString();
+        }
+
+
+
 
 
         //
