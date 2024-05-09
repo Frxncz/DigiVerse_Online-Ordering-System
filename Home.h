@@ -1,5 +1,7 @@
 #pragma once
 
+#include "CheckoutForm.h"
+
 namespace PointofSaleSystem {
 
 	using namespace System;
@@ -46,6 +48,17 @@ namespace PointofSaleSystem {
     ///
     ///
     /// 
+    /// 
+    /// 
+
+
+
+    private:  CheckoutForm^ checkoutForm = gcnew CheckoutForm();
+
+
+
+
+
 
 
     private: GroupBox^ newGbAtomicHabits;
@@ -238,8 +251,9 @@ private: System::Windows::Forms::Label^ lblMoney;
 private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
 private: System::Windows::Forms::PictureBox^ pictureBox3;
 private: System::Windows::Forms::PictureBox^ pictureBox4;
+private: System::Windows::Forms::PictureBox^ pbCart;
 
-private: System::Windows::Forms::PictureBox^ pictureBox1;
+
 private: System::Windows::Forms::PictureBox^ pictureBox2;
 private: System::Windows::Forms::PictureBox^ pictureBox5;
 private: System::Windows::Forms::PictureBox^ pictureBox6;
@@ -342,7 +356,7 @@ private: System::Windows::Forms::Label^ label4;
             this->btnFantasy = (gcnew System::Windows::Forms::Button());
             this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
             this->pictureBox4 = (gcnew System::Windows::Forms::PictureBox());
-            this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+            this->pbCart = (gcnew System::Windows::Forms::PictureBox());
             this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
             this->pictureBox5 = (gcnew System::Windows::Forms::PictureBox());
             this->pictureBox6 = (gcnew System::Windows::Forms::PictureBox());
@@ -369,7 +383,7 @@ private: System::Windows::Forms::Label^ label4;
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pbAtomicHabits))->BeginInit();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->BeginInit();
-            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pbCart))->BeginInit();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->BeginInit();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->BeginInit();
@@ -1033,6 +1047,7 @@ private: System::Windows::Forms::Label^ label4;
             this->btnAddAH->TabIndex = 21;
             this->btnAddAH->Text = L"+ Add";
             this->btnAddAH->UseVisualStyleBackColor = false;
+            this->btnAddAH->Click += gcnew System::EventHandler(this, &Home::btnAddAH_Click);
             // 
             // label27
             // 
@@ -1165,15 +1180,16 @@ private: System::Windows::Forms::Label^ label4;
             this->pictureBox4->TabIndex = 29;
             this->pictureBox4->TabStop = false;
             // 
-            // pictureBox1
+            // pbCart
             // 
-            this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-            this->pictureBox1->Location = System::Drawing::Point(1207, 48);
-            this->pictureBox1->Name = L"pictureBox1";
-            this->pictureBox1->Size = System::Drawing::Size(136, 50);
-            this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-            this->pictureBox1->TabIndex = 31;
-            this->pictureBox1->TabStop = false;
+            this->pbCart->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pbCart.Image")));
+            this->pbCart->Location = System::Drawing::Point(1207, 48);
+            this->pbCart->Name = L"pbCart";
+            this->pbCart->Size = System::Drawing::Size(136, 50);
+            this->pbCart->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+            this->pbCart->TabIndex = 31;
+            this->pbCart->TabStop = false;
+            this->pbCart->Click += gcnew System::EventHandler(this, &Home::pbCart_Click);
             // 
             // pictureBox2
             // 
@@ -1248,7 +1264,7 @@ private: System::Windows::Forms::Label^ label4;
             this->Controls->Add(this->pictureBox7);
             this->Controls->Add(this->pictureBox6);
             this->Controls->Add(this->pictureBox2);
-            this->Controls->Add(this->pictureBox1);
+            this->Controls->Add(this->pbCart);
             this->Controls->Add(this->pictureBox5);
             this->Controls->Add(this->pictureBox4);
             this->Controls->Add(this->pictureBox3);
@@ -1285,7 +1301,7 @@ private: System::Windows::Forms::Label^ label4;
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pbAtomicHabits))->EndInit();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->EndInit();
-            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pbCart))->EndInit();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->EndInit();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->EndInit();
@@ -1782,5 +1798,29 @@ private: System::Windows::Forms::Label^ label4;
          /// 
          /// 
     
+    private: System::Void btnAddAH_Click(System::Object^ sender, System::EventArgs^ e) 
+    {
+        // Create a new GroupBox for Atomic Habits
+        GroupBox^ newGbAtomicHabits = gcnew GroupBox();
+        newGbAtomicHabits->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(229)), static_cast<System::Int32>(static_cast<System::Byte>(235)),
+            static_cast<System::Int32>(static_cast<System::Byte>(246)));
+        newGbAtomicHabits->Size = System::Drawing::Size(422, 155);
+
+        checkoutForm->AddGroupBoxToOrderDetail(newGbAtomicHabits);
+
+        // Don't show the CheckoutForm here; it will be shown when pbCart is clicked
+    }
+
+
+
+    private: System::Void pbCart_Click(System::Object^ sender, System::EventArgs^ e) 
+    {
+
+        // Add the GroupBox (newGbAtomicHabits) to the flpOrderDetail flow layout panel
+        checkoutForm->AddGroupBoxToOrderDetail(newGbAtomicHabits);
+
+        // Show the CheckoutForm
+        checkoutForm->Show();
+    }
 };
 }

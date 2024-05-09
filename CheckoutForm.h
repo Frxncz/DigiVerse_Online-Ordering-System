@@ -29,6 +29,17 @@ namespace PointofSaleSystem {
 			CenterToScreen();
 		}
 
+
+	public:
+		// Constructor and other members...
+
+		void AddGroupBoxToOrderDetail(GroupBox^ groupBox)
+		{
+			// Add the provided GroupBox to flpOrderDetail
+			this->flpOrderDetail->Controls->Add(groupBox);
+		}
+
+
 	protected:
 		/// <summary>
 		/// Clean up any resources being used.
@@ -40,6 +51,12 @@ namespace PointofSaleSystem {
 				delete components;
 			}
 		}
+
+
+// Add a private member to store the GroupBox received from Home form
+	private: System::Windows::Forms::GroupBox^ newGroupBox;
+
+
 	private: System::Windows::Forms::TextBox^ textBox1;
 	protected:
 	private: System::Windows::Forms::Button^ button2;
@@ -68,7 +85,8 @@ namespace PointofSaleSystem {
 	private: System::Windows::Forms::Label^ label18;
 	private: System::Windows::Forms::Label^ label17;
 	private: System::Windows::Forms::Label^ label15;
-	private: System::Windows::Forms::PictureBox^ pictureBox1;
+	private: System::Windows::Forms::PictureBox^ pbBackHome;
+
 
 
 	private:
@@ -112,11 +130,11 @@ namespace PointofSaleSystem {
 			this->label18 = (gcnew System::Windows::Forms::Label());
 			this->label17 = (gcnew System::Windows::Forms::Label());
 			this->label15 = (gcnew System::Windows::Forms::Label());
-			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->pbBackHome = (gcnew System::Windows::Forms::PictureBox());
 			this->groupBox9->SuspendLayout();
 			this->groupBox8->SuspendLayout();
 			this->groupBox7->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pbBackHome))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// textBox1
@@ -126,7 +144,7 @@ namespace PointofSaleSystem {
 			this->textBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->textBox1->ForeColor = System::Drawing::Color::Silver;
-			this->textBox1->Location = System::Drawing::Point(390, 788);
+			this->textBox1->Location = System::Drawing::Point(390, 705);
 			this->textBox1->Multiline = true;
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(361, 30);
@@ -141,7 +159,7 @@ namespace PointofSaleSystem {
 				static_cast<System::Byte>(0)));
 			this->button2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
 				static_cast<System::Int32>(static_cast<System::Byte>(253)));
-			this->button2->Location = System::Drawing::Point(768, 787);
+			this->button2->Location = System::Drawing::Point(768, 704);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(80, 33);
 			this->button2->TabIndex = 18;
@@ -156,7 +174,7 @@ namespace PointofSaleSystem {
 				static_cast<System::Byte>(0)));
 			this->button1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
 				static_cast<System::Int32>(static_cast<System::Byte>(253)));
-			this->button1->Location = System::Drawing::Point(386, 837);
+			this->button1->Location = System::Drawing::Point(386, 757);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(463, 53);
 			this->button1->TabIndex = 17;
@@ -170,7 +188,7 @@ namespace PointofSaleSystem {
 			this->groupBox9->Controls->Add(this->lblTotalPayment);
 			this->groupBox9->Controls->Add(this->label10);
 			this->groupBox9->Controls->Add(this->label2);
-			this->groupBox9->Location = System::Drawing::Point(368, 707);
+			this->groupBox9->Location = System::Drawing::Point(368, 646);
 			this->groupBox9->Name = L"groupBox9";
 			this->groupBox9->Size = System::Drawing::Size(496, 43);
 			this->groupBox9->TabIndex = 16;
@@ -225,7 +243,7 @@ namespace PointofSaleSystem {
 			this->groupBox8->Controls->Add(this->label5);
 			this->groupBox8->Controls->Add(this->label4);
 			this->groupBox8->Controls->Add(this->label3);
-			this->groupBox8->Location = System::Drawing::Point(368, 552);
+			this->groupBox8->Location = System::Drawing::Point(368, 486);
 			this->groupBox8->Name = L"groupBox8";
 			this->groupBox8->Size = System::Drawing::Size(496, 149);
 			this->groupBox8->TabIndex = 15;
@@ -371,7 +389,7 @@ namespace PointofSaleSystem {
 			this->groupBox7->Controls->Add(this->label18);
 			this->groupBox7->Controls->Add(this->label17);
 			this->groupBox7->Controls->Add(this->label15);
-			this->groupBox7->Location = System::Drawing::Point(305, 82);
+			this->groupBox7->Location = System::Drawing::Point(305, 29);
 			this->groupBox7->Name = L"groupBox7";
 			this->groupBox7->Size = System::Drawing::Size(644, 434);
 			this->groupBox7->TabIndex = 14;
@@ -440,15 +458,16 @@ namespace PointofSaleSystem {
 			this->label15->TabIndex = 1;
 			this->label15->Text = L"Shopping Cart";
 			// 
-			// pictureBox1
+			// pbBackHome
 			// 
-			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(62, 46);
-			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(40, 40);
-			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->pictureBox1->TabIndex = 20;
-			this->pictureBox1->TabStop = false;
+			this->pbBackHome->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pbBackHome.Image")));
+			this->pbBackHome->Location = System::Drawing::Point(62, 46);
+			this->pbBackHome->Name = L"pbBackHome";
+			this->pbBackHome->Size = System::Drawing::Size(40, 40);
+			this->pbBackHome->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->pbBackHome->TabIndex = 20;
+			this->pbBackHome->TabStop = false;
+			this->pbBackHome->Click += gcnew System::EventHandler(this, &CheckoutForm::pbBackHome_Click);
 			// 
 			// CheckoutForm
 			// 
@@ -457,7 +476,7 @@ namespace PointofSaleSystem {
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
 				static_cast<System::Int32>(static_cast<System::Byte>(253)));
 			this->ClientSize = System::Drawing::Size(1216, 926);
-			this->Controls->Add(this->pictureBox1);
+			this->Controls->Add(this->pbBackHome);
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
@@ -472,11 +491,17 @@ namespace PointofSaleSystem {
 			this->groupBox8->PerformLayout();
 			this->groupBox7->ResumeLayout(false);
 			this->groupBox7->PerformLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pbBackHome))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
+
+	private: System::Void pbBackHome_Click(System::Object^ sender, System::EventArgs^ e) 
+	{
+		// Hide the CheckoutForm instead of closing it
+		this->Hide();
+	}
 };
 }
