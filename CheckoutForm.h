@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Shipping.h"
+
 namespace PointofSaleSystem {
 
 	using namespace System;
@@ -222,6 +224,7 @@ namespace PointofSaleSystem {
 			this->button1->TabIndex = 17;
 			this->button1->Text = L"Continue to Checkout";
 			this->button1->UseVisualStyleBackColor = false;
+			this->button1->Click += gcnew System::EventHandler(this, &CheckoutForm::button1_Click);
 			// 
 			// groupBox9
 			// 
@@ -431,7 +434,7 @@ namespace PointofSaleSystem {
 			this->groupBox7->Controls->Add(this->label18);
 			this->groupBox7->Controls->Add(this->label17);
 			this->groupBox7->Controls->Add(this->label15);
-			this->groupBox7->Location = System::Drawing::Point(305, 29);
+			this->groupBox7->Location = System::Drawing::Point(291, 29);
 			this->groupBox7->Name = L"groupBox7";
 			this->groupBox7->Size = System::Drawing::Size(644, 434);
 			this->groupBox7->TabIndex = 14;
@@ -524,9 +527,9 @@ namespace PointofSaleSystem {
 			// pictureBox2
 			// 
 			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
-			this->pictureBox2->Location = System::Drawing::Point(867, 3);
+			this->pictureBox2->Location = System::Drawing::Point(925, 3);
 			this->pictureBox2->Name = L"pictureBox2";
-			this->pictureBox2->Size = System::Drawing::Size(347, 351);
+			this->pictureBox2->Size = System::Drawing::Size(293, 351);
 			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureBox2->TabIndex = 22;
 			this->pictureBox2->TabStop = false;
@@ -570,6 +573,12 @@ namespace PointofSaleSystem {
 	{
 		// Hide the CheckoutForm instead of closing it
 		this->Hide();
+	}
+
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) 
+	{
+		Shipping^ shippingUI = gcnew Shipping();
+		shippingUI->Show();
 	}
 };
 }

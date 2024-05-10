@@ -156,6 +156,7 @@ namespace PointofSaleSystem {
 			this->pbCancel->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pbCancel->TabIndex = 12;
 			this->pbCancel->TabStop = false;
+			this->pbCancel->Click += gcnew System::EventHandler(this, &Shipping::pbCancel_Click);
 			// 
 			// label1
 			// 
@@ -251,7 +252,12 @@ namespace PointofSaleSystem {
 	{
 		this->Hide();
 		PaymentForm^ paymentUI = gcnew PaymentForm(this);
-		paymentUI->ShowDialog();
+		paymentUI->Show();
+	}
+
+	private: System::Void pbCancel_Click(System::Object^ sender, System::EventArgs^ e) 
+	{
+		this->Hide();
 	}
 };
 }

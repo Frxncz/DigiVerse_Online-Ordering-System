@@ -18,8 +18,6 @@ namespace PointofSaleSystem {
 	{
 	public:
 
-		Form^ newPaymentUI;
-
 		PaymentForm(void)
 		{
 			InitializeComponent();
@@ -33,6 +31,9 @@ namespace PointofSaleSystem {
 			//
 			CenterToScreen();
 		}
+
+
+		Form^ newPaymentUI;
 
 		PaymentForm(Form^ paymentUI)
 		{
@@ -191,7 +192,7 @@ namespace PointofSaleSystem {
 	{
 		this->Hide();
 		GcashForm^ gcashUI = gcnew GcashForm(this);
-		gcashUI->ShowDialog();
+		gcashUI->Show();
 	}
 };
 }

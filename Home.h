@@ -464,9 +464,9 @@ private: System::Windows::Forms::Label^ lblCartQty;
             // 
             this->gbWhiteEnd->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
                 static_cast<System::Int32>(static_cast<System::Byte>(253)));
-            this->gbWhiteEnd->Location = System::Drawing::Point(3, 623);
+            this->gbWhiteEnd->Location = System::Drawing::Point(3, 661);
             this->gbWhiteEnd->Name = L"gbWhiteEnd";
-            this->gbWhiteEnd->Size = System::Drawing::Size(1303, 70);
+            this->gbWhiteEnd->Size = System::Drawing::Size(1303, 29);
             this->gbWhiteEnd->TabIndex = 26;
             this->gbWhiteEnd->TabStop = false;
             // 
@@ -2092,14 +2092,13 @@ private: System::Windows::Forms::Label^ lblCartQty;
         {
             currentQuantity--;
             lblQuantity->Text = currentQuantity.ToString();
+
+            //
+            //  Decrease the quantity of the bookn aatomic habits
+            //
+            checkoutForm->Subtotal -= 100;
+            checkoutForm->TotalPayment -= 100;
         }
-
-
-        //
-        //  Decrease the quantity of the bookn aatomic habits
-        //
-        checkoutForm->Subtotal -= 100;
-        checkoutForm->TotalPayment -= 100;
     }
 
 
