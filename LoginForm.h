@@ -276,12 +276,17 @@ namespace PointofSaleSystem {
 #pragma endregion
 
 	//----- Go To Home Form -----//
-	private: System::Void btnLogin_Click(System::Object^ sender, System::EventArgs^ e) 
+	private: System::Void btnLogin_Click(System::Object^ sender, System::EventArgs^ e)
 	{
 		this->Hide();
 		Home^ homeFormUI = gcnew Home();
-		homeFormUI->ShowDialog();
+		homeFormUI->FormClosed += gcnew FormClosedEventHandler(this, &LoginForm::HomeFormClosed);
+		homeFormUI->Show();
+	}
+	private: System::Void HomeFormClosed(System::Object^ sender, System::Windows::Forms::FormClosedEventArgs^ e)
+	{
 		this->Show();
 	}
+
 };
 }

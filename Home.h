@@ -43,6 +43,8 @@ namespace PointofSaleSystem {
 			}
 		}
 
+
+
 	protected:
 
     ///
@@ -50,6 +52,9 @@ namespace PointofSaleSystem {
     /// 
     /// 
     /// 
+    /// 
+
+
 
 
     //--- Access the checkoutForm instance
@@ -57,12 +62,10 @@ namespace PointofSaleSystem {
 
 
 
-    private: 
-
-
 
     //--- this is for the cart to get access to the newGbAtomicHabits
     private: GroupBox^ newGbAtomicHabits;
+
 
 
 
@@ -74,11 +77,13 @@ namespace PointofSaleSystem {
 
 
 
+
     //--- Pyschology of money plus and minus buttons and also the quantity
 
     private: System::Windows::Forms::Label^ lblQuantityMoney;
     private: System::Windows::Forms::Button^ btnIncreaseQtyMoney;
     private: System::Windows::Forms::Button^ btnDecreaseQtyMoney;
+
 
 
 
@@ -1394,8 +1399,8 @@ private: System::Windows::Forms::Label^ lblCartQty;
         int scrollPosY = pAllBooks->VerticalScroll->Value;
 
         // Reset the locatio back to their original positions
-        gbSoloLeveling->Location = System::Drawing::Point(10 - scrollPosX, 340 - scrollPosY);
-        gbOmnicientReader->Location = System::Drawing::Point(350 - scrollPosX, 340 - scrollPosY);
+        gbSoloLeveling->Location = System::Drawing::Point(338 - scrollPosX, 340 - scrollPosY);
+        gbOmnicientReader->Location = System::Drawing::Point(19 - scrollPosX, 340 - scrollPosY);
         gbSecondBrain->Location = System::Drawing::Point(680 - scrollPosX, 340 - scrollPosY);
         gbDune->Location = System::Drawing::Point(337 - scrollPosX, 171 - scrollPosY);
 
@@ -2181,6 +2186,7 @@ private: System::Windows::Forms::Label^ lblCartQty;
 
         // Show the CheckoutForm
         checkoutForm->Show();
+
     }
 };
 }

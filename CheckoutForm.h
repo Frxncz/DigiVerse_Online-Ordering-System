@@ -188,7 +188,7 @@ namespace PointofSaleSystem {
 			this->textBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->textBox1->ForeColor = System::Drawing::Color::Silver;
-			this->textBox1->Location = System::Drawing::Point(390, 705);
+			this->textBox1->Location = System::Drawing::Point(386, 705);
 			this->textBox1->Multiline = true;
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(361, 30);
@@ -203,7 +203,7 @@ namespace PointofSaleSystem {
 				static_cast<System::Byte>(0)));
 			this->button2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
 				static_cast<System::Int32>(static_cast<System::Byte>(253)));
-			this->button2->Location = System::Drawing::Point(768, 704);
+			this->button2->Location = System::Drawing::Point(764, 704);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(80, 33);
 			this->button2->TabIndex = 18;
@@ -218,7 +218,7 @@ namespace PointofSaleSystem {
 				static_cast<System::Byte>(0)));
 			this->button1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
 				static_cast<System::Int32>(static_cast<System::Byte>(253)));
-			this->button1->Location = System::Drawing::Point(386, 757);
+			this->button1->Location = System::Drawing::Point(382, 757);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(463, 53);
 			this->button1->TabIndex = 17;
@@ -233,7 +233,7 @@ namespace PointofSaleSystem {
 			this->groupBox9->Controls->Add(this->lblTotalPayment);
 			this->groupBox9->Controls->Add(this->label10);
 			this->groupBox9->Controls->Add(this->label2);
-			this->groupBox9->Location = System::Drawing::Point(368, 646);
+			this->groupBox9->Location = System::Drawing::Point(364, 646);
 			this->groupBox9->Name = L"groupBox9";
 			this->groupBox9->Size = System::Drawing::Size(496, 43);
 			this->groupBox9->TabIndex = 16;
@@ -288,7 +288,7 @@ namespace PointofSaleSystem {
 			this->groupBox8->Controls->Add(this->label5);
 			this->groupBox8->Controls->Add(this->label4);
 			this->groupBox8->Controls->Add(this->label3);
-			this->groupBox8->Location = System::Drawing::Point(368, 486);
+			this->groupBox8->Location = System::Drawing::Point(364, 486);
 			this->groupBox8->Name = L"groupBox8";
 			this->groupBox8->Size = System::Drawing::Size(496, 149);
 			this->groupBox8->TabIndex = 15;
@@ -434,7 +434,7 @@ namespace PointofSaleSystem {
 			this->groupBox7->Controls->Add(this->label18);
 			this->groupBox7->Controls->Add(this->label17);
 			this->groupBox7->Controls->Add(this->label15);
-			this->groupBox7->Location = System::Drawing::Point(291, 29);
+			this->groupBox7->Location = System::Drawing::Point(276, 29);
 			this->groupBox7->Name = L"groupBox7";
 			this->groupBox7->Size = System::Drawing::Size(644, 434);
 			this->groupBox7->TabIndex = 14;
@@ -527,9 +527,9 @@ namespace PointofSaleSystem {
 			// pictureBox2
 			// 
 			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
-			this->pictureBox2->Location = System::Drawing::Point(925, 3);
+			this->pictureBox2->Location = System::Drawing::Point(946, 3);
 			this->pictureBox2->Name = L"pictureBox2";
-			this->pictureBox2->Size = System::Drawing::Size(293, 351);
+			this->pictureBox2->Size = System::Drawing::Size(275, 351);
 			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureBox2->TabIndex = 22;
 			this->pictureBox2->TabStop = false;
@@ -571,12 +571,15 @@ namespace PointofSaleSystem {
 	//----- Show the checkout form when the cart is cliked -----//
 	private: System::Void pbBackHome_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
-		// Hide the CheckoutForm instead of closing it
+
 		this->Hide();
+
 	}
 
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
+		this->Hide();
+
 		Shipping^ shippingUI = gcnew Shipping();
 		shippingUI->Show();
 	}

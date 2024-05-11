@@ -69,8 +69,10 @@ namespace PointofSaleSystem {
 
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Label^ label2;
-	private: System::Windows::Forms::Label^ label3;
-	private: System::Windows::Forms::Label^ label4;
+	private: System::Windows::Forms::Label^ lblPHPamount;
+
+	private: System::Windows::Forms::Label^ lblPHPtotal;
+
 	private: System::Windows::Forms::PictureBox^ pbReturnPayment;
 
 
@@ -93,8 +95,8 @@ namespace PointofSaleSystem {
 			this->btnPay = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->lblPHPamount = (gcnew System::Windows::Forms::Label());
+			this->lblPHPtotal = (gcnew System::Windows::Forms::Label());
 			this->pbReturnPayment = (gcnew System::Windows::Forms::PictureBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
@@ -163,29 +165,29 @@ namespace PointofSaleSystem {
 			this->label2->TabIndex = 15;
 			this->label2->Text = L"PHP";
 			// 
-			// label3
+			// lblPHPamount
 			// 
-			this->label3->AutoSize = true;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Arial", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->lblPHPamount->AutoSize = true;
+			this->lblPHPamount->Font = (gcnew System::Drawing::Font(L"Arial", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(132)), static_cast<System::Int32>(static_cast<System::Byte>(132)),
+			this->lblPHPamount->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(132)), static_cast<System::Int32>(static_cast<System::Byte>(132)),
 				static_cast<System::Int32>(static_cast<System::Byte>(133)));
-			this->label3->Location = System::Drawing::Point(830, 426);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(49, 23);
-			this->label3->TabIndex = 16;
-			this->label3->Text = L"0.00";
+			this->lblPHPamount->Location = System::Drawing::Point(830, 426);
+			this->lblPHPamount->Name = L"lblPHPamount";
+			this->lblPHPamount->Size = System::Drawing::Size(49, 23);
+			this->lblPHPamount->TabIndex = 16;
+			this->lblPHPamount->Text = L"0.00";
 			// 
-			// label4
+			// lblPHPtotal
 			// 
-			this->label4->AutoSize = true;
-			this->label4->Font = (gcnew System::Drawing::Font(L"Arial", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->lblPHPtotal->AutoSize = true;
+			this->lblPHPtotal->Font = (gcnew System::Drawing::Font(L"Arial", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label4->Location = System::Drawing::Point(825, 482);
-			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(57, 26);
-			this->label4->TabIndex = 17;
-			this->label4->Text = L"0.00";
+			this->lblPHPtotal->Location = System::Drawing::Point(825, 482);
+			this->lblPHPtotal->Name = L"lblPHPtotal";
+			this->lblPHPtotal->Size = System::Drawing::Size(57, 26);
+			this->lblPHPtotal->TabIndex = 17;
+			this->lblPHPtotal->Text = L"0.00";
 			// 
 			// pbReturnPayment
 			// 
@@ -208,8 +210,8 @@ namespace PointofSaleSystem {
 				static_cast<System::Int32>(static_cast<System::Byte>(253)));
 			this->ClientSize = System::Drawing::Size(1261, 842);
 			this->Controls->Add(this->pbReturnPayment);
-			this->Controls->Add(this->label4);
-			this->Controls->Add(this->label3);
+			this->Controls->Add(this->lblPHPtotal);
+			this->Controls->Add(this->lblPHPamount);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->btnPay);
@@ -233,12 +235,13 @@ namespace PointofSaleSystem {
 		newGcashUI->Show();
 	}
 
-	//----- Go to Payment Success -----//
+	//----- Go to Payment Success Form -----//
 	private: System::Void btnPay_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
 		this->Hide();
 		PaymentSuccessForm^ paymentSuccessUI = gcnew PaymentSuccessForm();
 		paymentSuccessUI->ShowDialog();
 	}
+
 };
 }
