@@ -32,25 +32,6 @@ namespace PointofSaleSystem {
 			CenterToScreen();
 		}
 
-
-		Form^ newPaymentUI;
-
-		PaymentForm(Form^ paymentUI)
-		{
-			newPaymentUI = paymentUI;
-
-			InitializeComponent();
-			//
-			//TODO: Add the constructor code here
-			//
-
-
-			//
-			// This will center the Form in the screen when it pop up
-			//
-			CenterToScreen();
-		}
-
 	protected:
 		/// <summary>
 		/// Clean up any resources being used.
@@ -183,15 +164,14 @@ namespace PointofSaleSystem {
 	private: System::Void pbReturnShipping_Click(System::Object^ sender, System::EventArgs^ e)
 	{
 		this->Hide();
-		newPaymentUI->Show();
 	}
 
 
 	//----- Go to Gcash Form -----//
 	private: System::Void btnGotoGcash_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
-		this->Hide();
-		GcashForm^ gcashUI = gcnew GcashForm(this);
+		//this->Hide();
+		GcashForm^ gcashUI = gcnew GcashForm();
 		gcashUI->Show();
 	}
 };

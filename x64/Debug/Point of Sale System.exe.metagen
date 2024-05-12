@@ -28,14 +28,12 @@ Class PointofSaleSystem.PaymentSuccessForm: AutoLayout, AnsiClass, Class, Public
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class PointofSaleSystem.GcashForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
-    Void .ctor(System.Windows.Forms.Form): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    UpdatePaymentLabels(String, String): PrivateScope, Public, HideBySig
 Class PointofSaleSystem.PaymentForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
-    Void .ctor(System.Windows.Forms.Form): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
-  Fields:
-    System.Windows.Forms.Form newPaymentUI : Public
 Class PointofSaleSystem.Shipping: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

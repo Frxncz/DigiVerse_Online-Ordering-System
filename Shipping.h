@@ -251,7 +251,7 @@ namespace PointofSaleSystem {
 	private: System::Void btnGotoPayment_Click(System::Object^ sender, System::EventArgs^ e)
 	{
 		this->Hide();
-		PaymentForm^ paymentUI = gcnew PaymentForm(this);
+		PaymentForm^ paymentUI = gcnew PaymentForm();
 		paymentUI->Show();
 	}
 

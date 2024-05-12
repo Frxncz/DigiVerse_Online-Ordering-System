@@ -17,8 +17,6 @@ namespace PointofSaleSystem {
 	public ref class GcashForm : public System::Windows::Forms::Form
 	{
 
-		Form^ newGcashUI;
-
 	public:
 		GcashForm(void)
 		{
@@ -34,22 +32,18 @@ namespace PointofSaleSystem {
 			CenterToScreen();
 		}
 
-		GcashForm(Form^ gcashUI)
+
+
+	public:
+
+		// Method to update lblPHPamount and lblPHPtotal labels
+		void UpdatePaymentLabels(String^ amount, String^ total)
 		{
-
-			newGcashUI = gcashUI;
-
-			InitializeComponent();
-			//
-			//TODO: Add the constructor code here
-			//
-
-
-			//
-			// This will center the Form in the screen when it pop up
-			//
-			CenterToScreen();
+			lblPHPamount->Text = amount;
+			lblPHPtotal->Text = total;
 		}
+
+
 
 	protected:
 		/// <summary>
@@ -137,7 +131,7 @@ namespace PointofSaleSystem {
 			this->btnPay->Name = L"btnPay";
 			this->btnPay->Size = System::Drawing::Size(278, 61);
 			this->btnPay->TabIndex = 13;
-			this->btnPay->Text = L"PAY PHP 0.00";
+			this->btnPay->Text = L"PAY PHP 0";
 			this->btnPay->UseVisualStyleBackColor = false;
 			this->btnPay->Click += gcnew System::EventHandler(this, &GcashForm::btnPay_Click);
 			// 
@@ -174,9 +168,9 @@ namespace PointofSaleSystem {
 				static_cast<System::Int32>(static_cast<System::Byte>(133)));
 			this->lblPHPamount->Location = System::Drawing::Point(830, 426);
 			this->lblPHPamount->Name = L"lblPHPamount";
-			this->lblPHPamount->Size = System::Drawing::Size(49, 23);
+			this->lblPHPamount->Size = System::Drawing::Size(21, 23);
 			this->lblPHPamount->TabIndex = 16;
-			this->lblPHPamount->Text = L"0.00";
+			this->lblPHPamount->Text = L"0";
 			// 
 			// lblPHPtotal
 			// 
@@ -185,9 +179,9 @@ namespace PointofSaleSystem {
 				static_cast<System::Byte>(0)));
 			this->lblPHPtotal->Location = System::Drawing::Point(825, 482);
 			this->lblPHPtotal->Name = L"lblPHPtotal";
-			this->lblPHPtotal->Size = System::Drawing::Size(57, 26);
+			this->lblPHPtotal->Size = System::Drawing::Size(25, 26);
 			this->lblPHPtotal->TabIndex = 17;
-			this->lblPHPtotal->Text = L"0.00";
+			this->lblPHPtotal->Text = L"0";
 			// 
 			// pbReturnPayment
 			// 
@@ -232,7 +226,6 @@ namespace PointofSaleSystem {
 	private: System::Void pbReturnPayment_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
 		this->Hide();
-		newGcashUI->Show();
 	}
 
 	//----- Go to Payment Success Form -----//

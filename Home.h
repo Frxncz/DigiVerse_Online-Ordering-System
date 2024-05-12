@@ -24,11 +24,10 @@ namespace PointofSaleSystem {
 			//TODO: Add the constructor code here
 			//
 
-            //
-            // This will center the Form in the screen when it pop up
-            //
-            CenterToScreen();
 
+            
+            ////----- This will center the Form in the screen when it pop up 
+            CenterToScreen();
 		}
 
 	protected:
@@ -57,19 +56,19 @@ namespace PointofSaleSystem {
 
 
 
-    //--- Access the checkoutForm instance
+    ////--- Access the checkoutForm instance
     private:  CheckoutForm^ checkoutForm = gcnew CheckoutForm();
 
 
 
 
-    //--- this is for the cart to get access to the newGbAtomicHabits
+    ////--- this is for the cart to get access to the newGbAtomicHabits
     private: GroupBox^ newGbAtomicHabits;
 
 
 
 
-    //--- Atomic habits plus and minus buttons and also the quantity
+    ////--- Atomic habits plus and minus buttons and also the quantity
 
     private: System::Windows::Forms::Label^ lblQuantity;
     private: System::Windows::Forms::Button^ btnIncreaseQty;
@@ -78,30 +77,14 @@ namespace PointofSaleSystem {
 
 
 
-    //--- Pyschology of money plus and minus buttons and also the quantity
-
-    private: System::Windows::Forms::Label^ lblQuantityMoney;
-    private: System::Windows::Forms::Button^ btnIncreaseQtyMoney;
-    private: System::Windows::Forms::Button^ btnDecreaseQtyMoney;
-
-
-
-
-    //--- For pAllBooks the buttons to navigate category
+    ////--- For pAllBooks the buttons to navigate category
 
     private: System::Windows::Forms::Panel^ pAllBooks;
 
 
 
-
-
-
-
-
-
-
+    ////--- To get access to the group box of the books
     private: System::Windows::Forms::GroupBox^ gbOmnicientReader;
-
 
     private: System::Windows::Forms::GroupBox^ gbSoloLeveling;
 
@@ -128,58 +111,52 @@ namespace PointofSaleSystem {
 
 
     private: System::Windows::Forms::PictureBox^ pbAtomicHabits;
+
     private: System::Windows::Forms::Label^ lblAtomic;
 
-
 	private: System::Windows::Forms::Label^ label27;
+
     private: System::Windows::Forms::Button^ btnAddAH;
 
-
-
 	private: System::Windows::Forms::Label^ label40;
+
     private: System::Windows::Forms::Label^ lblReader;
 
     private: System::Windows::Forms::PictureBox^ pbReader;
 
-
 	private: System::Windows::Forms::Label^ label38;
+
     private: System::Windows::Forms::Label^ lblSolo;
 
     private: System::Windows::Forms::PictureBox^ pbSoloLeveling;
 
-
-
-
 	private: System::Windows::Forms::Label^ label36;
+
     private: System::Windows::Forms::Label^ lblBrain;
 
     private: System::Windows::Forms::PictureBox^ pbSecondBrain;
 
-
-
-
 	private: System::Windows::Forms::Label^ label34;
+
     private: System::Windows::Forms::Label^ lblMakeIt;
 
     private: System::Windows::Forms::PictureBox^ pbMakeStick;
 
-
 	private: System::Windows::Forms::Label^ label32;
+
     private: System::Windows::Forms::Label^ lblMini;
 
     private: System::Windows::Forms::PictureBox^ pbMiniHabits;
 
-
 	private: System::Windows::Forms::Label^ label30;
+
     private: System::Windows::Forms::Label^ lblHuman;
+
     private: System::Windows::Forms::PictureBox^ pbHumanNature;
 
-
-
-
 	private: System::Windows::Forms::Label^ label28;
-private: System::Windows::Forms::Label^ lblMoney;
 
+    private: System::Windows::Forms::Label^ lblMoney;
 
     private: System::Windows::Forms::PictureBox^ pbMoney;
 
@@ -191,27 +168,22 @@ private: System::Windows::Forms::Label^ lblMoney;
     private: System::Windows::Forms::Label^ label47;
     private: System::Windows::Forms::Label^ label49;
     private: System::Windows::Forms::Label^ label48;
+
     private: System::Windows::Forms::Button^ btnAllGenre;
 
     private: System::Windows::Forms::Button^ btnNonFiction;
 
-
-
     private: System::Windows::Forms::Button^ btnFiction;
+
     private: System::Windows::Forms::Button^ btnNovel;
 
-
-
-
-
     private: System::Windows::Forms::Button^ btnFantasy;
-
 
     private: System::Windows::Forms::Button^ btnAddOR;
 
     private: System::Windows::Forms::Button^ btnAddSL;
-    private: System::Windows::Forms::Button^ btnAddSB;
 
+    private: System::Windows::Forms::Button^ btnAddSB;
 
     private: System::Windows::Forms::Button^ btnAddMIS;
 
@@ -221,41 +193,42 @@ private: System::Windows::Forms::Label^ lblMoney;
     private: System::Windows::Forms::Button^ btnAddHN;
 
     private: System::Windows::Forms::Button^ btnAddPM;
+
     private: System::Windows::Forms::GroupBox^ gbWhiteEnd;
 
+    private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
 
+    private: System::Windows::Forms::PictureBox^ pictureBox3;
 
+    private: System::Windows::Forms::PictureBox^ pictureBox4;
 
+    private: System::Windows::Forms::PictureBox^ pbCart;
 
+    private: System::Windows::Forms::PictureBox^ pictureBox2;
 
+    private: System::Windows::Forms::PictureBox^ pictureBox5;
 
+    private: System::Windows::Forms::PictureBox^ pictureBox6;
 
-private: System::Windows::Forms::GroupBox^ gbAtomicHabits;
-private: System::Windows::Forms::PictureBox^ pictureBox3;
-private: System::Windows::Forms::PictureBox^ pictureBox4;
-private: System::Windows::Forms::PictureBox^ pbCart;
+    private: System::Windows::Forms::PictureBox^ pictureBox7;
 
+    private: System::Windows::Forms::GroupBox^ gbDune;
 
-private: System::Windows::Forms::PictureBox^ pictureBox2;
-private: System::Windows::Forms::PictureBox^ pictureBox5;
-private: System::Windows::Forms::PictureBox^ pictureBox6;
-private: System::Windows::Forms::PictureBox^ pictureBox7;
-private: System::Windows::Forms::GroupBox^ gbDune;
+    private: System::Windows::Forms::Button^ button1;
 
-private: System::Windows::Forms::Button^ button1;
-private: System::Windows::Forms::Label^ label1;
-private: System::Windows::Forms::Label^ label2;
-private: System::Windows::Forms::Label^ label3;
-private: System::Windows::Forms::PictureBox^ pictureBox8;
-private: System::Windows::Forms::Label^ lblCartQty;
+    private: System::Windows::Forms::Label^ label1;
 
+    private: System::Windows::Forms::Label^ label2;
 
+    private: System::Windows::Forms::Label^ label3;
 
+    private: System::Windows::Forms::PictureBox^ pictureBox8;
 
-
-
+    private: System::Windows::Forms::Label^ lblCartQty;
 
 	private: System::ComponentModel::IContainer^ components;
+
+
 
 
 	private:
@@ -266,7 +239,9 @@ private: System::Windows::Forms::Label^ lblCartQty;
 		/// </summary>
 
 
-#pragma region Windows Form Designer generated code
+
+
+    #pragma region Windows Form Designer generated code
 
 		/// <summary>
 		/// Required method for Designer support - do not modify
@@ -1297,19 +1272,26 @@ private: System::Windows::Forms::Label^ lblCartQty;
 
 
 
-    //----- When clicking on each button changes its color, but the other buttons should remain unchanged -----//
-    //--------------- When clicking on each button, it will sort the books based on their genre ---------------//
+        //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 
 
 
-        //----- btnAllGenre
+        //----- When clicking on each button changes its color, but the other buttons should remain unchanged -----//
+        //--------------- When clicking on each button, it will sort the books based on their genre ---------------//
+
+
+        //////
+        //////----- btnAllGenre
+        //////
 
     private: System::Void btnAllGenre_Click(System::Object^ sender, System::EventArgs^ e) 
     {
 
 
         //////
+        // 
         // Change color of btnAllGenre
+        // 
         //////
         btnAllGenre->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
             static_cast<System::Int32>(static_cast<System::Byte>(197)));
@@ -1319,9 +1301,10 @@ private: System::Windows::Forms::Label^ lblCartQty;
 
         btnAllGenre->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
-
-        //
+        
+        // 
         // Reset color of btnNonFiction
+        // 
         //
         btnNonFiction->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
             static_cast<System::Int32>(static_cast<System::Byte>(242)));
@@ -1334,6 +1317,7 @@ private: System::Windows::Forms::Label^ lblCartQty;
 
         //
         // Reset color of btnFiction
+        // 
         //
         btnFiction->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
             static_cast<System::Int32>(static_cast<System::Byte>(242)));
@@ -1346,6 +1330,7 @@ private: System::Windows::Forms::Label^ lblCartQty;
 
         //
         // Reset color of btnNovel
+        // 
         //
         btnNovel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
             static_cast<System::Int32>(static_cast<System::Byte>(242)));
@@ -1358,6 +1343,7 @@ private: System::Windows::Forms::Label^ lblCartQty;
 
         //
         // Reset color of btnFantasy
+        // 
         //
         btnFantasy->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
             static_cast<System::Int32>(static_cast<System::Byte>(242)));
@@ -1367,12 +1353,11 @@ private: System::Windows::Forms::Label^ lblCartQty;
         btnFantasy->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
 
-        ////
-        ////
-        ////
 
         //
+        // 
         // Add all the book group box from panel->pAllBooks
+        // 
         //
         pAllBooks->Controls->Remove(gbSoloLeveling);
         pAllBooks->Controls->Remove(gbOmnicientReader);
@@ -1384,41 +1369,46 @@ private: System::Windows::Forms::Label^ lblCartQty;
         pAllBooks->Controls->Add(gbMakeStick);
 
 
-
-        //
+        // 
         // Change the location of the gbSoloLeveling & gbOmnicientReader
+        // 
         //
-
         pAllBooks->Controls->Add(gbSoloLeveling);
         pAllBooks->Controls->Add(gbOmnicientReader);
         pAllBooks->Controls->Add(gbSecondBrain);
         pAllBooks->Controls->Add(gbDune);
 
+
+        //
         // Get the current scroll position of the panel
+        // 
+        //
         int scrollPosX = pAllBooks->HorizontalScroll->Value;
         int scrollPosY = pAllBooks->VerticalScroll->Value;
 
+
+        //
         // Reset the locatio back to their original positions
+        // 
+        //
         gbSoloLeveling->Location = System::Drawing::Point(338 - scrollPosX, 340 - scrollPosY);
         gbOmnicientReader->Location = System::Drawing::Point(19 - scrollPosX, 340 - scrollPosY);
         gbSecondBrain->Location = System::Drawing::Point(680 - scrollPosX, 340 - scrollPosY);
         gbDune->Location = System::Drawing::Point(337 - scrollPosX, 171 - scrollPosY);
 
-        ////
-        ////
-        ////
-
     }
 
 
-
-           //----- btnNonFiction
+        /////
+        /////----- btnNonFiction
+        /////
 
     private: System::Void btnNonFiction_Click(System::Object^ sender, System::EventArgs^ e) 
     {
 
-        //
+        // 
         // Reset color of btnAllGenre
+        // 
         //
         btnAllGenre->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
             static_cast<System::Int32>(static_cast<System::Byte>(242)));
@@ -1428,8 +1418,11 @@ private: System::Windows::Forms::Label^ lblCartQty;
         btnAllGenre->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
 
+
         ///////
+        // 
         // Change color of btnNonFiction
+        // 
         ///////
         btnNonFiction->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
             static_cast<System::Int32>(static_cast<System::Byte>(197)));
@@ -1440,8 +1433,10 @@ private: System::Windows::Forms::Label^ lblCartQty;
         btnNonFiction->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
 
+
         //
         // Reset color of btnFiction
+        // 
         //
         btnFiction->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
             static_cast<System::Int32>(static_cast<System::Byte>(242)));
@@ -1451,8 +1446,10 @@ private: System::Windows::Forms::Label^ lblCartQty;
         btnFiction->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
 
+
         //
         // Reset color of btnNovel
+        // 
         //
         btnNovel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
             static_cast<System::Int32>(static_cast<System::Byte>(242)));
@@ -1462,8 +1459,10 @@ private: System::Windows::Forms::Label^ lblCartQty;
         btnNovel->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
 
+
         //
         // Reset color of btnFantasy
+        // 
         //
         btnFantasy->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
             static_cast<System::Int32>(static_cast<System::Byte>(242)));
@@ -1473,11 +1472,11 @@ private: System::Windows::Forms::Label^ lblCartQty;
         btnFantasy->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
 
-        ////
-        ////
-        ////
 
+        //
         // Add other books and Remove gbSoloLeveling & gbOmnicientRedear from panel->pAllBooks
+        // 
+        //
         pAllBooks->Controls->Remove(gbDune);
         pAllBooks->Controls->Remove(gbSoloLeveling);
         pAllBooks->Controls->Remove(gbOmnicientReader);
@@ -1487,35 +1486,42 @@ private: System::Windows::Forms::Label^ lblCartQty;
         pAllBooks->Controls->Add(gbMiniHabits);
         pAllBooks->Controls->Add(gbMakeStick);
 
-        ////
-        ////
-        ////
 
         //
         // Change the location of the gbSoloLeveling & gbOmnicientReader
+        // 
         //
-
         pAllBooks->Controls->Add(gbSecondBrain);
 
+
+        //
         // Get the current scroll position of the panel
+        // 
+        //
         int scrollPosX = pAllBooks->HorizontalScroll->Value; 
         int scrollPosY = pAllBooks->VerticalScroll->Value;
 
+
+        //
         // Reset the location of second bran back to their original positions
+        // 
+        //
         gbSecondBrain->Location = System::Drawing::Point(337 - scrollPosX, 171 - scrollPosY);
 
 
     }
 
 
-           
-           //-----btnFiction
+        /////
+        /////-----btnFiction
+        /////
 
     private: System::Void btnFiction_Click(System::Object^ sender, System::EventArgs^ e) 
     {
 
         //
         // Reset color of btnAllGenre
+        // 
         //
         btnAllGenre->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
             static_cast<System::Int32>(static_cast<System::Byte>(242)));
@@ -1525,8 +1531,10 @@ private: System::Windows::Forms::Label^ lblCartQty;
         btnAllGenre->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
 
+
         //
         // Reset color of btnNonFiction
+        // 
         //
         btnNonFiction->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
             static_cast<System::Int32>(static_cast<System::Byte>(242)));
@@ -1536,8 +1544,11 @@ private: System::Windows::Forms::Label^ lblCartQty;
         btnNonFiction->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
 
+
         //////
+        // 
         // Change color of btnFiction
+        // 
         //////
         btnFiction->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
             static_cast<System::Int32>(static_cast<System::Byte>(197)));
@@ -1548,8 +1559,10 @@ private: System::Windows::Forms::Label^ lblCartQty;
         btnFiction->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
 
+
         //
         // Reset color of btnNovel
+        // 
         //
         btnNovel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
             static_cast<System::Int32>(static_cast<System::Byte>(242)));
@@ -1559,8 +1572,10 @@ private: System::Windows::Forms::Label^ lblCartQty;
         btnNovel->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
 
+
         //
         // Reset color of btnFantasy
+        // 
         //
         this->btnFantasy->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
             static_cast<System::Int32>(static_cast<System::Byte>(242)));
@@ -1570,11 +1585,11 @@ private: System::Windows::Forms::Label^ lblCartQty;
         btnFantasy->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
 
-        ////
-        ////
-        ////
 
+        //
         // Remove all the book group box from panel->pAllBooks
+        // 
+        //
         pAllBooks->Controls->Remove(gbSoloLeveling);
         pAllBooks->Controls->Remove(gbOmnicientReader);
         pAllBooks->Controls->Remove(gbAtomicHabits);
@@ -1583,28 +1598,34 @@ private: System::Windows::Forms::Label^ lblCartQty;
         pAllBooks->Controls->Remove(gbMiniHabits);
         pAllBooks->Controls->Remove(gbMakeStick);
         pAllBooks->Controls->Remove(gbSecondBrain);
+        
 
-        ////
-        ////
-        ////
-
+        //
+        // add dune group box from panel->pAllBooks
+        // 
+        //
         pAllBooks->Controls->Add(gbDune);
 
+
+        //
         // Change the location of the gbDune
+        // 
+        //
         gbDune->Location = System::Drawing::Point(26, 12);
 
-       
     }
 
 
-
-           //-----btnNovel
+        /////
+        /////-----btnNovel
+        /////
 
     private: System::Void btnNovel_Click(System::Object^ sender, System::EventArgs^ e) 
     {
 
         //
         // Reset color of AllGenre
+        // 
         //
         btnAllGenre->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
             static_cast<System::Int32>(static_cast<System::Byte>(242)));
@@ -1614,8 +1635,10 @@ private: System::Windows::Forms::Label^ lblCartQty;
         btnAllGenre->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
 
+
         //
         // Reset color of btnNonFiction
+        // 
         //
         btnNonFiction->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
             static_cast<System::Int32>(static_cast<System::Byte>(242)));
@@ -1625,8 +1648,10 @@ private: System::Windows::Forms::Label^ lblCartQty;
         btnNonFiction->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
 
+
         //
         // Reset color of btnFiction
+        // 
         //
         btnFiction->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
             static_cast<System::Int32>(static_cast<System::Byte>(242)));
@@ -1636,8 +1661,11 @@ private: System::Windows::Forms::Label^ lblCartQty;
         btnFiction->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
 
+
         //////
+        // 
         // Change color of btnNovel
+        // 
         //////
         btnNovel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
             static_cast<System::Int32>(static_cast<System::Byte>(197)));
@@ -1648,8 +1676,10 @@ private: System::Windows::Forms::Label^ lblCartQty;
         btnNovel->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
 
+
         //
         // Reset color of btnFantasy
+        // 
         //
         btnFantasy->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
             static_cast<System::Int32>(static_cast<System::Byte>(242)));
@@ -1659,11 +1689,11 @@ private: System::Windows::Forms::Label^ lblCartQty;
         btnFantasy->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
 
-        ////
-        ////
-        ////
 
+        //
         // Remove all the book group box except for gbSoloLeveling & gbOmnicientReader from panel->pAllBooks
+        // 
+        //
         pAllBooks->Controls->Remove(gbAtomicHabits);
         pAllBooks->Controls->Remove(gbPsychologyMoney);
         pAllBooks->Controls->Remove(gbHumanNature);
@@ -1672,29 +1702,35 @@ private: System::Windows::Forms::Label^ lblCartQty;
         pAllBooks->Controls->Remove(gbSecondBrain);
         pAllBooks->Controls->Remove(gbDune);
 
-        // the gbSoloLeveling & gbOmnicientReader
+
+        //
+        // add the gbSoloLeveling & gbOmnicientReader
+        // 
+        //
         pAllBooks->Controls->Add(gbSoloLeveling);
         pAllBooks->Controls->Add(gbOmnicientReader);
 
+
+        //
         // Change the location of the gbSoloLeveling & gbOmnicientReader
+        // 
+        //
         gbSoloLeveling->Location = System::Drawing::Point(26, 12);
         gbOmnicientReader->Location = System::Drawing::Point(350, 12);
-
-        ////
-        ////
-        ////
 
     }
            
 
-
-           //-----btnFantsy
+        /////
+        /////-----btnFantsy
+        /////
 
     private: System::Void btnFantasy_Click(System::Object^ sender, System::EventArgs^ e) 
     {
 
         //
         // Reset color of btnAllGenre
+        // 
         //
         btnAllGenre->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
             static_cast<System::Int32>(static_cast<System::Byte>(242)));
@@ -1704,8 +1740,10 @@ private: System::Windows::Forms::Label^ lblCartQty;
         btnAllGenre->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
 
+
         //
         // Reset color of btnNonFiction
+        // 
         //
         btnNonFiction->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
             static_cast<System::Int32>(static_cast<System::Byte>(242)));
@@ -1715,8 +1753,10 @@ private: System::Windows::Forms::Label^ lblCartQty;
         btnNonFiction->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
 
+
         //
         // Reset color of btnFiction
+        // 
         //
         btnFiction->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
             static_cast<System::Int32>(static_cast<System::Byte>(242)));
@@ -1726,8 +1766,10 @@ private: System::Windows::Forms::Label^ lblCartQty;
         btnFiction->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
 
+
         //
         // Reset color of btnNovel
+        // 
         //
         btnNovel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
             static_cast<System::Int32>(static_cast<System::Byte>(242)));
@@ -1737,8 +1779,11 @@ private: System::Windows::Forms::Label^ lblCartQty;
         btnNovel->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
 
+
         //////
+        // 
         // Change color of btnFantasy
+        // 
         //////
         btnFantasy->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
             static_cast<System::Int32>(static_cast<System::Byte>(197)));
@@ -1749,11 +1794,11 @@ private: System::Windows::Forms::Label^ lblCartQty;
         btnFantasy->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
             static_cast<System::Byte>(0)));
 
-        ////
-        ////
-        ////
 
+        //
         // Remove all the book group box except for gbSoloLeveling & gbOmnicientReader from panel->pAllBooks
+        // 
+        //
         pAllBooks->Controls->Remove(gbAtomicHabits);
         pAllBooks->Controls->Remove(gbPsychologyMoney);
         pAllBooks->Controls->Remove(gbHumanNature);
@@ -1762,30 +1807,35 @@ private: System::Windows::Forms::Label^ lblCartQty;
         pAllBooks->Controls->Remove(gbSecondBrain);
         pAllBooks->Controls->Remove(gbDune);
 
+
+        //
         // the gbSoloLeveling & gbOmnicientReader
+        // 
+        //
         pAllBooks->Controls->Add(gbSoloLeveling);
         pAllBooks->Controls->Add(gbOmnicientReader);
 
+        
+        //
         // Change the location of the gbSoloLeveling & gbOmnicientReader
+        // 
+        //
         gbSoloLeveling->Location = System::Drawing::Point(26, 12);
         gbOmnicientReader->Location = System::Drawing::Point(350, 12);
     }
 
 
-         /// 
-         /// 
-         /// 
-         /// 
-         /// 
+
+        //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------//
     
 
-    //
-    //----- When the add button clicked the atomic habit will go to cart ----//
-    //
 
     //
-    // Atomic Habits is now added
+    //----- When the add button clicked the atomic habit will go to cart -----//
     //
+
+
+    // Atomic Habits is now added
     bool isAtomicHabitsAdded = false;
 
     private: System::Void btnAddAH_Click(System::Object^ sender, System::EventArgs^ e) 
@@ -1796,18 +1846,24 @@ private: System::Windows::Forms::Label^ lblCartQty;
 
             //
             // Create a new GroupBox for Atomic Habits
+            // 
             //
             GroupBox^ newGbAtomicHabits = gcnew GroupBox();
             newGbAtomicHabits->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(229)), static_cast<System::Int32>(static_cast<System::Byte>(235)),
                 static_cast<System::Int32>(static_cast<System::Byte>(246)));
             newGbAtomicHabits->Size = System::Drawing::Size(422, 155);
 
-            ////----- Add the Book GroupBox to the checkout form inside the flpOrderDetail ----////
+            //
+            //Add the Book GroupBox to the checkout form inside the flpOrderDetail
+            // 
+            //
             checkoutForm->AddGroupBoxToOrderDetail(newGbAtomicHabits);
+
 
 
             //
             // Create a new PictureBox
+            // 
             //
             PictureBox^ newPbAtomicHabits = gcnew PictureBox();
             newPbAtomicHabits->Image = pbAtomicHabits->Image;
@@ -1816,13 +1872,17 @@ private: System::Windows::Forms::Label^ lblCartQty;
             newPbAtomicHabits->Size = System::Drawing::Size(80, 130);
             newPbAtomicHabits->Location = System::Drawing::Point(25, 18);
 
+            //
             // Add the new Label to the GroupBox
+            // 
+            //
             newGbAtomicHabits->Controls->Add(newPbAtomicHabits);
 
 
 
             //
             // Create a new label TITLE
+            // 
             //
             Label^ newlblAtomic = gcnew Label();
             newlblAtomic->Font = (gcnew System::Drawing::Font(L"Arial", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
@@ -1831,13 +1891,17 @@ private: System::Windows::Forms::Label^ lblCartQty;
             newlblAtomic->Size = System::Drawing::Size(198, 23);
             newlblAtomic->Location = System::Drawing::Point(130, 50);
 
+            //
             // Add the new Label to the GroupBox
+            // 
+            //
             newGbAtomicHabits->Controls->Add(newlblAtomic);
 
 
 
             //
             // Create a new label PRICE
+            // 
             //
             Label^ newlblAtomicPrice = gcnew Label();
             newlblAtomicPrice->Font = (gcnew System::Drawing::Font(L"Arial Black", 10.2, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
@@ -1846,12 +1910,17 @@ private: System::Windows::Forms::Label^ lblCartQty;
             newlblAtomicPrice->Size = System::Drawing::Size(118, 19);
             newlblAtomicPrice->Location = System::Drawing::Point(145, 80);
 
+            //
             // Add the new Label to the GroupBox
+            // 
+            //
             newGbAtomicHabits->Controls->Add(newlblAtomicPrice);
+
 
 
             //
             // Create a new label for symbol P (PHP peso sysmbol)
+            // 
             // 
             Label^ newlblAtomicPriceSymbol = gcnew Label();
             newlblAtomicPriceSymbol->Font = (gcnew System::Drawing::Font(L"Arial Black", 10.2, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
@@ -1860,33 +1929,26 @@ private: System::Windows::Forms::Label^ lblCartQty;
             newlblAtomicPriceSymbol->Size = System::Drawing::Size(118, 19);
             newlblAtomicPriceSymbol->Location = System::Drawing::Point(130, 80);
 
+            //
             // Add the new Label to the GroupBox
+            // 
+            //
             newGbAtomicHabits->Controls->Add(newlblAtomicPriceSymbol);
-
-
-
-            ////
-            ////
-            ////
 
 
 
             //
             //  Atomic habits is added to order detail, so Update subtotal and total payment in checkout form
+            // 
             //
             checkoutForm->Subtotal += 100;
             checkoutForm->TotalPayment += 100;
 
 
 
-            ////
-            ////
-            ////
-
-
-
             //
-            //----- Create a button to Increase Quantity -----//
+            //----- Create a button to Increase Quantity -----//////
+            // 
             //
 
             Button^ btnIncreaseQty = gcnew Button();
@@ -1904,7 +1966,10 @@ private: System::Windows::Forms::Label^ lblCartQty;
             btnIncreaseQty->Text = L"+";
             btnIncreaseQty->UseVisualStyleBackColor = false;
 
+            //
             // Add the new addQty button to groupbox
+            // 
+            //
             newGbAtomicHabits->Controls->Add(btnIncreaseQty);
 
             // Handle Click event of Add Quantity button
@@ -1912,16 +1977,10 @@ private: System::Windows::Forms::Label^ lblCartQty;
 
 
 
-            ////
-            ////
-            ////
-
-
-
             //
-            //----- Create a button to Decrease Quantity -----//
+            //----- Create a button to Decrease Quantity -----/////
+            // 
             //
-
             Button^ btnDecreaseQty = gcnew Button();
 
             btnDecreaseQty->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
@@ -1937,7 +1996,10 @@ private: System::Windows::Forms::Label^ lblCartQty;
             btnDecreaseQty->Text = L"-";
             btnDecreaseQty->UseVisualStyleBackColor = false;
 
+            //
             // Add the new button to groupbox
+            // 
+            //
             newGbAtomicHabits->Controls->Add(btnDecreaseQty);
 
             // Handle Click event of Decrease Quantity button
@@ -1945,17 +2007,10 @@ private: System::Windows::Forms::Label^ lblCartQty;
 
 
 
-            ////
-            ////
-            ////
-
-
-
-            //
+            // 
             //----- Quantity of the item -----//
+            // 
             //
-
-            // Create a new label for Quantity
             lblQuantity = gcnew Label();
             lblQuantity->Font = (gcnew System::Drawing::Font(L"Arial", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
@@ -1964,20 +2019,18 @@ private: System::Windows::Forms::Label^ lblCartQty;
             lblQuantity->Size = System::Drawing::Size(67, 21);
             lblQuantity->Location = System::Drawing::Point(341, 105);
 
+            //
             // Add the new label to groupbox
+            // 
+            //
             newGbAtomicHabits->Controls->Add(lblQuantity);
 
 
 
-            ////
-            ////
-            ////
-
-
             //
             //----- Create a new label for DELETETING ORDER -----//
+            // 
             //
-
             Label^ lblDeleteOrder = gcnew Label();
 
             lblDeleteOrder->Font = (gcnew System::Drawing::Font(L"Arial", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
@@ -1987,7 +2040,9 @@ private: System::Windows::Forms::Label^ lblCartQty;
             lblDeleteOrder->Size = System::Drawing::Size(67, 21);
             lblDeleteOrder->Location = System::Drawing::Point(350, 75);
 
+            //
             // Add the new delete order label to the new GroupBox
+            //
             newGbAtomicHabits->Controls->Add(lblDeleteOrder);
 
             // Handle Click event of deleteOrder label
@@ -1995,15 +2050,16 @@ private: System::Windows::Forms::Label^ lblCartQty;
 
 
 
-
-
             //
             // Increase lblCartQuantity when adding book to cart
+            // 
             //
-
             int cartQuantityAtomic = System::Convert::ToInt32(lblCartQty->Text);
 
+            //
             // Increase the quantity by one if it's less than 100
+            // 
+            //
             if (cartQuantityAtomic < 1)
             {
                 cartQuantityAtomic++;
@@ -2012,11 +2068,9 @@ private: System::Windows::Forms::Label^ lblCartQty;
 
 
 
-
-
-
             //
             // Atomic Habits is now added
+            // 
             //
             isAtomicHabitsAdded = true;
         }
@@ -2025,8 +2079,8 @@ private: System::Windows::Forms::Label^ lblCartQty;
 
             //
             // Increase lblQuantity
+            // 
             //
-
             int currentQuantityAtomic = System::Convert::ToInt32(lblQuantity->Text);
 
             // Increase the quantity by one if it's less than 100
@@ -2039,6 +2093,7 @@ private: System::Windows::Forms::Label^ lblCartQty;
 
             //
             //  Increase the quantity of the bookn aatomic habits
+            // 
             //
             checkoutForm->Subtotal += 100;
             checkoutForm->TotalPayment += 100;
@@ -2047,9 +2102,7 @@ private: System::Windows::Forms::Label^ lblCartQty;
 
 
 
-    ///
-    ///
-    ///
+    //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 
 
 
@@ -2061,8 +2114,8 @@ private: System::Windows::Forms::Label^ lblCartQty;
     {
         //
         // Increase lblQuantity
+        // 
         //
-
         int currentQuantity = System::Convert::ToInt32(lblQuantity->Text);
 
         // Increase the quantity by one if it's less than 100
@@ -2075,20 +2128,28 @@ private: System::Windows::Forms::Label^ lblCartQty;
 
         //
         //  Increase the quantity of the bookn aatomic habits
+        // 
         //
         checkoutForm->Subtotal += 100;
         checkoutForm->TotalPayment += 100;
     }
 
 
-     //----- When Clicked the plus button in order detail the quantity, subtotal, and payment total decrease -----//
 
+     //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+
+
+     //
+     //----- When Clicked the plus button in order detail the quantity, subtotal, and payment total decrease -----//
+     //
 
     private: System::Void btnDecreaseQty_Click(System::Object^ sender, System::EventArgs^ e)
     {
 
         //
         // Decrease lblQuantity
+        // 
         //
         int currentQuantity = System::Convert::ToInt32(lblQuantity->Text);
 
@@ -2100,6 +2161,7 @@ private: System::Windows::Forms::Label^ lblCartQty;
 
             //
             //  Decrease the quantity of the bookn aatomic habits
+            // 
             //
             checkoutForm->Subtotal -= 100;
             checkoutForm->TotalPayment -= 100;
@@ -2108,11 +2170,7 @@ private: System::Windows::Forms::Label^ lblCartQty;
 
 
 
-         /// 
-         /// 
-         /// 
-         /// 
-         /// 
+    //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 
 
 
@@ -2122,8 +2180,10 @@ private: System::Windows::Forms::Label^ lblCartQty;
 
     private: System::Void DeleteOrder_Click(System::Object^ sender, System::EventArgs^ e)
     {
+
         //
         // Find the parent GroupBox of the clicked label
+        // 
         //
         Label^ deleteLabel = safe_cast<Label^>(sender);
         GroupBox^ parentGroupBox = safe_cast<GroupBox^>(deleteLabel->Parent);
@@ -2132,8 +2192,10 @@ private: System::Windows::Forms::Label^ lblCartQty;
         checkoutForm->RemoveGroupBoxToOrderDetail(parentGroupBox);
 
 
+
         //
         // reset Subtotal Total payment when the delete has been cliked
+        // 
         //
 
         // Update subtotal and total payment
@@ -2146,6 +2208,7 @@ private: System::Windows::Forms::Label^ lblCartQty;
 
         //
         // Decrease lblCartQuantity when then added book is deleted
+        // 
         //
         int cartQuantityAtomic = System::Convert::ToInt32(lblCartQty->Text);
 
@@ -2157,31 +2220,29 @@ private: System::Windows::Forms::Label^ lblCartQty;
 
 
 
-
-
         //
         // Atomic Habits is now deleted
+        // 
         //
         isAtomicHabitsAdded = false;
     }
 
 
 
-        /// 
-        /// 
-        /// 
-        /// 
-        /// 
+    //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------//
            
 
 
     //
     //----- When the cart image was clicked the checout form or the cart will show ----//
     //
+
     private: System::Void pbCart_Click(System::Object^ sender, System::EventArgs^ e) 
     {
-
+        //
         // Add the GroupBox (newGbAtomicHabits) to the flpOrderDetail flow layout panel
+        // 
+        //
         checkoutForm->AddGroupBoxToOrderDetail(newGbAtomicHabits);
 
         // Show the CheckoutForm

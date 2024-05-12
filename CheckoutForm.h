@@ -2,6 +2,8 @@
 
 #include "Shipping.h"
 
+#include "GcashForm.h"
+
 namespace PointofSaleSystem {
 
 	using namespace System;
@@ -64,12 +66,14 @@ namespace PointofSaleSystem {
 	// Define properties to access subtotal and total payment
 	public:
 
-		property int Subtotal {
+		property int Subtotal 
+		{
 			int get() { return System::Convert::ToInt32(lblSubtotal->Text); }
 			void set(int value) { lblSubtotal->Text = value.ToString(); }
 		}
 
-		property int TotalPayment {
+		property int TotalPayment 
+		{
 			int get() { return System::Convert::ToInt32(lblTotalPayment->Text); }
 			void set(int value) { lblTotalPayment->Text = value.ToString(); }
 		}
@@ -98,7 +102,8 @@ namespace PointofSaleSystem {
 	private: System::Windows::Forms::TextBox^ textBox1;
 	protected:
 	private: System::Windows::Forms::Button^ button2;
-	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::Button^ btnCheckout;
+
 	private: System::Windows::Forms::GroupBox^ groupBox9;
 	private: System::Windows::Forms::Label^ lblTotalPayment;
 	private: System::Windows::Forms::Label^ label10;
@@ -145,7 +150,7 @@ namespace PointofSaleSystem {
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(CheckoutForm::typeid));
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->btnCheckout = (gcnew System::Windows::Forms::Button());
 			this->groupBox9 = (gcnew System::Windows::Forms::GroupBox());
 			this->lblTotalPayment = (gcnew System::Windows::Forms::Label());
 			this->label10 = (gcnew System::Windows::Forms::Label());
@@ -210,21 +215,21 @@ namespace PointofSaleSystem {
 			this->button2->Text = L"Apply";
 			this->button2->UseVisualStyleBackColor = false;
 			// 
-			// button1
+			// btnCheckout
 			// 
-			this->button1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
+			this->btnCheckout->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
 				static_cast<System::Int32>(static_cast<System::Byte>(197)));
-			this->button1->Font = (gcnew System::Drawing::Font(L"Arial Black", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->btnCheckout->Font = (gcnew System::Drawing::Font(L"Arial Black", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
+			this->btnCheckout->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
 				static_cast<System::Int32>(static_cast<System::Byte>(253)));
-			this->button1->Location = System::Drawing::Point(382, 757);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(463, 53);
-			this->button1->TabIndex = 17;
-			this->button1->Text = L"Continue to Checkout";
-			this->button1->UseVisualStyleBackColor = false;
-			this->button1->Click += gcnew System::EventHandler(this, &CheckoutForm::button1_Click);
+			this->btnCheckout->Location = System::Drawing::Point(382, 757);
+			this->btnCheckout->Name = L"btnCheckout";
+			this->btnCheckout->Size = System::Drawing::Size(463, 53);
+			this->btnCheckout->TabIndex = 17;
+			this->btnCheckout->Text = L"Continue to Checkout";
+			this->btnCheckout->UseVisualStyleBackColor = false;
+			this->btnCheckout->Click += gcnew System::EventHandler(this, &CheckoutForm::btnCheckout_Click);
 			// 
 			// groupBox9
 			// 
@@ -545,7 +550,7 @@ namespace PointofSaleSystem {
 			this->Controls->Add(this->pbBackHome);
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->button2);
-			this->Controls->Add(this->button1);
+			this->Controls->Add(this->btnCheckout);
 			this->Controls->Add(this->groupBox9);
 			this->Controls->Add(this->groupBox8);
 			this->Controls->Add(this->groupBox7);
@@ -576,9 +581,15 @@ namespace PointofSaleSystem {
 
 	}
 
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) 
+	private: System::Void btnCheckout_Click(System::Object^ sender, System::EventArgs^ e)
 	{
-		this->Hide();
+		//this->Hide();
+
+		GcashForm^ gcashForm = gcnew GcashForm();
+
+		// Assuming you have an instance of GcashForm named gcashForm
+		gcashForm->UpdatePaymentLabels(lblTotalPayment->Text, lblTotalPayment->Text);
+
 
 		Shipping^ shippingUI = gcnew Shipping();
 		shippingUI->Show();
