@@ -2,6 +2,8 @@
 
 #include "GcashForm.h"
 
+
+
 namespace PointofSaleSystem {
 
 	using namespace System;
@@ -18,7 +20,7 @@ namespace PointofSaleSystem {
 	{
 	public:
 
-		PaymentForm(void)
+		PaymentForm(String^ totalPayment)
 		{
 			InitializeComponent();
 			//
@@ -26,11 +28,19 @@ namespace PointofSaleSystem {
 			//
 
 
+			this->totalPayment = totalPayment;
+
+
 			//
 			// This will center the Form in the screen when it pop up
 			//
 			CenterToScreen();
 		}
+
+	private: String^ totalPayment;
+
+
+
 
 	protected:
 		/// <summary>
@@ -43,13 +53,20 @@ namespace PointofSaleSystem {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::PictureBox^ pbReturnShipping;
-	protected:
+
+
 
 	protected:
+
+
+	private: System::Windows::Forms::PictureBox^ pbReturnShipping;
+
 	private: System::Windows::Forms::PictureBox^ pictureBox2;
+
 	private: System::Windows::Forms::PictureBox^ pictureBox3;
+
 	private: System::Windows::Forms::PictureBox^ pictureBox4;
+
 	private: System::Windows::Forms::Button^ btnGotoGcash;
 
 
@@ -58,6 +75,7 @@ namespace PointofSaleSystem {
 		/// Required designer variable.
 		/// </summary>
 		System::ComponentModel::Container ^components;
+
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -160,19 +178,36 @@ namespace PointofSaleSystem {
 		}
 #pragma endregion
 
+
+
+	//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+
+	//
+	//----- Go to Gcash Form -----//
+	// 
+	//
+	private: System::Void btnGotoGcash_Click(System::Object^ sender, System::EventArgs^ e)
+	{
+		this->Hide();
+		GcashForm^ gcashUI = gcnew GcashForm(totalPayment);
+		gcashUI->Show();
+	}
+
+
+
+	//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+
+
+	//
 	//------ Go To Shipping form when clicked the return to Shipping -----//
+	// 
+	//
 	private: System::Void pbReturnShipping_Click(System::Object^ sender, System::EventArgs^ e)
 	{
 		this->Hide();
 	}
 
-
-	//----- Go to Gcash Form -----//
-	private: System::Void btnGotoGcash_Click(System::Object^ sender, System::EventArgs^ e) 
-	{
-		//this->Hide();
-		GcashForm^ gcashUI = gcnew GcashForm();
-		gcashUI->Show();
-	}
 };
 }

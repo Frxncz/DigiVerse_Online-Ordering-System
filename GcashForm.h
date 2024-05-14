@@ -2,7 +2,8 @@
 
 #include "PaymentSuccessForm.h"
 
-namespace PointofSaleSystem {
+namespace PointofSaleSystem 
+{
 
 	using namespace System;
 	using namespace System::ComponentModel;
@@ -17,8 +18,11 @@ namespace PointofSaleSystem {
 	public ref class GcashForm : public System::Windows::Forms::Form
 	{
 
+
 	public:
-		GcashForm(void)
+
+
+		GcashForm(String^ totalPayment)
 		{
 			InitializeComponent();
 			//
@@ -27,21 +31,19 @@ namespace PointofSaleSystem {
 
 
 			//
+			// set the text of lblPHPamount and lblPHPtotal to the value passed in totalPayment
+			// 
+			//
+			this->lblPHPamount->Text = totalPayment;
+			this->lblPHPtotal->Text = totalPayment;
+
+
+			//
 			// This will center the Form in the screen when it pop up
 			//
 			CenterToScreen();
 		}
 
-
-
-	public:
-
-		// Method to update lblPHPamount and lblPHPtotal labels
-		void UpdatePaymentLabels(String^ amount, String^ total)
-		{
-			lblPHPamount->Text = amount;
-			lblPHPtotal->Text = total;
-		}
 
 
 
@@ -56,13 +58,22 @@ namespace PointofSaleSystem {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::PictureBox^ pictureBox1;
+
+
+
+
 	protected:
+
+	private: System::Windows::Forms::PictureBox^ pictureBox1;
+
 	private: System::Windows::Forms::PictureBox^ pictureBox2;
+
 	private: System::Windows::Forms::Button^ btnPay;
 
 	private: System::Windows::Forms::Label^ label1;
+
 	private: System::Windows::Forms::Label^ label2;
+
 	private: System::Windows::Forms::Label^ lblPHPamount;
 
 	private: System::Windows::Forms::Label^ lblPHPtotal;
@@ -70,11 +81,15 @@ namespace PointofSaleSystem {
 	private: System::Windows::Forms::PictureBox^ pbReturnPayment;
 
 
+
+
 	private:
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
 		System::ComponentModel::Container ^components;
+
+
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -131,7 +146,7 @@ namespace PointofSaleSystem {
 			this->btnPay->Name = L"btnPay";
 			this->btnPay->Size = System::Drawing::Size(278, 61);
 			this->btnPay->TabIndex = 13;
-			this->btnPay->Text = L"PAY PHP 0";
+			this->btnPay->Text = L"PAY";
 			this->btnPay->UseVisualStyleBackColor = false;
 			this->btnPay->Click += gcnew System::EventHandler(this, &GcashForm::btnPay_Click);
 			// 
@@ -222,19 +237,37 @@ namespace PointofSaleSystem {
 		}
 #pragma endregion
 
+
+	//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+
+	//
+	//----- Go to Payment Success Form -----//
+	// 
+	//
+	private: System::Void btnPay_Click(System::Object^ sender, System::EventArgs^ e)
+	{
+		this->Hide();
+		PaymentSuccessForm^ paymentSuccessUI = gcnew PaymentSuccessForm();
+		paymentSuccessUI->Show();
+	}
+
+
+
+	//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+
+
+	//
 	//------ Go To  Payment form when clicked the 'Return to Payment' in Gcash form -----//
+	// 
+	//
 	private: System::Void pbReturnPayment_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
 		this->Hide();
 	}
 
-	//----- Go to Payment Success Form -----//
-	private: System::Void btnPay_Click(System::Object^ sender, System::EventArgs^ e) 
-	{
-		this->Hide();
-		PaymentSuccessForm^ paymentSuccessUI = gcnew PaymentSuccessForm();
-		paymentSuccessUI->ShowDialog();
-	}
+
 
 };
 }

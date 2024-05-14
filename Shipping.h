@@ -3,7 +3,9 @@
 #include "PaymentForm.h"
 
 
-namespace PointofSaleSystem {
+
+namespace PointofSaleSystem 
+{
 
 	using namespace System;
 	using namespace System::ComponentModel;
@@ -17,14 +19,19 @@ namespace PointofSaleSystem {
 	/// </summary>
 	public ref class Shipping : public System::Windows::Forms::Form
 	{
+
 	public:
 
-		Shipping(void)
+
+		Shipping(String^ totalPayment)
 		{
 			InitializeComponent();
 			//
 			//TODO: Add the constructor code here
 			//
+
+
+			this->totalPayment = totalPayment;
 
 					
 			//
@@ -32,6 +39,11 @@ namespace PointofSaleSystem {
 			//
 			CenterToScreen();
 		}
+
+	private: String^ totalPayment;
+
+
+
 
 	protected:
 		/// <summary>
@@ -44,18 +56,31 @@ namespace PointofSaleSystem {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::PictureBox^ pictureBox1;
+
+
+
+
 	protected:
+
+
+	private: System::Windows::Forms::PictureBox^ pictureBox1;
+
 	private: System::Windows::Forms::PictureBox^ pictureBox2;
+
 	private: System::Windows::Forms::PictureBox^ pictureBox3;
+
 	private: System::Windows::Forms::PictureBox^ pictureBox4;
+
 	private: System::Windows::Forms::Button^ btnGotoPayment;
 
 	private: System::Windows::Forms::PictureBox^ pbCancel;
 
 	private: System::Windows::Forms::Label^ label1;
+
 	private: System::Windows::Forms::Label^ label2;
+
 	private: System::Windows::Forms::Label^ label3;
+
 	private: System::Windows::Forms::Label^ label4;
 
 
@@ -65,6 +90,8 @@ namespace PointofSaleSystem {
 		/// Required designer variable.
 		/// </summary>
 		System::ComponentModel::Container ^components;
+
+
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -247,14 +274,33 @@ namespace PointofSaleSystem {
 #pragma endregion
 
 
+
+	//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+
+
+	//
 	//----- Go to Payment form -----//
+	// 
+	//
 	private: System::Void btnGotoPayment_Click(System::Object^ sender, System::EventArgs^ e)
 	{
 		this->Hide();
-		PaymentForm^ paymentUI = gcnew PaymentForm();
-		paymentUI->Show();
+		PaymentForm^ paymentForm = gcnew PaymentForm(totalPayment);
+		paymentForm->Show();
+
 	}
 
+
+
+	//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+
+
+	//
+	//----- Go to checkout form when the cancel is clicked -----//
+	// 
+	//
 	private: System::Void pbCancel_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
 		this->Hide();

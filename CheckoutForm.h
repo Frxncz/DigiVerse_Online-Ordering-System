@@ -2,8 +2,6 @@
 
 #include "Shipping.h"
 
-#include "GcashForm.h"
-
 namespace PointofSaleSystem {
 
 	using namespace System;
@@ -18,14 +16,18 @@ namespace PointofSaleSystem {
 	/// </summary>
 	public ref class CheckoutForm : public System::Windows::Forms::Form
 	{
+
 	public:
 
 		CheckoutForm(void)
 		{
+
 			InitializeComponent();
 			//
 			//TODO: Add the constructor code here
 			//
+
+
 
 			//
 			// This will center the Form in the screen when it pop up
@@ -36,7 +38,10 @@ namespace PointofSaleSystem {
 
 
 
+	//---------------------------------------------------------------------------
 	// Created a method to access the flpOrderDetail
+	// 
+	//
 	public:
 
 		void AddGroupBoxToOrderDetail(GroupBox^ groupBox)
@@ -48,8 +53,10 @@ namespace PointofSaleSystem {
 
 
 
-
+	//---------------------------------------------------------------------------
 	// Created a method to access the flpOrderDetail
+	// 
+	//
 	public:
 
 		void RemoveGroupBoxToOrderDetail(GroupBox^ groupBox)
@@ -63,7 +70,10 @@ namespace PointofSaleSystem {
 
 
 
+	//---------------------------------------------------------------------------
 	// Define properties to access subtotal and total payment
+	//
+	//
 	public:
 
 		property int Subtotal 
@@ -77,6 +87,15 @@ namespace PointofSaleSystem {
 			int get() { return System::Convert::ToInt32(lblTotalPayment->Text); }
 			void set(int value) { lblTotalPayment->Text = value.ToString(); }
 		}
+
+
+
+
+	//---------------------------------------------------------------------------
+	// Add a private member to store the GroupBox received from Home form
+	// 
+	//
+	private: System::Windows::Forms::GroupBox^ newGroupBox;
 
 
 
@@ -95,41 +114,70 @@ namespace PointofSaleSystem {
 		}
 
 
-// Add a private member to store the GroupBox received from Home form
-	private: System::Windows::Forms::GroupBox^ newGroupBox;
 
+
+
+
+	protected:
 
 	private: System::Windows::Forms::TextBox^ textBox1;
-	protected:
+
 	private: System::Windows::Forms::Button^ button2;
+
 	private: System::Windows::Forms::Button^ btnCheckout;
 
 	private: System::Windows::Forms::GroupBox^ groupBox9;
+
 	private: System::Windows::Forms::Label^ lblTotalPayment;
+
 	private: System::Windows::Forms::Label^ label10;
+
 	private: System::Windows::Forms::Label^ label2;
+
 	private: System::Windows::Forms::GroupBox^ groupBox8;
+
 	private: System::Windows::Forms::Label^ label14;
+
 	private: System::Windows::Forms::Label^ label13;
+
 	private: System::Windows::Forms::Label^ label11;
+
 	private: System::Windows::Forms::Label^ label12;
+
 	private: System::Windows::Forms::Label^ lblSubtotal;
+
 	private: System::Windows::Forms::Label^ label9;
+
 	private: System::Windows::Forms::Label^ label8;
+
 	private: System::Windows::Forms::Label^ label7;
+
 	private: System::Windows::Forms::Label^ label6;
+
 	private: System::Windows::Forms::Label^ label5;
+
 	private: System::Windows::Forms::Label^ label4;
+
 	private: System::Windows::Forms::Label^ label3;
+
 	private: System::Windows::Forms::GroupBox^ groupBox7;
+
 	private: System::Windows::Forms::FlowLayoutPanel^ flpOrderDetail;
+
 	private: System::Windows::Forms::Label^ label21;
+
 	private: System::Windows::Forms::Label^ label19;
+
 	private: System::Windows::Forms::Label^ label18;
+
 	private: System::Windows::Forms::Label^ label17;
+
 	private: System::Windows::Forms::Label^ label15;
+
 	private: System::Windows::Forms::PictureBox^ pbBackHome;
+
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
+
 	private: System::Windows::Forms::PictureBox^ pictureBox2;
 
 
@@ -139,6 +187,8 @@ namespace PointofSaleSystem {
 		/// Required designer variable.
 		/// </summary>
 		System::ComponentModel::Container ^components;
+
+
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -573,26 +623,39 @@ namespace PointofSaleSystem {
 #pragma endregion
 
 
+
+	//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+	
+
+	// 
 	//----- Show the checkout form when the cart is cliked -----//
-	private: System::Void pbBackHome_Click(System::Object^ sender, System::EventArgs^ e) 
+	// 
+	//
+	private: System::Void btnCheckout_Click(System::Object^ sender, System::EventArgs^ e)
+	{
+
+		String^ totalPayment = lblTotalPayment->Text;
+
+		Shipping^ shippingForm = gcnew Shipping(totalPayment);
+		shippingForm->Show();
+
+	}
+
+
+
+	//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+
+
+	// 
+    //----- Go back home when the left arrow is clicked -----//
+	// 
+    //
+	private: System::Void pbBackHome_Click(System::Object^ sender, System::EventArgs^ e)
 	{
 
 		this->Hide();
 
-	}
-
-	private: System::Void btnCheckout_Click(System::Object^ sender, System::EventArgs^ e)
-	{
-		//this->Hide();
-
-		GcashForm^ gcashForm = gcnew GcashForm();
-
-		// Assuming you have an instance of GcashForm named gcashForm
-		gcashForm->UpdatePaymentLabels(lblTotalPayment->Text, lblTotalPayment->Text);
-
-
-		Shipping^ shippingUI = gcnew Shipping();
-		shippingUI->Show();
 	}
 };
 }
