@@ -20,7 +20,7 @@ namespace PointofSaleSystem {
 	{
 	public:
 
-		PaymentForm(String^ totalPayment)
+		PaymentForm(Form^ ShippingForm, String^ totalPayment)
 		{
 			InitializeComponent();
 			//
@@ -28,6 +28,10 @@ namespace PointofSaleSystem {
 			//
 
 
+			// Store the reference to the Shipping form
+			newShippingForm = ShippingForm;
+
+			// Store the total payment amount in the class member variable
 			this->totalPayment = totalPayment;
 
 
@@ -37,8 +41,13 @@ namespace PointofSaleSystem {
 			CenterToScreen();
 		}
 
-	private: String^ totalPayment;
 
+	// Declare a private member variable to hold the reference to the Shipping form
+	private: Form^ newShippingForm;
+
+
+	// Declare a private member variable to hold the total payment amount
+	private: String^ totalPayment;
 
 
 
@@ -190,7 +199,10 @@ namespace PointofSaleSystem {
 	private: System::Void btnGotoGcash_Click(System::Object^ sender, System::EventArgs^ e)
 	{
 		this->Hide();
-		GcashForm^ gcashUI = gcnew GcashForm(totalPayment);
+
+		// Create a new instance of the GcashForm, passing the total payment amount
+		GcashForm^ gcashUI = gcnew GcashForm(this, totalPayment);
+
 		gcashUI->Show();
 	}
 
@@ -207,6 +219,8 @@ namespace PointofSaleSystem {
 	private: System::Void pbReturnShipping_Click(System::Object^ sender, System::EventArgs^ e)
 	{
 		this->Hide();
+
+		newShippingForm->Show();
 	}
 
 };

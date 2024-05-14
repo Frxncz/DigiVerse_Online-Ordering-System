@@ -22,7 +22,7 @@ namespace PointofSaleSystem
 	public:
 
 
-		GcashForm(String^ totalPayment)
+		GcashForm(Form^ GcashForm, String^ totalPayment)
 		{
 			InitializeComponent();
 			//
@@ -30,10 +30,11 @@ namespace PointofSaleSystem
 			//
 
 
-			//
+			// Store the reference to the Shipping form
+			newGcashForm = GcashForm;
+
+
 			// set the text of lblPHPamount and lblPHPtotal to the value passed in totalPayment
-			// 
-			//
 			this->lblPHPamount->Text = totalPayment;
 			this->lblPHPtotal->Text = totalPayment;
 
@@ -45,6 +46,7 @@ namespace PointofSaleSystem
 		}
 
 
+	private: Form^ newGcashForm;
 
 
 	protected:
@@ -265,7 +267,9 @@ namespace PointofSaleSystem
 	private: System::Void pbReturnPayment_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
 		this->Hide();
-	}
+
+		newGcashForm->Show();
+;	}
 
 
 

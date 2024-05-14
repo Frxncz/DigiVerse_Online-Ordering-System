@@ -634,9 +634,12 @@ namespace PointofSaleSystem {
 	private: System::Void btnCheckout_Click(System::Object^ sender, System::EventArgs^ e)
 	{
 
+		// Retrieve the total payment amount from the label
 		String^ totalPayment = lblTotalPayment->Text;
 
+		// Create a new instance of the Shipping form, passing the total payment amount
 		Shipping^ shippingForm = gcnew Shipping(totalPayment);
+
 		shippingForm->Show();
 
 	}

@@ -3,7 +3,6 @@
 #include "PaymentForm.h"
 
 
-
 namespace PointofSaleSystem 
 {
 
@@ -31,15 +30,17 @@ namespace PointofSaleSystem
 			//
 
 
+			// Store the total payment amount in the class member variable
 			this->totalPayment = totalPayment;
 
-					
+			
 			//
 			// This will center the Form in the screen when it pop up
 			//
 			CenterToScreen();
 		}
 
+	// Declare a private member variable to hold the total payment amount
 	private: String^ totalPayment;
 
 
@@ -286,7 +287,9 @@ namespace PointofSaleSystem
 	private: System::Void btnGotoPayment_Click(System::Object^ sender, System::EventArgs^ e)
 	{
 		this->Hide();
-		PaymentForm^ paymentForm = gcnew PaymentForm(totalPayment);
+
+		// Create a new instance of the PaymentForm, passing the total payment amount
+		PaymentForm^ paymentForm = gcnew PaymentForm(this, totalPayment);
 		paymentForm->Show();
 
 	}
