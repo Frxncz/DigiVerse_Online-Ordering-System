@@ -163,6 +163,7 @@ namespace PointofSaleSystem {
 			// 
 			this->btnSignup->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
 				static_cast<System::Int32>(static_cast<System::Byte>(197)));
+			this->btnSignup->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->btnSignup->Font = (gcnew System::Drawing::Font(L"Arial Black", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnSignup->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(245)),
@@ -236,6 +237,7 @@ namespace PointofSaleSystem {
 			this->Controls->Add(this->btnSignup);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->pictureBox1);
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->Name = L"SignupForm";
 			this->Text = L"SignupForm";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();

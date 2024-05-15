@@ -140,6 +140,7 @@ namespace PointofSaleSystem
 			// 
 			this->btnPay->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
 				static_cast<System::Int32>(static_cast<System::Byte>(197)));
+			this->btnPay->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->btnPay->Font = (gcnew System::Drawing::Font(L"Arial Black", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnPay->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
@@ -204,6 +205,7 @@ namespace PointofSaleSystem
 			// 
 			this->pbReturnPayment->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(87)),
 				static_cast<System::Int32>(static_cast<System::Byte>(228)));
+			this->pbReturnPayment->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->pbReturnPayment->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pbReturnPayment.Image")));
 			this->pbReturnPayment->Location = System::Drawing::Point(56, 42);
 			this->pbReturnPayment->Name = L"pbReturnPayment";
@@ -228,6 +230,7 @@ namespace PointofSaleSystem
 			this->Controls->Add(this->btnPay);
 			this->Controls->Add(this->pictureBox2);
 			this->Controls->Add(this->pictureBox1);
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->Name = L"GcashForm";
 			this->Text = L"GcashForm";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();

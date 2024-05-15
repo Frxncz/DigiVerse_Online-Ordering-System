@@ -19,7 +19,7 @@ namespace PointofSaleSystem {
 
 	public:
 
-		CheckoutForm(void)
+		CheckoutForm(Form^ Home)
 		{
 
 			InitializeComponent();
@@ -27,7 +27,8 @@ namespace PointofSaleSystem {
 			//TODO: Add the constructor code here
 			//
 
-
+			// Store the reference to the Home form
+			newHome = Home;
 
 			//
 			// This will center the Form in the screen when it pop up
@@ -35,6 +36,9 @@ namespace PointofSaleSystem {
 			CenterToScreen();
 		}
 
+
+	// Declare a private member variable to hold the reference to the Home form
+	private: Form^ newHome;
 
 
 
@@ -254,6 +258,7 @@ namespace PointofSaleSystem {
 			// 
 			this->button2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
 				static_cast<System::Int32>(static_cast<System::Byte>(197)));
+			this->button2->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button2->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
@@ -269,6 +274,7 @@ namespace PointofSaleSystem {
 			// 
 			this->btnCheckout->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
 				static_cast<System::Int32>(static_cast<System::Byte>(197)));
+			this->btnCheckout->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->btnCheckout->Font = (gcnew System::Drawing::Font(L"Arial Black", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnCheckout->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
@@ -498,6 +504,7 @@ namespace PointofSaleSystem {
 			// flpOrderDetail
 			// 
 			this->flpOrderDetail->AutoScroll = true;
+			this->flpOrderDetail->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->flpOrderDetail->Location = System::Drawing::Point(23, 173);
 			this->flpOrderDetail->Name = L"flpOrderDetail";
 			this->flpOrderDetail->Size = System::Drawing::Size(597, 231);
@@ -560,6 +567,7 @@ namespace PointofSaleSystem {
 			// 
 			// pbBackHome
 			// 
+			this->pbBackHome->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->pbBackHome->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pbBackHome.Image")));
 			this->pbBackHome->Location = System::Drawing::Point(62, 46);
 			this->pbBackHome->Name = L"pbBackHome";
@@ -605,6 +613,7 @@ namespace PointofSaleSystem {
 			this->Controls->Add(this->groupBox8);
 			this->Controls->Add(this->groupBox7);
 			this->Controls->Add(this->pictureBox2);
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->Name = L"CheckoutForm";
 			this->Text = L"CheckoutForm";
 			this->groupBox9->ResumeLayout(false);
@@ -634,11 +643,13 @@ namespace PointofSaleSystem {
 	private: System::Void btnCheckout_Click(System::Object^ sender, System::EventArgs^ e)
 	{
 
+		this->Hide();
+
 		// Retrieve the total payment amount from the label
 		String^ totalPayment = lblTotalPayment->Text;
 
 		// Create a new instance of the Shipping form, passing the total payment amount
-		Shipping^ shippingForm = gcnew Shipping(totalPayment);
+		Shipping^ shippingForm = gcnew Shipping(this, totalPayment);
 
 		shippingForm->Show();
 
@@ -659,6 +670,7 @@ namespace PointofSaleSystem {
 
 		this->Hide();
 
+		newHome->Show();
 	}
 };
 }

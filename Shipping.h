@@ -22,16 +22,20 @@ namespace PointofSaleSystem
 	public:
 
 
-		Shipping(String^ totalPayment)
+		Shipping(Form^ CheckoutForm, String^ totalPayment)
 		{
 			InitializeComponent();
 			//
 			//TODO: Add the constructor code here
 			//
 
+			// Store the reference to the checkout form
+			newCheckout = CheckoutForm;
+
 
 			// Store the total payment amount in the class member variable
 			this->totalPayment = totalPayment;
+
 
 			
 			//
@@ -39,6 +43,11 @@ namespace PointofSaleSystem
 			//
 			CenterToScreen();
 		}
+
+
+	// Declare a private member variable to hold the reference to the checkout form
+	private: Form^ newCheckout;
+
 
 	// Declare a private member variable to hold the total payment amount
 	private: String^ totalPayment;
@@ -163,6 +172,7 @@ namespace PointofSaleSystem
 			// 
 			this->btnGotoPayment->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
 				static_cast<System::Int32>(static_cast<System::Byte>(197)));
+			this->btnGotoPayment->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->btnGotoPayment->Font = (gcnew System::Drawing::Font(L"Arial Black", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnGotoPayment->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
@@ -177,6 +187,7 @@ namespace PointofSaleSystem
 			// 
 			// pbCancel
 			// 
+			this->pbCancel->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->pbCancel->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pbCancel.Image")));
 			this->pbCancel->Location = System::Drawing::Point(51, 619);
 			this->pbCancel->Name = L"pbCancel";
@@ -261,6 +272,7 @@ namespace PointofSaleSystem
 			this->Controls->Add(this->pictureBox1);
 			this->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
 				static_cast<System::Int32>(static_cast<System::Byte>(197)));
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->Name = L"Shipping";
 			this->Text = L"Shipping";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
@@ -307,6 +319,8 @@ namespace PointofSaleSystem
 	private: System::Void pbCancel_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
 		this->Hide();
+
+		newCheckout->Show();
 	}
 };
 }

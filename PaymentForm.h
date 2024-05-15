@@ -46,6 +46,9 @@ namespace PointofSaleSystem {
 	private: Form^ newShippingForm;
 
 
+
+
+
 	// Declare a private member variable to hold the total payment amount
 	private: String^ totalPayment;
 
@@ -107,6 +110,7 @@ namespace PointofSaleSystem {
 			// 
 			// pbReturnShipping
 			// 
+			this->pbReturnShipping->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->pbReturnShipping->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pbReturnShipping.Image")));
 			this->pbReturnShipping->Location = System::Drawing::Point(51, 710);
 			this->pbReturnShipping->Name = L"pbReturnShipping";
@@ -152,6 +156,7 @@ namespace PointofSaleSystem {
 			// 
 			this->btnGotoGcash->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
 				static_cast<System::Int32>(static_cast<System::Byte>(197)));
+			this->btnGotoGcash->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->btnGotoGcash->Font = (gcnew System::Drawing::Font(L"Arial Black", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnGotoGcash->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
@@ -176,6 +181,7 @@ namespace PointofSaleSystem {
 			this->Controls->Add(this->pictureBox3);
 			this->Controls->Add(this->pictureBox2);
 			this->Controls->Add(this->pbReturnShipping);
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->Name = L"PaymentForm";
 			this->Text = L"PaymentForm";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pbReturnShipping))->EndInit();

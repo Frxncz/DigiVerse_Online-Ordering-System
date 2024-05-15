@@ -57,7 +57,7 @@ namespace PointofSaleSystem {
 
 
     ////--- Access the checkoutForm instance
-    private:  CheckoutForm^ checkoutForm = gcnew CheckoutForm();
+    private:  CheckoutForm^ checkoutForm = gcnew CheckoutForm(this);
 
 
 
@@ -226,6 +226,7 @@ namespace PointofSaleSystem {
 
     private: System::Windows::Forms::Label^ lblCartQty;
 
+
 	private: System::ComponentModel::IContainer^ components;
 
 
@@ -361,6 +362,7 @@ namespace PointofSaleSystem {
             this->pAllBooks->Controls->Add(this->gbHumanNature);
             this->pAllBooks->Controls->Add(this->gbPsychologyMoney);
             this->pAllBooks->Controls->Add(this->gbAtomicHabits);
+            this->pAllBooks->Cursor = System::Windows::Forms::Cursors::Default;
             this->pAllBooks->Location = System::Drawing::Point(101, 481);
             this->pAllBooks->Name = L"pAllBooks";
             this->pAllBooks->Size = System::Drawing::Size(1330, 362);
@@ -385,6 +387,7 @@ namespace PointofSaleSystem {
             // 
             this->button1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
                 static_cast<System::Int32>(static_cast<System::Byte>(197)));
+            this->button1->Cursor = System::Windows::Forms::Cursors::Hand;
             this->button1->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->button1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
@@ -432,6 +435,7 @@ namespace PointofSaleSystem {
             // 
             // pictureBox8
             // 
+            this->pictureBox8->Cursor = System::Windows::Forms::Cursors::Hand;
             this->pictureBox8->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox8.Image")));
             this->pictureBox8->Location = System::Drawing::Point(6, 10);
             this->pictureBox8->Name = L"pictureBox8";
@@ -469,6 +473,7 @@ namespace PointofSaleSystem {
             // 
             this->btnAddOR->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
                 static_cast<System::Int32>(static_cast<System::Byte>(197)));
+            this->btnAddOR->Cursor = System::Windows::Forms::Cursors::Hand;
             this->btnAddOR->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->btnAddOR->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
@@ -515,6 +520,7 @@ namespace PointofSaleSystem {
             // 
             // pbReader
             // 
+            this->pbReader->Cursor = System::Windows::Forms::Cursors::Hand;
             this->pbReader->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pbReader.Image")));
             this->pbReader->Location = System::Drawing::Point(12, 12);
             this->pbReader->Name = L"pbReader";
@@ -542,6 +548,7 @@ namespace PointofSaleSystem {
             // 
             this->btnAddSL->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
                 static_cast<System::Int32>(static_cast<System::Byte>(197)));
+            this->btnAddSL->Cursor = System::Windows::Forms::Cursors::Hand;
             this->btnAddSL->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->btnAddSL->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
@@ -589,6 +596,7 @@ namespace PointofSaleSystem {
             // 
             // pbSoloLeveling
             // 
+            this->pbSoloLeveling->Cursor = System::Windows::Forms::Cursors::Hand;
             this->pbSoloLeveling->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pbSoloLeveling.Image")));
             this->pbSoloLeveling->Location = System::Drawing::Point(2, 14);
             this->pbSoloLeveling->Name = L"pbSoloLeveling";
@@ -616,6 +624,7 @@ namespace PointofSaleSystem {
             // 
             this->btnAddSB->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
                 static_cast<System::Int32>(static_cast<System::Byte>(197)));
+            this->btnAddSB->Cursor = System::Windows::Forms::Cursors::Hand;
             this->btnAddSB->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->btnAddSB->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
@@ -662,6 +671,7 @@ namespace PointofSaleSystem {
             // 
             // pbSecondBrain
             // 
+            this->pbSecondBrain->Cursor = System::Windows::Forms::Cursors::Hand;
             this->pbSecondBrain->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pbSecondBrain.Image")));
             this->pbSecondBrain->Location = System::Drawing::Point(12, 18);
             this->pbSecondBrain->Name = L"pbSecondBrain";
@@ -689,6 +699,7 @@ namespace PointofSaleSystem {
             // 
             this->btnAddMIS->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
                 static_cast<System::Int32>(static_cast<System::Byte>(197)));
+            this->btnAddMIS->Cursor = System::Windows::Forms::Cursors::Hand;
             this->btnAddMIS->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->btnAddMIS->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
@@ -736,6 +747,7 @@ namespace PointofSaleSystem {
             // 
             // pbMakeStick
             // 
+            this->pbMakeStick->Cursor = System::Windows::Forms::Cursors::Hand;
             this->pbMakeStick->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pbMakeStick.Image")));
             this->pbMakeStick->Location = System::Drawing::Point(7, 17);
             this->pbMakeStick->Name = L"pbMakeStick";
@@ -763,6 +775,7 @@ namespace PointofSaleSystem {
             // 
             this->btnAddMH->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
                 static_cast<System::Int32>(static_cast<System::Byte>(197)));
+            this->btnAddMH->Cursor = System::Windows::Forms::Cursors::Hand;
             this->btnAddMH->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->btnAddMH->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
@@ -810,6 +823,7 @@ namespace PointofSaleSystem {
             // 
             // pbMiniHabits
             // 
+            this->pbMiniHabits->Cursor = System::Windows::Forms::Cursors::Hand;
             this->pbMiniHabits->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pbMiniHabits.Image")));
             this->pbMiniHabits->Location = System::Drawing::Point(11, 17);
             this->pbMiniHabits->Name = L"pbMiniHabits";
@@ -837,6 +851,7 @@ namespace PointofSaleSystem {
             // 
             this->btnAddHN->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
                 static_cast<System::Int32>(static_cast<System::Byte>(197)));
+            this->btnAddHN->Cursor = System::Windows::Forms::Cursors::Hand;
             this->btnAddHN->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->btnAddHN->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
@@ -883,6 +898,7 @@ namespace PointofSaleSystem {
             // 
             // pbHumanNature
             // 
+            this->pbHumanNature->Cursor = System::Windows::Forms::Cursors::Hand;
             this->pbHumanNature->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pbHumanNature.Image")));
             this->pbHumanNature->Location = System::Drawing::Point(10, 18);
             this->pbHumanNature->Name = L"pbHumanNature";
@@ -910,6 +926,7 @@ namespace PointofSaleSystem {
             // 
             this->btnAddPM->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
                 static_cast<System::Int32>(static_cast<System::Byte>(197)));
+            this->btnAddPM->Cursor = System::Windows::Forms::Cursors::Hand;
             this->btnAddPM->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->btnAddPM->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
@@ -956,6 +973,7 @@ namespace PointofSaleSystem {
             // 
             // pbMoney
             // 
+            this->pbMoney->Cursor = System::Windows::Forms::Cursors::Hand;
             this->pbMoney->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pbMoney.Image")));
             this->pbMoney->Location = System::Drawing::Point(12, 14);
             this->pbMoney->Name = L"pbMoney";
@@ -995,6 +1013,7 @@ namespace PointofSaleSystem {
             // 
             this->btnAddAH->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
                 static_cast<System::Int32>(static_cast<System::Byte>(197)));
+            this->btnAddAH->Cursor = System::Windows::Forms::Cursors::Hand;
             this->btnAddAH->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->btnAddAH->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
@@ -1034,6 +1053,7 @@ namespace PointofSaleSystem {
             this->pbAtomicHabits->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(231)), static_cast<System::Int32>(static_cast<System::Byte>(237)),
                 static_cast<System::Int32>(static_cast<System::Byte>(248)));
             this->pbAtomicHabits->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+            this->pbAtomicHabits->Cursor = System::Windows::Forms::Cursors::Hand;
             this->pbAtomicHabits->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pbAtomicHabits.Image")));
             this->pbAtomicHabits->Location = System::Drawing::Point(9, 14);
             this->pbAtomicHabits->Name = L"pbAtomicHabits";
@@ -1046,6 +1066,7 @@ namespace PointofSaleSystem {
             // 
             this->btnAllGenre->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
                 static_cast<System::Int32>(static_cast<System::Byte>(197)));
+            this->btnAllGenre->Cursor = System::Windows::Forms::Cursors::Hand;
             this->btnAllGenre->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->btnAllGenre->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
@@ -1062,6 +1083,7 @@ namespace PointofSaleSystem {
             // 
             this->btnNonFiction->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
                 static_cast<System::Int32>(static_cast<System::Byte>(242)));
+            this->btnNonFiction->Cursor = System::Windows::Forms::Cursors::Hand;
             this->btnNonFiction->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->btnNonFiction->ForeColor = System::Drawing::Color::Black;
@@ -1077,6 +1099,7 @@ namespace PointofSaleSystem {
             // 
             this->btnFiction->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
                 static_cast<System::Int32>(static_cast<System::Byte>(242)));
+            this->btnFiction->Cursor = System::Windows::Forms::Cursors::Hand;
             this->btnFiction->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->btnFiction->ForeColor = System::Drawing::Color::Black;
@@ -1092,6 +1115,7 @@ namespace PointofSaleSystem {
             // 
             this->btnNovel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
                 static_cast<System::Int32>(static_cast<System::Byte>(242)));
+            this->btnNovel->Cursor = System::Windows::Forms::Cursors::Hand;
             this->btnNovel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->btnNovel->ForeColor = System::Drawing::Color::Black;
@@ -1107,6 +1131,7 @@ namespace PointofSaleSystem {
             // 
             this->btnFantasy->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(217)),
                 static_cast<System::Int32>(static_cast<System::Byte>(242)));
+            this->btnFantasy->Cursor = System::Windows::Forms::Cursors::Hand;
             this->btnFantasy->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->btnFantasy->ForeColor = System::Drawing::Color::Black;
@@ -1140,6 +1165,7 @@ namespace PointofSaleSystem {
             // 
             // pbCart
             // 
+            this->pbCart->Cursor = System::Windows::Forms::Cursors::Hand;
             this->pbCart->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pbCart.Image")));
             this->pbCart->Location = System::Drawing::Point(1207, 48);
             this->pbCart->Name = L"pbCart";
@@ -1227,6 +1253,7 @@ namespace PointofSaleSystem {
             this->Controls->Add(this->pictureBox4);
             this->Controls->Add(this->pictureBox3);
             this->Controls->Add(this->pAllBooks);
+            this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
             this->Name = L"Home";
             this->Text = L"HomeForm";
             this->pAllBooks->ResumeLayout(false);
@@ -2239,6 +2266,8 @@ namespace PointofSaleSystem {
 
     private: System::Void pbCart_Click(System::Object^ sender, System::EventArgs^ e) 
     {
+        this->Hide();
+
         //
         // Add the GroupBox (newGbAtomicHabits) to the flpOrderDetail flow layout panel
         // 
@@ -2247,7 +2276,6 @@ namespace PointofSaleSystem {
 
         // Show the CheckoutForm
         checkoutForm->Show();
-
     }
 };
 }

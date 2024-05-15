@@ -87,6 +87,7 @@ namespace PointofSaleSystem {
 			// 
 			this->btnViewOrder->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
 				static_cast<System::Int32>(static_cast<System::Byte>(197)));
+			this->btnViewOrder->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->btnViewOrder->Font = (gcnew System::Drawing::Font(L"Arial Black", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnViewOrder->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
@@ -113,6 +114,7 @@ namespace PointofSaleSystem {
 			// 
 			// pbBackHomeSuccess
 			// 
+			this->pbBackHomeSuccess->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->pbBackHomeSuccess->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pbBackHomeSuccess.Image")));
 			this->pbBackHomeSuccess->Location = System::Drawing::Point(60, 35);
 			this->pbBackHomeSuccess->Name = L"pbBackHomeSuccess";
@@ -133,6 +135,7 @@ namespace PointofSaleSystem {
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->btnViewOrder);
 			this->Controls->Add(this->pictureBox2);
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->Name = L"PaymentSuccessForm";
 			this->Text = L"PaymentSuccessForm";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
