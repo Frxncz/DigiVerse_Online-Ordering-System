@@ -1,23 +1,26 @@
 ﻿  CheckoutForm.cpp
+  GcashForm.cpp
   Home.cpp
-C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(1934,84): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(1935,84): warning C4305: 'argument': truncation from 'double' to 'float'
   (compiling source file 'Home.cpp')
   
-C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(1953,90): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(1954,90): warning C4305: 'argument': truncation from 'double' to 'float'
   (compiling source file 'Home.cpp')
   
   LoginForm.cpp
-C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(1934,84): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(1935,84): warning C4305: 'argument': truncation from 'double' to 'float'
   (compiling source file 'LoginForm.cpp')
   
-C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(1953,90): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(1954,90): warning C4305: 'argument': truncation from 'double' to 'float'
   (compiling source file 'LoginForm.cpp')
   
+  PaymentForm.cpp
+  PaymentSuccessForm.cpp
   Shipping.cpp
-C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(1934,84): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(1935,84): warning C4305: 'argument': truncation from 'double' to 'float'
   (compiling source file 'Shipping.cpp')
   
-C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(1953,90): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(1954,90): warning C4305: 'argument': truncation from 'double' to 'float'
   (compiling source file 'Shipping.cpp')
   
   Generating Code...

@@ -20,12 +20,16 @@ namespace PointofSaleSystem {
 	{
 	public:
 
-		PaymentForm(Form^ ShippingForm, String^ totalPayment)
+		PaymentForm(Form^ ShippingForm, Form^ Home,  String^ totalPayment)
 		{
 			InitializeComponent();
 			//
 			//TODO: Add the constructor code here
 			//
+
+
+			// Store the reference to the Home form
+			newhomeUI = Home;
 
 
 			// Store the reference to the Shipping form
@@ -40,6 +44,10 @@ namespace PointofSaleSystem {
 			//
 			CenterToScreen();
 		}
+
+
+	// Declare a private member variable to hold the reference to the Home form
+	private: Form^ newhomeUI;
 
 
 	// Declare a private member variable to hold the reference to the Shipping form
@@ -207,7 +215,7 @@ namespace PointofSaleSystem {
 		this->Hide();
 
 		// Create a new instance of the GcashForm, passing the total payment amount
-		GcashForm^ gcashUI = gcnew GcashForm(this, totalPayment);
+		GcashForm^ gcashUI = gcnew GcashForm(this, newhomeUI, totalPayment);
 
 		gcashUI->Show();
 	}

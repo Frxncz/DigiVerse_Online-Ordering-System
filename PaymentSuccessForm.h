@@ -1,6 +1,9 @@
 #pragma once
 
-namespace PointofSaleSystem {
+//#include "Home.h"
+
+namespace PointofSaleSystem 
+{
 
 	using namespace System;
 	using namespace System::ComponentModel;
@@ -15,7 +18,7 @@ namespace PointofSaleSystem {
 	public ref class PaymentSuccessForm : public System::Windows::Forms::Form
 	{
 	public:
-		PaymentSuccessForm(void)
+		PaymentSuccessForm(Form^ Home)
 		{
 			InitializeComponent();
 			//
@@ -23,11 +26,20 @@ namespace PointofSaleSystem {
 			//
 
 
+			// Store the reference to the Home form
+			newhomeUI = Home;
+
+
 			//
 			// This will center the Form in the screen when it pop up
 			//
 			CenterToScreen();
 		}
+
+
+	// Declare a private member variable to hold the reference to the Home form
+	private: Form^ newhomeUI;
+
 
 	protected:
 		/// <summary>
@@ -149,6 +161,9 @@ namespace PointofSaleSystem {
 	private: System::Void pbBackHomeSuccess_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
 		this->Hide();
+
+		newhomeUI->Show();
+
 	}
 };
 }

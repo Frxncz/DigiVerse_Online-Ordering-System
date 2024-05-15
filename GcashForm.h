@@ -22,12 +22,16 @@ namespace PointofSaleSystem
 	public:
 
 
-		GcashForm(Form^ GcashForm, String^ totalPayment)
+		GcashForm(Form^ GcashForm, Form^ Home, String^ totalPayment)
 		{
 			InitializeComponent();
 			//
 			//TODO: Add the constructor code here
 			//
+
+
+		    // Store the reference to the Home form
+			newhomeUI = Home;
 
 
 			// Store the reference to the Shipping form
@@ -46,6 +50,11 @@ namespace PointofSaleSystem
 		}
 
 
+	// Declare a private member variable to hold the reference to the Home form
+	private: Form^ newhomeUI;
+
+
+	// Declare a private member variable to hold the reference to the Gcash form
 	private: Form^ newGcashForm;
 
 
@@ -253,7 +262,7 @@ namespace PointofSaleSystem
 	private: System::Void btnPay_Click(System::Object^ sender, System::EventArgs^ e)
 	{
 		this->Hide();
-		PaymentSuccessForm^ paymentSuccessUI = gcnew PaymentSuccessForm();
+		PaymentSuccessForm^ paymentSuccessUI = gcnew PaymentSuccessForm(newhomeUI);
 		paymentSuccessUI->Show();
 	}
 

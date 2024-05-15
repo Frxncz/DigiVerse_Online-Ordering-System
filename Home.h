@@ -1207,6 +1207,7 @@ namespace PointofSaleSystem {
             // 
             // pictureBox7
             // 
+            this->pictureBox7->Cursor = System::Windows::Forms::Cursors::Hand;
             this->pictureBox7->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox7.Image")));
             this->pictureBox7->Location = System::Drawing::Point(144, 63);
             this->pictureBox7->Name = L"pictureBox7";

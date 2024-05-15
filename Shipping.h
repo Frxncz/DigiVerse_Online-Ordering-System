@@ -22,12 +22,14 @@ namespace PointofSaleSystem
 	public:
 
 
-		Shipping(Form^ CheckoutForm, String^ totalPayment)
+		Shipping(Form^ CheckoutForm, Form^ Home, String^ totalPayment)
 		{
 			InitializeComponent();
 			//
 			//TODO: Add the constructor code here
 			//
+
+			newhomeUI = Home;
 
 			// Store the reference to the checkout form
 			newCheckout = CheckoutForm;
@@ -43,6 +45,10 @@ namespace PointofSaleSystem
 			//
 			CenterToScreen();
 		}
+
+
+	// Declare a private member variable to hold the reference to the Home form
+	private:Form^ newhomeUI;
 
 
 	// Declare a private member variable to hold the reference to the checkout form
@@ -301,7 +307,7 @@ namespace PointofSaleSystem
 		this->Hide();
 
 		// Create a new instance of the PaymentForm, passing the total payment amount
-		PaymentForm^ paymentForm = gcnew PaymentForm(this, totalPayment);
+		PaymentForm^ paymentForm = gcnew PaymentForm(this, newhomeUI, totalPayment);
 		paymentForm->Show();
 
 	}

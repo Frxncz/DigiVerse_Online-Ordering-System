@@ -28,7 +28,7 @@ namespace PointofSaleSystem {
 			//
 
 			// Store the reference to the Home form
-			newHome = Home;
+			homeUI = Home;
 
 			//
 			// This will center the Form in the screen when it pop up
@@ -38,7 +38,7 @@ namespace PointofSaleSystem {
 
 
 	// Declare a private member variable to hold the reference to the Home form
-	private: Form^ newHome;
+	private: Form^ homeUI;
 
 
 
@@ -649,7 +649,7 @@ namespace PointofSaleSystem {
 		String^ totalPayment = lblTotalPayment->Text;
 
 		// Create a new instance of the Shipping form, passing the total payment amount
-		Shipping^ shippingForm = gcnew Shipping(this, totalPayment);
+		Shipping^ shippingForm = gcnew Shipping(this, homeUI, totalPayment);
 
 		shippingForm->Show();
 
@@ -670,7 +670,7 @@ namespace PointofSaleSystem {
 
 		this->Hide();
 
-		newHome->Show();
+		homeUI->Show();
 	}
 };
 }
