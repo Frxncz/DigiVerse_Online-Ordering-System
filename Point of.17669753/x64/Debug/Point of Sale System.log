@@ -1,28 +1,25 @@
-﻿  CheckoutForm.cpp
-  GcashForm.cpp
+﻿  BookDetailForm.cpp
   Home.cpp
-C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(1935,84): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(1938,84): warning C4305: 'argument': truncation from 'double' to 'float'
   (compiling source file 'Home.cpp')
   
-C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(1954,90): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(1957,90): warning C4305: 'argument': truncation from 'double' to 'float'
   (compiling source file 'Home.cpp')
   
   LoginForm.cpp
-C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(1935,84): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(1938,84): warning C4305: 'argument': truncation from 'double' to 'float'
   (compiling source file 'LoginForm.cpp')
   
-C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(1954,90): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(1957,90): warning C4305: 'argument': truncation from 'double' to 'float'
   (compiling source file 'LoginForm.cpp')
   
-  PaymentForm.cpp
-  PaymentSuccessForm.cpp
   Shipping.cpp
-C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(1935,84): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(1938,84): warning C4305: 'argument': truncation from 'double' to 'float'
   (compiling source file 'Shipping.cpp')
   
-C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(1954,90): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(1957,90): warning C4305: 'argument': truncation from 'double' to 'float'
   (compiling source file 'Shipping.cpp')
   
   Generating Code...
-  CheckoutForm.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  BookDetailForm.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   Point of Sale System.vcxproj -> C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\x64\Debug\Point of Sale System.exe

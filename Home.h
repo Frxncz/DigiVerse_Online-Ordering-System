@@ -2,6 +2,8 @@
 
 #include "CheckoutForm.h"
 
+#include "BookDetailForm.h"
+
 namespace PointofSaleSystem {
 
 	using namespace System;
@@ -1061,6 +1063,7 @@ namespace PointofSaleSystem {
             this->pbAtomicHabits->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
             this->pbAtomicHabits->TabIndex = 19;
             this->pbAtomicHabits->TabStop = false;
+            this->pbAtomicHabits->Click += gcnew System::EventHandler(this, &Home::pbAtomicHabits_Click);
             // 
             // btnAllGenre
             // 
@@ -2277,6 +2280,23 @@ namespace PointofSaleSystem {
 
         // Show the CheckoutForm
         checkoutForm->Show();
+    }
+
+
+
+    //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+
+
+    //
+    //----- When the atomic habit image was clicked it will go to the book detail ----//
+    //
+
+    private: System::Void pbAtomicHabits_Click(System::Object^ sender, System::EventArgs^ e) 
+    {
+        BookDetailForm^ bookDeatilUI = gcnew BookDetailForm();
+
+        bookDeatilUI->Show();
     }
 };
 }

@@ -109,6 +109,7 @@ namespace PointofSaleSystem {
 			// label7
 			// 
 			this->label7->AutoSize = true;
+			this->label7->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label7->Location = System::Drawing::Point(408, 548);

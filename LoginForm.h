@@ -128,6 +128,7 @@ namespace PointofSaleSystem {
 			// btnSignUp
 			// 
 			this->btnSignUp->AutoSize = true;
+			this->btnSignUp->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->btnSignUp->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnSignUp->Location = System::Drawing::Point(416, 554);
