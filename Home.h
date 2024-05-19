@@ -74,11 +74,19 @@ namespace PointofSaleSystem {
 
 
 
-    ////--- Atomic habits plus and minus buttons and also the quantity
+    ////--- ATOMIC HABITS plus and minus buttons and also the quantity
 
     private: System::Windows::Forms::Label^ lblQuantity;
     private: System::Windows::Forms::Button^ btnIncreaseQty;
     private: System::Windows::Forms::Button^ btnDecreaseQty;
+
+
+    ////--- DUNE plus and minus buttons and also the quantity
+
+    private: System::Windows::Forms::Label^ lblQuantityDUNE;
+    private: System::Windows::Forms::Button^ btnIncreaseQtyDUNE;
+    private: System::Windows::Forms::Button^ btnDecreaseQtyDUNE;
+
 
 
 
@@ -219,8 +227,9 @@ namespace PointofSaleSystem {
     private: System::Windows::Forms::PictureBox^ pictureBox7;
 
     private: System::Windows::Forms::GroupBox^ gbDune;
+private: System::Windows::Forms::Button^ btnDune;
 
-    private: System::Windows::Forms::Button^ button1;
+
 
     private: System::Windows::Forms::Label^ label1;
 
@@ -262,7 +271,7 @@ private: System::Windows::Forms::PictureBox^ pbDune;
             System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Home::typeid));
             this->pAllBooks = (gcnew System::Windows::Forms::Panel());
             this->gbDune = (gcnew System::Windows::Forms::GroupBox());
-            this->button1 = (gcnew System::Windows::Forms::Button());
+            this->btnDune = (gcnew System::Windows::Forms::Button());
             this->label1 = (gcnew System::Windows::Forms::Label());
             this->label2 = (gcnew System::Windows::Forms::Label());
             this->lblDuneTitle = (gcnew System::Windows::Forms::Label());
@@ -380,7 +389,7 @@ private: System::Windows::Forms::PictureBox^ pbDune;
             // 
             this->gbDune->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(231)), static_cast<System::Int32>(static_cast<System::Byte>(237)),
                 static_cast<System::Int32>(static_cast<System::Byte>(248)));
-            this->gbDune->Controls->Add(this->button1);
+            this->gbDune->Controls->Add(this->btnDune);
             this->gbDune->Controls->Add(this->label1);
             this->gbDune->Controls->Add(this->label2);
             this->gbDune->Controls->Add(this->lblDuneTitle);
@@ -391,21 +400,22 @@ private: System::Windows::Forms::PictureBox^ pbDune;
             this->gbDune->TabIndex = 27;
             this->gbDune->TabStop = false;
             // 
-            // button1
+            // btnDune
             // 
-            this->button1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
+            this->btnDune->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
                 static_cast<System::Int32>(static_cast<System::Byte>(197)));
-            this->button1->Cursor = System::Windows::Forms::Cursors::Hand;
-            this->button1->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+            this->btnDune->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->btnDune->Font = (gcnew System::Drawing::Font(L"Arial", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->button1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
+            this->btnDune->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
                 static_cast<System::Int32>(static_cast<System::Byte>(253)));
-            this->button1->Location = System::Drawing::Point(286, 115);
-            this->button1->Name = L"button1";
-            this->button1->Size = System::Drawing::Size(68, 35);
-            this->button1->TabIndex = 27;
-            this->button1->Text = L"+ Add";
-            this->button1->UseVisualStyleBackColor = false;
+            this->btnDune->Location = System::Drawing::Point(286, 115);
+            this->btnDune->Name = L"btnDune";
+            this->btnDune->Size = System::Drawing::Size(68, 35);
+            this->btnDune->TabIndex = 27;
+            this->btnDune->Text = L"+ Add";
+            this->btnDune->UseVisualStyleBackColor = false;
+            this->btnDune->Click += gcnew System::EventHandler(this, &Home::btnDune_Click);
             // 
             // label1
             // 
@@ -1310,7 +1320,7 @@ private: System::Windows::Forms::PictureBox^ pbDune;
 
 
 
-        //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+    //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 
 
 
@@ -1864,16 +1874,16 @@ private: System::Windows::Forms::PictureBox^ pbDune;
 
 
 
-        //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+    //--------------------------------------------------------------------------------------------------------------------------------------------------------------------//
     
 
 
-    //
-    //----- When the add button clicked the atomic habit will go to cart -----//
-    //
+            //
+            //----- When the add button clicked the  [ ATOMIC HABIT ]  will go to cart -----//
+            //
 
 
-    // Atomic Habits is now added
+    // ATOMIC HABITS is now added
     bool isAtomicHabitsAdded = false;
 
     private: System::Void btnAddAH_Click(System::Object^ sender, System::EventArgs^ e) 
@@ -2098,7 +2108,7 @@ private: System::Windows::Forms::PictureBox^ pbDune;
             // Increase the quantity by one if it's less than 100
             // 
             //
-            if (cartQuantityAtomic < 1)
+            if (cartQuantityAtomic < 99)
             {
                 cartQuantityAtomic++;
                 lblCartQty->Text = cartQuantityAtomic.ToString();
@@ -2140,13 +2150,13 @@ private: System::Windows::Forms::PictureBox^ pbDune;
 
 
 
-    //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+            //----------------------------------------------------------------------------------------------------------------//
 
 
 
-    //  
-    //----- When Clicked the plus button in order detail the quantity, subtotal, and payment total increase -----//
-    //
+            //  
+            //----- When Clicked the plus button in order detail the quantity, subtotal, and payment total  [ INCREASE ] -----//
+            //
 
     private: System::Void btnIncreaseQty_Click(System::Object^ sender, System::EventArgs^ e)
     {
@@ -2174,13 +2184,13 @@ private: System::Windows::Forms::PictureBox^ pbDune;
 
 
 
-     //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+             //----------------------------------------------------------------------------------------------------------------//
 
 
 
-     //
-     //----- When Clicked the plus button in order detail the quantity, subtotal, and payment total decrease -----//
-     //
+             //
+             //----- When Clicked the plus button in order detail the quantity, subtotal, and payment total  [ DECREASE ] -----//
+             //
 
     private: System::Void btnDecreaseQty_Click(System::Object^ sender, System::EventArgs^ e)
     {
@@ -2208,13 +2218,13 @@ private: System::Windows::Forms::PictureBox^ pbDune;
 
 
 
-    //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+             //-----------------------------------------------------------------------------------------------------------------//
 
 
 
-     //                                                                                                            //
-     //----- When Clicked the Delete text the whole book that has been added to order detail will get deleted -----//
-     //                                                                                                            //
+             //                                                                                                            
+             //----- When Clicked the Delete text the whole book that has been added to order detail will get  [ DELETED ] -----//
+             //                                                                                                            
 
     private: System::Void DeleteOrder_Click(System::Object^ sender, System::EventArgs^ e)
     {
@@ -2267,13 +2277,422 @@ private: System::Windows::Forms::PictureBox^ pbDune;
 
 
 
+            //-----------------------------------------------------------------------------------------------------------------//
+            //-----------------------------------------------------------------------------------------------------------------//
+           
+            //
+            //----- When the add button clicked the  [ DUNE ]  will go to cart -----//
+            //
+    
+    // DUNE is now added
+    bool isDuneAdded = false;
+
+    private: System::Void btnDune_Click(System::Object^ sender, System::EventArgs^ e) 
+    {
+        if (!isDuneAdded)
+        {
+
+            //
+            // Create a new GroupBox for Atomic Habits
+            // 
+            //
+            GroupBox^ newGBdune = gcnew GroupBox();
+            newGBdune->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(229)), static_cast<System::Int32>(static_cast<System::Byte>(235)),
+                static_cast<System::Int32>(static_cast<System::Byte>(246)));
+            newGBdune->Size = System::Drawing::Size(422, 155);
+
+            //
+            //Add the Book GroupBox to the checkout form inside the flpOrderDetail
+            // 
+            //
+            checkoutForm->AddGroupBoxToOrderDetail(newGBdune);
+
+
+
+            //
+            // Create a new PictureBox
+            // 
+            //
+            PictureBox^ newPBdune = gcnew PictureBox();
+            newPBdune->Image = pbDune->Image;
+            newPBdune->SizeMode = pbDune->SizeMode;
+            newPBdune->Location = pbDune->Location;
+            newPBdune->Size = System::Drawing::Size(95, 130);
+            newPBdune->Location = System::Drawing::Point(18, 18);
+
+            //
+            // Add the new Label to the GroupBox
+            // 
+            //
+            newGBdune->Controls->Add(newPBdune);
+
+
+
+            //
+            // Create a new label TITLE
+            // 
+            //
+            Label^ newTitleDune = gcnew Label();
+            newTitleDune->Font = (gcnew System::Drawing::Font(L"Arial", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            newTitleDune->Text = lblDuneTitle->Text;
+            newTitleDune->Size = System::Drawing::Size(198, 23);
+            newTitleDune->Location = System::Drawing::Point(130, 50);
+
+            //
+            // Add the new Label to the GroupBox
+            // 
+            //
+            newGBdune->Controls->Add(newTitleDune);
+
+
+
+            //
+            // Create a new label PRICE
+            // 
+            //
+            Label^ newPriceDune = gcnew Label();
+            newPriceDune->Font = (gcnew System::Drawing::Font(L"Arial Black", 10.2, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            newPriceDune->Text = L"500";
+            newPriceDune->Size = System::Drawing::Size(118, 19);
+            newPriceDune->Location = System::Drawing::Point(145, 80);
+
+            //
+            // Add the new Label to the GroupBox
+            // 
+            //
+            newGBdune->Controls->Add(newPriceDune);
+
+
+
+            //
+            // Create a new label for symbol P (PHP peso sysmbol)
+            // 
+            // 
+            Label^ newPriceDuneSymbol = gcnew Label();
+            newPriceDuneSymbol->Font = (gcnew System::Drawing::Font(L"Arial Black", 10.2, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            newPriceDuneSymbol->Text = L"P";
+            newPriceDuneSymbol->Size = System::Drawing::Size(118, 19);
+            newPriceDuneSymbol->Location = System::Drawing::Point(130, 80);
+
+            //
+            // Add the new Label to the GroupBox
+            // 
+            //
+            newGBdune->Controls->Add(newPriceDuneSymbol);
+
+
+
+            //
+            //  Atomic habits is added to order detail, so Update subtotal and total payment in checkout form
+            // 
+            //
+            checkoutForm->Subtotal += 500;
+            checkoutForm->TotalPayment += 500;
+
+
+
+            //
+            //----- Create a button to Increase Quantity -----//////
+            // 
+            //
+
+            Button^ btnIncreaseQtyDUNE = gcnew Button();
+
+            btnIncreaseQtyDUNE->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
+                static_cast<System::Int32>(static_cast<System::Byte>(197)));
+            btnIncreaseQtyDUNE->Font = (gcnew System::Drawing::Font(L"Arial", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            btnIncreaseQtyDUNE->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
+                static_cast<System::Int32>(static_cast<System::Byte>(253)));
+            btnIncreaseQtyDUNE->Location = System::Drawing::Point(367, 100);
+            btnIncreaseQtyDUNE->Name = L"btnAddQty";
+            btnIncreaseQtyDUNE->Size = System::Drawing::Size(27, 27);
+            btnIncreaseQtyDUNE->TabIndex = 28;
+            btnIncreaseQtyDUNE->Text = L"+";
+            btnIncreaseQtyDUNE->UseVisualStyleBackColor = false;
+
+            //
+            // Add the new addQty button to groupbox
+            // 
+            //
+            newGBdune->Controls->Add(btnIncreaseQtyDUNE);
+
+            // Handle Click event of Add Quantity button
+            btnIncreaseQtyDUNE->Click += gcnew System::EventHandler(this, &Home::btnIncreaseQtyDUNE_Click);
+
+
+
+            //
+            //----- Create a button to Decrease Quantity -----/////
+            // 
+            //
+            Button^ btnDecreaseQtyDUNE = gcnew Button();
+
+            btnDecreaseQtyDUNE->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
+                static_cast<System::Int32>(static_cast<System::Byte>(197)));
+            btnDecreaseQtyDUNE->Font = (gcnew System::Drawing::Font(L"Arial", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            btnDecreaseQtyDUNE->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
+                static_cast<System::Int32>(static_cast<System::Byte>(253)));
+            btnDecreaseQtyDUNE->Location = System::Drawing::Point(300, 100);
+            btnDecreaseQtyDUNE->Name = L"btnAddQty";
+            btnDecreaseQtyDUNE->Size = System::Drawing::Size(27, 27);
+            btnDecreaseQtyDUNE->TabIndex = 28;
+            btnDecreaseQtyDUNE->Text = L"-";
+            btnDecreaseQtyDUNE->UseVisualStyleBackColor = false;
+
+            //
+            // Add the new button to groupbox
+            // 
+            //
+            newGBdune->Controls->Add(btnDecreaseQtyDUNE);
+
+            // Handle Click event of Decrease Quantity button
+            btnDecreaseQtyDUNE->Click += gcnew System::EventHandler(this, &Home::btnDecreaseQtyDUNE_Click);
+
+
+
+            // 
+            //----- Quantity of the item -----//
+            // 
+            //
+            lblQuantityDUNE = gcnew Label();
+
+            lblQuantityDUNE->Font = (gcnew System::Drawing::Font(L"Arial", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            lblQuantityDUNE->Text = L"1";
+            lblQuantityDUNE->ForeColor = System::Drawing::Color::Black;
+            lblQuantityDUNE->Size = System::Drawing::Size(67, 21);
+            lblQuantityDUNE->Location = System::Drawing::Point(341, 105);
+
+            //
+            // Add the new label to groupbox
+            // 
+            //
+            newGBdune->Controls->Add(lblQuantityDUNE);
+
+
+
+            //
+            //----- Create a new label for DELETETING ORDER -----//
+            // 
+            //
+            Label^ lblDeleteOrderDUNE = gcnew Label();
+
+            lblDeleteOrderDUNE->Font = (gcnew System::Drawing::Font(L"Arial", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            lblDeleteOrderDUNE->Text = L"Delete";
+            lblDeleteOrderDUNE->ForeColor = System::Drawing::Color::Red;
+            lblDeleteOrderDUNE->Size = System::Drawing::Size(67, 21);
+            lblDeleteOrderDUNE->Location = System::Drawing::Point(350, 75);
+
+            //
+            // Add the new delete order label to the new GroupBox
+            //
+            newGBdune->Controls->Add(lblDeleteOrderDUNE);
+
+            // Handle Click event of deleteOrder label
+            lblDeleteOrderDUNE->Click += gcnew System::EventHandler(this, &Home::DeleteOrderDUNE_Click);
+
+
+
+
+
+            //
+            // Increase lblCartQuantity when adding book to cart
+            // 
+            //
+            int cartQuantityAtomic = System::Convert::ToInt32(lblCartQty->Text);
+
+            //
+            // Increase the quantity by one if it's less than 100
+            // 
+            //
+            if (cartQuantityAtomic < 99)
+            {
+                cartQuantityAtomic++;
+                lblCartQty->Text = cartQuantityAtomic.ToString();
+            }
+
+
+
+
+
+            //
+            // Atomic Habits is now added
+            // 
+            //
+            isDuneAdded = true;
+        }
+        else
+        {
+
+            //
+            // Increase lblQuantity
+            // 
+            //
+            int currentQuantity = System::Convert::ToInt32(lblQuantityDUNE->Text);
+
+            // Increase the quantity by one if it's less than 100
+            if (currentQuantity < 99)
+            {
+                currentQuantity++;
+                lblQuantityDUNE->Text = currentQuantity.ToString();
+            }
+
+
+            //
+            //  Increase the quantity of the bookn aatomic habits
+            // 
+            //
+            checkoutForm->Subtotal += 500;
+            checkoutForm->TotalPayment += 500;
+        }
+    }
+
+
+
+            //-----------------------------------------------------------------------------------------------------------------//
+
+
+
+            //  
+            //----- When Clicked the plus button in order detail the quantity, subtotal, and payment total  [ INCREASE ] -----//
+            //
+
+    private: System::Void btnIncreaseQtyDUNE_Click(System::Object^ sender, System::EventArgs^ e)
+    {
+        //
+        // Increase lblQuantity
+        // 
+        //
+        int currentQuantityDUNE = System::Convert::ToInt32(lblQuantityDUNE->Text);
+
+        // Increase the quantity by one if it's less than 100
+        if (currentQuantityDUNE < 99)
+        {
+            currentQuantityDUNE++;
+            lblQuantityDUNE->Text = currentQuantityDUNE.ToString();
+        }
+
+
+        //
+        //  Increase the quantity of the bookn aatomic habits
+        // 
+        //
+        checkoutForm->Subtotal += 500;
+        checkoutForm->TotalPayment += 500;
+    }
+
+
+
+            //-----------------------------------------------------------------------------------------------------------------//
+
+
+
+            //
+            //----- When Clicked the plus button in order detail the quantity, subtotal, and payment total  [ DECREASE ] -----//
+            //
+
+    private: System::Void btnDecreaseQtyDUNE_Click(System::Object^ sender, System::EventArgs^ e)
+    {
+
+        //
+        // Decrease lblQuantity
+        // 
+        //
+        int currentQuantityDUNE = System::Convert::ToInt32(lblQuantityDUNE->Text);
+
+        // Decrease the quantity by one if it's greater than 1
+        if (currentQuantityDUNE > 1)
+        {
+            currentQuantityDUNE--;
+            lblQuantityDUNE->Text = currentQuantityDUNE.ToString();
+
+            //
+            //  Decrease the quantity of the bookn aatomic habits
+            // 
+            //
+            checkoutForm->Subtotal -= 500;
+            checkoutForm->TotalPayment -= 500;
+        }
+    }
+
+
+
+            //------------------------------------------------------------------------------------------------------------------//
+
+
+
+            //                                                                                                            
+            //----- When Clicked the Delete text the whole book that has been added to order detail will get  [ DELETED ] -----//
+            //                                                                                                            
+
+    private: System::Void DeleteOrderDUNE_Click(System::Object^ sender, System::EventArgs^ e)
+    {
+
+        //
+        // Find the parent GroupBox of the clicked label
+        // 
+        //
+        Label^ deleteLabel = safe_cast<Label^>(sender);
+        GroupBox^ parentGroupBox = safe_cast<GroupBox^>(deleteLabel->Parent);
+
+        // Delete the groupBox inside the flpOrderDetail
+        checkoutForm->RemoveGroupBoxToOrderDetail(parentGroupBox);
+
+
+
+        //
+        // reset Subtotal Total payment when the delete has been cliked
+        // 
+        //
+
+        // Update subtotal and total payment
+        int quantityDUNE = System::Convert::ToInt32(lblQuantityDUNE->Text);
+        checkoutForm->Subtotal -= (quantityDUNE * 500);
+        checkoutForm->TotalPayment -= (quantityDUNE * 500);
+
+
+
+
+        //
+        // Decrease lblCartQuantity when then added book is deleted
+        // 
+        //
+        int cartQuantityDUNE = System::Convert::ToInt32(lblCartQty->Text);
+
+        if (cartQuantityDUNE > 0)
+        {
+            cartQuantityDUNE--;
+            lblCartQty->Text = cartQuantityDUNE.ToString();
+        }
+
+
+
+        //
+        // Atomic Habits is now deleted
+        // 
+        //
+        isDuneAdded = false;
+    }
+
+
+
+
+
+
+
     //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------//
            
 
 
-    //
-    //----- When the cart image was clicked the checout form or the cart will show ----//
-    //
+        //
+        //----- When the cart image was clicked the checout form or the cart will show ----//
+        //
 
     private: System::Void pbCart_Click(System::Object^ sender, System::EventArgs^ e) 
     {
@@ -2291,13 +2710,17 @@ private: System::Windows::Forms::PictureBox^ pbDune;
 
 
 
+
     //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 
 
 
-    //
-    //----- When the atomic habit image was clicked it will go to the book detail ----//
-    //
+        //
+        //----- When the atomic habit image was clicked it will go to the book detail ----//
+        //
+
+
+        /////----- ATOMIC HABIT BOOK -----/////
 
     private: System::Void pbAtomicHabits_Click(System::Object^ sender, System::EventArgs^ e) 
     {
@@ -2340,6 +2763,8 @@ private: System::Windows::Forms::PictureBox^ pbDune;
     }
 
     
+        /////----- DUNE BOOK -----/////
+
     private: System::Void pictureBox8_Click(System::Object^ sender, System::EventArgs^ e) 
     {
         //
@@ -2372,7 +2797,6 @@ private: System::Windows::Forms::PictureBox^ pbDune;
         // Add the new label to the book detail form
         //
         bookDetailForm->ChangeLabel(duneTitleText);
-
 
 
 
