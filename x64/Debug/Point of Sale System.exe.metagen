@@ -27,6 +27,10 @@ Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c5619
 Class PointofSaleSystem.BookDetailForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    AddPictureBox(PictureBox): PrivateScope, Public, HideBySig
+    RemovePictureBox(PictureBox): PrivateScope, Public, HideBySig
+    ChangeLabel(Label): PrivateScope, Public, HideBySig
 Class PointofSaleSystem.PaymentSuccessForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(System.Windows.Forms.Form): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

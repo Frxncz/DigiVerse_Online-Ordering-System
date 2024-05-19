@@ -44,8 +44,6 @@ namespace PointofSaleSystem {
 			}
 		}
 
-
-
 	protected:
 
     ///
@@ -54,6 +52,12 @@ namespace PointofSaleSystem {
     /// 
     /// 
     /// 
+
+
+
+
+    ////--- Access the checkoutForm instance
+    private:  BookDetailForm^ bookDetailForm = gcnew BookDetailForm();
 
 
 
@@ -221,10 +225,12 @@ namespace PointofSaleSystem {
     private: System::Windows::Forms::Label^ label1;
 
     private: System::Windows::Forms::Label^ label2;
+private: System::Windows::Forms::Label^ lblDuneTitle;
 
-    private: System::Windows::Forms::Label^ label3;
 
-    private: System::Windows::Forms::PictureBox^ pictureBox8;
+private: System::Windows::Forms::PictureBox^ pbDune;
+
+
 
     private: System::Windows::Forms::Label^ lblCartQty;
 
@@ -259,8 +265,8 @@ namespace PointofSaleSystem {
             this->button1 = (gcnew System::Windows::Forms::Button());
             this->label1 = (gcnew System::Windows::Forms::Label());
             this->label2 = (gcnew System::Windows::Forms::Label());
-            this->label3 = (gcnew System::Windows::Forms::Label());
-            this->pictureBox8 = (gcnew System::Windows::Forms::PictureBox());
+            this->lblDuneTitle = (gcnew System::Windows::Forms::Label());
+            this->pbDune = (gcnew System::Windows::Forms::PictureBox());
             this->gbWhiteEnd = (gcnew System::Windows::Forms::GroupBox());
             this->gbOmnicientReader = (gcnew System::Windows::Forms::GroupBox());
             this->btnAddOR = (gcnew System::Windows::Forms::Button());
@@ -325,7 +331,7 @@ namespace PointofSaleSystem {
             this->lblCartQty = (gcnew System::Windows::Forms::Label());
             this->pAllBooks->SuspendLayout();
             this->gbDune->SuspendLayout();
-            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox8))->BeginInit();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pbDune))->BeginInit();
             this->gbOmnicientReader->SuspendLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pbReader))->BeginInit();
             this->gbSoloLeveling->SuspendLayout();
@@ -377,8 +383,8 @@ namespace PointofSaleSystem {
             this->gbDune->Controls->Add(this->button1);
             this->gbDune->Controls->Add(this->label1);
             this->gbDune->Controls->Add(this->label2);
-            this->gbDune->Controls->Add(this->label3);
-            this->gbDune->Controls->Add(this->pictureBox8);
+            this->gbDune->Controls->Add(this->lblDuneTitle);
+            this->gbDune->Controls->Add(this->pbDune);
             this->gbDune->Location = System::Drawing::Point(448, 211);
             this->gbDune->Name = L"gbDune";
             this->gbDune->Size = System::Drawing::Size(381, 169);
@@ -424,27 +430,28 @@ namespace PointofSaleSystem {
             this->label2->TabIndex = 25;
             this->label2->Text = L"P 999";
             // 
-            // label3
+            // lblDuneTitle
             // 
-            this->label3->AutoSize = true;
-            this->label3->Font = (gcnew System::Drawing::Font(L"Arial", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+            this->lblDuneTitle->AutoSize = true;
+            this->lblDuneTitle->Font = (gcnew System::Drawing::Font(L"Arial", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->label3->Location = System::Drawing::Point(106, 21);
-            this->label3->Name = L"label3";
-            this->label3->Size = System::Drawing::Size(50, 19);
-            this->label3->TabIndex = 23;
-            this->label3->Text = L"Dune";
+            this->lblDuneTitle->Location = System::Drawing::Point(106, 21);
+            this->lblDuneTitle->Name = L"lblDuneTitle";
+            this->lblDuneTitle->Size = System::Drawing::Size(50, 19);
+            this->lblDuneTitle->TabIndex = 23;
+            this->lblDuneTitle->Text = L"Dune";
             // 
-            // pictureBox8
+            // pbDune
             // 
-            this->pictureBox8->Cursor = System::Windows::Forms::Cursors::Hand;
-            this->pictureBox8->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox8.Image")));
-            this->pictureBox8->Location = System::Drawing::Point(6, 10);
-            this->pictureBox8->Name = L"pictureBox8";
-            this->pictureBox8->Size = System::Drawing::Size(88, 118);
-            this->pictureBox8->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-            this->pictureBox8->TabIndex = 22;
-            this->pictureBox8->TabStop = false;
+            this->pbDune->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->pbDune->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pbDune.Image")));
+            this->pbDune->Location = System::Drawing::Point(6, 10);
+            this->pbDune->Name = L"pbDune";
+            this->pbDune->Size = System::Drawing::Size(88, 118);
+            this->pbDune->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+            this->pbDune->TabIndex = 22;
+            this->pbDune->TabStop = false;
+            this->pbDune->Click += gcnew System::EventHandler(this, &Home::pictureBox8_Click);
             // 
             // gbWhiteEnd
             // 
@@ -1263,7 +1270,7 @@ namespace PointofSaleSystem {
             this->pAllBooks->ResumeLayout(false);
             this->gbDune->ResumeLayout(false);
             this->gbDune->PerformLayout();
-            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox8))->EndInit();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pbDune))->EndInit();
             this->gbOmnicientReader->ResumeLayout(false);
             this->gbOmnicientReader->PerformLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pbReader))->EndInit();
@@ -2294,9 +2301,83 @@ namespace PointofSaleSystem {
 
     private: System::Void pbAtomicHabits_Click(System::Object^ sender, System::EventArgs^ e) 
     {
-        BookDetailForm^ bookDeatilUI = gcnew BookDetailForm();
+        //
+        // Create a new PictureBox
+        // 
+        //
+        PictureBox^ newPBatomic = gcnew PictureBox();
 
-        bookDeatilUI->Show();
+        newPBatomic->Image = pbAtomicHabits->Image;
+        newPBatomic->SizeMode = pbAtomicHabits->SizeMode;
+        newPBatomic->Location = pbAtomicHabits->Location;
+        newPBatomic->Size = System::Drawing::Size(305, 365);
+        newPBatomic->Location = System::Drawing::Point(150, 24);
+        //
+        // Add the new Label to the GroupBox
+        // 
+        bookDetailForm->AddPictureBox(newPBatomic);
+
+
+
+
+        //
+        // Create a new Label for atomic title
+        // 
+        //
+        Label^ atomicTitleText = gcnew Label();
+
+        atomicTitleText->Text = this->lblAtomic->Text;
+        //
+        // Add the new label to the book detail form
+        // 
+        bookDetailForm->ChangeLabel(atomicTitleText);
+
+
+
+
+        // Show the book detail form
+        bookDetailForm->Show();
+    }
+
+    
+    private: System::Void pictureBox8_Click(System::Object^ sender, System::EventArgs^ e) 
+    {
+        //
+        // Create a new PictureBox for dune cover
+        // 
+        //
+        PictureBox^ newPBdune = gcnew PictureBox();
+
+        newPBdune->Image = pbDune->Image;
+        newPBdune->SizeMode = pbDune->SizeMode;
+        newPBdune->Location = pbDune->Location;
+        newPBdune->Size = System::Drawing::Size(305, 415);
+        newPBdune->Location = System::Drawing::Point(150, 2);
+        //
+        // Add the new PictureBox to the book detail form
+        // 
+        bookDetailForm->AddPictureBox(newPBdune);
+
+
+
+
+        //
+        // Create a new Label for dune title
+        // 
+        //
+        Label^ duneTitleText = gcnew Label();
+
+        duneTitleText->Text = this->lblDuneTitle->Text;
+        //
+        // Add the new label to the book detail form
+        //
+        bookDetailForm->ChangeLabel(duneTitleText);
+
+
+
+
+        // Show the book detail form
+        bookDetailForm->Show();
     }
 };
 }

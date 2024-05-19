@@ -1,23 +1,23 @@
 ﻿  BookDetailForm.cpp
   Home.cpp
-C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(1938,84): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(1945,84): warning C4305: 'argument': truncation from 'double' to 'float'
   (compiling source file 'Home.cpp')
   
-C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(1957,90): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(1964,90): warning C4305: 'argument': truncation from 'double' to 'float'
   (compiling source file 'Home.cpp')
   
   LoginForm.cpp
-C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(1938,84): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(1945,84): warning C4305: 'argument': truncation from 'double' to 'float'
   (compiling source file 'LoginForm.cpp')
   
-C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(1957,90): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(1964,90): warning C4305: 'argument': truncation from 'double' to 'float'
   (compiling source file 'LoginForm.cpp')
   
   Shipping.cpp
-C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(1938,84): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(1945,84): warning C4305: 'argument': truncation from 'double' to 'float'
   (compiling source file 'Shipping.cpp')
   
-C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(1957,90): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\John carlo francis\Documents\Source Code\Point of Sale System\Home.h(1964,90): warning C4305: 'argument': truncation from 'double' to 'float'
   (compiling source file 'Shipping.cpp')
   
   Generating Code...
