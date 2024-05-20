@@ -134,6 +134,7 @@
     <ClCompile Include="PaymentSuccessForm.cpp" />
     <ClCompile Include="Shipping.cpp" />
     <ClCompile Include="SignupForm.cpp" />
+    <ClCompile Include="TrackOrderForm.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BookDetailForm.h">
@@ -161,6 +162,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="SignupForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="TrackOrderForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>
@@ -191,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SignupForm.resx">
       <DependentUpon>SignupForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrackOrderForm.resx">
+      <DependentUpon>TrackOrderForm.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

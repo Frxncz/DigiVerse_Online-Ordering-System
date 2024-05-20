@@ -1,6 +1,6 @@
 #pragma once
 
-//#include "Home.h"
+#include "TrackOrderForm.h"
 
 namespace PointofSaleSystem 
 {
@@ -110,6 +110,7 @@ namespace PointofSaleSystem
 			this->btnViewOrder->TabIndex = 13;
 			this->btnViewOrder->Text = L"View Order";
 			this->btnViewOrder->UseVisualStyleBackColor = false;
+			this->btnViewOrder->Click += gcnew System::EventHandler(this, &PaymentSuccessForm::btnViewOrder_Click);
 			// 
 			// label1
 			// 
@@ -164,6 +165,16 @@ namespace PointofSaleSystem
 
 		newhomeUI->Show();
 
+	}
+
+	private: System::Void btnViewOrder_Click(System::Object^ sender, System::EventArgs^ e) 
+	{
+
+		TrackOrderForm^ trackOrder = gcnew TrackOrderForm(newhomeUI);
+
+		trackOrder->Show();
+
+		this->Hide();
 	}
 };
 }

@@ -438,7 +438,7 @@ private: System::Windows::Forms::PictureBox^ pbDune;
             this->label2->Name = L"label2";
             this->label2->Size = System::Drawing::Size(45, 16);
             this->label2->TabIndex = 25;
-            this->label2->Text = L"P 999";
+            this->label2->Text = L"P 500";
             // 
             // lblDuneTitle
             // 
@@ -2763,7 +2763,7 @@ private: System::Windows::Forms::PictureBox^ pbDune;
     }
 
     
-        /////----- DUNE BOOK -----/////
+        /////--------- DUNE BOOK ---------/////
 
     private: System::Void pictureBox8_Click(System::Object^ sender, System::EventArgs^ e) 
     {
@@ -2799,7 +2799,7 @@ private: System::Windows::Forms::PictureBox^ pbDune;
         bookDetailForm->ChangeLabel(duneTitleText);
 
 
-
+        
         // Show the book detail form
         bookDetailForm->Show();
     }

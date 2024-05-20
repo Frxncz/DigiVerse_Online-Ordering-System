@@ -7,6 +7,7 @@
   PointofSaleSystem.PaymentSuccessForm.resources - Embedded, ContainedInManifestFile, 
   PointofSaleSystem.Shipping.resources - Embedded, ContainedInManifestFile, 
   PointofSaleSystem.SignupForm.resources - Embedded, ContainedInManifestFile, 
+  PointofSaleSystem.TrackOrderForm.resources - Embedded, ContainedInManifestFile, 
 ImageRuntimeVersion: v4.0.30319
 Assembly Point of Sale System, Version=0.0.*, Culture=Invariant Language (Invariant Country): 
 	hash=SHA1, flags=PublicKey
@@ -31,6 +32,9 @@ Class PointofSaleSystem.BookDetailForm: AutoLayout, AnsiClass, Class, Public, Be
     AddPictureBox(PictureBox): PrivateScope, Public, HideBySig
     RemovePictureBox(PictureBox): PrivateScope, Public, HideBySig
     ChangeLabel(Label): PrivateScope, Public, HideBySig
+Class PointofSaleSystem.TrackOrderForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(System.Windows.Forms.Form): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class PointofSaleSystem.PaymentSuccessForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(System.Windows.Forms.Form): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
