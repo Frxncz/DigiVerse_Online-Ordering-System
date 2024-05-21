@@ -37,9 +37,9 @@ namespace PointofSaleSystem
 
 			// Store the total payment amount in the class member variable
 			this->totalPayment = totalPayment;
-
-
 			
+
+
 			//
 			// This will center the Form in the screen when it pop up
 			//
@@ -57,6 +57,8 @@ namespace PointofSaleSystem
 
 	// Declare a private member variable to hold the total payment amount
 	private: String^ totalPayment;
+
+
 
 
 

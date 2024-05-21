@@ -35,6 +35,10 @@ Class PointofSaleSystem.BookDetailForm: AutoLayout, AnsiClass, Class, Public, Be
 Class PointofSaleSystem.TrackOrderForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(System.Windows.Forms.Form): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Windows.Forms.FlowLayoutPanel fplTrackOrder : Public
+  Methods:
+    AddGroupBoxToTrackOrder(GroupBox): PrivateScope, Public, HideBySig
 Class PointofSaleSystem.PaymentSuccessForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(System.Windows.Forms.Form): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

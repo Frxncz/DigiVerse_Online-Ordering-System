@@ -43,6 +43,7 @@ namespace PointofSaleSystem
 			this->lblPHPtotal->Text = totalPayment;
 
 
+
 			//
 			// This will center the Form in the screen when it pop up
 			//
@@ -56,6 +57,8 @@ namespace PointofSaleSystem
 
 	// Declare a private member variable to hold the reference to the Gcash form
 	private: Form^ newGcashForm;
+
+
 
 
 	protected:

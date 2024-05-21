@@ -4,6 +4,9 @@
 
 #include "BookDetailForm.h"
 
+#include "TrackOrderForm.h"
+
+
 namespace PointofSaleSystem {
 
 	using namespace System;
@@ -55,9 +58,9 @@ namespace PointofSaleSystem {
 
 
 
-
     ////--- Access the checkoutForm instance
     private:  BookDetailForm^ bookDetailForm = gcnew BookDetailForm();
+
 
 
 
@@ -65,11 +68,22 @@ namespace PointofSaleSystem {
     ////--- Access the checkoutForm instance
     private:  CheckoutForm^ checkoutForm = gcnew CheckoutForm(this);
 
+    ////--- Access the TrackOrderForm instance
+    private:  TrackOrderForm^ trackOrder = gcnew TrackOrderForm(this);
+
+
 
 
 
     ////--- this is for the cart to get access to the newGbAtomicHabits
     private: GroupBox^ newGbAtomicHabits;
+
+    ////--- this is for the cart to get access to the trackGbAtomicHabits
+    private: GroupBox^ trackGbAtomicHabits;
+
+    ////--- this is for the cart to get access to the trackGbAtomicHabits
+    private: GroupBox^ trackGBdune;
+
 
 
 
@@ -219,8 +233,9 @@ namespace PointofSaleSystem {
     private: System::Windows::Forms::PictureBox^ pbCart;
 
     private: System::Windows::Forms::PictureBox^ pictureBox2;
+private: System::Windows::Forms::PictureBox^ btnMyPurchase;
 
-    private: System::Windows::Forms::PictureBox^ pictureBox5;
+
 
     private: System::Windows::Forms::PictureBox^ pictureBox6;
 
@@ -334,7 +349,7 @@ private: System::Windows::Forms::PictureBox^ pbDune;
             this->pictureBox4 = (gcnew System::Windows::Forms::PictureBox());
             this->pbCart = (gcnew System::Windows::Forms::PictureBox());
             this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
-            this->pictureBox5 = (gcnew System::Windows::Forms::PictureBox());
+            this->btnMyPurchase = (gcnew System::Windows::Forms::PictureBox());
             this->pictureBox6 = (gcnew System::Windows::Forms::PictureBox());
             this->pictureBox7 = (gcnew System::Windows::Forms::PictureBox());
             this->lblCartQty = (gcnew System::Windows::Forms::Label());
@@ -361,7 +376,7 @@ private: System::Windows::Forms::PictureBox^ pbDune;
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->BeginInit();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pbCart))->BeginInit();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
-            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->BeginInit();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->btnMyPurchase))->BeginInit();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->BeginInit();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox7))->BeginInit();
             this->SuspendLayout();
@@ -1205,15 +1220,17 @@ private: System::Windows::Forms::PictureBox^ pbDune;
             this->pictureBox2->TabIndex = 32;
             this->pictureBox2->TabStop = false;
             // 
-            // pictureBox5
+            // btnMyPurchase
             // 
-            this->pictureBox5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox5.Image")));
-            this->pictureBox5->Location = System::Drawing::Point(236, 51);
-            this->pictureBox5->Name = L"pictureBox5";
-            this->pictureBox5->Size = System::Drawing::Size(262, 50);
-            this->pictureBox5->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-            this->pictureBox5->TabIndex = 30;
-            this->pictureBox5->TabStop = false;
+            this->btnMyPurchase->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->btnMyPurchase->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnMyPurchase.Image")));
+            this->btnMyPurchase->Location = System::Drawing::Point(242, 51);
+            this->btnMyPurchase->Name = L"btnMyPurchase";
+            this->btnMyPurchase->Size = System::Drawing::Size(207, 53);
+            this->btnMyPurchase->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+            this->btnMyPurchase->TabIndex = 30;
+            this->btnMyPurchase->TabStop = false;
+            this->btnMyPurchase->Click += gcnew System::EventHandler(this, &Home::btnMyPurchase_Click);
             // 
             // pictureBox6
             // 
@@ -1270,7 +1287,7 @@ private: System::Windows::Forms::PictureBox^ pbDune;
             this->Controls->Add(this->pictureBox6);
             this->Controls->Add(this->pictureBox2);
             this->Controls->Add(this->pbCart);
-            this->Controls->Add(this->pictureBox5);
+            this->Controls->Add(this->btnMyPurchase);
             this->Controls->Add(this->pictureBox4);
             this->Controls->Add(this->pictureBox3);
             this->Controls->Add(this->pAllBooks);
@@ -1309,7 +1326,7 @@ private: System::Windows::Forms::PictureBox^ pbDune;
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->EndInit();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pbCart))->EndInit();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
-            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->EndInit();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->btnMyPurchase))->EndInit();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->EndInit();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox7))->EndInit();
             this->ResumeLayout(false);
@@ -1910,6 +1927,24 @@ private: System::Windows::Forms::PictureBox^ pbDune;
 
 
             //
+            // Create a new GroupBox for Atomic Habits in ( Track Order )
+            // 
+            //
+            GroupBox^ trackGbAtomicHabits = gcnew GroupBox();
+            trackGbAtomicHabits->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(229)), static_cast<System::Int32>(static_cast<System::Byte>(235)),
+                static_cast<System::Int32>(static_cast<System::Byte>(246)));
+            trackGbAtomicHabits->Size = System::Drawing::Size(422, 155);
+
+            //
+            //Add the Book GroupBox to the track order form inside the fplTrackOrder
+            // 
+            //
+            trackOrder->AddGroupBoxToTrackOrder(trackGbAtomicHabits);
+
+
+
+
+            //
             // Create a new PictureBox
             // 
             //
@@ -1925,6 +1960,28 @@ private: System::Windows::Forms::PictureBox^ pbDune;
             // 
             //
             newGbAtomicHabits->Controls->Add(newPbAtomicHabits);
+
+
+
+
+            //
+            // Create a new PictureBox ( trackGbAtomicHabits )
+            // 
+            //
+            PictureBox^ TrackAtomicHabits = gcnew PictureBox();
+            TrackAtomicHabits->Image = pbAtomicHabits->Image;
+            TrackAtomicHabits->SizeMode = pbAtomicHabits->SizeMode;
+            TrackAtomicHabits->Location = pbAtomicHabits->Location;
+            TrackAtomicHabits->Size = System::Drawing::Size(80, 130);
+            TrackAtomicHabits->Location = System::Drawing::Point(25, 18);
+
+            //
+            // Add the new Label to the GroupBox
+            // 
+            //
+            trackGbAtomicHabits->Controls->Add(TrackAtomicHabits);
+
+
 
 
 
@@ -1944,6 +2001,28 @@ private: System::Windows::Forms::PictureBox^ pbDune;
             // 
             //
             newGbAtomicHabits->Controls->Add(newlblAtomic);
+
+
+
+
+            //
+            // Create a new label TITLE ( trackGbAtomicHabits )
+            // 
+            //
+            Label^ TrackTitleAtomic = gcnew Label();
+            TrackTitleAtomic->Font = (gcnew System::Drawing::Font(L"Arial", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            TrackTitleAtomic->Text = lblAtomic->Text;
+            TrackTitleAtomic->Size = System::Drawing::Size(198, 23);
+            TrackTitleAtomic->Location = System::Drawing::Point(130, 50);
+
+            //
+            // Add the new Label to the GroupBox
+            // 
+            //
+            trackGbAtomicHabits->Controls->Add(TrackTitleAtomic);
+
+
 
 
 
@@ -2309,8 +2388,49 @@ private: System::Windows::Forms::PictureBox^ pbDune;
 
 
 
+
             //
-            // Create a new PictureBox
+            // Create a new GroupBox for Atomic Habits in Track Order
+            // 
+            //
+            GroupBox^ trackGBdune = gcnew GroupBox();
+            trackGBdune->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(229)), static_cast<System::Int32>(static_cast<System::Byte>(235)),
+                static_cast<System::Int32>(static_cast<System::Byte>(246)));
+            trackGBdune->Size = System::Drawing::Size(422, 155);
+
+            //
+            //Add the Book GroupBox to the track order form inside the fplTrackOrder
+            // 
+            //
+            trackOrder->AddGroupBoxToTrackOrder(trackGBdune);
+
+
+
+
+
+            //
+            // Create a new PictureBox ( trackGBdune )
+            // 
+            //
+            PictureBox^ TrackDune = gcnew PictureBox();
+            TrackDune->Image = pbDune->Image;
+            TrackDune->SizeMode = pbDune->SizeMode;
+            TrackDune->Location = pbDune->Location;
+            TrackDune->Size = System::Drawing::Size(95, 130);
+            TrackDune->Location = System::Drawing::Point(18, 18);
+
+            //
+            // Add the new Label to the GroupBox
+            // 
+            //
+            trackGBdune->Controls->Add(TrackDune);
+
+
+
+
+
+            //
+            // Create a new PictureBox ( trackGBdune )
             // 
             //
             PictureBox^ newPBdune = gcnew PictureBox();
@@ -2344,6 +2464,27 @@ private: System::Windows::Forms::PictureBox^ pbDune;
             // 
             //
             newGBdune->Controls->Add(newTitleDune);
+
+
+
+
+            //
+            // Create a new label TITLE ( trackGBdune )
+            // 
+            //
+            Label^ TrackTitleDune = gcnew Label();
+            TrackTitleDune->Font = (gcnew System::Drawing::Font(L"Arial", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            TrackTitleDune->Text = lblDuneTitle->Text;
+            TrackTitleDune->Size = System::Drawing::Size(198, 23);
+            TrackTitleDune->Location = System::Drawing::Point(130, 50);
+
+            //
+            // Add the new Label to the GroupBox
+            // 
+            //
+            trackGBdune->Controls->Add(TrackTitleDune);
+
 
 
 
@@ -2704,6 +2845,8 @@ private: System::Windows::Forms::PictureBox^ pbDune;
         //
         checkoutForm->AddGroupBoxToOrderDetail(newGbAtomicHabits);
 
+
+
         // Show the CheckoutForm
         checkoutForm->Show();
     }
@@ -2802,6 +2945,22 @@ private: System::Windows::Forms::PictureBox^ pbDune;
         
         // Show the book detail form
         bookDetailForm->Show();
+    }
+
+
+
+
+    //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+
+
+    private: System::Void btnMyPurchase_Click(System::Object^ sender, System::EventArgs^ e) 
+    {
+        this->Hide();
+
+
+        // Show the trackOrder
+        trackOrder->Show();
     }
 };
 }

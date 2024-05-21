@@ -30,6 +30,7 @@ namespace PointofSaleSystem
 			newhomeUI = Home;
 
 
+
 			//
 			// This will center the Form in the screen when it pop up
 			//
@@ -39,6 +40,7 @@ namespace PointofSaleSystem
 
 	// Declare a private member variable to hold the reference to the Home form
 	private: Form^ newhomeUI;
+
 
 
 	protected:
@@ -57,10 +59,11 @@ namespace PointofSaleSystem
 
 	protected:
 	private: System::Windows::Forms::PictureBox^ pictureBox2;
-	private: System::Windows::Forms::Button^ btnViewOrder;
+	private: System::Windows::Forms::Button^ btnGobackHome;
+
 
 	private: System::Windows::Forms::Label^ label1;
-	private: System::Windows::Forms::PictureBox^ pbBackHomeSuccess;
+
 
 
 	private:
@@ -78,11 +81,9 @@ namespace PointofSaleSystem
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(PaymentSuccessForm::typeid));
 			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
-			this->btnViewOrder = (gcnew System::Windows::Forms::Button());
+			this->btnGobackHome = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->pbBackHomeSuccess = (gcnew System::Windows::Forms::PictureBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pbBackHomeSuccess))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// pictureBox2
@@ -95,22 +96,22 @@ namespace PointofSaleSystem
 			this->pictureBox2->TabIndex = 1;
 			this->pictureBox2->TabStop = false;
 			// 
-			// btnViewOrder
+			// btnGobackHome
 			// 
-			this->btnViewOrder->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
+			this->btnGobackHome->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(67)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
 				static_cast<System::Int32>(static_cast<System::Byte>(197)));
-			this->btnViewOrder->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->btnViewOrder->Font = (gcnew System::Drawing::Font(L"Arial Black", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->btnGobackHome->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnGobackHome->Font = (gcnew System::Drawing::Font(L"Arial Black", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnViewOrder->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
+			this->btnGobackHome->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
 				static_cast<System::Int32>(static_cast<System::Byte>(253)));
-			this->btnViewOrder->Location = System::Drawing::Point(516, 465);
-			this->btnViewOrder->Name = L"btnViewOrder";
-			this->btnViewOrder->Size = System::Drawing::Size(182, 61);
-			this->btnViewOrder->TabIndex = 13;
-			this->btnViewOrder->Text = L"View Order";
-			this->btnViewOrder->UseVisualStyleBackColor = false;
-			this->btnViewOrder->Click += gcnew System::EventHandler(this, &PaymentSuccessForm::btnViewOrder_Click);
+			this->btnGobackHome->Location = System::Drawing::Point(527, 477);
+			this->btnGobackHome->Name = L"btnGobackHome";
+			this->btnGobackHome->Size = System::Drawing::Size(162, 49);
+			this->btnGobackHome->TabIndex = 13;
+			this->btnGobackHome->Text = L"Done";
+			this->btnGobackHome->UseVisualStyleBackColor = false;
+			this->btnGobackHome->Click += gcnew System::EventHandler(this, &PaymentSuccessForm::btnViewOrder_Click);
 			// 
 			// label1
 			// 
@@ -125,18 +126,6 @@ namespace PointofSaleSystem
 			this->label1->TabIndex = 14;
 			this->label1->Text = L"Order #987654321";
 			// 
-			// pbBackHomeSuccess
-			// 
-			this->pbBackHomeSuccess->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->pbBackHomeSuccess->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pbBackHomeSuccess.Image")));
-			this->pbBackHomeSuccess->Location = System::Drawing::Point(60, 35);
-			this->pbBackHomeSuccess->Name = L"pbBackHomeSuccess";
-			this->pbBackHomeSuccess->Size = System::Drawing::Size(40, 40);
-			this->pbBackHomeSuccess->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->pbBackHomeSuccess->TabIndex = 21;
-			this->pbBackHomeSuccess->TabStop = false;
-			this->pbBackHomeSuccess->Click += gcnew System::EventHandler(this, &PaymentSuccessForm::pbBackHomeSuccess_Click);
-			// 
 			// PaymentSuccessForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -144,37 +133,24 @@ namespace PointofSaleSystem
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(249)), static_cast<System::Int32>(static_cast<System::Byte>(248)),
 				static_cast<System::Int32>(static_cast<System::Byte>(253)));
 			this->ClientSize = System::Drawing::Size(1250, 612);
-			this->Controls->Add(this->pbBackHomeSuccess);
 			this->Controls->Add(this->label1);
-			this->Controls->Add(this->btnViewOrder);
+			this->Controls->Add(this->btnGobackHome);
 			this->Controls->Add(this->pictureBox2);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->Name = L"PaymentSuccessForm";
 			this->Text = L"PaymentSuccessForm";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pbBackHomeSuccess))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
 
-	private: System::Void pbBackHomeSuccess_Click(System::Object^ sender, System::EventArgs^ e) 
+	private: System::Void btnViewOrder_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
 		this->Hide();
 
 		newhomeUI->Show();
-
-	}
-
-	private: System::Void btnViewOrder_Click(System::Object^ sender, System::EventArgs^ e) 
-	{
-
-		TrackOrderForm^ trackOrder = gcnew TrackOrderForm(newhomeUI);
-
-		trackOrder->Show();
-
-		this->Hide();
 	}
 };
 }

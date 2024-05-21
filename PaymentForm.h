@@ -54,11 +54,10 @@ namespace PointofSaleSystem {
 	private: Form^ newShippingForm;
 
 
-
-
-
 	// Declare a private member variable to hold the total payment amount
 	private: String^ totalPayment;
+
+
 
 
 

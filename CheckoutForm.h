@@ -41,7 +41,6 @@ namespace PointofSaleSystem {
 	private: Form^ homeUI;
 
 
-
 	//---------------------------------------------------------------------------
 	// Created a method to access the flpOrderDetail
 	// 
@@ -642,7 +641,6 @@ namespace PointofSaleSystem {
 	//
 	private: System::Void btnCheckout_Click(System::Object^ sender, System::EventArgs^ e)
 	{
-
 		this->Hide();
 
 		// Retrieve the total payment amount from the label
@@ -654,7 +652,6 @@ namespace PointofSaleSystem {
 		shippingForm->Show();
 
 	}
-
 
 
 	//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------//

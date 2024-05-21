@@ -25,7 +25,6 @@ namespace PointofSaleSystem {
 			// Store the reference to the Home form
 			newhomeUI2 = Home;
 
-
 			//
 			// This will center the Form in the screen when it pop up
 			//
@@ -33,8 +32,38 @@ namespace PointofSaleSystem {
 		}
 
 
+
+
 	// Declare a private member variable to hold the reference to the Home form
 	private: Form^ newhomeUI2;
+
+
+
+
+
+	//---------------------------------------------------------------------------
+	// Created a method to access the flpOrderDetail
+	// 
+	//
+	public:
+
+		void AddGroupBoxToTrackOrder(GroupBox^ groupBox)
+		{
+			// Add the provided GroupBox to flpOrderDetail
+			this->fplTrackOrder->Controls->Add(groupBox);
+		}
+
+	public: System::Windows::Forms::FlowLayoutPanel^ fplTrackOrder;
+
+
+
+
+
+
+
+
+
+
 
 
 	protected:
@@ -48,7 +77,9 @@ namespace PointofSaleSystem {
 				delete components;
 			}
 		}
+
 	private: System::Windows::Forms::PictureBox^ pbBackHome2;
+
 	private: System::Windows::Forms::Button^ btnReturnRefund;
 
 	private: System::Windows::Forms::Button^ btnCanceled;
@@ -58,10 +89,6 @@ namespace PointofSaleSystem {
 	private: System::Windows::Forms::Button^ btnToRecieve;
 
 	private: System::Windows::Forms::Button^ btnToShip;
-
-	protected:
-
-	protected:
 
 	protected:
 
@@ -85,6 +112,7 @@ namespace PointofSaleSystem {
 			this->btnCompleted = (gcnew System::Windows::Forms::Button());
 			this->btnToRecieve = (gcnew System::Windows::Forms::Button());
 			this->btnToShip = (gcnew System::Windows::Forms::Button());
+			this->fplTrackOrder = (gcnew System::Windows::Forms::FlowLayoutPanel());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pbBackHome2))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -181,11 +209,19 @@ namespace PointofSaleSystem {
 			this->btnToShip->UseVisualStyleBackColor = false;
 			this->btnToShip->Click += gcnew System::EventHandler(this, &TrackOrderForm::btnToShip_Click);
 			// 
+			// fplTrackOrder
+			// 
+			this->fplTrackOrder->Location = System::Drawing::Point(151, 173);
+			this->fplTrackOrder->Name = L"fplTrackOrder";
+			this->fplTrackOrder->Size = System::Drawing::Size(597, 584);
+			this->fplTrackOrder->TabIndex = 31;
+			// 
 			// TrackOrderForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1251, 769);
+			this->Controls->Add(this->fplTrackOrder);
 			this->Controls->Add(this->btnReturnRefund);
 			this->Controls->Add(this->btnCanceled);
 			this->Controls->Add(this->btnCompleted);
