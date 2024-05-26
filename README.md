@@ -1,4 +1,4 @@
-# DigiVerse Online Ordering System 1.0
+# DigiVerse Online Ordering System Version 1.0
 
 Online Ordering System with GUI in C++ / CLI
 
