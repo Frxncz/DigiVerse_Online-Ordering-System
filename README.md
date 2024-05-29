@@ -5,9 +5,6 @@ Online Ordering System with GUI in C++ / CLI
 Final Project in Computer Programming 2  
 ITC123  (1st year, 2nd Semester)
 
-output:
-![image](https://github.com/Frxncz/DigiVerse_Online-Ordering-System/assets/148550609/420c4fa2-d640-4bb6-8b91-342823b81920)
-
 ## Overview
 
 DigiVerse Online Ordering System is a prototype application that provides a graphical user interface (GUI) for an online ordering system. It is designed in C++/CLI and showcases various features of an online store. 
@@ -39,6 +36,8 @@ DigiVerse Online Ordering System is a prototype application that provides a grap
 
 - **Order Tracking**: Users can track the status of their orders after payment.
 
+output:
+![image](https://github.com/Frxncz/DigiVerse_Online-Ordering-System/assets/148550609/420c4fa2-d640-4bb6-8b91-342823b81920)
 
 ### Usage
 
