@@ -18,7 +18,7 @@ DigiVerse Online Ordering System is a prototype application that provides a grap
 ## Features
 
 #### User Authentication
-- **Log In**: Existing users can log in to their accounts.
+- **Log In**: users can log in to their accounts.
 - **Sign Up**: New users can create an account.
 
 #### Book Management
@@ -35,12 +35,12 @@ DigiVerse Online Ordering System is a prototype application that provides a grap
 - **Checkout Processing**: Users can proceed to checkout to finalize their orders.
 - **Payment Processing**: Users can make payments for their orders.
 
-### Order Tracking
+#### Order Tracking
 
 - **Order Tracking**: Users can track the status of their orders after payment.
 
 
-#### Usage
+### Usage
 
 1. **Log In / Sign Up**: Start by logging into your account or signing up for a new account.
 2. **Browse Books**: Navigate through the available products and select any book to view its details.
