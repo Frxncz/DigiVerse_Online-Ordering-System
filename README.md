@@ -12,6 +12,10 @@ DigiVerse Online Ordering System is a prototype application that provides a grap
 > **Note:** This project currently does not include a database backend. The primary focus is on the GUI design and interactive elements.
 
 
+#### Screenshots
+![image](https://github.com/Frxncz/DigiVerse_Online-Ordering-System/assets/148550609/420c4fa2-d640-4bb6-8b91-342823b81920)
+
+
 ## Features
 
 #### User Authentication
@@ -35,19 +39,6 @@ DigiVerse Online Ordering System is a prototype application that provides a grap
 #### Order Tracking
 
 - **Order Tracking**: Users can track the status of their orders after payment.
-
-output:
-![image](https://github.com/Frxncz/DigiVerse_Online-Ordering-System/assets/148550609/420c4fa2-d640-4bb6-8b91-342823b81920)
-
-### Usage
-
-1. **Log In / Sign Up**: Start by logging into your account or signing up for a new account.
-2. **Browse Books**: Navigate through the available products and select any book to view its details.
-3. **Add to Cart**: Add desired books to your cart.
-4. **View Cart**: Check the items in your cart and proceed to checkout when ready.
-5. **Checkout**: Follow the checkout process to complete your order.
-6. **Payment**: Enter payment details and confirm the payment.
-7. **Track Order**: After completing the payment, track the status of your order.
 
 
 ## What I Learned
